@@ -465,7 +465,7 @@ fieldset[disabled] .btn-red.active {
 	.section-ask {
 		font-size: 1.7em;
 	}
-	.modal-image {
+	img .modal-image {
 		padding-left: 0px;
 		padding-top: 0px;
 	}
@@ -499,7 +499,7 @@ fieldset[disabled] .btn-red.active {
 	.btn-red {
 		font-size: 2.0em;
 	}
-	.modal-image {
+	img .modal-image {
 		padding-left: 70px;
 		padding-top: 20px;
 	}
@@ -539,7 +539,7 @@ fieldset[disabled] .btn-red.active {
 	.btn-red {
 		font-size: 2.4em;
 	}
-	.modal-image {
+	img .modal-image {
 		padding-left: 70px;
 		padding-top: 20px;
 	}
@@ -576,7 +576,7 @@ fieldset[disabled] .btn-red.active {
 	.btn-red {
 		font-size: 2.4em;
 	}
-	.modal-image {
+	img .modal-image {
 		padding-left: 70px;
 		padding-top: 20px;
 	}

@@ -81,9 +81,6 @@ $('#send-message-btn').click(function(e) {
     }
   }
  }).done(function(response) {
-  console.log(response);
-  console.log(response['0']);
-  console.log(response['0'].status);
   if(response['0'].status === "sent") {
     vex.defaultOptions.className = 'vex-theme-default';
     vex.open({
