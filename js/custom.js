@@ -71,7 +71,7 @@ $('#send-message-btn').click(function(e) {
         'message': {
           'from_email': email,
           'to': [{
-            'email': 'derickiscool@gmail.com', // change this!
+            'email': 'hi@derick.is',
             'name': 'Derick Ruiz',
             'type': 'to'
         }],
@@ -94,7 +94,7 @@ $('#send-message-btn').click(function(e) {
     email = $('#form-email').val("");
     message = $('#form-message').val("");
   } else {
-    alert("I'm sorry, but it looks like my email service is down (this is extremely rare). Please email me directly at hi@derick.is or call +1 901 341 9614. Thank you.");
+    alert("I'm sorry, but it looks like my email service is down (this is extremely rare). Please email me directly at hi@derick.is or call +1 901 341 9614.");
     button.button('reset');
   }
  });
