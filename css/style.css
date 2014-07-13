@@ -41,6 +41,7 @@
 .section-title-about{
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	font-size: 5.5em;
 	color: #fff;
 }
@@ -48,6 +49,7 @@
 .section-title-main {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	font-size: 4.1em;
 	color: #fff;
 }
@@ -150,7 +152,20 @@
 }
 
 #misphis-wrap {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-image: url("../img/bg/ryan.png");
+	background-attachment: relative;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #contact-wrap {
@@ -178,7 +193,7 @@
 	background-repeat: repeat;
 }
 
-#footer-container h6, p{
+#footer-container h6, #footer-container p{
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
 	font-size: 1.2em;
@@ -403,6 +418,12 @@ fieldset[disabled] .btn-red.active {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+}
+
+.modal-image {
+	width: auto;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .webdesign-point-top {
@@ -640,4 +661,33 @@ fieldset[disabled] .btn-red.active {
 
 @media (max-width: 767px) {
 	.post, .post.cs2 { width: 100%; }
+}
+
+#contact-container p {
+	font-family: 'Source Sans Pro',sans-serif;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.loader {
+	color: #000;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2.8em;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.loader p {
+	color: 000 !important;
+}
+
+/* sent successfully pop up */
+/* Styles for dialog window */
+.sent-successfully {
+	background: white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 400px;
+	margin: 40px auto;
+	position: relative;
 }

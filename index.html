@@ -4,10 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
     <meta name="Keywords" content="Web Design, Web Development, Photography">
     <meta name="Description" content="I am Derick Ruiz, a creative photographer and web designer in Memphis. Expertise in web design and portrait photography.">
     <title>Derick Ruiz | Photography · Web Design</title>
+    <link rel="canonical" href="http://derick.is/">
 
+    <meta http-equiv="cleartype" content="on">
+
+    <meta property="og:title" content="Derick Ruiz | Photographer & Web Designer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/icons/tile-large.png">
+    <meta property="og:url" content="http://derick.is/">
+    <meta property="og:description" content="Derick Ruiz, a creative photographer and web designer in Memphis. Expertise in mobile web design, portrait photography, cinematography, and social media marketing.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@hiderickis">
+    <meta name="twitter:creator" content="@hiderickis">
+    <meta name="twitter:description" content="Derick Ruiz, a creative photographer and web designer based in Memphis. Expertise in mobile web design and portrait photography.">
     <!-- Favicon - Apple Icons and Windows Icons -->
   <link href="img/icons/favicon.png" rel="icon" type="image/png" />
   <!-- non-retina iPhone pre iOS 7 -->
@@ -45,8 +59,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/vex.css" rel="stylesheet">
-    <link href="css/vex-theme-default.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
     <!-- Google Analytics -->
     <script>
@@ -59,6 +72,7 @@
   ga('send', 'pageview');
 
 </script>
+<script autosync src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,8 +101,7 @@
             <h1 class='section-title-about'>DERICK RUIZ</h1>
             <div class='about-spacer'></div>
             <h3 class='section-subtitle-about'>Hi, I'm a <span class='section-subtitle-bold'>photographer</span> and <span class='section-subtitle-bold'>web designer.</span></h3>
-            <p id='about-me-section'>My practice focuses on bridging art and technology by using the qualities of each to the other’s advantage. I have the ability to capture the beauty in people and nature with my camera and apply it to websites. 
-Are you looking for a bold photographer with a technical edge, or do you need a mobile-ready website with an artistic touch? <strong>I can help with that.</strong></p>
+            <p id='about-me-section'>My practice focuses on bridging art and technology by using the qualities of each to the other’s advantage. I capture the beauty in people and nature with my camera and apply it to websites. Are you looking for a bold photographer with a technical edge, or do you need a mobile-ready website with an artistic touch? <strong>I can help with that.</strong></p>
 <div class='col-md-12 col-sm-12'><a href="#contact" class="btn btn-red">GET STARTED</a></div>
           </div>
         </div>
@@ -107,35 +120,13 @@ Are you looking for a bold photographer with a technical edge, or do you need a 
       </div>
     </div>
     <div id='pictures-wrap' class='container-fluid'>
-      <div id="posts">
-      <div class="post">
-        <img src="img/photography/mai-stand.jpg">
+      <div class='loading row row-centered'>
+        <div class='loader col-centered center'>
+        <i class='fa fa-spinner fa-spin'></i>
+        <p>Loading images ..</p>
       </div>
-      <div class="post">
-        <img src="img/photography/takumu-black.jpg">
       </div>
-      <div class="post">
-        <img src="img/photography/tanya-1.jpg">
-      </div>
-      <div class="post cs2">
-        <img src="img/photography/mai-sit.jpg">
-      </div>
-      <div class="post">
-        <img src="img/photography/tanya-2.jpg">
-      </div>
-      <div class="post">
-        <img src="img/photography/haruka-itokazu.jpg">
-      </div>
-      <div class="post">
-        <img src="img/photography/haruka-misphis.jpg">
-      </div>
-      <div class="post cs2">
-        <img src="img/photography/takumu-flower.jpg">
-      </div>
-      <div class="post">
-        <img src="img/photography/emi.jpg">
-      </div>
-    </div>
+      <div id="posts"></div>
     </div>
     <div class='photography-wrap photography-wrap-bottom'>
       <div class='container-fluid'>
@@ -162,22 +153,7 @@ Are you looking for a bold photographer with a technical edge, or do you need a 
         </div>
       </div>
     </div>
-    <section id="videoTop">
-        <video id="videoBG" preload="auto" autoplay="" loop="loop" muted=""> 
-          <source src="video/misphis-hirari.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
-          <source src="video/misphis-hirari.webm" type="video/webm; codecs='vp8, vorbis&quot;'">
-          <source src="video/misphis-hirari.ogv" type="video/ogg; codecs='theora, vorbis'">
-          <embed src="video/misphis-hirari.flv" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true">
-        </video>  
-      </section>
-      <script type="text/javascript">
-              if( /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ) {
-                var video = document.getElementById("videoBG");
-                var misphis = document.getElementById('misphis-wrap');
-                video.parentNode.removeChild(video);
-                misphis.className += misphis.className ? ' misphis-mobile' : 'misphis-mobile';
-        }
-      </script>
+    <section id="videoTop"></section>
     <div id='webdesign-wrap'>
       <div id='webdesign-container' class='container'>
         <div class='row top-row'>
@@ -281,13 +257,18 @@ Are you looking for a bold photographer with a technical edge, or do you need a 
       </div>
     </div>
   </div><!-- #bodyContainer .container -->
+  <div class='sent-successfully zoom-anim-dialog mfp-hide' style="background-color: #e3ca45">
+    <img src="img/icons/tile-large.png">
+      <p>Thank you, your message was <strong>sent successfully</strong>. Expect a response within a few hours.
+    </p>
+  </div>
+    
   <script charset='UTF-8' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.0.0/masonry.pkgd.js"></script>
-  <script src="js/vex.combined.min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
   <script src="js/mailcheck.min.js"></script>
 
   <script src="js/button.js"></script>
   <script charset='UTF-8' src='js/custom.js'></script>
-
   </body>
 </html>

@@ -1,7 +1,19 @@
+/* Custom.js */
+
+/* Helper functions */
 var validateEmail = function (email) { 
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-}; 
+};
+
+var preloadImages = function (images, callback) {
+    for(var i=0; i<images.length; i++) {
+        (new Image).src = images[i];
+    }
+    callback();
+}
+
+
 
 /* Email Stuff */
 $(document).ready(function () {
@@ -82,10 +94,12 @@ $('#send-message-btn').click(function(e) {
   }
  }).done(function(response) {
   if(response['0'].status === "sent") {
-    vex.defaultOptions.className = 'vex-theme-default';
-    vex.open({
-      content: '<div style="background-color: #e3ca45"><img class= "modal-image" src="img/icons/tile-large.png"><p style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px; color: #000; text-align: center; font-family: '+ 'Source Sans Pro' +', sans-serif;">Thank you, your message was <strong>sent successfully</strong>. Expect a response within 24 hours.</p></div>'
-    });
+    $.magnificPopup.open({
+      items: {
+      src: $('.sent-successfully'), // can be a HTML string, jQuery object, or CSS selector
+      type: 'inline'
+    }
+  });
     button.button('reset');
     name = $('#form-name').val("");
     email = $('#form-email').val("");
@@ -114,8 +128,34 @@ $(function() {
   });
 });
 
-// Load is used to ensure all images have been loaded, impossible with document
+var fulldir = 'img/photography/full/';
+var smalldir = 'img/photography/';
+var images = ['mai-stand.jpg', 'ryan-2.jpg', 'tanya-1.jpg', 'mai-sit.jpg', 'emi.jpg', 'haruka-itokazu.jpg', 'haruka-misphis.jpg', 'ryan.jpg', 'takumu-flower.jpg', 'tanya-2.jpg', 'haruka-amane.jpg', 'takumu-black.jpg'];
+var fulldirpictures = (function (fulldir, images) {
+  var i = 0,
+      fulldirarray = [];
+  for(i; i < images.length; i += 1) {
+    fulldirarray.push(fulldir + images[i]);
+  }
+  return fulldirarray;
+}(fulldir, images));
+/* Start loading the small images */
 
+$(function () {
+  preloadImages(images, function () {
+  var div, i = 0;
+  var posts = $('#posts'),
+      post = '';
+  // console.log("Finished loading the images.");
+  $('.loading').remove(); // remove this element
+  for(i = 0; i < images.length; i += 1) {
+    post = "<div class='post'><a href='"+fulldirpictures[i]+"'><img src='" + smalldir + images[i] + "'></img></a></div>";
+    posts.append(post);
+  }
+});
+});
+
+// Load is used to ensure all images have been loaded, impossible with document
 jQuery( window ).load( function() {
 
 
@@ -174,4 +214,68 @@ jQuery( window ).load( function() {
   
 
 
+});
+
+/* Start preloading the big images */
+$(window).load(function () {
+  preloadImages(fulldirpictures, function () {
+    console.log("finished loading the big images.");
+  });
+});
+
+$(document).ready(function() {
+  $('#posts').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: '',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    }
+  });
+});
+
+var loadVideo = function () {
+
+      var $container = $('#videoTop');
+      var $video = $container.find('video');
+
+      var mp4 = '<source src="video/ryan.mp4" type="video/mp4">';
+      var webm = '<source src="video/ryan.ogv" type="video/ogg">';
+      var ogg = '<source src="video/ryan.ogv" type="video/ogg">';
+
+      if (!$video.length && Modernizr.video) {
+        if (Modernizr.video.h264){
+            appendVideoElement($container, mp4);
+            removeBackgroundImage($('#misphis-wrap')); // remove the background image if you have managed to set the video ..
+        }
+        else if (Modernizr.video.webm) {
+            appendVideoElement($container, webm);
+            removeBackgroundImage($('#misphis-wrap'));
+        }
+        else if (Modernizr.video.ogg) {
+            appendVideoElement($container, ogg);
+            removeBackgroundImage($('#misphis-wrap'));
+        } else {
+          // do nothing. It'll already be loading the background image via css so no performance drops.
+        }
+      }
+    }
+var appendVideoElement = function (container, source) {
+  var video = $('<video id="videoBG" preload="auto" autoplay="" loop="loop" muted="">');
+  video.append(source);
+  container.append(video);
+};
+
+var removeBackgroundImage = function (el) {
+  el.css('background', 'none');
+};
+
+$(window).load(function () {
+  loadVideo();
 });
