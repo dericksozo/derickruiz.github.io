@@ -387,7 +387,6 @@ a:hover, a:visited, a:link, a:active
   transition: .7s all;
 }
 
-
 /* Media Queries */
 /* Custom, iPhone Retina */ 
   @media only screen and (min-width : 320px) {

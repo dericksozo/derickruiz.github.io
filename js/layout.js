@@ -94,7 +94,7 @@ var removeBackgroundImage = function (el) {
       		navigateByImgClick: false,
             arrowMarkup: '<button title="%title%" class="paginate %dir%"><i></i><i></i></button>',
             tCounter: '',
-      		preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      		preload: [2, 2] // Will preload 0 - before current, and 1 after the current image
     	},
     	image: {
       		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
