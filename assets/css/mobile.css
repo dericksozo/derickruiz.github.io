@@ -1,0 +1,10 @@
+/* Mobile Style Sheet */
+
+@media (max-width: 480px) {
+	.section-blog .card-background .image {
+		height: 110px;
+	}
+	.photo-row {
+		margin-bottom: 0px;
+	}
+}

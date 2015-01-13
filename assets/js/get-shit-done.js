@@ -163,13 +163,17 @@ gsdk = {
          $('.card').each(function(){
             if(!$(this).hasClass('card-product') && !$(this).hasClass('card-user')){
                 image = $(this).find('.image img');
+                var imageContainer = $(this).find('.image');
                 
                 image.hide();
                 image_src = image.attr('src');
+                var image_vertical_height = imageContainer.attr('data-background-position-y');
+                var backgroundPositionY = image_vertical_height + "%";
                 
                 $(this).find('.image').css({
                     "background-image": "url('" + image_src + "')",
-                    "background-position": "center center",
+                    /* "background-position": "center center", */
+                    "background-position-y": backgroundPositionY,
                     "background-size": "cover"
                 });
             }
