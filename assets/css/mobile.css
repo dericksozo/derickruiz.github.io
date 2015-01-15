@@ -1,9 +1,27 @@
 /* Mobile Style Sheet */
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
 	.section-blog .card-background .image {
 		height: 110px;
 	}
+	.photo-row {
+		margin-bottom: 0px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.row div .card-background .image {
+		height: 220px;
+	}
+
+	.row div:last-child .card-background .image {
+		height: 110px;
+	}
+
+	.row:last-child div:last-child .card-background .image {
+		height: 220px;
+	}
+
 	.photo-row {
 		margin-bottom: 0px;
 	}
