@@ -1,0 +1,366 @@
+/* Colors */
+/* Fonts */
+html {
+  /* Typography related rules */
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "kern=0";
+  -ms-font-feature-settings: "kern" 0;
+  -webkit-appearance: none; }
+
+body {
+  font-size: 100%;
+  background-color: #fdfdfd;
+  color: #222; }
+
+a {
+  color: #222; }
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.container {
+  /* padding: 0 1em 0 1.5em; */ }
+
+header {
+  position: relative; }
+
+/* header .name {
+	position: relative;
+} */
+h1 {
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  color: #141313;
+  font-weight: 900;
+  line-height: 0.85em;
+  font-size: 4.5em;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.3em;
+  white-space: nowrap;
+  -webkit-transition: font-size 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1 .last-name {
+  display: block;
+  padding-right: 0.19em; }
+
+h1 .trim {
+  margin-left: 0.007em; }
+
+h1 .tighten {
+  margin-left: -0.04em; }
+
+h1 .loosen {
+  margin-left: 0.02em; }
+
+.position {
+  font-size: 1.9em;
+  line-height: 2.2em;
+  font-weight: 500;
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif; }
+
+.description {
+  /* margin-top: 15px;
+  margin-bottom: 15px; */ }
+
+.description p {
+  /* Inconsolata - Mobile */
+  font-size: 1.6em;
+  line-height: 1.45em;
+  font-weight: 400;
+  text-align: left;
+  /* Inconsolata - Mobile */
+  font-family: Inconsolata, Menlo, "Courier New", monospace;
+  text-align: justify; }
+
+/* Work Items */
+.work-item-title {
+  font-size: 1.9em;
+  line-height: 2.2em;
+  font-weight: 500;
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.work-item {
+  position: relative; }
+
+.work-item-number {
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 3.5em;
+  letter-spacing: -3px;
+  line-height: 1.4em; }
+
+/* Shapes */
+.shape {
+  position: absolute; }
+
+.shape.shape-square {
+  width: 200px;
+  height: 200px; }
+
+.shape.shape-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px; }
+
+.name-shape {
+  background-color: #ffdd00;
+  left: 50%; }
+
+.shape.shape-square.name-shape {
+  width: 129px;
+  height: 129px;
+  left: 13%;
+  background-color: #ffdd00;
+  top: 8px; }
+
+.volunteer-shape {
+  background-color: #00d1e0;
+  left: 75%;
+  top: -3px; }
+
+.photography-shape {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(-40deg, #ff3c00, #ff3c00), url("") no-repeat;
+  background: -webkit-linear-gradient(-40deg, #ff3c00, #ff3c00), url("") no-repeat;
+  background: -moz-linear-gradient(-40deg, #ff3c00, #ff3c00), url("") no-repeat;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: -120px;
+  background-position-y: -188px;
+  background-position-x: 19px;
+  top: 0px; }
+  .photography-shape:before, .photography-shape:after {
+    position: absolute;
+    content: ''; }
+  .photography-shape:before, .photography-shape:after {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #fdfdfd; }
+  .photography-shape:before {
+    margin-left: -100px; }
+  .photography-shape:after {
+    margin-left: 100px; }
+
+.glasses-shape {
+  width: 200px;
+  height: 200px;
+  left: 37%;
+  top: 9px;
+  background-color: #ffdd00; }
+
+/* contact section */
+.underline {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.6) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 18px; }
+
+.underline--small {
+  background-position: 0 15px; }
+
+.underline--bold {
+  background-position: 0px 21px; }
+
+.underline:hover {
+  text-decoration: none; }
+
+.contact-section a {
+  font-family: Inconsolata, Menlo, "Courier New", monospace;
+  font-size: 1.9em;
+  line-height: 2.2em; }
+
+/* Social icons section */
+.email {
+  float: left; }
+
+.social-icons {
+  float: left;
+  clear: both; }
+
+.social-icon {
+  float: left; }
+
+.social-icon.first {
+  margin-right: 12px; }
+
+@media only screen and (min-width: 769px) {
+  .container {
+    padding: 0 7.5%; }
+
+  body {
+    font-size: 118%; }
+
+  .intro-section {
+    margin-bottom: 20px; }
+
+  .description p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+  .work-item.last {
+    margin-bottom: 52px; }
+
+  .work-item.last .work-item-title {
+    line-height: 1.2em; }
+
+  .work-item.last .work-item-number {
+    line-height: 0.9em; }
+
+  .work-item.last .work-item-separator {
+    margin-top: 52px; }
+
+  .work-item .description p {
+    margin-top: 10px; }
+
+  .work-item-title {
+    font-size: 3em;
+    line-height: 0.9em; }
+
+  .work-item-number {
+    line-height: 1.8em; }
+
+  .work-item-separator {
+    height: 1px;
+    width: 100%;
+    clear: both;
+    background-color: #000; }
+
+  .work-item-separator.first {
+    height: 6px; }
+
+  /* Shape */
+  .shape.shape-square.name-shape {
+    left: 9%; }
+
+  .shape.shape-circle.volunteer-shape {
+    left: 84%;
+    top: 14px; }
+
+  .shape.shape-triangle.photography-shape {
+    left: 49%;
+    top: 13px; }
+
+  .shape.shape-square.glasses-shape {
+    left: 17%;
+    top: 0px; }
+
+  .contact {
+    border-top: 6px solid #000; }
+
+  .social-icons {
+    float: right;
+    clear: none; }
+
+  .underline {
+    background-position: 0 18px; }
+
+  .underline.underline--bold {
+    background-position: 0 21px; } }
+@media only screen and (min-width: 991px) {
+  .position {
+    margin-top: 8px; }
+
+  .shape.shape-circle.volunteer-shape,
+  .shape.shape-triangle.photography-shape,
+  .shape.shape-square.glasses-shape {
+    left: 2%;
+    top: 100px; }
+
+  .work-item {
+    margin-bottom: 70px; }
+
+  .shape.shape-circle.volunteer-shape {
+    background: linear-gradient(to bottom, rgba(0, 209, 224, 0.7) 0%, rgba(0, 209, 224, 0.7) 100%), url("../img/volunteer-odyssey.png") no-repeat;
+    transform: scale(1);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-position: 0px 0px; }
+
+  .shape.shape-circle.volunteer-shape:hover {
+    background-position: 0px -438px;
+    transform: scale(1.1); }
+
+  .shape.shape-triangle.photography-shape {
+    left: 2%;
+    top: 92px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-40deg, rgba(255, 60, 0, 0.7), rgba(255, 60, 0, 0.7)), url("../img/photography.derickruiz.com.jpg") no-repeat;
+    background: -webkit-linear-gradient(-40deg, rgba(255, 60, 0, 0.7), rgba(255, 60, 0, 0.7)), url("../img/photography.derickruiz.com.jpg") no-repeat;
+    background: -moz-linear-gradient(-40deg, rgba(255, 60, 0, 0.7), rgba(255, 60, 0, 0.7)), url("../img/photography.derickruiz.com.jpg") no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-position: -35px -190px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .shape.shape-triangle.photography-shape:before, .shape.shape-triangle.photography-shape:after {
+      position: absolute;
+      content: ''; }
+    .shape.shape-triangle.photography-shape:before, .shape.shape-triangle.photography-shape:after {
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 200px solid #fdfdfd; }
+    .shape.shape-triangle.photography-shape:before {
+      margin-left: -100px; }
+    .shape.shape-triangle.photography-shape:after {
+      margin-left: 100px; }
+
+  .shape.shape-triangle.photography-shape:hover {
+    background-position: -35px -90px;
+    transform: scale(1.1); }
+
+  .shape.shape-square.glasses-shape {
+    top: 70px;
+    left: 2%;
+    background: linear-gradient(to bottom, rgba(255, 221, 0, 0.7) 0%, rgba(255, 221, 0, 0.7) 100%), url("../img/GUESS-eyewear-2013.jpg") no-repeat;
+    background-position: -80px -90px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+  .shape.shape-square.glasses-shape:hover {
+    background-position: -300px -90px; } }
+@media only screen and (max-width: 768px) {
+  /* Any styles where the max width is 768 pixels. */
+  .wrapper {
+    padding: 0 7.5%; }
+
+  .contact-section a {
+    font-family: Inconsolata, Menlo, "Courier New", monospace;
+    font-size: 1.9em;
+    line-height: 2.2em; }
+
+  .shape.shape-square.name-shape {
+    height: 109px;
+    width: 109px; }
+
+  .underline {
+    background-position: 0 15px; }
+
+  .underline.underline--bold {
+    background-position: 0 18px; } }
+@media only screen and (max-width: 480px) {
+  /* Any styles where the max width is 480 */
+  .wrapper {
+    padding: 0 0.5em 0 1em; } }
+
+/*# sourceMappingURL=styles.css.map */
