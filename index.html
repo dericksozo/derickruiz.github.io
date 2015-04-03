@@ -98,7 +98,7 @@
                         <div class='col-xs-12 col-md-8 col-md-push-4'>
                             <div class='description'>
                                 <p>
-                                    During GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities, a group of Ruby on Rails programmers and I developed a responsive calendar solution for Volunteer Odyssey. I took care of the design and front-end development. On desktop, the calendar functioned like normal in a table view, but on mobile and with some CSS magic I transformed the content into a list view to give the user a condensed and compact view of the events that were going on. <a class='underline' href="http://calendar.volunteerodyssey.com" target="_blank">Visit the original site here.</a>
+                                    During GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities, a group of Ruby on Rails programmers and I developed a responsive calendar solution for Volunteer Odyssey. I took care of the design and front-end development. On desktop, the calendar functioned like normal in a table view, but on mobile and with some CSS magic I transformed the content into a list view to give the user a condensed and compact view of the events that were going on. <a class='js-link link' href="http://calendar.volunteerodyssey.com" target="_blank">Visit the original site here.</a>
                                 </p>
                             </div><!-- .description -->
                         </div><!-- .col-xs-12 -->
@@ -128,7 +128,7 @@
                                 <div class='col-xs-12 col-md-8 col-md-push-4'>
                                 <div class='description'>
                                     <p>
-                                        I host all of my photography on photography.derickruiz.com. Of course I wanted the website to be responsive, but one of the most important things to me was that the images that loaded were fast and appropriate for each device. You don't want to load a 1200px image for a device that only needs 480, but that’s hard when you’re trying to showcase high quality photos. I took advantage of the new the new HTML5 picture element, media queries, and picturefill.js, a polyfill for the picture element, to load the most appropriate image for each device. I automatically generated the images at their respective sizes with Grunt. <a class='underline' href="http://photography.derickruiz.com/" target="_blank">Visit the original website here.</a>
+                                        I host all of my photography on derickruiz.com/photography/. Of course I wanted the website to be responsive, but one of the most important things to me was that the images that loaded were fast and appropriate for each device. You don't want to load a 1200px image for a device that only needs 480, but that’s hard when you’re trying to showcase high quality photos. I took advantage of the new the new HTML5 picture element, media queries, and picturefill.js, a polyfill for the picture element, to load the most appropriate image for each device. I automatically generated the images at their respective sizes with Grunt. <a class='js-link link' href="http://derickruiz.com/photography/" target="_blank">Visit the original website here.</a>
                                         <!-- There’s also some pretty sweet UI Javascript and CSS in there to make the images properly adapt to their containers after loading. -->
                                     </p>
                                     </div><!-- .description -->
@@ -158,7 +158,7 @@
                                 <div class='col-xs-12 col-md-8 col-md-push-4'>
                                 <div class='description'>
                                     <p>
-                                        During my time at Lokion I worked with Glasses.com, an ecommerce website specializing in selling glasses and sunglasses, and a team of 5 on their new redesign and the mobification of their website. We used Adaptive.js by Mobify to transform their content on desktop to mobile. We focused heavily on making sure the viewing and touch experience were as smooth as can be for the user. <a class='underline' href="http://glasses.com/" target="_blank">Visit the original website here.</a>
+                                        During my time at Lokion I worked with Glasses.com, an ecommerce website specializing in selling glasses and sunglasses, and a team of 5 on their new redesign and the mobification of their website. We used Adaptive.js by Mobify to transform their content on desktop to mobile. We focused heavily on making sure the viewing and touch experience were as smooth as can be for the user. <a class='js-link link' href="http://glasses.com/" target="_blank">Visit the original website here.</a>
                                     </p>
                                     </div><!-- .description -->
                                 </div><!-- .col-xs-12 -->
@@ -173,14 +173,14 @@
                     <div class='col-xs-12'>
                         <div class='contact clearfix'>
                         <div class='email'>
-                            <a class='underline underline--bold' href="mailto:hello@derickruiz.com">hello@derickruiz.com</a>
+                            <a class='js-link link' href="mailto:hello@derickruiz.com">hello@derickruiz.com</a>
                         </div>
                         <div class='social-icons'>
                             <div class='twitter social-icon first'>
-                                <a class='underline underline--bold' href='http://twitter.com/iamderickruiz' target="_blank">twitter</a>
+                                <a class='js-link link' href='http://twitter.com/iamderickruiz' target="_blank">twitter</a>
                             </div>
                             <div class='instagram social-icon'>
-                                <a class='underline underline--bold' href="http://instagram.com/iamderickruiz" target="_blank">instagram</a>
+                                <a class='js-link link' href="http://instagram.com/iamderickruiz" target="_blank">instagram</a>
                             </div>
                         </div>
                         </div><!-- .contact -->
@@ -189,5 +189,14 @@
             </div>
         </section>
         </div><!-- .wrapper -->
+
+        <script src="js/smart-underline.js"></script>
+        <script>
+            var links = document.querySelectorAll('.js-link');
+            [].forEach.call(links, function (element, index) {
+                element.setAttribute('style', 'text-decoration: underline');
+            });
+            SmartUnderline.init();
+        </script>
     </body>
 </html>
