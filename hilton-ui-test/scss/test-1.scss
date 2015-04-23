@@ -1,0 +1,208 @@
+@import 'base';
+@import 'utilities';
+@import 'mixins';
+
+// some variables for color and fonts.
+$header-color: rgb(0, 0, 0);
+$grey-color-darkest: rgb(7, 7, 7); // used for the top most back button
+$grey-color-darker: rgb(50, 50, 50);
+$grey-color-lighter: rgb(71, 71, 71); // used for some border bottoms.
+$grey-color-lightest: rgb(218, 218, 218); // border color for navigation
+$blue-color: rgb(0, 19, 37); // color of navigation items
+$blue-color-lighter: rgb(161, 190, 217); // the color of the address
+$sky-blue-color: rgb(192, 206, 219); // navigation background-color
+$white-color: rgb(255, 255, 255); // default text color
+
+$font-family-helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+
+body {
+	font-family: $font-family-helvetica;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+header {
+	background-color: $header-color;
+	height: 48px;
+	border-bottom: 1px solid $grey-color-lighter;
+	overflow: hidden; // This is so that logo image behaves.
+}
+
+header div {
+	width: 33.333%;
+	float: left;
+}
+
+h1, h2 {
+	font-size: 1.2em;
+	color: $white-color;
+}
+
+button {
+	outline: none;
+
+	font-size: 0.8em;
+	color: $white-color;
+	font-weight: bold;
+
+	border: 1px solid $grey-color-darker;
+	border-radius: 4px;
+
+	padding: 0.5em 1em;
+
+	margin-top: 9px;
+	margin-left: 10px;
+
+	@include linear-gradient($grey-color-darker, $grey-color-darkest);
+
+}
+
+button i.chevron { 
+	float: left;
+	margin-right: 7px;
+	margin-top: 1px;
+}
+
+.logo { // hacking this together because of the image provided.
+	height: 95px;
+	width: 62px;
+
+	background-size: cover;
+	background-image: url('../img/HI_mk_logo_hiltonbrandlogo_3.jpg');
+	background-position: 90px 1px;
+
+	float: right;
+	margin-right: 10px;
+}
+
+.screen-name h2 {
+	margin-top: 13px;
+	text-align: center;
+}
+
+@media screen and (max-width: 351px) { // 1.2em breaks for the top title on iPhone 4 and other small screens.
+	h2 {
+		font-size: 1em;
+	}
+}
+
+main {
+	background-image: url('../img/background.png');
+	background-size: cover;
+
+	padding: 1em;
+}
+
+img.hotel-image {
+	border: 4px solid $white-color;
+
+	@include box-shadow(-4, 4, 16, -1, rgba(0, 0, 0, 0.75));
+}
+
+p {
+	color: $blue-color-lighter;
+	font-size: 1em;
+}
+
+.address {
+	margin-bottom: 0.2em; // so the telephone and the address can appear closer together typographically.
+}
+.address > span { // so the address properly breaks.
+	display: block;
+}
+
+a.telephone-number {
+	color: $white-color;
+	text-decoration: underline;
+
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+img.hotel-image {
+	margin-bottom: 0.5em;
+}
+
+.hotel-details > h1 {
+	margin-bottom: 0.25em;
+}
+
+nav li {
+	border-top: 1px solid $grey-color-lightest;
+	border-bottom: 1px solid $white-color;
+
+	@include linear-gradient($white-color, $sky-blue-color);
+}
+
+nav li:first-child {
+	border-top: none;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+nav li:last-child {
+	border-bottom: none;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+nav span {
+	font-size: 1em;
+	font-weight: bold;
+	color: $blue-color;
+}
+
+nav a {
+	width: 100%;
+	display: block;
+	position: relative;
+	padding: 0.8em 1em;
+}
+
+nav a > i.chevron {
+	position: absolute;
+	right: 0;
+	margin-right: 18px;
+	margin-top: 4px;
+}
+
+/* Chevron */
+.chevron:before,
+.chevron:after {
+	content: " ";
+	display: block;
+	width: 2px;
+	height: 8px;
+
+	background-color: $white-color;
+}
+
+.chevron.chevron--dark:before,
+.chevron.chevron--dark:after {
+	background-color: $blue-color;
+}
+
+.chevron:before {
+    @include rotate(45);
+}
+
+.chevron:after {
+	@include rotate(137);
+    margin-top: -3px;
+}
+
+.chevron.chevron--direction-right {
+	-webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+
+
+
+
+
