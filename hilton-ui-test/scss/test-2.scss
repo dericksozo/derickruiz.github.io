@@ -120,6 +120,11 @@ body {
 	body {
 		font-size: 108%;
 	}
+
+	.button-container {
+		margin-left: 2.5%;
+	}
+
 	.room {
 		width: 45%;
 		float: left;
@@ -134,6 +139,10 @@ body {
 		font-size: 115%; // more readable on bigger screens.
 	}
 
+	.button-container {
+		margin-left: 1.665%;
+	}
+	
 	.room {
 		width: 30%;
 		margin-left: 1.665%;
