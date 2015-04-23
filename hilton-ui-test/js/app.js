@@ -53,6 +53,7 @@
 		};
 
 		self.removeRoom = function () {
+			rooms.pop();
 			$roomsList.children().last().remove();
 		};
 
