@@ -1,0 +1,131 @@
+article {
+	display: block;
+	margin: 0 auto;
+	max-width: 43.75em; // single width 700px.
+	margin-top: 1em;
+}
+
+article > .content {
+
+	text-align: left;
+	hyphens: auto;
+	text-align: left;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+
+	a {
+		text-decoration: underline;
+	}
+
+	p:first-child {
+		hyphens: none;
+		text-align: left;
+		-webkit-hyphens: none;
+		-ms-hyphens: none;
+		-moz-hyphens: none;
+	}
+}
+
+article {
+
+	header {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	}
+
+	h1 {
+		font-family: $font-family-nimbus;
+		font-size: 1.4em;
+		line-height: 1.2em;
+		font-weight: 600;
+		word-break: break-word;
+		word-wrap: break-word;
+	}
+
+	time {
+		display: inline-block;
+	}
+
+	header > time:first-of-type { 
+		// margin-top: 0.25em;
+	}
+
+	time > span,
+	header > .separator {
+		font-family: $font-family-atlas;
+		font-size: 1em;
+		line-height: 1.5em;
+		font-weight: 300;
+		color: #8d8d8d;
+	}
+
+	h2,
+	h3,
+	p,
+	article ul li,
+	article ol li {
+		font-family: $font-family-atlas;
+		font-size: 1em;
+		// line-height: 1.5em;
+		font-weight: 300;
+		line-height: 1.6em;
+		// line-height: 1.5em; 
+		// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
+		// to more closely match ia.net.
+	}
+
+	h2,
+	h3 {
+		font-weight: 500;
+		font-size: 1.1em; 
+		// I like this for the time being. It's not the same size as body text, just slightly bigger
+		// and bolded.
+	}
+
+	p,
+	h2,
+	h3,
+	img {
+		padding-bottom: 1em;
+	}
+
+	.video-wrapper,
+	pre {
+		margin: 0 auto;
+		margin-bottom: 1em;
+		display: block;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	pre > code {
+		font-size: 0.75em; // 12px for the code at smaller screens like iPhone 4.
+	}
+
+	ul,
+	ol {
+		padding-bottom: 1em;
+	}
+
+	ul {
+		padding-left: 1em;
+		list-style-type: square;
+	}
+
+	ol {
+		padding-left: 3em;
+		list-style-type: decimal-leading-zero;
+	}
+
+	ul li,
+	ol li {
+		display: list-item;
+		list-style-position: outside;
+	}
+
+}

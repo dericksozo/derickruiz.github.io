@@ -1,0 +1,125 @@
+---
+---
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Somehow put the title inside of here -->
+        <title>Volunteer Odyssey - Work - {{ site.name }}</title><!-- The structure of the title could be better? -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <!-- Every page should have a custom description no matter if it's a blog, portfolio page, whatever -->
+        <meta name="Description" content="">
+
+        <!-- The current url should go in here -->
+        <link rel="canonical" href="http://derickruiz.com/work/volunteer-odyssey">
+        <meta http-equiv="cleartype" content="on">
+
+        {% include typekit-js.html %}
+        {% include styles.css.html %}
+
+    </head>
+
+    {% assign slug = page.url | split: "/" | last %}
+
+    {% if slug %}
+        <body class='work-item-page {{slug}}' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+    {% else %}
+        <body class='work-item-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+    {% endif %}
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+                <a href="#"><!-- link to home page -->
+                    <header itemscope itemtype="http://schema.org/Person">
+                        <h3 class='name' itemprop="name">
+                            <span itemprop="givenName">
+                                Der<span class='loosen'>i</span>ck
+                            </span>
+                            <span itemprop="familyName">
+                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                            </span>
+                        </h3>
+                        <h4 class='title' itemprop="jobTitle">Front-end Web Developer</h4>
+                    </header>
+                </a>
+
+                {% include navigation.html %}
+
+            </section>
+        </div>
+
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+                <div class='wrapper'>
+                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                            <span itemprop="item">
+                                <a class='link' itemprop="url">Home</a>
+                            </span>
+                            <meta itemprop="position" content="1">
+                        </span>
+
+                        <span class='separator chevron chevron--direction-right'></span>
+
+                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                            <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+                            <!-- Yes, for now. -->
+                            <span itemprop="item">
+                                <a class='link' itemprop="url">Work</a>
+                            </span>
+                            <meta itemprop="position" content="2">
+                        </span>
+
+                        <span class='separator chevron chevron--direction-right'></span>
+
+                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                            <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+                            <!-- Yes, for now. -->
+                            <span itemprop="item">
+                                <span itemprop="name">Volunteer Odyssey</span>
+                            </span>
+                            <meta itemprop="position" content="3">
+                        </span>	                    
+                    </div><!-- breadcrumbs -->
+                </div>
+
+            	<!-- Should this be an article tag or a section tag? -->
+            	<!-- Look up the schema.org stuff you'll have to put in here -->
+            	<article class='clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+            		<header>
+                        <div class='container'>
+                            <h1 class='hyphenate' itemprop="headline">{{ page.title }}</h1>
+                            <h2 class='role'>{{ page.role | array_to_sentence_string }}</h2>
+                        </div>
+            		</header>
+                    <div class='work-example'>
+
+                        {% if page.devices %}
+                            {% capture device_include_url %}devices-{{slug}}.html{% endcapture %}
+                            {% include {{device_include_url}} %}
+                        {% endif %}
+
+                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a> 
+                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>                     
+                    </div><!-- .work-example -->
+                    <!-- Is text the proper itemprop in this case since I'm going to have images and possibly videos
+                    in here? -->
+            		<div class='hyphenate content' itemprop="text">
+            			{{ content }}
+            		</div>
+            	</article>
+            </main>
+
+            <div class='wrapper'>
+            	{% include footer.html %}
+            </div>
+
+        {% include typography-js.html %}
+        <script src="/js/work-item.js"></script>
+
+    </body>
+</html>

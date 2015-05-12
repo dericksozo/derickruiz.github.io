@@ -1,0 +1,104 @@
+section.articles {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.title {
+	line-height: 1.68em;
+}
+
+ul.posts-list {
+
+	margin-top: 0.5em;
+
+	li.blog-post {
+		margin-bottom: 1em;
+	}
+
+	.reading-time,
+	h2 {
+		display: inline;
+	}
+
+	.reading-time {
+		margin-right: 0.5em;
+	}
+
+	.reading-time {
+		display: none;
+	}
+
+	time,
+	.reading-time > span,
+	h2 {
+		font-family: $font-family-atlas;
+		font-weight: normal;
+		text-align: left;
+		line-height: 1.6em;
+		// letter-spacing: -0.02em;
+		font-size: 1em;
+	}
+
+	time,
+	.reading-time > span {
+		color: rgb(168, 168, 168); // make this a variable
+	}
+
+	time {
+		display: none;
+	}
+
+	.reading-time .read-text {
+		display: none;
+	}
+
+	.reading-time .minute-text {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	ul.posts-list {
+		a {
+			display: block;
+			float: left;
+			width: 80%;
+		}
+
+		.reading-time {
+			margin-right: 0;
+			display: block;
+			float: right;
+			text-align: right;
+			width: 20%;
+		}
+	}
+}
+
+@media screen and (min-width: 43.75em) {
+	ul.posts-list {
+
+		a {
+			width: 60%;
+		}
+
+		.reading-time .read-text {
+			display: inline;
+		}
+	}
+}
+
+@media screen and (min-width: 51.25em) {
+	ul.posts-list {
+		/* a {
+			width: 60%;
+		} */
+
+		time {
+			display: block;
+			float: right;
+			text-align: right;
+			width: 20%;
+		}
+	}
+}

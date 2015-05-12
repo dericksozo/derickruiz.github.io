@@ -1,23 +1,111 @@
 ---
-layout: default
+intro: >
+    I focus on the front-end. The HTML, CSS, and Javascript. The what your eyes can see and what your fingers can swipe part of a website. I focus on making it good, responsive, and fast.
+regenerate: true
 ---
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ site.name }} - {{ site.title }}</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="{{ site.description }}">
+        <meta http-equiv="cleartype" content="on">
 
-<div class="home">
+        {% include typekit-js.html %}
 
-  <h1 class="page-heading">Posts</h1>
+        {% include styles.css.html %}
+    </head>
+    <body class="home-page" itemscope="itemscope" itemprop="http://schema.org/WebPage">
+        <div class='wrapper'>
+            <section class='intro clearfix'>
+                <a href="#"><!-- link to home page -->
+                    <header itemscope itemtype="http://schema.org/Person">
+                        <h1 class='name' itemprop="name">
+                            <span itemprop="givenName">
+                                Der<span class='loosen'>i</span>ck
+                            </span>
+                            <span itemprop="familyName">
+                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                            </span>
+                        </h1>
+                        <h2 class='title' itemprop="jobTitle">{{ site.title }}</h2><!-- Title in here -->
+                    </header>
+                </a>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                {% include navigation.html %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                <div class='what-i-do'>
+                    <h4>What I do</h4>
+                    <p class='description hyphenate'><!-- Some kind of description about what I do? -->
+                        {{page.intro}}
+                    </p>
+                </div>
+                <div class='latest-blog-posts'>
+                    <h4>Latest articles</h4>
+                    <ul class='posts-list'>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                        {% for post in site.posts limit: 3 %}
 
-</div>
+                            {% assign post_year = post.date | date: "%Y"  %}
+                            {% assign this_year = 'now' | date: "%Y" %}
+
+                            <li class='blog-post' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+                                <time itemprop="datePublished" datetime={{post.date | date: "%Y-%m-%d"}}>
+                                    {% if post_year == this_year %}
+                                        <span class='month-and-day'>{{post.date | date: '%m.%d' }}</span>
+                                    {% else %}
+                                        <span class='year'>{{post.date | date: '%Y' }}</span>
+                                    {% endif %}
+                                </time>
+                                <a class='link' href="{{post.url}}" itemprop="headline">{{post.title}}</a>
+                            </li>
+
+                        {% endfor %}
+
+                    </ul><!-- .latest-blog-posts -->
+                    <span class='or'>or</span>
+                    <!-- Can this be adjusted? I don't like the way it's hardcoded, but it works for now. -->
+                    <a href="articles.html" class='link'>View all articles</a>
+                </div><!-- .latest-blog-posts -->
+            </section>
+            <section class='work'>
+
+                <!-- {% assign works = site.work | sort: 'index' %} -->
+                {% for work_item in site.work reversed %}
+                    <div class='work-item clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+                        <h3 class='title' itemprop="headline">{{work_item.title}}</h3>
+
+                        {% if work_item.devices %}
+                            {% assign device_slug = work_item.url | split: "/" | last %}
+                            {% capture device_include_url %}devices-{{device_slug}}.html{% endcapture %}
+                            {% include {{device_include_url}} %}
+                        {% endif %}
+                        <p class='description hyphenate' itemprop="about">
+                            {{work_item.short_description}}
+                        </p>
+                        <a class='button button--yellow' href="{{work_item.url}}">View Details</a>
+                    </div>
+                {% endfor %}
+            </section>
+            <footer>
+                <div class='email'>
+                    <a class='link' href="#">hello@derickruiz.com</a><!-- Email and other services should be in here -->
+                </div>
+                <ul class='social-links'>
+                    <li>
+                        <a href="#"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+                    </li>
+                    <li><a href="#"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a></li>
+                    <li><a href="#"><i class='icon-github'></i> <span class='link service'>Github</span></a></li>
+                </ul>
+            </footer>
+        </div>
+
+        {% include typography-js.html %}
+
+    </body>
+</html>

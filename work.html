@@ -1,0 +1,126 @@
+---
+regenerate: true
+description: >
+  This is a temporary description for the work page.
+---
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Work - Derick Ruiz</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="{{page.description}}">
+        <!-- <link rel="canonical" href=""> -->
+        <meta http-equiv="cleartype" content="on">
+
+        {% include typekit-js.html %}
+        {% include styles.css.html %}
+
+    </head>
+    <body class='work-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+                <a href="#"><!-- link to home page -->
+                    <header itemscope itemtype="http://schema.org/Person">
+                        <h3 class='name' itemprop="name">
+                            <span itemprop="givenName">
+                                Der<span class='loosen'>i</span>ck
+                            </span>
+                            <span itemprop="familyName">
+                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                            </span>
+                        </h3>
+                        <h4 class='title' itemprop="jobTitle">Front-end Web Developer</h4>
+                    </header>
+                </a>
+                <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                    <ul>
+                        <li><a class='link' href="#" itemprop="url">About</a></li>
+                        <li><a class='link' href="articles.html" itemprop="url">Articles</a></li>
+                        <li><a class='link' href="work.html" itemprop="url">Work</a></li>
+                        <li><a class='link' href="#" itemprop="url">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+            <!-- I removed the itemtype of blog from the main tag. What should go in here now? Nothing? -->
+            <main role="main" itemprop="mainContentOfPage">
+            	<div class='wrapper'>
+	                <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+	                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+	                        <span itemprop="item">
+	                            <a class='link' itemprop="url">Home</a>
+	                        </span>
+	                        <meta itemprop="position" content="1">
+	                    </span>
+
+	                    <span class='separator chevron chevron--direction-right'></span>
+
+	                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+	                        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+	                        <!-- Yes, for now. -->
+	                        <span itemprop="item">
+	                            <span itemprop="name">Work</span>
+	                        </span>
+	                        <meta itemprop="position" content="2">
+	                    </span>
+	                </div><!-- breadcrumbs -->
+            	</div>
+
+                <section class='work'>
+                	<div class='wrapper'>
+                    	<h1 class='title'>Work</h1>
+                    	<!-- This needs to be replaced with a front-matter variable. -->
+                    	<h2 class='subtitle hyphenate'>A collection of projects I have worked on.</h2>
+                	</div>
+                    <ul class='work-items'>
+
+                    	{% for work_item in site.work reversed %}
+                    	{% assign slug = work_item.url | split: "/" | last %}
+                    	<!-- I need a new way to generate that slug now. -->
+	                    	<li class='work-item clearfix {{slug}}' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    {% assign words = work_item.title | split: " " %}
+		                    			    {% for word in words %}
+		                    			    	{{word}}
+			                    				{% unless forloop.last %}
+		                    			    	<br>
+		                    			    	{% endunless %}
+		                    				{% endfor %}
+		                    			</h2>
+		                    			<span class='role'>{{work_item.role | array_to_sentence_string }}</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				{{work_item.description}}
+		                    			</p>
+		                    			<button class='button button--yellow read-more-button'>Read more</button>
+		                    		</div>
+		                    		{% if work_item.devices %}
+		                    			<div class='work-example'>
+		                    				{% capture device_include_url %}devices-{{slug}}.html{% endcapture %}
+
+		                    				{% include {{device_include_url}} %}
+		                    			</div><!-- work-example -->
+		                    		{% endif %}
+		                    		<button class='button button--yellow'>See more</button>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	{% endfor %}
+                    </ul><!-- .work-items -->
+                </section><!-- .work -->
+            </main>
+
+            <div class='wrapper'>
+            	{% include footer.html %}
+            </div>
+
+        <!-- </div> -->
+
+        {% include typography-js.html %}
+    </body>
+</html>

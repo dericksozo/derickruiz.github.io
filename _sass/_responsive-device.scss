@@ -1,0 +1,681 @@
+.device,
+.device:before,
+.device:after{
+	 background: rgba(0,0,0,0.00);
+	 -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: wall 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.device:before,
+.device:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 50%;
+}
+
+.device	{
+	position: relative;
+	// margin: 80px auto 0;
+	// background: #525255;
+	background: #E5E5E5;
+}
+
+.device:after {
+	background: #d2d5d9;
+}
+
+/* iPhone */
+.device.iphone {
+	margin: 0.5em auto 1em;
+ 	width: 110px;
+ 	height: 180px; 
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.device .center-block {
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+.device .camera {
+	top: 9px;
+	height: 5px;
+	width: 5px;
+
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+
+	background: rgb(66, 66, 66);
+}
+
+.device .second-camera {
+	position: absolute;
+	display: block;
+
+	left: 24%;
+	top: 17px;
+
+	height: 8px;
+	width: 8px;
+
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+
+	background: rgb(66, 66, 66);
+}
+
+.device .speaker {
+
+	height: 3px;
+	top: 15px;
+	width: 29%;
+
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+
+	background: rgb(66, 66, 66);
+}
+
+.device:after	{ // the home button
+	bottom: 5px;
+	margin: 0 -9px 0 0;
+	height: 18px;
+	width: 18px;
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+	border: 1px solid $yellow-color;
+
+	background: #EFEFEF;
+}
+
+.device.iphone {
+	position: relative;
+	z-index: 3;
+}
+
+.device.iphone .content {
+	position: relative;
+	top: 25px;
+	height: 119px;
+	width: 101px;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.device .content .section {
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+}
+
+.device .content .section.section--blue {
+	background-color: #3A60DA;
+}
+
+.device.iphone.volunteer-odyssey .content > .header {
+	height: 25px;
+}
+
+.device.iphone.volunteer-odyssey .content > .header > .logo {
+	display: block;
+	position: relative;
+	background-color: rgb(234, 234, 234);
+	height: 15px;
+	width: 15px;
+	margin: 0 auto;
+	top: 5px;
+}
+
+
+.device.iphone.volunteer-odyssey .content > .search {
+	  height: 20px;
+}
+
+.device.iphone.volunteer-odyssey .content > .navigation--main {
+	height: 20px;
+}
+
+.device.iphone.volunteer-odyssey .content > .navigation--secondary {
+	height: 7px;
+}
+
+.device.iphone.volunteer-odyssey .link {
+	display: block;
+	position: relative;
+	background-color: rgb(234, 234, 234);
+	height: 3px;
+	width: 30%;
+	margin: 0 auto;
+	top: 8px;
+	border-left: 4px solid #fff;
+}
+
+.device.iphone.volunteer-odyssey .link:first-child {
+	position: absolute;
+	left: 10px;
+	border-left: none;
+}
+
+.device.iphone.volunteer-odyssey .link:last-child {
+	position: absolute;
+	right: 10px;
+}
+
+.device.iphone.volunteer-odyssey .calendar {
+	height: 79px;
+	width: 100%;
+}
+
+.device.iphone.volunteer-odyssey .calendar > .calendar-month {
+	height: 15px;
+}
+
+.device.iphone.volunteer-odyssey .calendar-month > .calendar-month-text {
+	display: block;
+	position: relative;
+	background-color: rgb(234, 234, 234);
+	height: 4px;
+	width: 66.6666%;
+	margin: 0 auto;
+	top: 5px;
+}
+
+.device.iphone.volunteer-odyssey .calendar > .calendar-time,
+.device.iphone.volunteer-odyssey .calendar > .calendar-entry {
+	height: 10px;
+}
+
+.device.iphone.volunteer-odyssey .calendar > .calendar-time:last-child {
+	height: 4px
+}
+
+/* Responsive Photography */
+
+.device.iphone.responsive-photography,
+.device.ipad.responsive-photography,
+.device.browser.responsive-photography {
+
+	.header {
+		height: 25px;
+		overflow: auto;
+	}
+
+	.header > .logo {
+		width: 40%;
+		height: 5px;
+		background-color: #333;
+		margin-top: 5px;
+	}
+
+	.header > .spacer {
+		height: 1px;
+		width: 80%;
+		background-color: gray; /* Find the correct background-color */
+		margin-top: 5px;
+	}
+
+	.header > .description {
+		background-color: rgb(235, 235, 235);
+		height: 2px;
+		width: 50%;
+		margin-top: 5px;
+	}
+
+	.photos {
+		height: 127px;
+		background-color: #fff;
+		padding-top: 4px;
+	}
+
+	figure.photo {
+		width: 90%;
+		height: 20px;
+		margin-bottom: 5px;
+		background-color: rgb(238, 238, 238); // find a default color to fallback to.
+		background-size: cover;
+	}
+
+	figure.photo.jessica {
+		background-image: url("../img/jessica-croyle-kubist.svg");
+		background-position: 0 20%;
+	}
+
+	figure.photo.vancouver {
+		background-image: url("../img/vancouver-fashion-week-kubist.svg");
+		background-position: 0 70%;
+	}
+
+	figure.photo.sarah {
+		background-image: url("../img/sarah-blanc-kubist.svg");
+		background-position: 0 30%;
+	}
+}
+
+.device.iphone.glasses-com .header {
+	height: 20px;
+	background-color: rgb(51, 51, 53);
+
+	> .logo {
+		height: 20px;
+		width: 25px;
+		background-color: rgb(255, 64, 38);
+	}
+}
+
+.device.iphone.glasses-com .hero-image {
+	height: 50px;
+	background-color: rgb(249, 249, 249);
+	background-image: url("../img/glasses-kubist.svg");
+	background-size: cover;
+	background-position: 0% 18%;
+}
+
+.device.iphone.glasses-com .red-button {
+	height: 10px;
+	background-color: rgb(255, 64, 38);
+}
+
+.device.iphone.glasses-com .brands {
+	height: 20px;
+	background-color: #fff;
+	overflow: auto;
+}
+
+.device.iphone.glasses-com .brands > .brand {
+	background-color: grey;
+	display: block;
+	float: left;
+	width: 40%;
+	height: 5px;
+	margin-top: 7px;
+	border-right: 2px solid #fff;
+
+	&:first-child {
+		width: 30%;
+	}
+
+	&:last-child {
+		width: 30%;
+		border-right: none;
+	}
+}
+
+.device.iphone.glasses-com .mosaic-images {
+	height: 22px;
+	padding-left: 2px;
+	padding-right: 2px;
+};
+
+.device.iphone.glasses-com .mosaic-image {
+	width: 30%;
+	margin-right: 3.33%;
+	float: left;
+	height: 15px;
+	background-color: rgb(249, 249, 249);
+	background-image: url("../img/guess-kubist.svg");
+	background-size: cover;
+	background-position: 0% 18%;
+}
+
+/* iPad */
+.device.ipad {
+	width: 180px;
+	height: 240px;
+
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	position:relative;
+	z-index: 2;
+}
+
+.device.ipad .content {
+	position: relative;
+	top: 20px;
+	height: 185px;
+	width: 171px;
+	display: block;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.device.ipad.volunteer-odyssey,
+.device.browser.volunteer-odyssey {
+
+	.header {
+		overflow: auto;
+	}
+
+	.header > .logo {
+		width: 30%;
+		height: 15px;
+		background-color: #EAEAEA;
+		margin-left: 5%;
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+
+	.navigation {
+		background-color: #3A60DA;
+		height: 20px;
+	}
+
+	.calendar-month > table {
+		width: 100%;
+		height: 115px;
+		border-collapse: collapse;
+	}
+
+	th {
+		background-color: #EAEAEA;
+		border: 1px solid #C0C0C0;
+		border-top: none;
+	}
+
+	th:last-child,
+	td:last-child {
+		border-right: none;
+	}
+
+	td {
+		background-color: #fff;
+		border: 1px solid #C0C0C0;
+		border-top: none;
+	}
+
+	td.highlight {
+		background-color: #D7F2FF;
+	}
+
+	tr:last-child td {
+		border-bottom: none;
+	}
+
+	.footer {
+		height: 15px;
+		background-color: #3A60DA;
+	}
+}
+
+.device.ipad.responsive-photography {
+	.photos { // add a clearfix to this element.
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	figure.photo.vancouver {
+		float: left;
+		width: 45%;
+		margin-right: 5%;
+	}
+
+	figure.photo.sarah {
+		float: left;
+		width: 45%;
+		// doesn't need a margin-right right? haha
+	}
+
+	figure.photo.jessica {
+		width: 100%;
+		clear: both;
+		// possibly gonna need some margin?
+	}
+}
+
+.device.ipad.glasses-com {
+
+}
+
+.device.macbook {
+	width: 230px;
+	height: 200px;
+
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	border: 2px solid #D2D5D9;
+
+	background-color: #000;
+
+	position: relative;
+	z-index: 1;
+}
+
+.device.macbook:before {
+	width: 270px;
+	height: 17px;
+
+	background-color: #d2d5d9;
+
+	display: block;
+	margin: 0 auto;
+
+	bottom: -2px;
+	left: -15px;
+	right: 0;
+
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+	border: none;
+}
+
+.device.macbook:after {
+	width: 75px;
+	height: 9px;
+
+	bottom: 6px;
+	right: 50%;
+	left: 37%;
+
+	background-color: #898C90; // make this a variable
+
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+	border: none;
+}
+
+.device.macbook > .background {
+	background-color: #fff;
+	position: relative;
+	top: 17px;
+	height: 147px;
+	width: 196px;
+	display: block;
+	margin: 0 auto;
+
+	background: rgb(207,231,250); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(207,231,250,1) 0%, rgba(99,147,193,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,231,250,1)), color-stop(100%,rgba(99,147,193,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+
+}
+
+.device.macbook .content {
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	height: 130px;
+	background-color: #fff;
+	position: relative;
+	top: 9px;
+}
+
+.device.browser {
+	width: 220px;
+	height: 266px;
+	display: block;
+	float: left;
+	margin-left: -3em;
+	background-color: #fff;
+}
+
+.device.browser:before { // top bar
+	background-color: #E5E5E5;
+
+	width: 220px;
+	height: 25px;
+
+	border: none;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.device.browser:after { // url bar.
+	background-color: #CACACA;
+	border: none;
+	width: 160px;
+	right: 0;
+	top: 7px;
+	height: 10px;
+	left: 33px;
+}
+
+.device.browser > .buttons:before,
+.device.browser > .buttons:after {
+	content: " ";
+	display: block;
+}
+
+.device.browser > .buttons,
+.device.browser > .buttons:before,
+.device.browser > .buttons:after { // minimize button
+	width: 5px;
+	height: 5px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	position: relative;
+	z-index: 2;
+
+	top: 8px;
+	left: 14px;
+}
+
+.device.browser > .buttons {
+	background-color: #f1c40f;
+}
+
+.device.browser > .buttons:before { // close button
+	background-color: #e74c3c;
+	position: relative;
+	top: 0;
+	left: -8px;
+}
+
+.device.browser > .buttons:after { // maximize button
+	left: 16px;
+	background-color: #2ecc71;
+	position: relative;
+	top: -5px;
+	left: 8px;
+}
+
+.device.browser > .menu:before,
+.device.browser > .menu:after {
+	content: " ";
+	display: block;
+}
+
+.device.browser > .menu,
+.device.browser > .menu:before,
+.device.browser > .menu:after { // hamburger menu
+	display: block;
+	height: 2px;
+	width: 10px;
+
+	position: relative;
+	z-index: 2;
+
+	background-color: #424242;
+
+	left: 199px;
+	top: 12px;
+}
+
+.device.browser > .menu:before {
+	top: -4px;
+	left: 0;
+}
+
+.device.browser > .menu:after {
+	left: 0px;
+	top: 2px;
+}
+
+.device.browser > .content {
+	position: relative;
+	top: 18px;
+	height: 241px;
+	width: 220px;
+	display: block;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.device.browser.volunteer-odyssey { // the extra bits that don't transfer over from the ipad version.
+
+	.calendar-month {
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	th {
+		border-top: 1px solid #C0C0C0;
+	}
+
+	th:last-child,
+	td:last-child {
+		border-right: 1px solid #C0C0C0;
+	}
+
+	tr:last-child td {
+		border-bottom: 1px solid #C0C0C0;
+	}	
+}
+
+.device.browser.responsive-photography {
+	.photos {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	figure.photo {
+		float: left;
+		width: 30%;
+		margin-right: 3.33%;
+		min-height: 37px;
+	}
+}

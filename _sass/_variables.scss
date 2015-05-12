@@ -1,0 +1,88 @@
+@font-face {
+	font-family: 'AtlasTypewriterWeb';
+	src: url('/fonts/AtlasTypewriterWeb-Light.eot');
+	src: url('/fonts/AtlasTypewriterWeb-Light.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/AtlasTypewriterWeb-Light.woff') format('woff'),
+		 url('/fonts/AtlasTypewriterWeb-Light.ttf') format('truetype'),
+		 url('/fonts/AtlasTypewriterWeb-Light.svg#AtlasTypewriterWeb-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	word-spacing: 2em;
+}
+
+@font-face {
+	font-family: 'AtlasTypewriterWeb';
+	src: url('/fonts/AtlasTypewriterWeb-Medium.eot');
+	src: url('/fonts/AtlasTypewriterWeb-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/AtlasTypewriterWeb-Medium.woff') format('woff'),
+		 url('/fonts/AtlasTypewriterWeb-Medium.ttf') format('truetype'),
+		 url('/fonts/AtlasTypewriterWeb-Medium.svg#AtlasTypewriterWeb-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face { 
+	font-family: 'AtlasTypewriterWeb'; 
+	src: url('/fonts/AtlasTypewriterRegular.eot');
+	src: url('/fonts/AtlasTypewriterRegular.eot?#iefix') format('embedded-opentype'), 
+		 url('/fonts/AtlasTypewriterRegular.woff') format('woff'), 
+		 url('/fonts/AtlasTypewriterRegular.ttf') format('truetype'), 
+		 url('/fonts/AtlasTypewriterRegular.svg#AtlasTypewriterRegular') format('svg'); 
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal; 
+}
+
+/* Colors */
+// $background-color: rgb(240, 236, 235);
+$background-color: #fdfdfd;
+$background-color-darker: #F4F4F4;
+
+$header-text-color: rgb(20, 19, 19);
+$yellow-color: rgb(255, 221, 0);
+$red-color: rgb(255, 60, 0);
+$blue-color: rgb(0, 209, 224);
+$purple-color: rgb(108, 73, 204);
+// $black-color: #141313;
+$black-color: #222;
+
+$yellow-color-darker: #E0C200; // used for yellow buttons.
+$yellow-color-darker-lighter: #E0CD4D; // used for yellow button hover state.
+$yellow-color-lighter: #FFE645; // used for yellow button hover state.
+$yellow-color-darkest: #A18C00; // for the role
+
+$lighter-black-color: rgb(64, 64, 64);
+
+
+$glasses-cyan: #3EBCE0;
+$glasses-cyan-darker: #339EBD;
+$glasses-cyan-lighter: #44CCF4;
+
+$volunteer-blue-color: #3A60DA;
+$volunteer-blue-color-darker: #2B4AAB;
+$volunteer-blue-darkest: #1C2E69; // for the role in the volunteer odyssey thing.
+
+$glasses-red: #FF4026;
+$glasses-red-darkest: #932415;
+$glasses-red-with-opacity: rgba(255, 64, 38, 0.7);
+
+$pink-color: #E2319B;
+$pink-color-darker: #AE2276;
+$pink-color-lighter: #FF3CB1;
+
+$red-color-with-opacity: rgba(255, 60, 0, 0.7);
+$blue-color-with-opacity: rgba(0, 209, 224, 0.7);
+$purple-color-with-opacity: rgba(108, 73, 204, 0.7);
+$yellow-color-with-opacity: rgba(255, 221, 0, 0.7);
+
+$circle-width: 300px;
+$shape-width: 200px;
+
+/* Fonts */
+$font-family-nimbus: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+$font-family-monospace: Inconsolata, Menlo, "Courier New", monospace;
+$font-family-atlas: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+
+

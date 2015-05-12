@@ -1,0 +1,367 @@
+article {
+
+	a:not(.button) {
+		text-decoration: underline;
+	}
+
+	h1 {
+		line-height: 1.2em;
+		position: relative;
+		z-index: 2;
+		font-size: 1.5em;
+		font-family: $font-family-nimbus;
+		color: #fdfdfd;
+		border-bottom: 4px solid #fdfdfd;
+
+		padding-bottom: 0.25em;
+	}
+
+	h2 {
+		font-size: 1em;
+		font-family: $font-family-atlas;
+		line-height: 1.5em;
+		font-weight: 300;
+		color: #1C2E69;
+
+		padding-top: 0.25em;
+	}
+
+	> header,
+	> .work-example {
+		background-color: $volunteer-blue-color;
+	}
+
+	> .content {
+		margin: 1em 0;
+		text-align: left;
+		hyphens: auto;
+		hyphens: auto;
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+	}
+
+	> header .container,
+	> .work-example .devices,
+	> .content {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 43.75em; // 700 pixels I believe?
+	}
+
+	> header .container {
+		max-width: 55em; // because I want this thing to be aligned with my name still.
+	}
+
+	// Same padding settings as .wrapper
+	// Really only doing this because I want full width images on mobile.
+	// Putting it in here because it's affecting the layout for the header up on top.
+	p,
+	h3,
+	> header,
+	.work-example {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+		padding: 0 0.5em 0 1em;
+	}
+
+	> header {
+		padding-top: 1em;
+	}
+
+	.work-example {
+		padding-bottom: 1.5em;
+	}
+
+	p,
+	h3 {
+		font-family: $font-family-atlas;
+		font-size: 1em;
+		font-weight: 300;
+		line-height: 1.6em;
+	}
+
+	h3 {
+		font-weight: 500;
+		font-size: 1.1em;
+	}
+
+	p,
+	h3,
+	img {
+		margin-bottom: 1em;
+	}
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+.button {
+	margin: 0 auto;
+}
+
+.button.another-device {
+	display: none;
+}
+
+.device.iphone {
+	margin-top: 1em auto;
+}
+
+.device.ipad,
+.device.browser {
+	margin: 0 auto;
+	display: none;
+	float: none;
+}
+
+.device.ipad {
+	margin-bottom: 1em;
+}
+
+.device.browser {
+	clear: both;
+	background-color: $volunteer-blue-color;
+}
+
+.breadcrumbs {
+	margin-bottom: 1em;
+}
+
+@media screen and (min-width: 30em) {
+
+	article {
+		p,
+		h3 {
+			padding: 0 7.5%;
+		}
+
+		> header,
+		> .work-example {
+			padding-left: 7.5%;
+			padding-right: 7.5%;
+		}
+
+		> .content {
+			text-align: justify;
+		}
+	}
+
+	.devices {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.button.another-device {
+		display: block;
+	}
+
+	.button.more-devices {
+		display: none;
+	}
+
+	.device.iphone,
+	.device.ipad {
+		float: left;
+	}
+
+	.device.iphone {
+		margin: 0 5%;
+		margin-top: 3.9em;
+	}
+
+	.device.ipad {
+		display: block;
+	}
+
+}
+
+@media screen and (min-width: 32.5em) {
+	.device.iphone {
+		margin-left: 8.5%;
+		margin-right: 8.5%;
+	}
+}
+
+@media screen and (min-width: 36.25em) {
+	.device.iphone {
+		margin-left: 12%;
+		margin-right: 12%;
+	}
+}
+
+@media screen and (min-width: 39.6875em) {
+	.devices {
+		width: 100%;
+	}
+
+	.device.iphone,
+	.device.ipad {
+		margin-right: 2.5%;
+	}
+
+	.device.iphone {
+		margin-top: 5.9em;
+		margin-left: 0;
+	}
+
+	.device.ipad {
+		margin-top: 2em;
+	}
+
+	.device.browser {
+		clear: none;
+		display: block;
+		float: left;
+	}
+
+	.button,
+	.button.another-device {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 42.1875em) {
+	.devices {
+		margin: 0 auto;
+		width: 95%;
+	}
+}
+
+@media screen and (min-width: 45em) {
+	.devices {
+		width: 88%;
+	}
+}
+
+@media screen and (min-width: 46.5625em) {
+	.devices {
+		width: 85%;
+	}
+}
+
+@media screen and (min-width: 49.6875em) {
+	.devices {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 51.25em) {
+	.device.iphone {
+		margin-top: 4.8em;
+	}
+	.device.ipad {
+		margin-top: 1.5em;
+	}
+}
+
+@media screen and (min-width: 52.8125em) {
+	.devices {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 56.25em) {
+	article {
+		p,
+		h3 {
+			padding: 0;
+		}
+
+		.work-example {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.devices {
+		width: 30.8em;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 79.375em) { // 1270px
+	// super experimenting here. I just want a layout that's not your traditional layout you know?
+	article {
+
+		position: relative;
+
+		&:before {
+			content: "01";
+			display: block;
+			position: absolute;
+			color: $volunteer-blue-color;
+			right: 13%;
+			font-family: $font-family-nimbus;
+			font-weight: 900;
+			line-height: 0.8em;
+			font-size: 2.9em;
+			letter-spacing: -0.075em;
+			white-space: nowrap;
+		}
+
+		> header {
+			float: right;
+			width: 40%;
+			padding-bottom: 1em;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+			margin-top: 12.33em;
+			position: relative;
+
+			$color-a: rgba(58, 96, 218, 0.7);
+			$color-b: rgba(58, 96, 218, 0.7);
+			$background-image: 'https://pbs.twimg.com/media/B-ZefvDCMAAby1_.jpg:large';
+
+			background: linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -webkit-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -moz-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+
+			background-position: 50% 43%;
+		}
+
+		> header h2 {
+			color: #fdfdfd;
+			padding-top: 0.5em;
+		}
+
+		> .work-example {
+			float: left;
+			width: 48%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+
+			padding-top: 1.5em;
+			padding-bottom: 1em;
+
+			margin-left: 2.5%;
+			margin-bottom: 2em;
+		}
+
+		> .content {
+			// margin-top: 2em;
+			// float: right;
+			// padding-right: 2.5%;
+			clear: left;
+		}
+	}
+}
+
+@media screen and (min-width: 82.5em) {
+	article:before {
+		right: 14%;
+	}
+}
+
+@media screen and (min-width: 84.375em) {
+	main {
+		max-width: 75em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

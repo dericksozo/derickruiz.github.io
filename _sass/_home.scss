@@ -1,0 +1,340 @@
+section.intro {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+nav {
+	border-bottom: 5px solid #F4F4F4;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+// styles specific to the home page.
+div.what-i-do h4,
+div.latest-blog-posts h4 {
+	font-size: 1.1em;
+	line-height: 2.2em;
+	font-weight: 600;
+	font-family: $font-family-nimbus;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+section.work {
+
+	padding-bottom: 1em;
+
+	.work-item {
+		position: relative;
+		margin-bottom: 0.5em;
+	}
+}
+
+div.what-i-do {
+	p.description {
+		font-weight: 300;
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+}
+
+/* Blog posts section */
+div.latest-blog-posts {
+
+	border-bottom: 5px solid $background-color-darker;
+	padding-bottom: 1em;
+
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+
+	li.blog-post {
+		margin-bottom: 0.3em;
+	}
+
+	> span.or {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $font-family-atlas;
+		font-size: 0.85em;
+		color: rgb(168, 168, 168); // make this a variable
+
+		margin-top: 1em;
+		// margin-bottom: 0.5em;
+	}
+
+	li.blog-post > time,
+	li.blog-post > a,
+	> a {
+		font-family: $font-family-atlas;
+		font-weight: normal;
+		text-align: left;
+		font-size: 1em;
+		line-height: 1.6em;
+	}
+
+	li.blog-post > time {
+		color: rgb(168, 168, 168); // make this a variable
+	}
+
+	> a { // view more link
+		display: inline-block;
+	}
+}
+
+.device.ipad {
+	display: none;
+}
+
+.device.macbook {
+	display: none;
+}
+
+.device.browser {
+	display: none;
+}
+
+.button {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	div.latest-blog-posts {
+		border-bottom: none;
+		border-bottom: 0;
+	}
+
+	.work-item {
+
+		&:before {
+			display: block;
+			float: right;
+
+			font-family: $font-family-nimbus;
+			font-weight: 600;
+			font-size: 2.2em;
+			letter-spacing: -3px;
+		}
+
+		// TODO: It's okay for now, but should probably update this to a class name.
+		h3 {
+			border-bottom: 1px solid $header-text-color;
+		}
+
+		.devices {
+			float: left;
+			width: 30%;
+		}
+
+		.device {
+			margin: 1em auto;
+			margin-bottom: 0;
+		}
+
+		p.description {
+			float: left;
+			width: 65%;
+			margin-left: 5%;
+			margin-top: 1em;
+		}
+
+		.button {
+			float: left;
+			margin-left: 5%;
+		}
+	}
+
+	.work-item:first-child {
+
+		h3 {
+			border-bottom: 5px solid $header-text-color;
+		}
+
+		&:before { // the number
+			content: "01";
+		}
+
+	}
+
+	.work-item:nth-child(2) {
+
+		&:before {
+			content: "02";
+		}
+
+	}
+
+	.work-item:last-child {
+		&:before {
+			content: "03";
+		}
+	}
+}
+
+@media screen and (min-width: 38.75em) {
+	a.button {
+		padding-top: 0.8em;
+	}
+}
+
+@media screen and (min-width: 43.75em) { // try and switch out these pixel media queries to ems.
+
+	.work-item {
+
+		.devices {
+			width: 40%;
+		}
+
+		.device.iphone {
+			display: block;
+			float: left;
+
+			border: 4px solid $background-color;
+
+			margin-top: 4.55em;
+		}
+
+		.device.ipad {
+			display: block;
+			float: left;
+
+			margin-left: -4.0em;
+		}
+
+		.devices.single-device .device.iphone {
+			float: none;
+			border: none;
+			margin: 1em auto;
+			margin-bottom: 0;
+		}
+
+		p.description {
+			width: 52%;
+			margin-left: 5%;
+		}
+	}
+
+}
+
+@media screen and (min-width: 48.4375em) { // time for a readability bump.
+	.work-item {
+
+		.devices {
+			width: 37%;
+		}
+
+		.device.ipad {
+			margin-top: 1.36em; // changed the font size, so now gotta bump the margin up as well.
+			border: 4px solid $background-color;
+		}
+
+		p.description {
+			width: 58%;
+			margin-left: 5%;
+		}
+
+	}
+}
+
+// 926px
+@media screen and (min-width: 57.875em) {
+	section.intro {
+
+		div.latest-blog-posts {
+			width: 60%;
+			float: right;
+
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		div.what-i-do {
+			width: 60%;
+			float: right;
+			// margin-top: 0.5em;
+		}
+
+		/* p.description {
+			width: 60%;
+			float: right;
+
+			margin-top: 0.5em;
+		} */
+	}
+}
+
+//992px
+@media screen and (min-width: 62em) {
+
+	section.intro {
+
+		div.latest-blog-posts {
+			width: 45%;
+			float: left;
+
+			margin-top: 0;
+			margin-bottom: 0.5em;
+		}
+
+		div.what-i-do {
+			width: 50%;
+			float: right;
+
+			margin-left: 5%;
+			// margin-top: 0.5em;
+		}
+
+		/* p.description {
+			width: 50%;
+			float: right;
+
+			margin-left: 5%;
+			margin-top: 0.5em;
+		} */
+	}
+
+	.work-item {
+
+		.devices {
+			width: 40%;
+		}
+		/* .device.macbook {
+			display: block;
+			float: left;
+			margin-left: -3.5em;
+			margin-top: 3.48em;
+		} */
+
+		.device.iphone {
+			margin-top: 5.7em;
+		}
+
+		.device.ipad {
+			margin-top: 2.37em;
+		}
+
+		.device.browser {
+			display: block;
+			float: left;
+			margin-left: -6.9em;
+		}
+
+		p.description {
+			width: 50%;
+			margin-left: 10%;
+		}
+
+		.button {
+			margin-left: 10%;
+		}
+	}
+}
+
+@media screen and (min-width: 68.75em) { // I have to change up .wrapper here somehow to make it not stretch anymore.
+	.work-item:before {
+		margin-right: 3px;
+	}
+}

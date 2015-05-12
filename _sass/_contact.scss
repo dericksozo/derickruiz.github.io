@@ -1,0 +1,252 @@
+main {
+	padding-bottom: 2em; // want some space at the bottom.
+}
+
+main a.button {
+	text-decoration: none;
+}
+
+header,
+p.description,
+.other-places {
+	display: block;
+	margin: 0 auto;
+	max-width: 43.75em;
+}
+
+h1 {
+	line-height: 1.5em;
+	margin-top: 0.5em;
+}
+
+input[type="text"] {
+	border: 1px solid #CBCBCB;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	width: 100%;
+	border: 2px solid #AE2B19;
+	background-color: #C7311D;
+	color: #fdfdfd;
+	outline: none;
+}
+
+input[type="text"]::-moz-selection {
+	background-color: #55ACEE; // twitter blue color
+	color: #fdfdfd;
+}
+
+input[type="text"]::selection {
+	background-color: #62BBFF; // lighter version of twitter blue because it looks dark on chrome?
+	color: #fdfdfd;
+}
+
+h2,
+h3,
+p,
+article ul li,
+article ol li,
+input[type="text"],
+span.email-separator,
+main a {
+	font-family: $font-family-atlas;
+	font-size: 1em;
+	// line-height: 1.5em;
+	font-weight: 300;
+	line-height: 1.6em;
+	// line-height: 1.5em; 
+	// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
+	// to more closely match ia.net.
+}
+
+span.email-separator {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	color: #a8a8a8;
+	margin-top: 0.5em;
+	max-width: 245px;
+}
+
+h2,
+h3 {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.twitter,
+.email,
+.email-more-options {
+	padding: 1em 0;
+	position: relative;
+	color: #fdfdfd;
+}
+
+.twitter {
+	background-color: #55ACEE; // twitter blue color
+}
+
+.twitter-link {
+	margin-top: 1em;
+}
+
+.email-link {
+	margin-bottom: 1em;
+}
+
+.twitter-link,
+.email-link {
+	display: block;
+	text-decoration: none;
+}
+
+.twitter-link:hover,
+.email-link:hover {
+	top: 0;
+}
+
+.twitter h2,
+.email h2,
+.email-more-options h2 {
+  border-bottom: 4px solid #fdfdfd;
+  margin-bottom: 0.25em;
+  text-decoration: none;
+}
+
+.twitter a,
+.email a {
+	color: #fdfdfd;
+}
+
+.twitter i,
+.email i,
+.email-more-options i {
+	position: absolute;
+	right: 1em;
+	top: 0.25em;
+	font-size: 1.2em;
+	top: 0;
+}
+
+.email,
+.email-more-options {
+	background-color: $glasses-red;
+}
+
+.other-places i {
+	font-size: 1.2em;
+	position: relative;
+}
+
+.email-more-options {
+	display: none;
+}
+
+a.button {
+	padding-top: 0.5em;
+}
+
+@media screen and (min-width: 30em) {
+	.twitter i,
+	.email i {
+		right: 8%;
+	}
+}
+
+@media screen and (min-width: 43.75em) {
+	.twitter-link {
+
+		margin-top: 1em;
+
+		float: left;
+		width: 50%;
+
+		margin-left: 3.5%;
+	}
+
+	.email-link {
+		display: none;
+	}
+
+	.email-more-options {
+		display: block;
+		float: right;
+		width: 50%;
+		margin-top: 1em;
+		margin-right: 7.5%;
+		margin-bottom: 2em;
+	}
+
+	.email-more-options .email-options {
+		padding: 0.5em 0;
+	}
+
+	.email-more-options a {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.email-more-options i {
+		right: 8%;
+	}
+
+	.email-more-options .email-separator {
+		max-width: 100%;
+		width: 100%;
+		color: #fdfdfd;
+		margin-top: 1em;
+	}
+}
+
+@media screen and (min-width: 56.25em) { // layout looks amazing until about 900 px.
+
+	.twitter-link {
+		margin-left: 0;
+	}
+
+	.twitter-link .wrapper {
+		padding: 0 14%;
+	}
+
+	.email-more-options {
+		width: 53%;
+		margin-right: 0;
+	}
+	.email-more-options .wrapper {
+		padding-right: 14%;
+	}
+
+	.twitter-link i,
+	.email-more-options i {
+		right: 14%;
+	}
+}
+
+@media screen and (min-width: 68.75em) {
+
+	.contact-options {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	.twitter-link {
+		margin-left: -2em;
+	}
+
+	.twitter-link .wrapper {
+		padding: 0 2em;
+	}
+
+	.email-more-options {
+		width: 57%;
+	}
+
+	.email-more-options .wrapper {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.twitter-link i,
+	.email-more-options i {
+		right: 2em;
+	}
+}

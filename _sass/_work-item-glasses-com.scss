@@ -1,0 +1,120 @@
+article {
+	> header,
+	> .work-example {
+		background-color: $glasses-red;
+	}
+
+	h1 {
+		// color: $black-color;
+		// border-bottom: 4px solid $black-color;
+	}
+
+	h2 {
+		color: $glasses-red-darkest;
+	}
+}
+
+.button {
+	display: none;
+}
+
+@media screen and (min-width: 30em) {
+	.devices.single-device > .device.iphone {
+		margin: 1em auto;
+		margin-bottom: 0;
+		float: none;
+	}
+}
+
+@media screen and (min-width: 57.5em) { // 1270px
+	// super experimenting here. I just want a layout that's not your traditional layout you know?
+	article {
+
+		position: relative;
+
+		.devices.single-device {
+			width: 100%;
+		}
+
+		.devices.single-device .device.iphone {
+			margin-top: 0;
+		}
+
+		&:before {
+			content: "03";
+			display: block;
+			position: absolute;
+			color: $glasses-red;
+			right: 8%;
+			font-family: $font-family-nimbus;
+			font-weight: 900;
+			line-height: 0.8em;
+			font-size: 2.9em;
+			letter-spacing: -0.065em;
+			white-space: nowrap;
+		}
+
+		> header {
+			float: right;
+			width: 40%;
+			padding-bottom: 1em;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+			margin-top: 6.4em;
+			position: relative;
+
+			$color-a: $glasses-red-with-opacity;
+			$color-b: $glasses-red-with-opacity;
+			$background-image: 'http://eyeglasses.elzais.com/wp-content/uploads/sites/7/2013/07/GUESS-eyewear-2013.jpg';
+
+			background: linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -webkit-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -moz-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+
+			background-position: 35% 43%;
+		}
+
+		> header h2 {
+			color: #fdfdfd;
+			padding-top: 0.5em;
+		}
+
+		> .work-example {
+			float: left;
+			width: 48%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+
+			padding-top: 1.5em;
+			padding-bottom: 1em;
+
+			margin-left: 2.5%;
+			margin-bottom: 2em;
+		}
+
+		> .content {
+			// margin-top: 2em;
+			// float: right;
+			// padding-right: 2.5%;
+			clear: left;
+		}
+	}
+}
+
+@media screen and (min-width: 73.125em) { // 1170px?
+	article:before {
+		right: 10%;
+	}
+}
+
+@media screen and (min-width: 77.8125em) { // 1245px
+	article:before {
+		right: 12%;
+	}
+}
+
+@media screen and (min-width: 83.75em) {
+	article:before {
+		right: 14%;
+	}
+}

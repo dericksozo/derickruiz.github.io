@@ -1,0 +1,65 @@
+article {
+	> header,
+	> .work-example {
+		background-color: $yellow-color;
+	}
+
+	h1 {
+		// color: $black-color;
+		// border-bottom: 4px solid $black-color;
+	}
+
+	h2 {
+		color: $yellow-color-darkest;
+	}
+}
+
+.device.browser {
+	background-color: $yellow-color;
+}
+
+.button {
+	color: #fdfdfd;
+	background-color: $pink-color;
+	border-bottom: 3px solid $pink-color-darker;
+
+	&:hover {
+		background-color: $pink-color-lighter;
+		border-bottom: 3px solid $pink-color;
+	}
+
+	&:active {
+		border-top: 3px solid $pink-color-lighter;
+		border-bottom: none;
+	}
+}
+
+@media screen and (min-width: 79.375em) {
+
+	article {
+
+		&:before {
+			color: $yellow-color;
+			content: "02";
+			letter-spacing: -0.065em;
+		}
+
+		> header {
+			// should probably make this some kind of mixin.
+			$color-a: $yellow-color-with-opacity;
+			$color-b: $yellow-color-with-opacity;
+			$background-image: 'http://derickruiz.com/photography/assets/img/jessica-croyle/DSC_4978-5.jpg';
+
+			background: linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -webkit-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -moz-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+
+			background-position: 50% 23%;
+		}
+
+		h2 {
+			color: $black-color;
+		}
+	}
+
+}

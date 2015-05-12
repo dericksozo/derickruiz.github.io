@@ -1,0 +1,421 @@
+---
+---
+@import 'foundation';
+@import 'variables';
+@import 'utilities';
+@import 'mixins';
+
+@import 'icons';
+@import 'responsive-device';
+
+html {
+	/* Typography related rules */
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=0";
+	-ms-font-feature-settings: "kern" 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	-webkit-appearance: none;
+}
+
+body {
+	font-size: 90%;
+	background-color: $background-color;
+	color: $black-color;
+}
+
+.link {
+	text-decoration: underline;
+}
+
+a {
+	color: $black-color;
+	display: inline;
+}
+
+// TODO: I like this effect, but I don't like how it flickers when the user is too close to the edge of the link.
+// Is there a better way to do it?
+a:hover {
+	position: relative;
+	top: 2px;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	padding: 0 0.5em 0 1em;
+}
+
+section.intro > a {
+	display: inline-block;
+}
+
+section.intro {
+	border-bottom: 5px solid $background-color-darker;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+section.intro header {
+
+	position: relative;
+
+	&:before { // shape on my name.
+		content: " ";
+		display: block;
+
+		width: 105px;
+		height: 105px;
+
+		left: 2.6em;
+
+		position: absolute;
+		z-index: 1; // getting the shape to display below the h1 and h2.
+
+		background-color: $yellow-color;
+	}
+
+	// gotta update this to be more general because the tag might change depending on the page.
+	.name {
+		font-family: $font-family-nimbus;
+		color: $header-text-color;
+		font-weight: 900;
+		line-height: 0.8em;
+		font-size: 2.9em;
+		letter-spacing: -0.04em;
+		white-space: nowrap;
+		-webkit-transition: font-size 0.3s ease;
+
+		// to display above the shape. 
+		position: relative;
+		z-index: 2;
+
+		margin-top: 0.3em;
+		margin-bottom: 0.1em;
+
+		padding-top: 0.1em;
+	}
+
+	.name > span { // display the names right under each other.
+		display: block;
+	}
+
+	// for kerning.
+	.name .trim {
+		margin-left: 0.007em;
+	}
+
+	.name .tighten {
+		margin-left: -0.04em;
+	}
+
+	.name .loosen {
+		margin-left: 0.02em;
+	}
+
+	// used to be an h2 tag, but might change depending on the page so using classes.
+	.name + .title {
+		text-transform: lowercase;
+		line-height: 1.2em;
+
+		// to display above the shape.
+		position: relative;
+		z-index: 2;
+
+		font-size: 1.5em;
+	}
+}
+
+/* Possibly gotta update this be more general because tags might change in the future. */
+.title {
+	font-size: 1.5em;
+	line-height: 2.2em;
+	font-weight: 600;
+	font-family: $font-family-nimbus;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+nav {
+
+	margin-top: 1em;
+
+	li {
+		position: relative;
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+
+	li.active:before {
+		content: " ";
+		position: absolute;
+		background-color: $yellow-color; 
+		height: 5px;
+		width: 100%;
+		bottom: -0.75em; // This is obviously going to have to be changed based on the media query in place.
+	}
+
+	li a {
+		text-transform: lowercase;
+	}	
+}
+
+p.description,
+nav a,
+.breadcrumbs > span > span > span,
+.breadcrumbs span > a,
+footer .social-links .service,
+footer .email > a {
+	font-size: 1em;
+	line-height: 1.6em;
+	font-weight: normal;
+	font-family: $font-family-atlas;
+	text-align: left;
+	font-weight: 300;
+}
+
+p.description b {
+	font-weight: 500;
+}
+
+footer .email > a {
+	font-size: 1.1em;
+}
+
+footer {
+
+	padding-top: 0.5em;
+	margin-bottom: 2em;
+
+	border-top: 5px solid #F4F4F4; // TODO: this should be made into a variable.
+
+	.email {
+		margin-bottom: 0.25em;
+	}
+
+	// TODO: Gonna have to fix this soon. Just make it bold?
+	.email > a {
+		// font-family: $font-family-atlas;
+		// font-size: 1em;
+		line-height: 2.2em;
+		font-weight: 500;
+	}
+
+	.social-links > li {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+
+	.social-links i {
+		font-size: 1.2em;
+	}
+}
+
+/* Button styles */
+.button {
+	background: none;
+	border: none;
+	outline: none;
+	font-family: $font-family-atlas;
+	font-size: 1em;
+	// font-size: 0.85em;
+	padding: 0.5em;
+	min-height: 44px;
+	width: 50%;
+	display: block;
+	font-weight: 300;
+	margin-top: 1em;
+	max-width: 200px;
+}
+
+a.button {
+	text-align: center;
+	padding-top: 1em; // seems to fix the issue of the button text not being aligned in the middle vertically.
+}
+
+.button.button--yellow {
+	background-color: $yellow-color;
+	border-bottom: 3px solid $yellow-color-darker;
+}
+
+.button.button--yellow:hover {
+	background-color: $yellow-color-lighter;
+	border-bottom: 3px solid $yellow-color-darker-lighter;
+}
+
+.button.button--yellow:active {
+	border-top: 3px solid $yellow-color-lighter;
+	border-bottom: none;
+}
+
+.button.button--red {
+	background-color: $red-color;
+}
+
+.button.button--cyan {
+	background-color: $glasses-cyan;
+	border-bottom: 3px solid $glasses-cyan-darker;
+}
+.button.button--cyan:hover {
+	background-color: $glasses-cyan-lighter;
+	border-bottom: 3px solid $glasses-cyan;
+}
+.button.button--cyan:active {
+	border-top: 3px solid $glasses-cyan-lighter;
+	border-bottom: none;
+}
+
+.button.button--blue {
+	background-color: $volunteer-blue-color;
+	border-bottom: 3px solid $volunteer-blue-darkest;
+}
+
+.button.button--pink {
+	background-color: $pink-color;
+	border-bottom: 3px solid $pink-color-darker;
+}
+
+.button.button--pink:hover {
+	background-color: $pink-color-lighter;
+	border-bottom: 3px solid $pink-color;
+}
+
+.button.button--pink:active {
+	border-top: 3px solid $pink-color-lighter;
+	border-bottom: none;
+}
+
+/* Chevron */
+.chevron {
+	display: inline-block; // this should be on a span tag or i tag which are already display: inline;
+	position: relative;
+}
+
+.chevron:before,
+.chevron:after {
+	content: " ";
+	display: block;
+	width: 1px;
+	height: 7px;
+
+	background-color: rgb(0, 0, 0); // turn this into a variable?
+}
+
+.chevron:before {
+    @include rotate(45);
+}
+
+.chevron:after {
+	@include rotate(137);
+    margin-top: -3px;
+}
+
+.chevron.chevron--direction-right {
+	-webkit-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+
+	.chevron {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	> span:last-child > span > span { // the last element.
+		// TODO: note that the same color appears in home.scss
+		color: rgb(168, 168, 168); // make this a variable
+	}
+}
+
+// General media queries that should apply to every page for consistency.
+@media screen and (min-width: 30em) {
+	.wrapper {
+		padding: 0 7.5%;
+	}
+}
+
+@media screen and (min-width: 48.4375em) { // time for a readability bump.
+	body {
+		font-size: 118%;
+	}
+
+	header:before {
+		width: 130px;
+		height: 130px;
+	}
+}
+// 1100px
+@media screen and (min-width: 68.75em) { // I have to change up .wrapper here somehow to make it not stretch anymore.
+	.wrapper {
+		padding: 0;
+		margin: 0 auto;
+		max-width: 960px;
+	}
+}
+
+// Specific styles for pages
+.home-page {
+	@import 'home';
+}
+
+.articles-page {
+	@import 'articles';
+}
+
+.work-page {
+	@import 'work';
+}
+
+.blog-post-page {
+	@import 'blog-post';
+}
+
+.work-item-page {
+	@import 'work-item';
+
+	&.responsive-photography { // a different theme.
+		@import 'work-item-responsive-photography';
+	}
+
+	&.glasses {
+		@import 'work-item-glasses-com';
+	}
+}
+
+.contact-page {
+	@import 'contact';
+}
+
+.about-page {
+	@import 'about';
+}
+
+@media screen and (min-width: 38.75em) {
+	body {
+		font-size: 100%;
+	}
+
+	section.intro header:before {
+		width: 115px;
+		height: 115px;
+	}
+}
+
+@media screen and (min-width: 51.25em) {
+	section.intro header:before {
+		width: 125px;
+		height: 125px;
+	}
+
+	body {
+		font-size: 110%;
+	}	
+}
