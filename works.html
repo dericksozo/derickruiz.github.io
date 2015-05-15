@@ -1,6 +1,6 @@
 ---
 regenerate: true
-description: >
+meta_description: >
   This is a temporary description for the work page.
 permalink: /works
 title: Works
@@ -14,7 +14,7 @@ title: Works
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="{{page.description}}">
+        <meta name="Description" content="{{page.meta_description}}">
         <!-- <link rel="canonical" href=""> -->
         <meta http-equiv="cleartype" content="on">
 
@@ -45,6 +45,16 @@ title: Works
                     	{% for work_item in site.work reversed %}
                     	{% assign slug = work_item.url | split: "/" | last %}
                     	<!-- I need a new way to generate that slug now. -->
+
+                        {% case slug %}
+                        {% when "volunteer-odyssey" %}
+                            {% assign button_color = "yellow" %}
+                        {% when "responsive-photography" %}
+                            {% assign button_color = "pink" %}
+                        {% when "glasses" %}
+                            {% assign button_color = "cyan" %}
+                        {% endcase %}
+
 	                    	<li class='work-item clearfix {{slug}}' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 	                    		<div class='wrapper'>
 		                    		<div class='content'>
@@ -62,7 +72,7 @@ title: Works
 		                    			<p class='description hyphenate' itemprop="about">
 		                    				{{work_item.description}}
 		                    			</p>
-		                    			<button class='button button--yellow read-more-button'>Read more</button>
+		                    			<a href="{{work_item.url}}" class='button button--{{button_color}} read-more-button'>Read more</a>
 		                    		</div>
 		                    		{% if work_item.devices %}
 		                    			<div class='work-example'>
@@ -71,7 +81,7 @@ title: Works
 		                    				{% include {{device_include_url}} %}
 		                    			</div><!-- work-example -->
 		                    		{% endif %}
-		                    		<button class='button button--yellow'>See more</button>
+		                    		<a href="{{work_item.url}}" class='button button--{{button_color}}'>See more</a>
 		                    	</div><!-- .wrapper -->
 	                    	</li>
                     	{% endfor %}

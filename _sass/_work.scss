@@ -123,7 +123,7 @@ li.work-item.responsive-photography {
 	}
 }
 
-li.work-item.glasses-com {
+li.work-item.glasses {
 
 	// background-color: #FF4026; // should probably me made into a variable named glasses-com-red? 
 	background-color: $glasses-red;
@@ -170,7 +170,7 @@ li.work-item.glasses-com {
 			margin: 0.5em 0;
 		}
 
-		button {
+		.button {
 			display: none;
 		}
 

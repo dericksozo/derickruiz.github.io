@@ -155,7 +155,7 @@ nav {
 		background-color: $yellow-color; 
 		height: 5px;
 		width: 100%;
-		bottom: -0.75em; // This is obviously going to have to be changed based on the media query in place.
+		bottom: -0.9em; // This is obviously going to have to be changed based on the media query in place.
 	}
 
 	li a {
@@ -399,6 +399,17 @@ a.button {
 }
 
 @media screen and (min-width: 38.75em) {
+
+	a.button {
+		padding-top: 0.8em;
+	}
+
+	nav {
+		li.active:before {
+			bottom: -0.8em;
+		}
+	}
+
 	body {
 		font-size: 100%;
 	}
@@ -410,6 +421,16 @@ a.button {
 }
 
 @media screen and (min-width: 51.25em) {
+
+	a.button {
+		padding-top: 0.7em;
+	}
+
+	nav {
+		li.active:before {
+			bottom: -0.75em;
+		}
+	}
 	section.intro header:before {
 		width: 125px;
 		height: 125px;
