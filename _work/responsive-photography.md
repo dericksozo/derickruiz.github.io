@@ -1,6 +1,5 @@
 ---
 title: Responsive Photography
-layout: work-item
 role: [Design, HTML, CSS, Javascript]
 devices: true
 short_description: >

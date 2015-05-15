@@ -1,0 +1,105 @@
+---
+title: Contact
+regenerate: true
+---
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>{{page.title}} - {{site.name}}</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <meta name="Description" content="">
+        <link rel="canonical" href="">
+        <meta http-equiv="cleartype" content="on">
+
+        {% include typekit-js.html %}
+        {% include styles.css.html %}
+
+    </head>
+    <body class='contact-page' itemscope="itemscope" itemprop="http://schema.org/ContactPage">
+        <div class='wrapper'>
+
+        	{% include intro-h1.html %}
+        	
+        </div><!-- .wrapper -->
+
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage">
+            	<div class='wrapper'>
+
+            		{% include first-level-breadcrumbs.html %}
+
+	                <header>
+            			<h1 class='title hyphenate'>{{page.title}}</h1>
+            		</header>
+
+            		<p class='description hyphenate'>If you want a quick reply tweet me. If you need more than 140 characters you can always send an email.</p>
+            	</div>
+
+            	<div class='contact-options clearfix'>
+	            	<a class='twitter-link' href="http://twitter.com/{{site.social_services.twitter}}">
+		            	<div class='twitter'>
+		            		<div class='wrapper'>
+		            			<h2>Twitter</h2>
+		            			<i class='icon-twitter'></i>
+		            			<span class='link'>{{site.social_services.twitter}}</span>
+		            		</div>
+		            	</div>
+	            	</a>
+
+	            	<a class='email-link' href="mailto:{{site.email}}">
+		            	<div class='email'>
+		            		<div class='wrapper'>
+				    			<h2>Email</h2>
+				    			<i class='icon-email'></i>
+				    			<span class='email-span link'>{{site.email}}</span>
+			    			</div>
+		            	</div>
+	            	</a>
+
+	            	<div class='email-more-options'>
+	            		<div class='wrapper'>
+	            			<h2>Email</h2>
+			    			<i class='icon-email'></i>
+			    			<div class='email-options'>
+				    			<input type='text' value='{{site.email}}'>
+				    			<span class='email-separator'>or</span>
+				    			<a class='button button--yellow' itemprop="significantLink" href='mailto:{{site.email}}'>Your native email app</a>
+			    			</div>
+	            		</div>
+	            	</div>
+	            </div><!-- .contact-options -->
+
+	            <div class='wrapper'>
+	            	<div class='other-places'>
+						<h3>Other places on the internet</h3>
+						<ul>
+							<li><a href="https://github.com/{{site.social_services.github}}"><i class='icon-github'></i> <span class='link'>@{{site.social_services.github}} on Github</span></a></li>
+							<li><a href="http://codepen.io/{{site.social_services.codepen}}"><i class='icon-codepen'></i> <span class='link'>@{{site.social_services.codepen}} on Codepen</span></a></li>
+							<li><a href="http://instagram.com/{{site.social_services.instagram}}"><i class='icon-instagram'></i> <span class='link'>@{{site.social_services.instagram}} on Instagram</span></a></li>
+						</ul>
+	            	</div>
+            	</div>
+
+            </main>
+
+        {% include typography-js.html %}
+
+        <script>
+        (function () {
+			var input = document.querySelector('.email-more-options input');
+			input.setSelectionRange(0, input.value.length);
+			input.focus();
+        }());
+        </script>
+
+    </body>
+</html>

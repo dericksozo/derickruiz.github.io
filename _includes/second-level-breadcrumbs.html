@@ -1,0 +1,30 @@
+<div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <span itemprop="item">
+            <a href="/" class='link' itemprop="url">Home</a>
+        </span>
+        <meta itemprop="position" content="1">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <a href="{{page.parentUrl}}" class='link' itemprop="url">{{page.parentTitle}}</a>
+        </span>
+        <meta itemprop="position" content="2">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <span itemprop="name">{{page.title}}</span>
+        </span>
+        <meta itemprop="position" content="3">
+    </span>	                    
+</div><!-- breadcrumbs -->

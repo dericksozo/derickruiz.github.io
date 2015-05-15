@@ -2,6 +2,9 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-05-12 22:07:13
+hasCode: true
+languages: [javascript]
+regenerate: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -9,13 +12,31 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+<pre data-language="javascript">
+	<code data-language="javascript">							
++function ($) { "use strict";
+
+  /**
+   * The zoom service
+   */
+  function ZoomService () {
+    this._activeZoom            =
+    this._initialScrollPosition =
+    this._initialTouchPosition  =
+    this._touchMoveListener     = null
+
+    this._$document = $(document)
+    this._$window   = $(window)
+    this._$body     = $(document.body)
+  }
+
+  ZoomService.prototype.listen = function () {
+    this._$body.on('click', '[data-action="zoom"]', $.proxy(this._zoom, this))
+  }
+
+  ZoomService.prototype._zoom = function (e) {
+	</code>
+</pre>
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 

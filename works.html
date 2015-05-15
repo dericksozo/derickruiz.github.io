@@ -2,6 +2,8 @@
 regenerate: true
 description: >
   This is a temporary description for the work page.
+permalink: /works
+title: Works
 ---
 <!doctype html>
 <html class="no-js" lang="en">
@@ -22,57 +24,19 @@ description: >
     </head>
     <body class='work-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
-            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-                <a href="#"><!-- link to home page -->
-                    <header itemscope itemtype="http://schema.org/Person">
-                        <h3 class='name' itemprop="name">
-                            <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
-                            </span>
-                            <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                            </span>
-                        </h3>
-                        <h4 class='title' itemprop="jobTitle">Front-end Web Developer</h4>
-                    </header>
-                </a>
-                <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                    <ul>
-                        <li><a class='link' href="#" itemprop="url">About</a></li>
-                        <li><a class='link' href="articles.html" itemprop="url">Articles</a></li>
-                        <li><a class='link' href="work.html" itemprop="url">Work</a></li>
-                        <li><a class='link' href="#" itemprop="url">Contact</a></li>
-                    </ul>
-                </nav>
-            </section>
+
+            {% include intro-h3.html %}
+            
         </div>
             <!-- I removed the itemtype of blog from the main tag. What should go in here now? Nothing? -->
             <main role="main" itemprop="mainContentOfPage">
             	<div class='wrapper'>
-	                <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-	                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-	                        <span itemprop="item">
-	                            <a class='link' itemprop="url">Home</a>
-	                        </span>
-	                        <meta itemprop="position" content="1">
-	                    </span>
-
-	                    <span class='separator chevron chevron--direction-right'></span>
-
-	                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-	                        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-	                        <!-- Yes, for now. -->
-	                        <span itemprop="item">
-	                            <span itemprop="name">Work</span>
-	                        </span>
-	                        <meta itemprop="position" content="2">
-	                    </span>
-	                </div><!-- breadcrumbs -->
+                    {% include first-level-breadcrumbs.html %} 
             	</div>
 
                 <section class='work'>
                 	<div class='wrapper'>
-                    	<h1 class='title'>Work</h1>
+                    	<h1 class='title'>{{page.title}}</h1>
                     	<!-- This needs to be replaced with a front-matter variable. -->
                     	<h2 class='subtitle hyphenate'>A collection of projects I have worked on.</h2>
                 	</div>

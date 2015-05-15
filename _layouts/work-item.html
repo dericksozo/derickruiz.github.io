@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Somehow put the title inside of here -->
-        <title>Volunteer Odyssey - Work - {{ site.name }}</title><!-- The structure of the title could be better? -->
+        <title>{{page.title}} - Work - {{ site.name }}</title><!-- The structure of the title could be better? -->
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
         <meta name="Description" content="">
 
         <!-- The current url should go in here -->
-        <link rel="canonical" href="http://derickruiz.com/work/volunteer-odyssey">
+        <link rel="canonical" href="">
         <meta http-equiv="cleartype" content="on">
 
         {% include typekit-js.html %}
@@ -32,59 +32,13 @@
         <body class='work-item-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
     {% endif %}
         <div class='wrapper'>
-            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-                <a href="#"><!-- link to home page -->
-                    <header itemscope itemtype="http://schema.org/Person">
-                        <h3 class='name' itemprop="name">
-                            <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
-                            </span>
-                            <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                            </span>
-                        </h3>
-                        <h4 class='title' itemprop="jobTitle">Front-end Web Developer</h4>
-                    </header>
-                </a>
-
-                {% include navigation.html %}
-
-            </section>
+            {% include intro-h3.html %}
         </div>
 
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
                 <div class='wrapper'>
-                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                            <span itemprop="item">
-                                <a class='link' itemprop="url">Home</a>
-                            </span>
-                            <meta itemprop="position" content="1">
-                        </span>
-
-                        <span class='separator chevron chevron--direction-right'></span>
-
-                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                            <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-                            <!-- Yes, for now. -->
-                            <span itemprop="item">
-                                <a class='link' itemprop="url">Work</a>
-                            </span>
-                            <meta itemprop="position" content="2">
-                        </span>
-
-                        <span class='separator chevron chevron--direction-right'></span>
-
-                        <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                            <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-                            <!-- Yes, for now. -->
-                            <span itemprop="item">
-                                <span itemprop="name">Volunteer Odyssey</span>
-                            </span>
-                            <meta itemprop="position" content="3">
-                        </span>	                    
-                    </div><!-- breadcrumbs -->
+                    {% include second-level-breadcrumbs.html %}
                 </div>
 
             	<!-- Should this be an article tag or a section tag? -->

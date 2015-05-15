@@ -2,6 +2,8 @@
 layout: post
 title:  "Hello World"
 date:   2015-05-11
+hasCode: false
+regenerate: true
 ---
 
 # Hello world

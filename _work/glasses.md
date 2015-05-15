@@ -1,6 +1,5 @@
 ---
 title: Glasses.com
-layout: work-item
 role: [HTML, CSS, Javascript]
 devices: true
 short_description: >

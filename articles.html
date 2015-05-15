@@ -1,5 +1,6 @@
 ---
 regenerate: true
+title: Articles
 ---
 <!doctype html>
 <html class="no-js" lang="en">
@@ -20,48 +21,12 @@ regenerate: true
     </head>
     <body class='articles-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
-            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-                <a href="#"><!-- link to home page -->
-                    <header itemscope itemtype="http://schema.org/Person">
-                        <h3 class='name' itemprop="name">
-                            <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
-                            </span>
-                            <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                            </span>
-                        </h3>
-                        <h4 class='title' itemprop="jobTitle">{{site.title}}</h4>
-                    </header>
-                </a>
 
-                {% include navigation.html %}
-
-            </section>
+            {% include intro-h3.html %}
+            
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-                <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                        <span itemprop="item">
-                            <a class='link' itemprop="url">Home</a>
-                        </span>
-                        <!-- <a itemprop="item" href="#">
-                            <span itemprop="name">Home</span>
-                        </a> -->
-                        <meta itemprop="position" content="1">
-                    </span>
-
-                    <span class='separator chevron chevron--direction-right'></span>
-
-                    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-                        <!-- Yes, for now. -->
-                        <span itemprop="item">
-                            <span itemprop="name">Articles</span>
-                        </span>
-                        <meta itemprop="position" content="2">
-                    </span>
-                </div><!-- breadcrumbs -->
+                {% include first-level-breadcrumbs.html %}
 
                 <section class='articles'>
                     <ul class='posts-list'>

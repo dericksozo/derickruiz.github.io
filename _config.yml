@@ -1,16 +1,13 @@
 # Site settings
 
 name: Derick Ruiz
-title: Front-end Developer
+title: Front-End Web Developer
 email: derick.r.ruiz@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Derick Ruiz is a front-end web developer with a focus on responsive
   websites.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://derickruiz.com" # the base hostname & protocol for your site
-twitter_username: iamderickruiz
-github_username: itsderick
-
 social_services:
   twitter: iamderickruiz
   github: itsderick
@@ -27,21 +24,32 @@ collections:
     output: true
     permalink: /work/:path
 
-defaults:
-  - scope:
-      path: ""
-      type: work
-    values:
-      layout: work-item
-
 navigation:
  - title: About
    url: /about
  - title: Articles
    url: /articles
- - title: Work
-   url: /work
+ - title: Works
+   url: /works
  - title: Contact
    url: /contact
 
-gems: [liquid_reading_time]
+gems: ["liquid_reading_time"]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      parentTitle: "Articles"
+      parentUrl: "/articles"
+  -
+    scope:
+      path: ""
+      type: "work"
+    values:
+      layout: "work-item"
+      parentTitle: "Works"
+      parentUrl: "/works"

@@ -1,15 +1,97 @@
 ---
-layout: default
+regenerate: true
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>{{page.title}} - {{site.name}}</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+        <!-- Some custom description in here -->
+        <meta name="Description" content="{{page.description}}">
+        <link rel="canonical" href="{{page.url}}">
+        <meta http-equiv="cleartype" content="on">
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+        {% include typekit-js.html %}
 
-</article>
+        {% include styles.css.html %}
+
+        {% if page.hasCode %}
+        	<link rel="stylesheet" href="/css/code.css">
+        {% endif %}
+
+    </head>
+    <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+        <div class='wrapper'>
+
+            {% include intro-h3.html %}
+
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+            	{% include second-level-breadcrumbs.html %}
+            	
+            	<!-- Should this be an article tag or a section tag? -->
+            	<!-- Look up the schema.org stuff you'll have to put in here -->
+            	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+            		<header>
+            			<!-- <h1 class='hyphenate' itemprop="headline">Building a responsive calendar: The Definitive Guide</h1> -->
+            			<h1 class='hyphenate' itemprop="headline">{{page.title}}</h1>
+            			<time itemprop="datePublished" datetime={{page.date | date: "%Y-%m-%d"}}>
+            				<span class='month-day-year'>{{page.date | date: "%m.%d.%Y"}}</span>
+            			</time>
+            			<span class='separator'>|</span>
+
+            			{% assign read_time = content | reading_time %}
+	                    
+	                    {% if read_time < 10 %}
+	                    	<time class='read-time' itemprop="timeRequired" datetime="{{read_time | prepend: '0'}}M">
+            					<span>{{read_time | prepend: '0'}} minute read</span>
+            				</time>
+            			{% else %}
+            				<time class='read-time' itemprop="timeRequired" datetime="{{read_time}}M">
+            					<span>{{read_time}} minute read</span>
+            				</time>
+	                    {% endif %}
+            			<meta itemprop="wordCount" content="{{ content | count_words }}">
+            		</header>
+            		<div class='hyphenate content' itemprop="articleBody">
+            			{{ content }}
+            		</div>
+            	</article>
+            </main>
+
+            {% include footer.html %}
+
+        </div><!-- .wrapper -->
+
+        {% include typography-js.html %}
+
+        <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->
+
+        {% if page.hasCode %}
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/rainbow.linenumbers/js/rainbow.linenumbers.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	{% for language in page.languages %}
+        		<script src="/js/vendor/language/{{language}}.js"></script>
+        	{% endfor %}
+
+        {% endif %}
+
+        <script>
+        (function () {
+        	Rainbow.color();
+        }());
+        </script>
+
+    </body>
+</html>

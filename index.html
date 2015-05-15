@@ -69,7 +69,7 @@ regenerate: true
                     </ul><!-- .latest-blog-posts -->
                     <span class='or'>or</span>
                     <!-- Can this be adjusted? I don't like the way it's hardcoded, but it works for now. -->
-                    <a href="articles.html" class='link'>View all articles</a>
+                    <a href="/articles" class='link'>View all articles</a>
                 </div><!-- .latest-blog-posts -->
             </section>
             <section class='work'>
@@ -91,18 +91,9 @@ regenerate: true
                     </div>
                 {% endfor %}
             </section>
-            <footer>
-                <div class='email'>
-                    <a class='link' href="#">hello@derickruiz.com</a><!-- Email and other services should be in here -->
-                </div>
-                <ul class='social-links'>
-                    <li>
-                        <a href="#"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
-                    </li>
-                    <li><a href="#"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a></li>
-                    <li><a href="#"><i class='icon-github'></i> <span class='link service'>Github</span></a></li>
-                </ul>
-            </footer>
+
+            {% include footer.html %}
+
         </div>
 
         {% include typography-js.html %}
