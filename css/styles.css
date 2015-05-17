@@ -984,6 +984,8 @@ a.button {
   .home-page .button {
     margin-left: auto;
     margin-right: auto; }
+  .home-page .work-item::before {
+    display: none; }
   @media screen and (min-width: 37.5em) {
     .home-page div.latest-blog-posts {
       border-bottom: none;
