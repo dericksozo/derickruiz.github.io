@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Derick Ruiz - Front-End Web Developer</title>
+        <title>Work - Derick Ruiz</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Derick Ruiz is a front-end web developer with a focus on responsive websites.
+        <meta name="Description" content="This is a temporary description for the work page.
 ">
+        <!-- <link rel="canonical" href=""> -->
         <meta http-equiv="cleartype" content="on">
 
         <!-- Typekit code that loads nimbus sans -->
@@ -21,27 +22,28 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-
         <link rel="stylesheet" href="/css/styles.css">
-    </head>
-    <body class="home-page" itemscope="itemscope" itemprop="http://schema.org/WebPage">
-        <div class='wrapper'>
-            <section class='intro clearfix'>
-                <a href="#"><!-- link to home page -->
-                    <header itemscope itemtype="http://schema.org/Person">
-                        <h1 class='name' itemprop="name">
-                            <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
-                            </span>
-                            <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                            </span>
-                        </h1>
-                        <h2 class='title' itemprop="jobTitle">Front-End Web Developer</h2><!-- Title in here -->
-                    </header>
-                </a>
 
-                <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    </head>
+    <body class='work-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+        <div class='wrapper'>
+
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">
+                    Der<span class='loosen'>i</span>ck
+                </span>
+                <span itemprop="familyName">
+                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                </span>
+            </h3>
+            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
+        </header>
+    </a>
+
+    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
@@ -58,7 +60,7 @@
         
     	    
     	    
-	    	<li class=''>
+	    	<li class='active'>
 	    		<a class='link' href="/works" itemprop="url">Works</a>
 	    	</li>
         
@@ -71,58 +73,73 @@
     </ul>
 </nav>
 
-                <div class='what-i-do'>
-                    <h4>What I do</h4>
-                    <p class='description hyphenate'><!-- Some kind of description about what I do? -->
-                        I focus on the front-end. The HTML, CSS, and Javascript. The what your eyes can see and what your fingers can swipe part of a website. I focus on making it good, responsive, and fast.
+</section>
+            
+        </div>
+            <!-- I removed the itemtype of blog from the main tag. What should go in here now? Nothing? -->
+            <main role="main" itemprop="mainContentOfPage">
+            	<div class='wrapper'>
+                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <span itemprop="item">
+        <a href="/" class='link' itemprop="url">Home</a>
+        </span>
+        <meta itemprop="position" content="1">
+    </span>
 
-                    </p>
-                </div>
-                <div class='latest-blog-posts'>
-                    <h4>Latest articles</h4>
-                    <ul class='posts-list'>
+    <span class='separator chevron chevron--direction-right'></span>
 
-                        
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <span itemprop="item">
+            <span itemprop="name">Works</span>
+        </span>
+        <meta itemprop="position" content="2">
+    </span>
+</div><!-- breadcrumbs --> 
+            	</div>
 
-                            
-                            
+                <section class='work'>
+                	<div class='wrapper'>
+                    	<h1 class='title'>Works</h1>
+                    	<!-- This needs to be replaced with a front-matter variable. -->
+                    	<h2 class='subtitle hyphenate'>A collection of projects I have worked on.</h2>
+                	</div>
+                    <ul class='work-items'>
 
-                            <li class='blog-post' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-                                <time itemprop="datePublished" datetime=2015-05-17>
-                                    
-                                        <span class='month-and-day'>05.17</span>
-                                    
-                                </time>
-                                <a class='link' href="/hello-world" itemprop="headline">Hello World</a>
-                            </li>
-
-                        
-
-                    </ul><!-- .latest-blog-posts -->
-
-                    
-                </div><!-- .latest-blog-posts -->
-            </section>
-            <section class='work'>
-
-                <!--  -->
-                
-                    <div class='work-item work-item-1 clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
-
-                        
-                        <style>
-                            .work-item.work-item-1::before {
-                                content: "01";
-                            }
-                        </style>
-                        
-
-                        <h3 class='title' itemprop="headline">Volunteer Odyssey</h3>
+                    	
+                    	
+                    	<!-- I need a new way to generate that slug now. -->
 
                         
-                            
-                            
-                            <div class='devices clearfix'>
+
+	                    	<li class='work-item clearfix volunteer-odyssey' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    
+		                    			    
+		                    			    	Volunteer
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Odyssey
+			                    				
+		                    				
+		                    			</h2>
+		                    			<span class='role'>Design, HTML, CSS, and Javascript</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				I developed and designed a responsive calendar solution for Volunteer Odyssey during GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities.
+
+		                    			</p>
+		                    			<a href="/work/volunteer-odyssey" class='button button--yellow read-more-button'>Read more</a>
+		                    		</div>
+		                    		
+		                    			<div class='work-example'>
+		                    				
+
+		                    				<div class='devices clearfix'>
 
     <div class='device iphone volunteer-odyssey' itemprop="workExample">
         <div class='camera center-block'></div>
@@ -282,30 +299,45 @@
         </div>
     </div>
 </div><!-- container for the devices -->
-                        
-                        <p class='description hyphenate' itemprop="about">
-                            I developed and designed a responsive calendar solution for Volunteer Odyssey during GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities.
-
-                        </p>
-                        <a class='button button--yellow' href="/work/volunteer-odyssey">View Details</a>
-                    </div>
-                
-                    <div class='work-item work-item-2 clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
-
-                        
-                        <style>
-                            .work-item.work-item-2::before {
-                                content: "02";
-                            }
-                        </style>
-                        
-
-                        <h3 class='title' itemprop="headline">Responsive Photography</h3>
+		                    			</div><!-- work-example -->
+		                    		
+		                    		<a href="/work/volunteer-odyssey" class='button button--yellow'>See more</a>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	
+                    	
+                    	<!-- I need a new way to generate that slug now. -->
 
                         
-                            
-                            
-                             <div class='devices clearfix'>
+
+	                    	<li class='work-item clearfix responsive-photography' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    
+		                    			    
+		                    			    	Responsive
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Photography
+			                    				
+		                    				
+		                    			</h2>
+		                    			<span class='role'>Design, HTML, CSS, and Javascript</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				I created a photo blog where the loaded images are just as responsive as the layout.
+
+		                    			</p>
+		                    			<a href="/work/responsive-photography" class='button button--pink read-more-button'>Read more</a>
+		                    		</div>
+		                    		
+		                    			<div class='work-example'>
+		                    				
+
+		                    				 <div class='devices clearfix'>
     <div class='device iphone responsive-photography' itemprop="workExample">
         <div class='camera center-block'></div>
         <div class='second-camera'></div>
@@ -374,17 +406,18 @@
         </div><!-- .content -->
     </div>
 </div>
-                        
-                        <p class='description hyphenate' itemprop="about">
-                            I created a photo blog where the loaded images are just as responsive as the layout.
+		                    			</div><!-- work-example -->
+		                    		
+		                    		<a href="/work/responsive-photography" class='button button--pink'>See more</a>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	
+                    </ul><!-- .work-items -->
+                </section><!-- .work -->
+            </main>
 
-                        </p>
-                        <a class='button button--yellow' href="/work/responsive-photography">View Details</a>
-                    </div>
-                
-            </section>
-
-            <footer>
+            <div class='wrapper'>
+            	<footer>
     <div class='email'>
         <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
     </div>
@@ -401,12 +434,12 @@
         </li>
     </ul>
 </footer>
+            </div>
 
-        </div>
+        <!-- </div> -->
 
         <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
 <script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
 <script src="/js/typography.js"></script>
-
     </body>
 </html>

@@ -3,12 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Derick Ruiz - Front-End Web Developer</title>
+        <!-- Somehow put the title inside of here -->
+        <title>Volunteer Odyssey - Work - Derick Ruiz</title><!-- The structure of the title could be better? -->
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Derick Ruiz is a front-end web developer with a focus on responsive websites.
-">
+
+        <!-- Some custom description in here -->
+        <!-- Every page should have a custom description no matter if it's a blog, portfolio page, whatever -->
+        <meta name="Description" content="">
+
+        <!-- The current url should go in here -->
+        <link rel="canonical" href="">
         <meta http-equiv="cleartype" content="on">
 
         <!-- Typekit code that loads nimbus sans -->
@@ -21,27 +27,34 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-
         <link rel="stylesheet" href="/css/styles.css">
-    </head>
-    <body class="home-page" itemscope="itemscope" itemprop="http://schema.org/WebPage">
-        <div class='wrapper'>
-            <section class='intro clearfix'>
-                <a href="#"><!-- link to home page -->
-                    <header itemscope itemtype="http://schema.org/Person">
-                        <h1 class='name' itemprop="name">
-                            <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
-                            </span>
-                            <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                            </span>
-                        </h1>
-                        <h2 class='title' itemprop="jobTitle">Front-End Web Developer</h2><!-- Title in here -->
-                    </header>
-                </a>
 
-                <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+        
+
+    </head>
+
+    
+
+    
+        <body class='work-item-page volunteer-odyssey' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+    
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">
+                    Der<span class='loosen'>i</span>ck
+                </span>
+                <span itemprop="familyName">
+                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                </span>
+            </h3>
+            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
+        </header>
+    </a>
+
+    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
@@ -71,56 +84,56 @@
     </ul>
 </nav>
 
-                <div class='what-i-do'>
-                    <h4>What I do</h4>
-                    <p class='description hyphenate'><!-- Some kind of description about what I do? -->
-                        I focus on the front-end. The HTML, CSS, and Javascript. The what your eyes can see and what your fingers can swipe part of a website. I focus on making it good, responsive, and fast.
+</section>
+        </div>
 
-                    </p>
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+                <div class='wrapper'>
+                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <span itemprop="item">
+            <a href="/" class='link' itemprop="url">Home</a>
+        </span>
+        <meta itemprop="position" content="1">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <a href="/works" class='link' itemprop="url">Works</a>
+        </span>
+        <meta itemprop="position" content="2">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <span itemprop="name">Volunteer Odyssey</span>
+        </span>
+        <meta itemprop="position" content="3">
+    </span>	                    
+</div><!-- breadcrumbs -->
                 </div>
-                <div class='latest-blog-posts'>
-                    <h4>Latest articles</h4>
-                    <ul class='posts-list'>
+
+            	<!-- Should this be an article tag or a section tag? -->
+            	<!-- Look up the schema.org stuff you'll have to put in here -->
+            	<article class='clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+            		<header>
+                        <div class='container'>
+                            <h1 class='hyphenate' itemprop="headline">Volunteer Odyssey</h1>
+                            <h2 class='role'>Design, HTML, CSS, and Javascript</h2>
+                        </div>
+            		</header>
+                    <div class='work-example'>
 
                         
-
-                            
-                            
-
-                            <li class='blog-post' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-                                <time itemprop="datePublished" datetime=2015-05-17>
-                                    
-                                        <span class='month-and-day'>05.17</span>
-                                    
-                                </time>
-                                <a class='link' href="/hello-world" itemprop="headline">Hello World</a>
-                            </li>
-
-                        
-
-                    </ul><!-- .latest-blog-posts -->
-
-                    
-                </div><!-- .latest-blog-posts -->
-            </section>
-            <section class='work'>
-
-                <!--  -->
-                
-                    <div class='work-item work-item-1 clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
-
-                        
-                        <style>
-                            .work-item.work-item-1::before {
-                                content: "01";
-                            }
-                        </style>
-                        
-
-                        <h3 class='title' itemprop="headline">Volunteer Odyssey</h3>
-
-                        
-                            
                             
                             <div class='devices clearfix'>
 
@@ -283,108 +296,54 @@
     </div>
 </div><!-- container for the devices -->
                         
-                        <p class='description hyphenate' itemprop="about">
-                            I developed and designed a responsive calendar solution for Volunteer Odyssey during GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities.
 
-                        </p>
-                        <a class='button button--yellow' href="/work/volunteer-odyssey">View Details</a>
-                    </div>
-                
-                    <div class='work-item work-item-2 clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a> 
+                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>                     
+                    </div><!-- .work-example -->
+                    <!-- Is text the proper itemprop in this case since I'm going to have images and possibly videos
+                    in here? -->
+            		<div class='hyphenate content' itemprop="text">
+            			<p><img src="/img/work/volunteer-odyssey/calendar.gif" alt="gif of the calendar" /></p>
 
-                        
-                        <style>
-                            .work-item.work-item-2::before {
-                                content: "02";
-                            }
-                        </style>
-                        
+<p>During GiveCamp Memphis 2015, a weekend-long event where creators donate their time to nonprofit organizations, I helped design and develop a responsive calendar for Volunteer Odyssey. Sarah Petschonek, the director of Volunteer Odyssey, pitched that she needed a new calendar because the one currently in use wasn’t mobile friendly. I jumped on the opportunity to help immediately.</p>
 
-                        <h3 class='title' itemprop="headline">Responsive Photography</h3>
+<p>GiveCamp works by having teams do standup meetings every few hours to discuss the status of the project, and where it’s going next. We all chose which organization we wanted to help, formed teams, and headed for the first standup meeting.</p>
 
-                        
-                            
-                            
-                             <div class='devices clearfix'>
-    <div class='device iphone responsive-photography' itemprop="workExample">
-        <div class='camera center-block'></div>
-        <div class='second-camera'></div>
-        <div class='speaker center-block'></div>
-        <div class='content clearfix'>
-            <div class='header section'>
-                <div class='logo center-block'></div>
-                <div class='spacer center-block'></div>
-                <div class='description center-block'></div>
-            </div>
-            <div class='photos'>
-                <figure class='photo vancouver center-block'></figure>
-                <figure class='photo sarah center-block'></figure>
-                <figure class='photo jessica center-block'></figure>
-                <figure class='photo vancouver center-block'></figure>
-                <figure class='photo sarah center-block'></figure>
-            </div>
-        </div><!-- .content -->
-    </div><!-- .device -->
+<p><img src="/img/work/volunteer-odyssey/givecamp-meeting.jpg" alt="A photo of the first standup meeting at GiveCamp Memphis 2015" /></p>
 
-    <div class='device ipad responsive-photography' itemprop="workExample">
-        <div class='camera center-block'></div>
-        <div class='content clearfix'>
-            <div class='header section'>
-                <div class='logo center-block'></div>
-                <div class='spacer center-block'></div>
-                <div class='description center-block'></div>
-            </div>
-            <div class='photos clearfix'>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo sarah'></figure>
-                <figure class='photo jessica'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo sarah'></figure>
-                <figure class='photo jessica'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo sarah'></figure>
-                <figure class='photo jessica'></figure>
-            </div>
-        </div><!-- .content -->
-    </div>
+<p>A group of Ruby on Rails programmers and I got together and immediately got to work after the meeting finished. I remember a feeling of bond and happiness between all of us. We were working together for a higher purpose. To create a great calendar that could be accessed on any device by volunteers and organizations alike. It felt refreshing.</p>
 
-    <div class='device browser responsive-photography' itemprop="workExample">
-        <div class='menu'></div>
-        <div class='buttons'></div>
-        <div class='content clearfix'>
-            <div class='header section'>
-                <div class='logo center-block'></div>
-                <div class='spacer center-block'></div>
-                <div class='description center-block'></div>
-            </div>
-            <div class='photos clearfix'>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo jessica'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo sarah'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo jessica'></figure>
-                <figure class='photo vancouver'></figure>
-                <figure class='photo sarah'></figure>
-                <figure class='photo jessica'></figure>
-            </div>
-        </div><!-- .content -->
-    </div>
-</div>
-                        
-                        <p class='description hyphenate' itemprop="about">
-                            I created a photo blog where the loaded images are just as responsive as the layout.
+<p><img src="/img/work/volunteer-odyssey/givecamp-team.jpg" alt="A photo of the team and I at GiveCamp Memphis 2015" /></p>
 
-                        </p>
-                        <a class='button button--yellow' href="/work/responsive-photography">View Details</a>
-                    </div>
-                
-            </section>
+<h3 id="the-calendar">The Calendar</h3>
 
-            <footer>
+<p>We forked a repository on Github named <a href="https://github.com/calagator/calagator">calagator</a> that already had most of the calendar functionality implemented but was missing a few important features that Sarah needed.</p>
+
+<ul>
+  <li>Recurring Events</li>
+  <li>The ability for organizations to log in privately through a URL</li>
+  <li>A calendar view</li>
+</ul>
+
+<p>Taking care of the design and implementation of the calendar view was my role.</p>
+
+<h3 id="the-approach">The Approach</h3>
+
+<p>I chose to start with the table view traditionally associated with calendars for desktop and tablet, and then use CSS to break that table view down into a list for mobile devices while still containing all the necessary information. I chose a list for mobile because I thought volunteers checking the calendar on mobile were probably looking for events happening right now or in the very near future. The list view provides just that.</p>
+
+<h3 id="the-code-and-future">The Code and Future</h3>
+
+<p>You can view all the code that went into the project on Github <a href="https://github.com/VolunteerOdyssey/calagator">here</a>. I am actively working on a redesign for the calendar with Sarah. Below is a gif of the redesign’s current status. You can keep up with my efforts on the <code>css-restructure-and-redesign</code> branch <a href="https://github.com/VolunteerOdyssey/calagator/tree/css-restructure-and-redesign">here</a>.</p>
+
+<p><img src="/img/work/volunteer-odyssey/redesign.gif" alt="A gif of the redesign of Volunteer Odyssey's calendar" /></p>
+
+
+            		</div>
+            	</article>
+            </main>
+
+            <div class='wrapper'>
+            	<footer>
     <div class='email'>
         <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
     </div>
@@ -401,12 +360,13 @@
         </li>
     </ul>
 </footer>
-
-        </div>
+            </div>
 
         <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
 <script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
 <script src="/js/typography.js"></script>
-
+        <script src="/js/work-item.js"></script>
+        
+        
     </body>
 </html>

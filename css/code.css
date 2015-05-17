@@ -1,0 +1,126 @@
+/**
+ * Monokai theme
+ *
+ * Adapted from Wimer Hazenberg's TextMate theme of the same name
+ *
+ * @author Wimer Hazenberg
+ * @author Michael Fasani
+ * @author Craig Campbell
+ * @version 1.0.0
+ */
+pre {
+    background: #1A1A1A; /* Experimenting with colors here to better match my theme. */
+    padding: 1em;
+    padding-top: 2.5em;
+    color: #fff;
+    font-size: 1em;
+    overflow: auto;
+    position: relative;
+    margin: 0;
+
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre:before {
+
+    font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    text-transform: capitalize;
+
+    content: attr(data-language);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: #3EBCE0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+code[data-language] {
+    white-space: pre;
+    display: block;
+}
+
+pre, code {
+    font-family: 'Monaco', courier, monospace;
+}
+
+pre .comment {
+    color: #75715E;
+}
+
+pre .constant {
+    color: #AE81FF;
+    color: #E2319B; /* Responsive photography pink */
+}
+
+pre .storage {
+    color: #66D9EF;
+    color: #3A60DA; /* $volunteer-blue */
+}
+
+pre .string, pre .comment.docstring {
+    color: #E6DB74;
+    color: #ffdd00; /* $yellow-color */
+}
+
+pre .support.tag {
+    color: #fff;
+}
+
+pre .keyword {
+    /* @todo some keywords use this light blue, most use the pink */
+    /*color: #66D9EF;*/
+    color: #F92672;
+    color: #FF4026; /* $glasses-red */
+}
+
+pre .selector {
+    color: #F92672;
+    color: #E2319B; /* responsive photography pink */
+}
+
+pre .inherited-class {
+    font-style: italic;
+}
+
+pre .operator, pre .support.tag-name , pre .entity.tag {
+    color: #F92672;
+    color: #FF4026; /* $glasses-red */
+}
+
+pre .entity, pre .support.attribute, pre .entity.attribute {
+    color: #A6E22E;
+    color: #3EBCE0; /* $glasses-cyan */
+}
+
+pre .support, *[data-language="c"] .function.call {
+    color: #66D9EF;
+    color: #3A60DA; /* $volunteer-blue */
+}
+
+*[data-language="html"] .support.operator {
+    color: #fff;
+}
+
+pre .css-property, pre .storage.function {
+    font-style: italic;
+}
+
+pre .variable.global, pre .variable.class, pre .variable.instance {
+    color: #A6E22E;
+}

@@ -1,0 +1,130 @@
+include ../bower_components/ui/jade/typekit
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title SmartUnderline
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    link(href="./css/index.css" rel="stylesheet")
+    link(href="/images/favicon.ico" rel="icon" type="image/x-icon")
+
+    +typekit
+
+    script(src="./js/smart-underline.js")
+    script.
+      SmartUnderline.init({
+        "location": ""
+      })
+
+  body
+    header
+      h1 <a href="https://github.com/EagerIO/SmartUnderline">SmartUnderline</a>
+      h2 Descender-aware underlines for every browser
+
+    .share
+      iframe(class="github" src="//stars.eager.io/github/spin/EagerIO/SmartUnderline?name=%20")
+      iframe(class="twitter" src="//stars.eager.io/twitter/spin/?name=%20&url=https://eager.io/showcase/SmartUnderline&text=Readable%20and%20beautiful%20underlines%20for%20every%20website&via=EagerIO")
+
+    section.about
+      h3 About
+
+      p.indented
+        | SmartUnderline is an open-source JavaScript library which uses clever
+        | tricks to draw underlines in a more beautiful and readable way.
+        | It can be downloaded on <a href="https://github.com/EagerIO/SmartUnderline">GitHub</a>
+        | or installed for free on the <a href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=lp">Eager App Store</a>.
+
+      p.indented
+        | SmartUnderline works by searching your page for links which have a CSS underline
+        | applied with text-decoration, and replaces the text-decoration with a smarter line
+        | drawn in such a way that it gets cleared by the descenders—glyphs such as “g”,
+        | “j”, and others—creating more readable and beautiful links.
+
+    section.install
+      p
+        | Install <a href="https://eager.io/app/eA9ULux0UOJP/install">SmartUnderline</a> on your website for free, with <a href="https://eager.io/app">Eager</a>.
+
+      //- p
+      //-   a(href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=lp" target="_blank" data-eager-button)
+      //-     img(src="https://install.eager.io/button.png" alt="Install with Eager" height="48" width="180" style="display: block; margin: 0 auto")
+      //-     script(src="https://install.eager.io/embed.js")
+
+      p.
+        <a href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=lp" target="_blank" data-eager-button>
+          <img src="https://install.eager.io/button.png" alt="Install with Eager" height="48" width="180" style="display: block; margin: 0 auto">
+          <script src="https://install.eager.io/embed.js"></script>
+        </a>
+
+    section.diagram
+      iframe(src="./diagram#three-dee")
+
+    section.before-and-after
+      h3 Examples
+
+      p.example-header
+        | Some before-and-after examples.
+
+      style.
+        html body section.before-and-after p.example a.no-smart-underline {
+          text-decoration: underline !important;
+          background: none !important;
+          text-shadow: none !important;
+        }
+
+      p.example.before-and-after
+        span.before
+          a.no-smart-underline(href)
+            | Intriguing, eh?
+
+        span.after
+          a(href)
+            | Intriguing, eh?
+
+      p.example.before-and-after.rtl
+        span.before
+          a(href)
+            | متشرف بمعرفتك
+
+        span.after
+          a.no-smart-underline(href)
+            | متشرف بمعرفتك
+
+      p.example.before-and-after
+        span.before
+          a.no-smart-underline(href)
+            | Illegal styles
+
+        span.after
+          a(href)
+            | Illegal styles
+
+      p.example-header
+        | And one more for some fun. :)
+
+      p.example
+        a(href)
+          | 50 ways of joyfully piquing intrigue
+
+    section.limitations
+      h3 Notes
+
+      p.indented
+        | While SmartUnderline works great on blogs and in other controlled-text enironments,
+        | there are a few things you should be aware of when considering using SmartUnderline
+        | on your website.
+
+      ul
+        li
+          | It requires that the text be on top of a solid background color.
+        li
+          | It makes an assumption about selection color, which is OS- and browser-dependent.
+        li
+          | Each smart-underlined link has 12 text-shadows drawn underneath it, which could potentially have performance penalties on mobile or older devices.
+
+      p
+        | Read more about <a href="https://eager.io/blog/smarter-link-underlines/">SmartUnderline on the Eager blog →</a>
+
+    footer
+      p
+        | Built by <a class="eager" href="https://eager.io">Eager</a>
