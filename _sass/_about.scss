@@ -128,4 +128,14 @@ article {
 		list-style-position: outside;
 	}
 
+	strong {
+		font-weight: 500;
+	}
+
+	.accepting-work:before {
+		width: 40px;
+		height: 40px;
+		border-radius: 15px;
+		background-color: green;
+	}
 }

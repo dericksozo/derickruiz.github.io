@@ -22,6 +22,10 @@
         {% include typekit-js.html %}
         {% include styles.css.html %}
 
+        {% if page.hasCode %}
+            <link rel="stylesheet" href="/css/code.css">
+        {% endif %}
+
     </head>
 
     {% assign slug = page.url | split: "/" | last %}
@@ -74,6 +78,21 @@
 
         {% include typography-js.html %}
         <script src="/js/work-item.js"></script>
+        
+        {% if page.hasCode %}
+            <script src="/js/vendor/rainbow.js"></script>
+            <script src="/js/vendor/language/generic.js"></script>
 
+            {% for language in page.languages %}
+                <script src="/js/vendor/language/{{language}}.js"></script>
+            {% endfor %}
+
+            <script>
+            (function () {
+                Rainbow.color();
+            }());
+            </script>
+
+        {% endif %}
     </body>
 </html>

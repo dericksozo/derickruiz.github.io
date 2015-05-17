@@ -152,25 +152,7 @@ div.latest-blog-posts {
 		h3 {
 			border-bottom: 5px solid $header-text-color;
 		}
-
-		&:before { // the number
-			content: "01";
-		}
-
-	}
-
-	.work-item:nth-child(2) {
-
-		&:before {
-			content: "02";
-		}
-
-	}
-
-	.work-item:last-child {
-		&:before {
-			content: "03";
-		}
+		
 	}
 }
 

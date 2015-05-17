@@ -77,7 +77,9 @@ article {
 	}
 
 	p,
-	h3 {
+	h3,
+	ul li,
+	ol li {
 		font-family: $font-family-atlas;
 		font-size: 1em;
 		font-weight: 300;
@@ -94,11 +96,46 @@ article {
 	img {
 		margin-bottom: 1em;
 	}
+
+	ul,
+	ol {
+		padding-bottom: 1em;
+	}
+
+	ul {
+		padding-left: 7.5%;
+		list-style-type: square;
+	}
+
+	ol {
+		padding-left: 4em;
+		list-style-type: decimal-leading-zero;
+	}
+
+	ul li,
+	ol li {
+		display: list-item;
+		list-style-position: outside;
+	}
+
+	strong {
+		font-weight: 500;
+	}
 }
 
 img {
 	display: block;
 	margin: 0 auto;
+}
+
+pre {
+	margin: 0 auto;
+	margin-bottom: 1em;
+	display: block;
+}
+
+pre > code {
+	font-size: 0.75em; // 12px for the code at smaller screens like iPhone 4.
 }
 
 .button {
@@ -133,6 +170,12 @@ img {
 	margin-bottom: 1em;
 }
 
+@media screen and (min-width: 20.125em) { // 322px
+	pre > code {
+		font-size: 1em;
+	}
+}
+
 @media screen and (min-width: 30em) {
 
 	article {
@@ -149,6 +192,10 @@ img {
 
 		> .content {
 			text-align: justify;
+		}
+
+		ul {
+			padding-right: 7.5%;
 		}
 	}
 
@@ -226,6 +273,12 @@ img {
 	}
 }
 
+@media screen and (min-width: 38.75em) {
+	pre {
+		font-size: 16px; // should be the max size for the code.
+	}
+}
+
 @media screen and (min-width: 42.1875em) {
 	.devices {
 		margin: 0 auto;
@@ -274,6 +327,11 @@ img {
 		}
 
 		.work-example {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		ul {
 			padding-left: 0;
 			padding-right: 0;
 		}
