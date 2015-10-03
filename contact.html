@@ -23,6 +23,8 @@ regenerate: true
         {% include typekit-js.html %}
         {% include styles.css.html %}
 
+        {% include analytics.js.html %}
+
     </head>
     <body class='contact-page' itemscope="itemscope" itemprop="http://schema.org/ContactPage">
         <div class='wrapper'>
@@ -70,7 +72,7 @@ regenerate: true
 	            			<h2>Email</h2>
 			    			<i class='icon-email'></i>
 			    			<div class='email-options'>
-				    			<input type='text' value='{{site.email}}'>
+				    			<input type='text' readonly value='{{site.email}}'>
 				    			<span class='email-separator'>or</span>
 				    			<a class='button button--yellow' itemprop="significantLink" href='mailto:{{site.email}}'>Your native email app</a>
 			    			</div>

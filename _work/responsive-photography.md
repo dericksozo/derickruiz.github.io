@@ -50,8 +50,10 @@ The images were automatically generated using `grunt` and the `grunt-responsive-
 
 ### The code
 
-Checkout the Github repository [here](https://github.com/itsderick/itsderick.github.io/tree/master/photography) for all of the HTML, CSS, and Javascript that went into the project.
+View the original website [here][original-website], and checkout the Github repository [here][github-repository] for all of the HTML, CSS, and Javascript that went into the project.
 
 [site]: /img/work/responsive-photography/site.gif
 [images]: /img/work/responsive-photography/images.gif
 [in-japan-with-camera]: /img/work/responsive-photography/in-japan-with-camera.jpg
+[github-repository]: https://github.com/itsderick/photography/tree/gh-pages
+[original-website]: http://derickruiz.com/photography/

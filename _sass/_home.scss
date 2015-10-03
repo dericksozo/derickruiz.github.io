@@ -100,6 +100,10 @@ div.latest-blog-posts {
 	margin-right: auto;
 }
 
+.work-item::before {
+	display: none;
+}
+
 @media screen and (min-width: 37.5em) {
 
 	div.latest-blog-posts {
@@ -152,7 +156,7 @@ div.latest-blog-posts {
 		h3 {
 			border-bottom: 5px solid $header-text-color;
 		}
-		
+
 	}
 }
 

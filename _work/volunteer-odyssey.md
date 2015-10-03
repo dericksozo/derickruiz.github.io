@@ -35,7 +35,7 @@ I chose to start with the table view traditionally associated with calendars for
 
 ### The Code and Future
 
-You can view all the code that went into the project on Github [here](https://github.com/VolunteerOdyssey/calagator). I am actively working on a redesign for the calendar with Sarah. Below is a gif of the redesign's current status. You can keep up with my efforts on the `css-restructure-and-redesign` branch [here](https://github.com/VolunteerOdyssey/calagator/tree/css-restructure-and-redesign).
+You can see the original website [here][original-website]. You can view all the code that went into the project on Github [here](https://github.com/VolunteerOdyssey/calagator). I am actively working on a redesign for the calendar with Sarah. Below is a gif of the redesign's current status. You can keep up with my efforts on the `css-restructure-and-redesign` branch [here](https://github.com/VolunteerOdyssey/calagator/tree/css-restructure-and-redesign).
 
 ![A gif of the redesign of Volunteer Odyssey's calendar][calendar-redesign]
 
@@ -43,3 +43,4 @@ You can view all the code that went into the project on Github [here](https://gi
 [givecamp-team]: /img/work/volunteer-odyssey/givecamp-team.jpg
 [calendar-gif]: /img/work/volunteer-odyssey/calendar.gif
 [calendar-redesign]: /img/work/volunteer-odyssey/redesign.gif
+[original-website]: http://calendar.volunteerodyssey.com/

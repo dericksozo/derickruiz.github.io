@@ -26,6 +26,8 @@
             <link rel="stylesheet" href="/css/code.css">
         {% endif %}
 
+        {% include analytics.js.html %}
+        
     </head>
 
     {% assign slug = page.url | split: "/" | last %}
