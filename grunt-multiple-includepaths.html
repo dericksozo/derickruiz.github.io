@@ -6,14 +6,14 @@
         <!-- derickruiz.com/responsive-calendar -->
         <!-- It would be cool having the emoji either in the title or in the description. -->
         <!-- A single emoji that represents what the post is about -->
-        <title>Hello World - Derick Ruiz</title>
+        <title>Multiple includePaths with Grunt SASS - Derick Ruiz</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Some custom description in here -->
         <meta name="Description" content="">
-        <link rel="canonical" href="/hello-world">
+        <link rel="canonical" href="/grunt-multiple-includepaths">
         <meta http-equiv="cleartype" content="on">
 
         <!-- Typekit code that loads nimbus sans -->
@@ -29,6 +29,8 @@
 
         <link rel="stylesheet" href="/css/styles.css">
 
+        
+        	<link rel="stylesheet" href="/css/code.css">
         
 
         <script>
@@ -121,7 +123,7 @@
         <!-- Is this the best way to approach the last item in the breadcrumbs? -->
         <!-- Yes, for now. -->
         <span itemprop="item">
-            <span itemprop="name">Hello World</span>
+            <span itemprop="name">Multiple includePaths with Grunt SASS</span>
         </span>
         <meta itemprop="position" content="3">
     </span>	                    
@@ -132,9 +134,9 @@
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
             			<!-- <h1 class='hyphenate' itemprop="headline">Building a responsive calendar: The Definitive Guide</h1> -->
-            			<h1 class='hyphenate' itemprop="headline">Hello World</h1>
-            			<time itemprop="datePublished" datetime=2015-05-17>
-            				<span class='month-day-year'>05.17.2015</span>
+            			<h1 class='hyphenate' itemprop="headline">Multiple includePaths with Grunt SASS</h1>
+            			<time itemprop="datePublished" datetime=2015-10-03>
+            				<span class='month-day-year'>10.03.2015</span>
             			</time>
             			<span class='separator'>|</span>
 
@@ -145,10 +147,45 @@
             					<span>01 minute read</span>
             				</time>
             			
-            			<meta itemprop="wordCount" content="15">
+            			<meta itemprop="wordCount" content="58">
             		</header>
             		<div class='hyphenate content' itemprop="articleBody">
-            			<p>We do. And then you win. Tokyo is yours. The world is ours. Hello Univers.</p>
+            			<p>Here is how to include both Bourbon and Neat in your grunt sass configuration and have multiple includePaths.</p>
+
+<h2 id="grunt-sass">grunt-sass</h2>
+<pre data-language="javascript">
+    <code data-language="javascript">
+    sass: {
+        dev: {
+            files: {
+                'src/css/styles.css': 'src/scss/styles.scss'
+            },
+            options: {
+                includePaths: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
+            }
+        }
+    }
+    </code>
+</pre>
+
+<h2 id="grunt-contrib-sass">grunt-contrib-sass</h2>
+<pre data-language="javascript">
+    <code data-language="javascript">
+    sass: {
+        dev: {
+            files: {
+                'src/css/styles.css': 'src/scss/styles.scss'
+            },
+            options: {
+                loadPath: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
+                sourceMap: true
+            }
+        }
+    }
+    </code>
+</pre>
+
+<p>The includePaths (or loadPath with grunt-contrib-sass) property takes an array of different string paths. Doing <code>require('node-bourbon').includePaths</code> by itself returns an array so to have multiple includePaths concatenation is required to keep that single array.</p>
 
             		</div>
             	</article>
@@ -179,6 +216,13 @@
 <script src="/js/typography.js"></script>
 
         <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->
+
+        
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/rainbow.linenumbers/js/rainbow.linenumbers.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	
 
         
 
