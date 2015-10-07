@@ -1,0 +1,242 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>Custom dots with Owl Carousel 2 - Derick Ruiz</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <meta name="Description" content="">
+        <link rel="canonical" href="/owl-carousel-custom-dots">
+        <meta http-equiv="cleartype" content="on">
+
+        <!-- Typekit code that loads nimbus sans -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'yhz0fyw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+        <link rel="stylesheet" href="/css/styles.css">
+
+        
+        	<link rel="stylesheet" href="/css/code.css">
+        
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58696895-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </head>
+    <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+        <div class='wrapper'>
+
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">
+                    Der<span class='loosen'>i</span>ck
+                </span>
+                <span itemprop="familyName">
+                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                </span>
+            </h3>
+            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
+        </header>
+    </a>
+
+    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <ul>
+    	
+    	    
+    	    
+	    	<li class=''>
+	    		<a class='link' href="/about" itemprop="url">About</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    	</li>
+        
+    </ul>
+</nav>
+
+</section>
+
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+            	<div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <span itemprop="item">
+            <a href="/" class='link' itemprop="url">Home</a>
+        </span>
+        <meta itemprop="position" content="1">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <a href="/articles" class='link' itemprop="url">Articles</a>
+        </span>
+        <meta itemprop="position" content="2">
+    </span>
+
+    <span class='separator chevron chevron--direction-right'></span>
+
+    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
+        <!-- Yes, for now. -->
+        <span itemprop="item">
+            <span itemprop="name">Custom dots with Owl Carousel 2</span>
+        </span>
+        <meta itemprop="position" content="3">
+    </span>	                    
+</div><!-- breadcrumbs -->
+            	
+            	<!-- Should this be an article tag or a section tag? -->
+            	<!-- Look up the schema.org stuff you'll have to put in here -->
+            	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+            		<header>
+            			<!-- <h1 class='hyphenate' itemprop="headline">Building a responsive calendar: The Definitive Guide</h1> -->
+            			<h1 class='hyphenate' itemprop="headline">Custom dots with Owl Carousel 2</h1>
+            			<time itemprop="datePublished" datetime=2015-10-07>
+            				<span class='month-day-year'>10.07.2015</span>
+            			</time>
+            			<span class='separator'>|</span>
+
+            			
+	                    
+	                    
+	                    	<time class='read-time' itemprop="timeRequired" datetime="01M">
+            					<span>01 minute read</span>
+            				</time>
+            			
+            			<meta itemprop="wordCount" content="62">
+            		</header>
+            		<div class='hyphenate content' itemprop="articleBody">
+            			<p>Here is how you can get custom dot navigation in with <strong>Owl Carousel 2</strong>.</p>
+
+<p>First create your dots container.</p>
+
+<pre data-language="html">
+    <code data-language="html">
+
+&lt;div id=&#39;carousel&#39; class=&#39;owl-carousel&#39;&gt;
+    &lt;div class=&#39;item&#39;&gt;&lt;/div&gt;
+    &lt;div class=&#39;item&#39;&gt;&lt;/div&gt;
+    &lt;div class=&#39;item&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul id=&#39;carousel-custom-dots&#39; class=&#39;owl-dots&#39;&gt;
+    &lt;li class=&#39;owl-dot&#39;&gt;&lt;!-- Anything in here --&gt;&lt;/li&gt;
+    &lt;li class=&#39;owl-dot&#39;&gt;&lt;/li&gt;
+    &lt;li class=&#39;owl-dot&#39;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    </code>
+</pre>
+
+<p>Next include this inside of your options object.</p>
+
+<pre data-language="javascript">
+    <code data-language="javascript">
+    owl.owlCarousel({
+      dotsContainer: '#carousel-custom-dots'
+    });
+    </code>
+</pre>
+
+<p>The following tells Owl Carousel 2 to go to a slide based on the index of the dot that was clicked.</p>
+
+<pre data-language="javascript">
+    <code data-language="javascript">
+    $('.owl-dot').click(function () {
+        owl.trigger('to.owl.carousel', [$(this).index(), 300]);
+    });
+    </code>
+</pre>
+
+<p>That should be all you need to get custom dots up and going with Owl Carousel 2.</p>
+
+            		</div>
+            	</article>
+            </main>
+
+            <footer>
+    <div class='email'>
+        <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
+    </div>
+    <!-- Figure out how to loop through the social_services thing in _confing.yml -->
+    <ul class='social-links'>
+        <li>
+            <a href="https://twitter.com/iamderickruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+        </li>
+        <li>
+            <a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/itsderick"><i class='icon-github'></i> <span class='link service'>Github</span></a>
+        </li>
+    </ul>
+</footer>
+
+        </div><!-- .wrapper -->
+
+        <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
+<script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
+<script src="/js/typography.js"></script>
+
+        <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->
+
+        
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/rainbow.linenumbers/js/rainbow.linenumbers.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	
+
+        
+
+        <script>
+        (function () {
+        	Rainbow.color();
+        }());
+        </script>
+
+    </body>
+</html>
