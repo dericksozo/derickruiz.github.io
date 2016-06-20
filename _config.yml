@@ -36,7 +36,7 @@ navigation:
 
 gems: ["liquid_reading_time"]
 
-destination: ../itsderick.github.io/
+destination: ../derickruiz.github.io/
 
 defaults:
   -
