@@ -244,7 +244,7 @@
 
 <h3 id="the-technique">The technique</h3>
 
-<p>I am using the new HTML5 picture element to set different images based on media queries. In the layout, there are three total points of reassembly. The first is mobile that lasts until about 768 pixels. From there the tablet layout assembles, and finally the desktop layout starts at around 992 pixels. Since the picture element also supports checking for pixel density, each point of reassemlby had two images to check for. A normal image if the pixel density of the device was one, and a retina image if the pixel density was 2 or higher. Not all browsers support the picture element yet so I also used <code>picturefill.js</code> as a polyfill.</p>
+<p>I am using the new HTML5 picture element to set different images based on media queries. In the layout, there are three total points of reassembly. The first is mobile that lasts until about 768 pixels. From there the tablet layout assembles, and finally the desktop layout starts at around 992 pixels. Since the picture element also supports checking for pixel density, each point of reassemlby had two images to check for. A normal image if the pixel density of the device was one, and a retina image if the pixel density was 2 or higher. Not all browsers support the picture element yet so I also used <code class="highlighter-rouge">picturefill.js</code> as a polyfill.</p>
 
 <pre data-language="HTML">
 	<code data-language="HTML">
@@ -263,7 +263,7 @@
 	</code>
 </pre>
 
-<p>The images were automatically generated using <code>grunt</code> and the <code>grunt-responsive-images</code> plugin. Also, in order to get the slick rounded look of the images, I set them to be background-images of the container and hid the image itself once it loaded using a bit of Javascript.</p>
+<p>The images were automatically generated using <code class="highlighter-rouge">grunt</code> and the <code class="highlighter-rouge">grunt-responsive-images</code> plugin. Also, in order to get the slick rounded look of the images, I set them to be background-images of the container and hid the image itself once it loaded using a bit of Javascript.</p>
 
 <h3 id="the-code">The code</h3>
 
@@ -282,13 +282,13 @@
     <!-- Figure out how to loop through the social_services thing in _confing.yml -->
     <ul class='social-links'>
         <li>
-            <a href="https://twitter.com/iamderickruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+            <a href="https://twitter.com/drrrruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
         </li>
         <li>
             <a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a>
         </li>
         <li>
-            <a href="https://github.com/itsderick"><i class='icon-github'></i> <span class='link service'>Github</span></a>
+            <a href="https://github.com/dericksozo"><i class='icon-github'></i> <span class='link service'>Github</span></a>
         </li>
     </ul>
 </footer>
