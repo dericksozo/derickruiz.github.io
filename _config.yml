@@ -10,7 +10,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://derickruiz.com" # the base hostname & protocol for your site
 social_services:
   twitter: drrrruiz
-  github: dericksozo
+  github: derickruiz
   codepen: derickruiz
   instagram: iamderickruiz
 
