@@ -18,10 +18,14 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 
 	-webkit-appearance: none;
+
+	font-size: 16px;
 }
 
 body {
-	font-size: 90%;
+	font-family: $font-family-serif;
+	font-size: 100%;
+	line-height: 1.63;
 	background-color: $background-color;
 	color: $body-color;
 	border-top: 30px solid $top-bar-color;

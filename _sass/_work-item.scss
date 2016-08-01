@@ -76,25 +76,20 @@ article {
 		padding-bottom: 1.5em;
 	}
 
-	p,
-	h3,
-	ul li,
-	ol li {
-		font-family: $font-family-serif;
-		font-size: 1em;
-		font-weight: 300;
-		line-height: 1.6em;
-	}
-
 	h3 {
-		font-weight: 500;
-		font-size: 1.1em;
+		font-weight: normal;
+		font-size: 1.1rem;
+		color: $secondary-header-color;
 	}
 
 	p,
 	h3,
 	img {
-		margin-bottom: 1em;
+		margin-bottom: 1.5rem;
+	}
+
+	p > img {
+		margin-bottom: 0;
 	}
 
 	ul,
@@ -132,10 +127,6 @@ pre {
 	margin: 0 auto;
 	margin-bottom: 1em;
 	display: block;
-}
-
-pre > code {
-	font-size: 0.75em; // 12px for the code at smaller screens like iPhone 4.
 }
 
 .button {
