@@ -1,7 +1,6 @@
 # Site settings
 
 name: Derick Ruiz
-title: Front-End Web Developer
 email: derick.r.ruiz@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Derick Ruiz is a front-end web developer with a focus on responsive

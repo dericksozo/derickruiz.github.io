@@ -28,7 +28,7 @@ regenerate: true
         {% endif %}
 
         {% include analytics.js.html %}
-        
+
     </head>
     <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
@@ -38,13 +38,8 @@ regenerate: true
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-            	{% include second-level-breadcrumbs.html %}
-            	
-            	<!-- Should this be an article tag or a section tag? -->
-            	<!-- Look up the schema.org stuff you'll have to put in here -->
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
-            			<!-- <h1 class='hyphenate' itemprop="headline">Building a responsive calendar: The Definitive Guide</h1> -->
             			<h1 class='hyphenate' itemprop="headline">{{page.title}}</h1>
             			<time itemprop="datePublished" datetime={{page.date | date: "%Y-%m-%d"}}>
             				<span class='month-day-year'>{{page.date | date: "%m.%d.%Y"}}</span>
@@ -52,7 +47,7 @@ regenerate: true
             			<span class='separator'>|</span>
 
             			{% assign read_time = content | reading_time %}
-	                    
+
 	                    {% if read_time < 10 %}
 	                    	<time class='read-time' itemprop="timeRequired" datetime="{{read_time | prepend: '0'}}M">
             					<span>{{read_time | prepend: '0'}} minute read</span>
