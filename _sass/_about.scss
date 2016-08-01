@@ -5,7 +5,7 @@ article {
 	margin-top: 1em;
 }
 
-article > .content {
+article {
 
 	text-align: left;
 	hyphens: auto;
@@ -25,14 +25,19 @@ article > .content {
 		-webkit-hyphens: none;
 		-ms-hyphens: none;
 		-moz-hyphens: none;
+		margin-bottom: 1.5rem;
+	}
+
+	*+* {
+		margin-bottom: 1.5rem;
 	}
 }
 
 article {
 
 	header {
-	margin-top: 1em;
-	margin-bottom: 1em;
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 
 	h1 {
@@ -62,33 +67,11 @@ article {
 	}
 
 	h2,
-	h3,
-	p,
-	article ul li,
-	article ol li {
-		font-family: $font-family-monospace;
-		font-size: 1em;
-		// line-height: 1.5em;
-		font-weight: 300;
-		line-height: 1.6em;
-		// line-height: 1.5em;
-		// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
-		// to more closely match ia.net.
-	}
-
-	h2,
 	h3 {
 		font-weight: 500;
-		font-size: 1.1em;
+		font-size: 1.1rem;
 		// I like this for the time being. It's not the same size as body text, just slightly bigger
 		// and bolded.
-	}
-
-	p,
-	h2,
-	h3,
-	img {
-		padding-bottom: 1em;
 	}
 
 	.video-wrapper,
@@ -138,4 +121,8 @@ article {
 		border-radius: 15px;
 		background-color: green;
 	}
+}
+
+article > p {
+	padding: 0 0.5em 0 1em;
 }

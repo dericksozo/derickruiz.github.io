@@ -17,6 +17,7 @@ article > .content {
 	-webkit-hyphens: auto;
     -ms-hyphens: auto;
     -moz-hyphens: auto;
+	margin-top: 1.5rem;
 
 	a {
 		text-decoration: underline;
@@ -28,6 +29,11 @@ article > .content {
 		-webkit-hyphens: none;
 		-ms-hyphens: none;
 		-moz-hyphens: none;
+		margin-bottom: 1.5rem;
+	}
+
+	*+* {
+		margin-bottom: 1.5rem;
 	}
 }
 
@@ -38,8 +44,8 @@ article > .content p {
 
 h1 {
 	font-family: $font-family-serif;
-	font-size: 1.4em;
-	line-height: 1.2em;
+	font-size: 1.5rem;
+	line-height: 1.2;
 	font-weight: normal;
 	word-break: break-word;
 	word-wrap: break-word;
@@ -48,6 +54,7 @@ h1 {
 
 time {
 	display: inline-block;
+	margin-top: 0.333rem;
 }
 
 header > time:first-of-type {
@@ -63,31 +70,11 @@ header > .separator {
 	color: $post-details-color;
 }
 
-h2,
-p,
-article ul li,
-article ol li {
-	font-family: $font-family-serif;
-	font-size: 1em;
-	// line-height: 1.5em;
-	font-weight: normal;
-	line-height: 1.6em;
-	// line-height: 1.5em;
-	// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
-	// to more closely match ia.net.
-}
-
 h2 {
 	font-weight: normal;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 	color: $secondary-header-color;
 	padding: 0 0.5em 0 1em;
-}
-
-p,
-h2,
-img {
-	padding-bottom: 1em;
 }
 
 .video-wrapper,
@@ -107,11 +94,6 @@ pre > code {
 }
 
 article {
-
-	ul,
-	ol {
-		padding-bottom: 1em;
-	}
 
 	ul {
 		padding-left: 1em;
