@@ -20,7 +20,7 @@ h2.subtitle {
 	font-size: 1em;
 	line-height: 1.6em;
 	font-weight: normal;
-	font-family: $font-family-atlas;
+	font-family: $font-family-serif;
 	text-align: left;
 	// letter-spacing: -0.02em;
 
@@ -41,24 +41,23 @@ li.work-item {
 	}
 
 	.role {
-		font-family: $font-family-atlas;
+		font-family: $font-family-serif;
 		font-size: 1em;
 		line-height: 1.8em;
 		font-weight: normal;
-		font-family: $font-family-atlas;
 		text-align: left;
 		// letter-spacing: -0.02em;
 		display: block;
 		font-weight: 300;
 
 		// I'm not even sure if I like this yet, but it works for now.
-		margin-top: 0.3em;	
+		margin-top: 0.3em;
 	}
 
 	.title:before {
 		display: block;
 		float: right;
-		font-family: $font-family-nimbus;
+		font-family: $font-family-serif;
 		font-weight: 600;
 		font-size: 2.2em;
 		letter-spacing: -3px;
@@ -125,7 +124,7 @@ li.work-item.responsive-photography {
 
 li.work-item.glasses {
 
-	// background-color: #FF4026; // should probably me made into a variable named glasses-com-red? 
+	// background-color: #FF4026; // should probably me made into a variable named glasses-com-red?
 	background-color: $glasses-red;
 
 	.title,

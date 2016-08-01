@@ -1,40 +1,3 @@
-@font-face {
-	font-family: 'AtlasTypewriterWeb';
-	src: url('/fonts/AtlasTypewriterWeb-Light.eot');
-	src: url('/fonts/AtlasTypewriterWeb-Light.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/AtlasTypewriterWeb-Light.woff') format('woff'),
-		 url('/fonts/AtlasTypewriterWeb-Light.ttf') format('truetype'),
-		 url('/fonts/AtlasTypewriterWeb-Light.svg#AtlasTypewriterWeb-Light') format('svg');
-	font-weight: 300;
-	font-style: normal;
-	font-stretch: normal;
-	word-spacing: 2em;
-}
-
-@font-face {
-	font-family: 'AtlasTypewriterWeb';
-	src: url('/fonts/AtlasTypewriterWeb-Medium.eot');
-	src: url('/fonts/AtlasTypewriterWeb-Medium.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/AtlasTypewriterWeb-Medium.woff') format('woff'),
-		 url('/fonts/AtlasTypewriterWeb-Medium.ttf') format('truetype'),
-		 url('/fonts/AtlasTypewriterWeb-Medium.svg#AtlasTypewriterWeb-Medium') format('svg');
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-}
-
-@font-face { 
-	font-family: 'AtlasTypewriterWeb'; 
-	src: url('/fonts/AtlasTypewriterRegular.eot');
-	src: url('/fonts/AtlasTypewriterRegular.eot?#iefix') format('embedded-opentype'), 
-		 url('/fonts/AtlasTypewriterRegular.woff') format('woff'), 
-		 url('/fonts/AtlasTypewriterRegular.ttf') format('truetype'), 
-		 url('/fonts/AtlasTypewriterRegular.svg#AtlasTypewriterRegular') format('svg'); 
-	font-weight: 400;
-	font-style: normal;
-	font-stretch: normal; 
-}
-
 /* Colors */
 // $background-color: rgb(240, 236, 235);
 $background-color: #fdfdfd;
@@ -81,8 +44,7 @@ $circle-width: 300px;
 $shape-width: 200px;
 
 /* Fonts */
-$font-family-nimbus: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-$font-family-monospace: Inconsolata, Menlo, "Courier New", monospace;
-$font-family-atlas: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+$font-family-serif: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+$font-family-monospace: 'HelveticaMonospacedStd-Rg', Menlo, "Courier New", monospace;
 
 

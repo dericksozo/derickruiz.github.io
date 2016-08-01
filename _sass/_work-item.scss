@@ -9,7 +9,7 @@ article {
 		position: relative;
 		z-index: 2;
 		font-size: 1.5em;
-		font-family: $font-family-nimbus;
+		font-family: $font-family-serif;
 		color: #fdfdfd;
 		border-bottom: 4px solid #fdfdfd;
 
@@ -18,7 +18,7 @@ article {
 
 	h2 {
 		font-size: 1em;
-		font-family: $font-family-atlas;
+		font-family: $font-family-serif;
 		line-height: 1.5em;
 		font-weight: 300;
 		color: #1C2E69;
@@ -80,7 +80,7 @@ article {
 	h3,
 	ul li,
 	ol li {
-		font-family: $font-family-atlas;
+		font-family: $font-family-serif;
 		font-size: 1em;
 		font-weight: 300;
 		line-height: 1.6em;
@@ -355,7 +355,7 @@ pre > code {
 			position: absolute;
 			color: $volunteer-blue-color;
 			right: 13%;
-			font-family: $font-family-nimbus;
+			font-family: $font-family-serif;
 			font-weight: 900;
 			line-height: 0.8em;
 			font-size: 2.9em;

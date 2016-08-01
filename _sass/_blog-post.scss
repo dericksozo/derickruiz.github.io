@@ -33,7 +33,7 @@ article > header {
 }
 
 h1 {
-	font-family: $font-family-nimbus;
+	font-family: $font-family-serif;
 	font-size: 1.4em;
 	line-height: 1.2em;
 	font-weight: 600;
@@ -45,13 +45,13 @@ time {
 	display: inline-block;
 }
 
-header > time:first-of-type { 
+header > time:first-of-type {
 	// margin-top: 0.25em;
 }
 
 time > span,
 header > .separator {
-	font-family: $font-family-atlas;
+	font-family: $font-family-monospace;
 	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 300;
@@ -62,19 +62,19 @@ h2,
 p,
 article ul li,
 article ol li {
-	font-family: $font-family-atlas;
+	font-family: $font-family-serif;
 	font-size: 1em;
 	// line-height: 1.5em;
 	font-weight: 300;
 	line-height: 1.6em;
-	// line-height: 1.5em; 
+	// line-height: 1.5em;
 	// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
 	// to more closely match ia.net.
 }
 
 h2 {
 	font-weight: 500;
-	font-size: 1.1em; 
+	font-size: 1.1em;
 	// I like this for the time being. It's not the same size as body text, just slightly bigger
 	// and bolded.
 }

@@ -1,5 +1,6 @@
 ---
 ---
+@import 'fonts';
 @import 'foundation';
 @import 'variables';
 @import 'utilities';
@@ -80,7 +81,7 @@ section.intro header {
 
 	// gotta update this to be more general because the tag might change depending on the page.
 	.name {
-		font-family: $font-family-nimbus;
+		font-family: $font-family-monospace;
 		color: $header-text-color;
 		font-weight: 900;
 		line-height: 0.8em;
@@ -89,7 +90,7 @@ section.intro header {
 		white-space: nowrap;
 		-webkit-transition: font-size 0.3s ease;
 
-		// to display above the shape. 
+		// to display above the shape.
 		position: relative;
 		z-index: 2;
 
@@ -134,7 +135,7 @@ section.intro header {
 	font-size: 1.5em;
 	line-height: 2.2em;
 	font-weight: 600;
-	font-family: $font-family-nimbus;
+	font-family: $font-family-monospace;
 	word-break: break-word;
 	word-wrap: break-word;
 }
@@ -152,7 +153,7 @@ nav {
 	li.active:before {
 		content: " ";
 		position: absolute;
-		background-color: $yellow-color; 
+		background-color: $yellow-color;
 		height: 5px;
 		width: 100%;
 		bottom: -0.9em; // This is obviously going to have to be changed based on the media query in place.
@@ -160,7 +161,7 @@ nav {
 
 	li a {
 		text-transform: lowercase;
-	}	
+	}
 }
 
 p.description,
@@ -172,7 +173,7 @@ footer .email > a {
 	font-size: 1em;
 	line-height: 1.6em;
 	font-weight: normal;
-	font-family: $font-family-atlas;
+	font-family: $font-family-monospace;
 	text-align: left;
 	font-weight: 300;
 }
@@ -198,8 +199,6 @@ footer {
 
 	// TODO: Gonna have to fix this soon. Just make it bold?
 	.email > a {
-		// font-family: $font-family-atlas;
-		// font-size: 1em;
 		line-height: 2.2em;
 		font-weight: 500;
 	}
@@ -219,7 +218,7 @@ footer {
 	background: none;
 	border: none;
 	outline: none;
-	font-family: $font-family-atlas;
+	font-family: $font-family-monospace;
 	font-size: 1em;
 	// font-size: 0.85em;
 	padding: 0.5em;
@@ -438,5 +437,5 @@ a.button {
 
 	body {
 		font-size: 110%;
-	}	
+	}
 }

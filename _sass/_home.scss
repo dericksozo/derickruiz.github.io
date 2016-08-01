@@ -16,7 +16,7 @@ div.latest-blog-posts h4 {
 	font-size: 1.1em;
 	line-height: 2.2em;
 	font-weight: 600;
-	font-family: $font-family-nimbus;
+	font-family: $font-family-serif;
 	word-break: break-word;
 	word-wrap: break-word;
 }
@@ -56,7 +56,7 @@ div.latest-blog-posts {
 		display: block;
 		text-align: center;
 		text-transform: uppercase;
-		font-family: $font-family-atlas;
+		font-family: $font-family-serif;
 		font-size: 0.85em;
 		color: rgb(168, 168, 168); // make this a variable
 
@@ -67,7 +67,7 @@ div.latest-blog-posts {
 	li.blog-post > time,
 	li.blog-post > a,
 	> a {
-		font-family: $font-family-atlas;
+		font-family: $font-family-serif;
 		font-weight: normal;
 		text-align: left;
 		font-size: 1em;
@@ -117,7 +117,7 @@ div.latest-blog-posts {
 			display: block;
 			float: right;
 
-			font-family: $font-family-nimbus;
+			font-family: $font-family-serif;
 			font-weight: 600;
 			font-size: 2.2em;
 			letter-spacing: -3px;
