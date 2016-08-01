@@ -1,7 +1,12 @@
 /* Colors */
 // $background-color: rgb(240, 236, 235);
-$background-color: #fdfdfd;
+// $background-color: #fdfdfd;
+$background-color: #ffffff;
 $background-color-darker: #F4F4F4;
+
+$top-bar-color: #FAF8FB; // The bar / border on the top of the page.
+
+$logo-color: #ffd321; // The color of the shape beside my name in the logo.
 
 $header-text-color: rgb(20, 19, 19);
 $yellow-color: rgb(255, 221, 0);
@@ -10,6 +15,13 @@ $blue-color: rgb(0, 209, 224);
 $purple-color: rgb(108, 73, 204);
 // $black-color: #141313;
 $black-color: #222;
+
+$body-color: #121013;
+$post-details-color: #C7CBD5; // The color of the date, article length, etc. under the headline.
+
+// Colors for headers on blog post style pages.
+$primary-header-color: #EA6B00;
+$secondary-header-color: #62B4F8;
 
 $yellow-color-darker: #E0C200; // used for yellow buttons.
 $yellow-color-darker-lighter: #E0CD4D; // used for yellow button hover state.

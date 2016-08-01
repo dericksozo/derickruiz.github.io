@@ -1,126 +1,202 @@
-/**
- * Monokai theme
- *
- * Adapted from Wimer Hazenberg's TextMate theme of the same name
- *
- * @author Wimer Hazenberg
- * @author Michael Fasani
- * @author Craig Campbell
- * @version 1.0.0
- */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    10% {
+        transform: scale(1, 1)
+    }
+
+    35% {
+        transform: scale(1, 1.7)
+    }
+
+    40% {
+        transform: scale(1, 1.7)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    60% {
+        transform: scale(1, 1)
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 0
+    }
+}[data-language] code,[class^="lang"] code,pre [data-language],pre [class^="lang"] {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    animation: 50ms ease-in-out 2s forwards fade-in
+}[data-language] code.rainbow,[class^="lang"] code.rainbow,pre [data-language].rainbow,pre [class^="lang"].rainbow {
+    animation-delay: 0s
+}[data-language] code.loading,[class^="lang"] code.loading,pre [data-language].loading,pre [class^="lang"].loading {
+    animation-play-state: paused
+}
+
 pre {
-    background: #1A1A1A; /* Experimenting with colors here to better match my theme. */
-    padding: 1em;
-    padding-top: 2.5em;
-    color: #fff;
-    font-size: 1em;
-    overflow: auto;
     position: relative;
-    margin: 0;
-
-    -moz-tab-size: 2;
-    -o-tab-size: 2;
-    tab-size: 2;
-    -ms-word-break: normal;
-    word-break: normal;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
 }
 
-pre:before {
+pre.loading .preloader div {
+    animation-play-state: running
+}
 
-    font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: 1.6em;
-    text-transform: capitalize;
+pre.loading .preloader div:nth-of-type(1) {
+    background: #0081f5;
+    animation: fade 1.5s 300ms linear infinite
+}
 
-    content: attr(data-language);
-    color: white;
+pre.loading .preloader div:nth-of-type(2) {
+    background: #5000f5;
+    animation: fade 1.5s 438ms linear infinite
+}
+
+pre.loading .preloader div:nth-of-type(3) {
+    background: #9000f5;
+    animation: fade 1.5s 577ms linear infinite
+}
+
+pre.loading .preloader div:nth-of-type(4) {
+    background: #f50419;
+    animation: fade 1.5s 715ms linear infinite
+}
+
+pre.loading .preloader div:nth-of-type(5) {
+    background: #f57900;
+    animation: fade 1.5s 853ms linear infinite
+}
+
+pre.loading .preloader div:nth-of-type(6) {
+    background: #f5e600;
+    animation: fade 1.5s 992ms linear infinite
+}
+
+pre.loading .preloader div:nth-of-type(7) {
+    background: #00f50c;
+    animation: fade 1.5s 1130ms linear infinite
+}
+
+pre .preloader {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    background: #3EBCE0;
-    padding-left: 1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    top: 12px;
+    left: 10px
 }
 
-code[data-language] {
-    white-space: pre;
-    display: block;
+pre .preloader div {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 4px;
+    opacity: 0;
+    animation-play-state: paused;
+    animation-fill-mode: forwards
 }
 
-pre, code {
-    font-family: 'Monaco', courier, monospace;
+pre {
+    background-color: #000;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
+
+pre,code {
+    font-family: 'HelveticaMonospacedStd-Rg', Menlo, "Courier New", monospace;
+}
+
+p > code {
+    padding: 0.2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+code span {
+    transition: color 0.6s ease-in
+}
+
+code .red {
+    color: #f50419
+}
+
+code .orange {
+    color: #f57900
+}
+
+code .yellow {
+    color: #f5e600
+}
+
+code .green {
+    color: #00f50c
+}
+
+code .blue {
+    color: #0081f5
+}
+
+code .indigo {
+    color: #5000f5
+}
+
+code .violet {
+    color: #9000f5
+}
+
+code .animate {
+    color: #fff !important
+}
+
+pre {
+    background: #010104
 }
 
 pre .comment {
-    color: #75715E;
+    color: #747474
+}
+
+pre .keyword,pre .selector,pre .operator {
+    color: #bc5cff
+}
+
+pre .storage,pre .support {
+    color: #fb2639
+}
+
+pre .string {
+    color: #fff55c
 }
 
 pre .constant {
-    color: #AE81FF;
-    color: #E2319B; /* Responsive photography pink */
+    color: #ffad5c
 }
 
-pre .storage {
-    color: #66D9EF;
-    color: #3A60DA; /* $volunteer-blue */
+pre .entity {
+    color: #43a6ff
 }
 
-pre .string, pre .comment.docstring {
-    color: #E6DB74;
-    color: #ffdd00; /* $yellow-color */
-}
-
-pre .support.tag {
-    color: #fff;
-}
-
-pre .keyword {
-    /* @todo some keywords use this light blue, most use the pink */
-    /*color: #66D9EF;*/
-    color: #F92672;
-    color: #FF4026; /* $glasses-red */
-}
-
-pre .selector {
-    color: #F92672;
-    color: #E2319B; /* responsive photography pink */
-}
-
-pre .inherited-class {
-    font-style: italic;
-}
-
-pre .operator, pre .support.tag-name , pre .entity.tag {
-    color: #F92672;
-    color: #FF4026; /* $glasses-red */
-}
-
-pre .entity, pre .support.attribute, pre .entity.attribute {
-    color: #A6E22E;
-    color: #3EBCE0; /* $glasses-cyan */
-}
-
-pre .support, *[data-language="c"] .function.call {
-    color: #66D9EF;
-    color: #3A60DA; /* $volunteer-blue */
-}
-
-*[data-language="html"] .support.operator {
-    color: #fff;
-}
-
-pre .css-property, pre .storage.function {
-    font-style: italic;
-}
-
-pre .variable.global, pre .variable.class, pre .variable.instance {
-    color: #A6E22E;
+pre .inherited-class,pre .storage {
+    font-style: italic
+}[data-language="custom"] .comment,.lang-custom .comment,.language-custom .comment {
+    color: #314CAD
+}[data-language="custom"] .integer,.lang-custom .integer,.language-custom .integer {
+    color: #f5e600
+}[data-language="custom"] .keyword,.lang-custom .keyword,.language-custom .keyword {
+    color: #f57900
+}[data-language="html"] .attribute,.lang-html .attribute,.language-html .attribute {
+    color: #fc4959
 }

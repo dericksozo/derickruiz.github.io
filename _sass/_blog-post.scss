@@ -1,3 +1,7 @@
+main {
+	margin-top: 2.25rem;
+}
+
 article {
 	display: block;
 	margin: 0 auto;
@@ -27,9 +31,9 @@ article > .content {
 	}
 }
 
-article > header {
-	margin-top: 1em;
-	margin-bottom: 1em;
+article > header,
+article > .content p {
+	padding: 0 0.5em 0 1em;
 }
 
 h1 {
@@ -39,6 +43,7 @@ h1 {
 	font-weight: normal;
 	word-break: break-word;
 	word-wrap: break-word;
+	color: $primary-header-color;
 }
 
 time {
@@ -55,7 +60,7 @@ header > .separator {
 	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 300;
-	color: #8d8d8d;
+	color: $post-details-color;
 }
 
 h2,
@@ -65,7 +70,7 @@ article ol li {
 	font-family: $font-family-serif;
 	font-size: 1em;
 	// line-height: 1.5em;
-	font-weight: 300;
+	font-weight: normal;
 	line-height: 1.6em;
 	// line-height: 1.5em;
 	// Trying smaller font-size (90% on the body) and a bigger line-height on the body,
@@ -73,10 +78,10 @@ article ol li {
 }
 
 h2 {
-	font-weight: 500;
+	font-weight: normal;
 	font-size: 1.1em;
-	// I like this for the time being. It's not the same size as body text, just slightly bigger
-	// and bolded.
+	color: $secondary-header-color;
+	padding: 0 0.5em 0 1em;
 }
 
 p,
