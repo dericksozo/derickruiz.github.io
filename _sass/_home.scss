@@ -4,26 +4,11 @@ section.intro {
 	margin-bottom: 0;
 }
 
-nav {
-	border-bottom: 5px solid #F4F4F4;
-	padding-bottom: 0.5em;
-	margin-bottom: 0.5em;
-}
-
 // styles specific to the home page.
-div.what-i-do h4,
-div.latest-blog-posts h4 {
-	font-size: 1.1em;
-	line-height: 2.2em;
-	font-weight: 600;
-	font-family: $font-family-serif;
-	word-break: break-word;
-	word-wrap: break-word;
-}
 
 section.work {
 
-	padding-bottom: 1em;
+	margin-top: 3.375rem;
 
 	.work-item {
 		position: relative;
@@ -31,7 +16,18 @@ section.work {
 	}
 }
 
+.work-items {
+	margin-top: 1rem;
+}
+
+.work-items > .work-item + .work-item {
+	margin-top: 1.5rem;
+}
+
 div.what-i-do {
+
+	margin-top: 2.25rem;
+
 	p.description {
 		font-weight: 300;
 		font-size: 1em;
@@ -42,11 +38,7 @@ div.what-i-do {
 /* Blog posts section */
 div.latest-blog-posts {
 
-	border-bottom: 5px solid $background-color-darker;
-	padding-bottom: 1em;
-
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-top: 1.5rem;
 
 	li.blog-post {
 		margin-bottom: 0.3em;
@@ -58,7 +50,7 @@ div.latest-blog-posts {
 		text-transform: uppercase;
 		font-family: $font-family-serif;
 		font-size: 0.85em;
-		color: rgb(168, 168, 168); // make this a variable
+		color: $low-key-color;
 
 		margin-top: 1em;
 		// margin-bottom: 0.5em;
@@ -75,7 +67,11 @@ div.latest-blog-posts {
 	}
 
 	li.blog-post > time {
-		color: rgb(168, 168, 168); // make this a variable
+		font-family: $font-family-monospace;
+	}
+
+	li.blog-post > time {
+		color: $low-key-color;
 	}
 
 	> a { // view more link

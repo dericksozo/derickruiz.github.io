@@ -40,14 +40,14 @@ regenerate: true
                 </a>
 
                 <div class='what-i-do'>
-                    <h4>What I do</h4>
+                    <h3 class="descriptionTitle descriptionTitle--helpYou descriptionTitle--spaceDown">What I do</h3>
                     <p class='description hyphenate'><!-- Some kind of description about what I do? -->
                         {{page.intro}}
                     </p>
                 </div>
 
                 <div class='latest-blog-posts'>
-                    <h4>Latest articles</h4>
+                    <h3 class="descriptionTitle descriptionTitle--articles descriptionTitle--spaceDown">Latest articles</h3>
                     <ul class='posts-list'>
 
                         {% for post in site.posts limit: 3 %}
@@ -70,7 +70,7 @@ regenerate: true
 
                     </ul><!-- .latest-blog-posts -->
 
-                    {% if site.posts.length > 1 %}
+                    {% if site.posts.size > 1 %}
                         <span class='or'>or</span>
                         <!-- Can this be adjusted? I don't like the way it's hardcoded, but it works for now. -->
                         <a href="/articles" class='link'>View all articles</a>
@@ -79,37 +79,41 @@ regenerate: true
             </section>
             <section class='work'>
 
-                <!-- {% assign works = site.work | sort: 'index' %} -->
-                {% for work_item in site.work reversed %}
-                    <div class='work-item work-item-{{work_item.index}} clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+                <h3 class="descriptionTitle descriptionTitle--lowKey">A collection of projects I have worked on.</h3>
 
-                        {% if work_item.index < 10 %}
-                        <style>
-                            .work-item.work-item-{{work_item.index}}::before {
-                                content: "0{{work_item.index}}";
-                            }
-                        </style>
-                        {% else %}
-                        <style>
-                            .work-item.work-item-{{work_item.index}}::before {
-                                content: "{{work_item.index}}";
-                            };
-                        </style>
-                        {% endif %}
+                <div class="work-items">
+                    <!-- {% assign works = site.work | sort: 'index' %} -->
+                    {% for work_item in site.work reversed %}
+                        <div class='work-item work-item-{{work_item.index}} clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 
-                        <h3 class='title' itemprop="headline">{{work_item.title}}</h3>
+                            {% if work_item.index < 10 %}
+                            <style>
+                                .work-item.work-item-{{work_item.index}}::before {
+                                    content: "0{{work_item.index}}";
+                                }
+                            </style>
+                            {% else %}
+                            <style>
+                                .work-item.work-item-{{work_item.index}}::before {
+                                    content: "{{work_item.index}}";
+                                };
+                            </style>
+                            {% endif %}
 
-                        {% if work_item.devices %}
-                            {% assign device_slug = work_item.url | split: "/" | last %}
-                            {% capture device_include_url %}devices-{{device_slug}}.html{% endcapture %}
-                            {% include {{device_include_url}} %}
-                        {% endif %}
-                        <p class='description hyphenate' itemprop="about">
-                            {{work_item.description}}
-                        </p>
-                        <a class='button button--yellow' href="{{work_item.url}}">View Details</a>
-                    </div>
-                {% endfor %}
+                            <h3 class='title' itemprop="headline">{{work_item.title}}</h3>
+
+                            {% if work_item.devices %}
+                                {% assign device_slug = work_item.url | split: "/" | last %}
+                                {% capture device_include_url %}devices-{{device_slug}}.html{% endcapture %}
+                                {% include {{device_include_url}} %}
+                            {% endif %}
+                            <p class='description hyphenate' itemprop="about">
+                                {{work_item.description}}
+                            </p>
+                            <a class='button button--yellow' href="{{work_item.url}}">View Details</a>
+                        </div>
+                    {% endfor %}
+                </div>
             </section>
 
             {% include footer.html %}

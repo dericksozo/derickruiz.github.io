@@ -115,7 +115,7 @@ section.intro header {
 
 nav {
 
-	margin-top: -0.6rem;
+	margin-top: -0.8rem;
 	max-width: 100%;
 
 	li {
@@ -211,6 +211,7 @@ footer {
 	max-width: 200px;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+	text-transform: lowercase;
 }
 
 a.button {
@@ -314,6 +315,33 @@ a.button {
 		// TODO: note that the same color appears in home.scss
 		color: rgb(168, 168, 168); // make this a variable
 	}
+}
+
+/* Description Title */
+
+.descriptionTitle {
+	font-size: 1.1rem;
+	line-height: 1.64;
+	font-weight: normal;
+	font-family: $font-family-serif;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+.descriptionTitle.descriptionTitle--lowKey {
+	color: $low-key-color;
+}
+
+.descriptionTitle.descriptionTitle--articles {
+	color: $primary-header-color;
+}
+
+.descriptionTitle.descriptionTitle--helpYou {
+	color: $secondary-header-color;
+}
+
+.descriptionTitle.descriptionTitle--spaceDown {
+	margin-bottom: 0.5rem;
 }
 
 // General media queries that should apply to every page for consistency.
