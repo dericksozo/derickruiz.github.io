@@ -31,10 +31,12 @@ regenerate: true
 
     </head>
     <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+
         <div class='wrapper'>
-
             {% include intro-h3.html %}
-
+        </div>
+        
+        <div class='wrapper wrapper--noSpacing'>
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
@@ -64,11 +66,11 @@ regenerate: true
             		</div>
             	</article>
             </main>
-
-            {% include footer.html %}
-
         </div><!-- .wrapper -->
 
+        <div class='wrapper'>
+            {% include footer.html %}
+        </div>
         {% include typography-js.html %}
 
         <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->

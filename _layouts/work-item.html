@@ -27,7 +27,7 @@
         {% endif %}
 
         {% include analytics.js.html %}
-        
+
     </head>
 
     {% assign slug = page.url | split: "/" | last %}
@@ -43,9 +43,6 @@
 
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-                <div class='wrapper'>
-                    {% include second-level-breadcrumbs.html %}
-                </div>
 
             	<!-- Should this be an article tag or a section tag? -->
             	<!-- Look up the schema.org stuff you'll have to put in here -->
@@ -63,8 +60,8 @@
                             {% include {{device_include_url}} %}
                         {% endif %}
 
-                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a> 
-                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>                     
+                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a>
+                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>
                     </div><!-- .work-example -->
                     <!-- Is text the proper itemprop in this case since I'm going to have images and possibly videos
                     in here? -->
@@ -80,7 +77,7 @@
 
         {% include typography-js.html %}
         <script src="/js/work-item.js"></script>
-        
+
         {% if page.hasCode %}
             <script src="/js/vendor/rainbow.js"></script>
             <script src="/js/vendor/language/generic.js"></script>

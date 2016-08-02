@@ -15,8 +15,6 @@ regenerate: true
         <meta name="Description" content="{{ site.description }}">
         <meta http-equiv="cleartype" content="on">
 
-        {% include typekit-js.html %}
-
         {% include styles.css.html %}
 
         {% include analytics.js.html %}
@@ -25,20 +23,21 @@ regenerate: true
     <body class="home-page" itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
             <section class='intro clearfix'>
+
+                {% include navigation.html %}
+
                 <a href="#"><!-- link to home page -->
                     <header itemscope itemtype="http://schema.org/Person">
                         <h1 class='name' itemprop="name">
                             <span itemprop="givenName">
-                                Der<span class='loosen'>i</span>ck
+                                Derick
                             </span>
                             <span itemprop="familyName">
-                                R<span class='tighten'>u</span>i<span class='trim'>z</span>
+                                Ruiz
                             </span>
                         </h1>
                     </header>
                 </a>
-
-                {% include navigation.html %}
 
                 <div class='what-i-do'>
                     <h4>What I do</h4>
@@ -46,6 +45,7 @@ regenerate: true
                         {{page.intro}}
                     </p>
                 </div>
+
                 <div class='latest-blog-posts'>
                     <h4>Latest articles</h4>
                     <ul class='posts-list'>
@@ -71,9 +71,9 @@ regenerate: true
                     </ul><!-- .latest-blog-posts -->
 
                     {% if site.posts.length > 1 %}
-                    <span class='or'>or</span>
-                    <!-- Can this be adjusted? I don't like the way it's hardcoded, but it works for now. -->
-                    <a href="/articles" class='link'>View all articles</a>
+                        <span class='or'>or</span>
+                        <!-- Can this be adjusted? I don't like the way it's hardcoded, but it works for now. -->
+                        <a href="/articles" class='link'>View all articles</a>
                     {% endif %}
                 </div><!-- .latest-blog-posts -->
             </section>

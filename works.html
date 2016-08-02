@@ -22,25 +22,19 @@ title: Works
         {% include styles.css.html %}
 
         {% include analytics.js.html %}
-        
+
     </head>
     <body class='work-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
 
             {% include intro-h3.html %}
-            
+
         </div>
             <!-- I removed the itemtype of blog from the main tag. What should go in here now? Nothing? -->
             <main role="main" itemprop="mainContentOfPage">
-            	<div class='wrapper'>
-                    {% include first-level-breadcrumbs.html %} 
-            	</div>
-
                 <section class='work'>
                 	<div class='wrapper'>
-                    	<h1 class='title'>{{page.title}}</h1>
-                    	<!-- This needs to be replaced with a front-matter variable. -->
-                    	<h2 class='subtitle hyphenate'>A collection of projects I have worked on.</h2>
+                    	<h1 class='subtitle hyphenate'>A collection of projects I have worked on.</h1>
                 	</div>
                     <ul class='work-items'>
 

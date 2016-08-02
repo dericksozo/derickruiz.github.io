@@ -29,6 +29,11 @@ body {
 	background-color: $background-color;
 	color: $body-color;
 	border-top: 30px solid $top-bar-color;
+	min-height: 100vh;
+}
+
+main {
+	margin-top: 3.375rem;
 }
 
 .link {
@@ -47,20 +52,23 @@ a:hover {
 	top: 2px;
 }
 
+em {
+	font-style: normal;
+	font-weight: normal;
+}
+
 .wrapper {
 	width: 100%;
-	// padding: 0 0.5em 0 1em;
+	padding: 0 0.5em 0 1em;
+}
+
+.wrapper.wrapper--noSpacing {
+	padding: 0 0 0 0 !important;
 }
 
 section.intro > a {
 	display: inline-block;
-	margin-top: 5rem;
-}
-
-section.intro {
-	padding-bottom: 0.5em;
-	margin-bottom: 0.5em;
-	padding: 0 0.5em 0 1em;
+	margin-top: 2.25rem;
 }
 
 section.intro header {
@@ -79,11 +87,6 @@ section.intro header {
 
 		position: relative;
 		z-index: 2;
-
-		margin-top: 0.3em;
-		margin-bottom: 0.1em;
-
-		padding-top: 0.22rem;
 	}
 
 	// used to be an h2 tag, but might change depending on the page so using classes.
@@ -111,8 +114,7 @@ section.intro header {
 
 nav {
 
-	position: absolute;
-	top: 1.1rem;
+	margin-top: -0.6rem;
 	max-width: 100%;
 
 	li {
@@ -181,7 +183,6 @@ footer {
 	margin-bottom: 2em;
 
 	margin-top: 2.25rem;
-	padding: 0 0.5em 0 1em;
 
 	.email {
 		margin-bottom: 0.25em;
@@ -387,6 +388,66 @@ a.button {
 	@import 'about';
 }
 
+@media screen and (min-width: 25.3125rem) { // 405px @ 16
+
+	nav {
+
+		li:nth-child(3n) {
+			clear: none;
+		}
+
+		li:nth-child(4n) {
+			clear: left;
+		}
+	}
+}
+
+@media screen and (min-width: 37.5rem) { // 600px @ 16
+
+	html {
+		font-size: 19px;
+	}
+
+	body {
+		border: 30px solid $top-bar-color;
+	}
+
+	nav {
+
+		position: static;
+		width: 100%;
+		margin-top: -0.8rem;
+
+		ul {
+			position: relative;
+		}
+
+		li {
+			margin-right: 0;
+			margin-left: 2.8rem;
+		}
+
+		li:nth-child(4n) {
+			clear: none;
+		}
+
+		li.home-link {
+			margin-left: 0;
+			margin-top: 0.2rem;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	main {
+		margin-top: 5.0625rem;
+	}
+
+	.wrapper {
+		padding: 0 1rem 0 1rem;
+	}
+}
+
 @media screen and (min-width: 38.75em) {
 
 	a.button {
@@ -397,10 +458,6 @@ a.button {
 		li.active:before {
 			bottom: -0.8em;
 		}
-	}
-
-	body {
-		font-size: 100%;
 	}
 }
 

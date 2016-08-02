@@ -20,17 +20,15 @@ title: Articles
         {% include styles.css.html %}
 
         {% include analytics.js.html %}
-        
+
     </head>
     <body class='articles-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
 
             {% include intro-h3.html %}
-            
+
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-
-                {% include first-level-breadcrumbs.html %}
-
+                
                 <section class='articles'>
                     <ul class='posts-list'>
 
@@ -45,7 +43,7 @@ title: Articles
 	                                <meta itemprop="wordCount" content="{{post.content | count_words }}">
 
 	                                {% assign read_time = post.content | reading_time %}
-	                                
+
 	                                {% if read_time < 10 %}
 	                                	<span>{{read_time | prepend: '0'}} min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
 	                                {% else %}

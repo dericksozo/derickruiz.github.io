@@ -20,7 +20,6 @@ regenerate: true
         <link rel="canonical" href="">
         <meta http-equiv="cleartype" content="on">
 
-        {% include typekit-js.html %}
         {% include styles.css.html %}
 
         {% include analytics.js.html %}
@@ -30,19 +29,12 @@ regenerate: true
         <div class='wrapper'>
 
         	{% include intro-h1.html %}
-        	
+
         </div><!-- .wrapper -->
 
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage">
             	<div class='wrapper'>
-
-            		{% include first-level-breadcrumbs.html %}
-
-	                <header>
-            			<h1 class='title hyphenate'>{{page.title}}</h1>
-            		</header>
-
             		<p class='description hyphenate'>If you want a quick reply tweet me. If you need more than 140 characters you can always send an email.</p>
             	</div>
 
@@ -86,7 +78,6 @@ regenerate: true
 						<ul>
 							<li><a href="https://github.com/{{site.social_services.github}}"><i class='icon-github'></i> <span class='link'>@{{site.social_services.github}} on Github</span></a></li>
 							<li><a href="http://codepen.io/{{site.social_services.codepen}}"><i class='icon-codepen'></i> <span class='link'>@{{site.social_services.codepen}} on Codepen</span></a></li>
-							<li><a href="http://instagram.com/{{site.social_services.instagram}}"><i class='icon-instagram'></i> <span class='link'>@{{site.social_services.instagram}} on Instagram</span></a></li>
 						</ul>
 	            	</div>
             	</div>
