@@ -5,15 +5,14 @@ article {
 	}
 
 	h1 {
-		line-height: 1.2em;
+		line-height: 1.64;
 		position: relative;
 		z-index: 2;
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		font-family: $font-family-serif;
 		color: #fdfdfd;
 		border-bottom: 4px solid #fdfdfd;
-
-		padding-bottom: 0.25em;
+		font-weight: normal;
 	}
 
 	h2 {
@@ -50,6 +49,10 @@ article {
 		max-width: 43.75em; // 700 pixels I believe?
 	}
 
+	> .work-example .devices {
+		margin-top: 1.5rem;
+	}
+
 	> header .container {
 		max-width: 55em; // because I want this thing to be aligned with my name still.
 	}
@@ -64,10 +67,6 @@ article {
 		width: 100%;
 		overflow: hidden;
 		position: relative;
-	}
-
-	> header {
-		padding-top: 1em;
 	}
 
 	.work-example {
@@ -114,7 +113,12 @@ article {
 	header,
 	p,
 	h3 {
-		padding: 0 0.5rem 0 1rem;
+		padding-right: 0.5rem;
+		padding-left: 1rem;
+	}
+
+	> header {
+		padding-top: 1rem;
 	}
 
 }
@@ -198,6 +202,18 @@ pre {
 
 }
 
+@media screen and (min-width: 31.25rem) { // 500px @ 16
+
+	article {
+		header,
+		p,
+		h3 {
+			padding-left:1rem;
+			padding-right: 1rem;
+		}
+	}
+}
+
 @media screen and (min-width: 32.5em) {
 	.device.iphone {
 		margin-left: 8.5%;
@@ -211,18 +227,6 @@ pre {
 		margin-right: 12%;
 	}
 }
-
-@media screen and (min-width: 37.5rem) { // 600px @ 16
-
-	article {
-		header,
-		p,
-		h3 {
-			padding: 0 1rem 0 1rem;
-		}
-	}
-}
-
 
 @media screen and (min-width: 39.6875em) {
 	.devices {

@@ -9,26 +9,17 @@
 	display: none;
 }
 
-h1.title {
-	font-size: 2em;
-	line-height: 1.2em;
-	margin-top: 0.5em;
-}
-
-h2.subtitle {
+h1 {
 	color: #adadad;
-	font-size: 1em;
-	line-height: 1.6em;
+	font-size: 1.1rem;
+	line-height: 1.64;
 	font-weight: normal;
 	font-family: $font-family-serif;
 	text-align: left;
-	// letter-spacing: -0.02em;
-
-	margin-bottom: 1em;
 }
 
-footer {
-	border-top: none; // footer doesn't need a border-top on this page.
+.work-items {
+	margin-top: 1.5rem;
 }
 
 li.work-item {
@@ -57,11 +48,10 @@ li.work-item {
 	.title:before {
 		display: block;
 		float: right;
-		font-family: $font-family-serif;
-		font-weight: 600;
-		font-size: 2.2em;
+		font-family: $font-family-monospace;
+		font-weight: normal;
 		letter-spacing: -3px;
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		position: relative;
 		top: 0.125em;
 	}

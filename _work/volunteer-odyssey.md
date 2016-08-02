@@ -14,11 +14,11 @@ During GiveCamp Memphis 2015, a weekend-long event where creators donate their t
 
 GiveCamp works by having teams do standup meetings every few hours to discuss the status of the project, and where it’s going next. We all chose which organization we wanted to help, formed teams, and headed for the first standup meeting.
 
-![A photo of the first standup meeting at GiveCamp Memphis 2015][givecamp-meeting]
+<figure><img src="/img/work/volunteer-odyssey/givecamp-meeting.jpg" alt="A photo of the first standup meeting at GiveCamp Memphis 2015"></figure>
 
 A group of Ruby on Rails programmers and I got together and immediately got to work after the meeting finished. I remember a feeling of bond and happiness between all of us. We were working together for a higher purpose. To create a great calendar that could be accessed on any device by volunteers and organizations alike. It felt refreshing.
 
-![A photo of the team and I at GiveCamp Memphis 2015][givecamp-team]
+<figure><img src="/img/work/volunteer-odyssey/givecamp-team.jpg" alt="A photo of the team and I at GiveCamp Memphis 2015"></figure>
 
 ### The Calendar
 

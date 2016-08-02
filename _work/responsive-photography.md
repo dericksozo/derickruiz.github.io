@@ -13,7 +13,7 @@ index: 2
 ### A backstory
 I have a penchant for photography. It's a hobby that I picked up during my year abroad in Tokyo, Japan and I've been in love with it ever since. I wanted to capture the people and my experiences in the city so I picked up a Nikon D5200 at a local electronics store named Yodobashi Camera. I even started my own [street fashion account on instagram](http://instagram.com/misphis) that picked up a few followers.
 
-![A photo of me in Japan holding my camera by the sea.][in-japan-with-camera]
+<figure><img src="/img/work/responsive-photography/in-japan-with-camera.jpg" alt="A photo of me in Japan holding my camera by the sea."></figure>
 
 The website came about because I wanted a place to host my best images. But, the web developer inside of me *had* to make this responsive. I needed *responsive* photography.
 
@@ -27,19 +27,19 @@ The images look bloated and stretched on bigger devices. That's because the brow
 
 ### The technique
 
-I am using the new HTML5 picture element to set different images based on media queries. In the layout, there are three total points of reassembly. The first is mobile that lasts until about 768 pixels. From there the tablet layout assembles, and finally the desktop layout starts at around 992 pixels. Since the picture element also supports checking for pixel density, each point of reassemlby had two images to check for. A normal image if the pixel density of the device was one, and a retina image if the pixel density was 2 or higher. Not all browsers support the picture element yet so I also used `picturefill.js` as a polyfill. 
+I am using the new HTML5 picture element to set different images based on media queries. In the layout, there are three total points of reassembly. The first is mobile that lasts until about 768 pixels. From there the tablet layout assembles, and finally the desktop layout starts at around 992 pixels. Since the picture element also supports checking for pixel density, each point of reassemlby had two images to check for. A normal image if the pixel density of the device was one, and a retina image if the pixel density was 2 or higher. Not all browsers support the picture element yet so I also used `picturefill.js` as a polyfill.
 
 <pre data-language="HTML">
 	<code data-language="HTML">
 &lt;picture&gt;
     &lt;source srcset="assets/img/cropped-images/vancouver-fashion-week-lg-2x.jpg 2x,
-                    assets/img/cropped-images/vancouver-fashion-week-lg.jpg 1x" 
+                    assets/img/cropped-images/vancouver-fashion-week-lg.jpg 1x"
             media="(min-width: 992px)"&gt;
     &lt;source srcset="assets/img/cropped-images/vancouver-fashion-week-sm-2x.jpg 2x,
-                    assets/img/cropped-images/vancouver-fashion-week-sm.jpg 1x" 
+                    assets/img/cropped-images/vancouver-fashion-week-sm.jpg 1x"
             media="(min-width: 768px)"&gt;
     &lt;source srcset="assets/img/cropped-images/vancouver-fashion-week-xs-2x.jpg 2x,
-                    assets/img/cropped-images/vancouver-fashion-week-xs.jpg 1x" 
+                    assets/img/cropped-images/vancouver-fashion-week-xs.jpg 1x"
             media="(max-width: 767px)"&gt;
     &lt;img srcset="assets/img/cropped-images/vancouver-fashion-week-xs.jpg" alt="Vancouver Fashion Week"&gt;
 &lt;picture&gt;

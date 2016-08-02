@@ -52,7 +52,8 @@ a:hover {
 	top: 2px;
 }
 
-em {
+em,
+strong {
 	font-style: normal;
 	font-weight: normal;
 }
@@ -104,10 +105,10 @@ section.intro header {
 
 /* Possibly gotta update this be more general because tags might change in the future. */
 .title {
-	font-size: 1.5em;
-	line-height: 2.2em;
-	font-weight: 600;
-	font-family: $font-family-monospace;
+	font-size: 1.5rem;
+	line-height: 1.64;
+	font-weight: normal;
+	font-family: $font-family-serif;
 	word-break: break-word;
 	word-wrap: break-word;
 }
@@ -155,7 +156,6 @@ nav {
 	}
 }
 
-p.description,
 nav a,
 .breadcrumbs > span > span > span,
 .breadcrumbs span > a,
@@ -167,14 +167,6 @@ footer .email > a {
 	font-family: $font-family-monospace;
 	text-align: left;
 	font-weight: 300;
-}
-
-p.description b {
-	font-weight: 500;
-}
-
-footer .email > a {
-	font-size: 1.1em;
 }
 
 footer {
@@ -210,20 +202,19 @@ footer {
 	border: none;
 	outline: none;
 	font-family: $font-family-monospace;
-	font-size: 1em;
+	font-size: 1rem;
 	// font-size: 0.85em;
-	padding: 0.5em;
-	min-height: 44px;
 	width: 50%;
 	display: block;
-	font-weight: 300;
+	font-weight: normal;
 	margin-top: 1em;
 	max-width: 200px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 a.button {
 	text-align: center;
-	padding-top: 1em; // seems to fix the issue of the button text not being aligned in the middle vertically.
 }
 
 .button.button--yellow {
@@ -402,6 +393,13 @@ a.button {
 	}
 }
 
+@media screen and (min-width: 31.25rem) { // 500px @ 16
+
+	.wrapper {
+		padding: 0 1rem 0 1rem;
+	}
+}
+
 @media screen and (min-width: 37.5rem) { // 600px @ 16
 
 	html {
@@ -441,10 +439,6 @@ a.button {
 
 	main {
 		margin-top: 5.0625rem;
-	}
-
-	.wrapper {
-		padding: 0 1rem 0 1rem;
 	}
 }
 

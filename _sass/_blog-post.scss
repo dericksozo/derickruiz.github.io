@@ -101,7 +101,7 @@ article {
 		display: list-item;
 		list-style-position: outside;
 	}
-	
+
 	header,
 	p,
 	h2 {
@@ -130,7 +130,7 @@ article {
 	}
 }
 
-@media screen and (min-width: 37.5rem) { // 600px @ 16
+@media screen and (min-width: 31.25rem) { // 500px @ 16
 
 	article {
 		header,
