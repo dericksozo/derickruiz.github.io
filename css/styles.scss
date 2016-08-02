@@ -160,7 +160,7 @@ nav {
 
 section.work {
 	max-width: 960px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 nav a,
@@ -211,13 +211,11 @@ footer {
 	font-family: $font-family-monospace;
 	font-size: 1rem;
 	// font-size: 0.85em;
-	width: 50%;
 	display: block;
 	font-weight: normal;
 	margin-top: 1em;
-	max-width: 200px;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	width: 200px;
+	padding: 0.5rem;
 	text-transform: lowercase;
 }
 
