@@ -6,12 +6,11 @@ main a.button {
 	text-decoration: none;
 }
 
-header,
 p.description,
 .other-places {
 	display: block;
 	margin: 0 auto;
-	max-width: 43.75em;
+	max-width: $max-article-width;
 }
 
 h1 {
@@ -67,12 +66,6 @@ span.email-separator {
 	max-width: 245px;
 }
 
-h2,
-h3 {
-	font-size: 1.1em;
-	font-weight: 500;
-}
-
 .twitter,
 .email,
 .email-more-options {
@@ -121,9 +114,9 @@ h3 {
 .email i,
 .email-more-options i {
 	position: absolute;
-	right: 1em;
-	top: 0.25em;
-	font-size: 1.2em;
+	right: 1rem;
+	top: 1rem;
+	font-size: 1.2rem;
 }
 
 .email,

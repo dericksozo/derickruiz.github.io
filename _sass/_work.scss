@@ -255,6 +255,16 @@ li.work-item.glasses {
 	}
 }
 
+@media only screen and (min-width: 60rem) {
+
+	li.work-item {
+		.wrapper {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+}
+
 @media screen and (min-width: 62em) {
 
 	li.work-item {

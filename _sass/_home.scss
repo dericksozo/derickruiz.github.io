@@ -102,6 +102,10 @@ div.latest-blog-posts {
 
 @media screen and (min-width: 37.5em) {
 
+	div.what-i-do {
+		margin-top: 3.375rem;
+	}
+
 	div.latest-blog-posts {
 		border-bottom: none;
 		border-bottom: 0;
@@ -112,11 +116,12 @@ div.latest-blog-posts {
 		&:before {
 			display: block;
 			float: right;
-
-			font-family: $font-family-serif;
-			font-weight: 600;
-			font-size: 2.2em;
+			font-family: $font-family-monospace;
+			font-weight: normal;
 			letter-spacing: -3px;
+			font-size: 1.5rem;
+			position: relative;
+			top: 0.125em;
 		}
 
 		// TODO: It's okay for now, but should probably update this to a class name.
@@ -150,10 +155,11 @@ div.latest-blog-posts {
 	.work-item:first-child {
 
 		h3 {
-			border-bottom: 5px solid $header-text-color;
+			border-bottom: 3px solid $header-text-color;
 		}
 
 	}
+
 }
 
 @media screen and (min-width: 38.75em) {
@@ -221,39 +227,12 @@ div.latest-blog-posts {
 	}
 }
 
-// 926px
-@media screen and (min-width: 57.875em) {
-	section.intro {
-
-		div.latest-blog-posts {
-			width: 60%;
-			float: right;
-
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-
-		div.what-i-do {
-			width: 60%;
-			float: right;
-			// margin-top: 0.5em;
-		}
-
-		/* p.description {
-			width: 60%;
-			float: right;
-
-			margin-top: 0.5em;
-		} */
-	}
-}
-
 //992px
 @media screen and (min-width: 62em) {
 
 	section.intro {
 
-		div.latest-blog-posts {
+		div.what-i-do {
 			width: 45%;
 			float: left;
 
@@ -261,7 +240,7 @@ div.latest-blog-posts {
 			margin-bottom: 0.5em;
 		}
 
-		div.what-i-do {
+		div.latest-blog-posts {
 			width: 50%;
 			float: right;
 
@@ -269,6 +248,10 @@ div.latest-blog-posts {
 			// margin-top: 0.5em;
 		}
 
+		div.what-i-do,
+		div.latest-blog-posts {
+			margin-top: 5.0625rem;
+		}
 		/* p.description {
 			width: 50%;
 			float: right;
