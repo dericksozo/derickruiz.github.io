@@ -1,0 +1,120 @@
+article {
+	> header,
+	> .work-example {
+		background-color: $uber-blue;
+	}
+
+	h2 {
+        color: $uber-blue;
+	}
+}
+
+.button {
+	display: none;
+}
+
+@media screen and (min-width: 30em) {
+	.devices.single-device > .device.iphone {
+		margin: 1em auto;
+		margin-bottom: 0;
+		float: none;
+	}
+}
+
+@media screen and (min-width: 57.5em) { // 1270px
+	// super experimenting here. I just want a layout that's not your traditional layout you know?
+	article {
+
+		position: relative;
+
+		.devices.single-device {
+			width: 100%;
+		}
+
+		.devices.single-device .device.iphone {
+			margin-top: 0;
+		}
+
+		&:before {
+			content: "04";
+			display: block;
+			position: absolute;
+			color: $uber-blue;
+			right: 8%;
+			font-family: $font-family-monospace;
+			font-weight: normal;
+			line-height: 0.8em;
+			font-size: 2.9em;
+			letter-spacing: -0.065em;
+			white-space: nowrap;
+		}
+
+		> header {
+			float: right;
+			width: 40%;
+			padding-bottom: 1em;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+			margin-top: 6.4em;
+			position: relative;
+
+			$color-a: $uber-blue-with-opacity;
+			$color-b: $uber-blue-with-opacity;
+			$background-image: "http://hhonors3.hilton.com/resources/media/hh/en_US/d3/uber/new-york-skyline-666x410.jpg";
+
+			background: linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -webkit-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+			background: -moz-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
+
+			background-position: 35% 43%;
+		}
+
+        > header h1 {
+            color: $uber-blue;
+            border-bottom: 4px solid $uber-blue;
+        }
+
+		> header h2 {
+			color: #fdfdfd;
+			padding-top: 0.5em;
+		}
+
+		> .work-example {
+			float: left;
+			width: 48%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+
+			padding-top: 1.5em;
+			padding-bottom: 1em;
+
+			margin-left: 2.5%;
+			margin-bottom: 2em;
+		}
+
+		> .content {
+			// margin-top: 2em;
+			// float: right;
+			// padding-right: 2.5%;
+			clear: left;
+		}
+	}
+}
+
+@media screen and (min-width: 73.125em) { // 1170px?
+	article:before {
+		right: 10%;
+	}
+}
+
+@media screen and (min-width: 77.8125em) { // 1245px
+	article:before {
+		right: 12%;
+	}
+}
+
+@media screen and (min-width: 83.75em) {
+	article:before {
+		right: 14%;
+	}
+}

@@ -35,14 +35,25 @@ regenerate: true
         <div class='wrapper'>
             {% include intro-h3.html %}
         </div>
-        
+
         <div class='wrapper wrapper--noSpacing'>
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
-            			<h1 class='hyphenate' itemprop="headline">{{page.title}}</h1>
+                        {% if page.headerImage %}
+                            <style>
+                            .Hero {
+                                background-image: url({{page.headerImage}});
+                            }
+                            </style>
+                            <div class="Hero">
+                                <h1 class='Hero-title hyphenate' itemprop='headline'>{{page.title}}</h1>
+                            </div>
+                        {% else %}
+                            <h1 class='hyphenate' itemprop="headline">{{page.title}}</h1>
+                        {% endif %}
             			<time itemprop="datePublished" datetime={{page.date | date: "%Y-%m-%d"}}>
             				<span class='month-day-year'>{{page.date | date: "%m.%d.%Y"}}</span>
             			</time>

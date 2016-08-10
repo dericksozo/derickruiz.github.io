@@ -82,8 +82,8 @@ regenerate: true
                 <h3 class="descriptionTitle descriptionTitle--lowKey">A collection of projects I have worked on.</h3>
 
                 <div class="work-items">
-                    <!-- {% assign works = site.work | sort: 'index' %} -->
-                    {% for work_item in site.work reversed %}
+                    {% assign works = site.work | sort: 'index' %}
+                    {% for work_item in works %}
                         <div class='work-item work-item-{{work_item.index}} clearfix' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 
                             {% if work_item.index < 10 %}

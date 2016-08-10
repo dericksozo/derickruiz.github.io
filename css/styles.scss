@@ -349,6 +349,45 @@ a.button {
 	margin-bottom: 0.5rem;
 }
 
+.Hero {
+	background-size: cover;
+	min-height: 11.089rem;
+	overflow: hidden;
+}
+
+.Hero > .Hero-title {
+	margin-top: 4.235rem;
+	margin-left: 1rem;
+	color: #fff;
+}
+
+.SpecialLink {
+	position: relative;
+	display: inline-block;
+	background-color: $body-color;
+	color: $top-bar-color;
+	padding-left: 1rem;
+	padding-right: 2.617rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.SpecialLink:before {
+	content: "";
+	display: block;
+
+	position: absolute;
+	right: 1rem;
+	top: 33%;
+
+	width: 0;
+	height: 0;
+	border-top: 0.618rem solid transparent;
+	border-bottom: 0.618rem solid transparent;
+	border-left: 1rem solid $top-bar-color;
+
+}
+
 // Specific styles for pages
 .home-page {
 	@import 'home';
@@ -375,6 +414,14 @@ a.button {
 
 	&.glasses {
 		@import 'work-item-glasses-com';
+	}
+
+	&.uber-hilton {
+		@import 'work-item-uber-hilton';
+	}
+
+	&.hilton-luxury-maps {
+		@import 'work-item-hilton-luxury-maps';
 	}
 }
 

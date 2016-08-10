@@ -36,8 +36,8 @@ title: Works
                     	<h1 class='subtitle hyphenate'>A collection of projects I have worked on.</h1>
                 	</div>
                     <ul class='work-items'>
-
-                    	{% for work_item in site.work reversed %}
+                        {% assign works = site.work | sort: 'index' %}
+                    	{% for work_item in works %}
                     	{% assign slug = work_item.url | split: "/" | last %}
                     	<!-- I need a new way to generate that slug now. -->
 
@@ -67,7 +67,7 @@ title: Works
 		                    			<p class='description hyphenate' itemprop="about">
 		                    				{{work_item.description}}
 		                    			</p>
-		                    			<a href="{{work_item.url}}" class='button button--{{button_color}} read-more-button'>Read more</a>
+		                    			<a href="{{work_item.url}}" class='button button--{{button_color}} read-more-button'>read case study</a>
 		                    		</div>
 		                    		{% if work_item.devices %}
 		                    			<div class='work-example'>
