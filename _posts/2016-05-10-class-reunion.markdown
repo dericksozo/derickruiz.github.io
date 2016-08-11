@@ -45,6 +45,8 @@ Tantek word's beautifully captured the idea, but how did it come into life? Thes
 
 The web, created by Tim Berners-Lee, was originally created for structure. It was a science project designed for information organization.[^4] There's a lot of benefits to the structural approach. You have machine readability which leads to better accessibility, better indexing and search engines, and portability to all devices.
 
+<figure><img src="/img/posts/class-reunion/This-is-for-everyone.jpg" alt="A photo of the London Olympics showcasing Tim Berners-Lee's This is for everyone."></figure>
+
 However that structural purity wasn't what the web was destined for. The web, as was so famously captured in the London Olympics, was given for everyone to use. And it turns out that the best practices for computer scientists aren't necessarily the same for regular people.
 
 ## The Table Movement
@@ -52,6 +54,8 @@ However that structural purity wasn't what the web was destined for. The web, as
 People wanted the web to be a visual medium. Pretty sites, animated gifs, and places to post photos. Catering to normal people was seen as a competitive advantage for browsers because there's a lot more normal people than there are computer scientists.
 
 Besides browser incompatibility and lack of developer inertia, CSS just wasn't powerful enough to achieve the layouts that designers wanted. It was just good enough for a few text effects and changing colors. The only way to achieve this visual nature was to abuse HTML structure at the time. Hence font tags and inline formatting. The mid 90's HTML was all about presentation.
+
+<figure><img src="/img/posts/class-reunion/creating-killer-websites.jpg"></figure>
 
 The book Creating Killer Web Sites by David Siegel was extremely popular because it helped people achieve that visual medium. It got designers excited about the web. The most important concept expressed in the book was how to use tables and transparent gifs to achieve a grid-based layout that was close to print.
 
@@ -67,6 +71,8 @@ Despite CSS2 finally achieving the power necessary to create modern layouts the 
 
 ## The road CSS took to prove itself
 
+<figure><img src="/img/posts/class-reunion/daily-css-fun.jpg"></figure>
+
 In late 2001 Chris Casciano posted an influencial transitionary post from using tables to taking advantage of the new power of CSS titled Your CSS Bores Me[^6]. He argued that CSS was just as powerful as tables and wondered why designers still weren't taking advantage of it. In response, a lot of designers said they still weren't sure if CSS could do what Chris was claiming. As a result, he created a project called Daily CSS Fun[^7] in 2002 in which every day in the month of February he would post a new redesign of his website by only changing the stylesheet.
 
 In the table movement a few years before, redesigns were extremely tedious. Because the design was very much tied into the markup it required designers to go into the HTML and manually update all the values on every page. By only changing the stylesheet and not any of the markup to achieve his redesigns, Chris was essentially marketing to web developers, "No need to change the markup for presentational changes, just use CSS!". It was to reassure them that they would no longer have to face the great pains of big redesigns.
@@ -74,6 +80,8 @@ In the table movement a few years before, redesigns were extremely tedious. Beca
 Because the design was only changed through the stylesheet, consequently the style and structure of the CSS very much resembled Tantek Celik's Context before Class. This would help to further enforce and solidify that style of writing CSS.
 
 ## Solidification of style with CSS Zen Garden
+
+<figure><img src="/img/posts/class-reunion/css-zen-garden.jpg"></figure>
 
 In 2003 Dave Shea, the creator of CSS Zen Garden, was inspired by Chris Casciano's Daily CSS Fun project and Your CSS Bores Me post to create CSS Zen Garden[^8]. Instead of Dave doing all of the redesigns, as Chris did, he opened it up to the community as a contest. This was huge because many web designers got their start around this period. They learned CSS by experimenting with the layouts presented in the contests and through reading the CSS source code created by other developers.
 
