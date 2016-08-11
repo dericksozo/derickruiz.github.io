@@ -86,6 +86,12 @@ pre > code {
 
 article {
 
+	.subheadline {
+		color: $secondary-header-color;
+		font-weight: normal;
+		line-height: 1;
+	}
+
 	ul {
 		padding-left: 1em;
 		list-style-type: square;
@@ -115,6 +121,11 @@ article {
 
 	.footnotes li {
 		font-size: 0.666rem;
+		margin-bottom: 1rem;
+	}
+
+	.footnotes li p {
+		margin-bottom: 0;
 	}
 	/* End Footnotes */
 

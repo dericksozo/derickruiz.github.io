@@ -24,7 +24,7 @@ regenerate: true
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/manifest.json">
         <meta name="theme-color" content="#ffffff">
-        
+
         {% include typekit-js.html %}
 
         {% include styles.css.html %}
@@ -59,6 +59,9 @@ regenerate: true
                             </div>
                         {% else %}
                             <h1 class='hyphenate' itemprop="headline">{{page.title}}</h1>
+                            {% if page.subtitle %}
+                                <h3 class="subheadline" class="hyphenate" itemprop="headline">{{page.subtitle}}</h3>
+                            {% endif %}
                         {% endif %}
             			<time itemprop="datePublished" datetime={{page.date | date: "%Y-%m-%d"}}>
             				<span class='month-day-year'>{{page.date | date: "%m.%d.%Y"}}</span>
@@ -90,8 +93,6 @@ regenerate: true
         </div>
         {% include typography-js.html %}
 
-        <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->
-
         {% if page.hasCode %}
         	<script src="/js/vendor/rainbow.js"></script>
         	<script src="/js/vendor/language/generic.js"></script>
@@ -100,13 +101,12 @@ regenerate: true
         		<script src="/js/vendor/language/{{language}}.js"></script>
         	{% endfor %}
 
+            <script>
+            (function () {
+            	Rainbow.color();
+            }());
+            </script>
+
         {% endif %}
-
-        <script>
-        (function () {
-        	Rainbow.color();
-        }());
-        </script>
-
     </body>
 </html>
