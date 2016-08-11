@@ -96,6 +96,39 @@ article {
 		list-style-type: decimal-leading-zero;
 	}
 
+	/* Footnotes */
+	.footnotes {
+		position: relative;
+	}
+
+	.footnotes:before {
+		content: "Footnotes";
+		display: block;
+		font-size: 1rem;
+		color: $primary-header-color;
+		margin-bottom: 1rem;
+	}
+
+	.footnotes ol {
+		padding-left: 2em;
+	}
+
+	.footnotes li {
+		font-size: 0.666rem;
+	}
+	/* End Footnotes */
+
+	/* Footnote Link */
+	sup {
+		font-family: $font-family-monospace;
+		font-size: 0.666rem;
+	}
+
+	sup a {
+		color: $primary-header-color;
+	}
+	/* End Footnote Link */
+
 	ul li,
 	ol li {
 		display: list-item;
@@ -104,7 +137,8 @@ article {
 
 	header,
 	p,
-	h2 {
+	h2,
+	.footnotes:before {
 		padding: 0 0.5rem 0 1rem;
 	}
 
@@ -135,7 +169,8 @@ article {
 	article {
 		header,
 		p,
-		h2 {
+		h2,
+		.footnotes:before {
 			padding: 0 1rem 0 1rem;
 		}
 	}

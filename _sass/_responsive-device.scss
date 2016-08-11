@@ -682,8 +682,19 @@
 
 .device.iphone.glasses-com.uber-hilton {
 	.hero-image {
+		position: relative;
 		background-color: #151525;
 		background-image: none;
+	}
+
+	.hero-image:before {
+		content: " ";
+		display: block;
+		width: 50%;
+		border-radius: 80%;
+		border: 1px solid #1fbad6;
+		height: 50px;
+		margin: 0 auto;
 	}
 
 	.header {
