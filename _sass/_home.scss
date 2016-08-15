@@ -91,9 +91,17 @@ div.latest-blog-posts {
 	display: none;
 }
 
+.devices.single-device .device.browser {
+	display: block;
+}
+
 .button {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.work-item {
+	overflow: hidden;
 }
 
 .work-item::before {
@@ -122,6 +130,7 @@ div.latest-blog-posts {
 			font-size: 1.5rem;
 			position: relative;
 			top: 0.125em;
+			right: 0.2rem;
 		}
 
 		// TODO: It's okay for now, but should probably update this to a class name.
@@ -137,6 +146,11 @@ div.latest-blog-posts {
 		.device {
 			margin: 1em auto;
 			margin-bottom: 0;
+		}
+
+		.devices.single-device .device.browser {
+			margin-top: $scale-default;
+			margin-left: -$scale-three-up;
 		}
 
 		p.description {
@@ -197,6 +211,12 @@ div.latest-blog-posts {
 			border: none;
 			margin: 1em auto;
 			margin-bottom: 0;
+		}
+
+		.devices.single-device .device.browser {
+			margin-left: auto;
+			margin-right: auto;
+			float: none;
 		}
 
 		p.description {
@@ -283,12 +303,6 @@ div.latest-blog-posts {
 			display: block;
 			float: left;
 			margin-left: -6.9em;
-		}
-
-		.devices.single-device .device.browser {
-			float: none;
-			margin-left: auto;
-			margin-right: auto;
 		}
 
 		p.description {

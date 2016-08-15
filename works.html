@@ -23,7 +23,7 @@ title: Works
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/manifest.json">
         <meta name="theme-color" content="#ffffff">
-        
+
         {% include styles.css.html %}
 
         {% include analytics.js.html %}
@@ -54,6 +54,10 @@ title: Works
                             {% assign button_color = "pink" %}
                         {% when "glasses" %}
                             {% assign button_color = "cyan" %}
+                        {% when "uber-hilton" %}
+                            {% assign button_color = "brown" %}
+                        {% when "hilton-luxury-maps" %}
+                            {% assign button_color = "grey" %}
                         {% endcase %}
 
 	                    	<li class='work-item clearfix {{slug}}' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">

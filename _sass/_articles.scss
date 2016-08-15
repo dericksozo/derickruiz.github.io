@@ -7,6 +7,13 @@ section.articles {
 	line-height: 1.68em;
 }
 
+.articles-header {
+	font-family: $font-family-serif;
+	font-size: $scale-two-up;
+	color: $primary-header-color;
+	font-weight: normal;
+}
+
 ul.posts-list {
 
 	margin-top: 0.5em;
@@ -41,7 +48,7 @@ ul.posts-list {
 
 	time,
 	.reading-time > span {
-		color: rgb(168, 168, 168); // make this a variable
+		color: $low-key-color;
 	}
 
 	time {

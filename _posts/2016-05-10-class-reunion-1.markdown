@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Class Reunion"
+title:  "Class Reunion Pt. 1"
 subtitle: "or how 3 words by Tantek Celik shaped CSS structure permanently."
 date:   2016-05-10
 hasCode: true
@@ -93,7 +93,9 @@ CSS Zen Garden convinced a lot of developers that CSS was a serious language. It
 
 Ultimately Tantek's context before class, the connection of classes to semantic HTML, and CSS proving itself came together to create a system to style pages that worked very well for developers. It finally just began to spread and it became commonplace.
 
-This style of CSS works great for static documents. But there is a difference between styling a document, a glorified word document, to styling a web application. As the internet was becoming more of an application platform instead of a document sharing platform, the same methods were no longer up to par. Except they are still being used as we can see. More on this on Part 2.
+This style of CSS works great for static documents. But there is a difference between styling a document, a glorified word document, to styling a web application. As the internet was becoming more of an application platform instead of a document sharing platform, the same methods were no longer up to par. Except they are still being used as we can see.
+
+<a class="SpecialLink" href="/class-reunion-2">Read Part 2</a>
 
 Thank you for reading.
 

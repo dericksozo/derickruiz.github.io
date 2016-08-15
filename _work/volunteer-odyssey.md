@@ -8,6 +8,8 @@ description: >
 index: 1
 ---
 
+NOTE: Volunteer Odyssey's calendar has been updated. [I wrote about it here.][updated-redesign]
+
 ![gif of the calendar][calendar-gif]
 
 During GiveCamp Memphis 2015, a weekend-long event where creators donate their time to nonprofit organizations, I helped design and develop a responsive calendar for Volunteer Odyssey. Sarah Petschonek, the director of Volunteer Odyssey, pitched that she needed a new calendar because the one currently in use wasn't mobile friendly. I jumped on the opportunity to help immediately.
@@ -40,6 +42,7 @@ You can see the original website [here][original-website]. You can view all the 
 
 ![A gif of the redesign of Volunteer Odyssey's calendar][calendar-redesign]
 
+[updated-redesign]: /remote-volunteering-givecamp-memphis
 [givecamp-meeting]: /img/work/volunteer-odyssey/givecamp-meeting.jpg
 [givecamp-team]: /img/work/volunteer-odyssey/givecamp-team.jpg
 [calendar-gif]: /img/work/volunteer-odyssey/calendar.gif

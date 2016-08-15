@@ -164,12 +164,7 @@ li.work-item.uber-hilton {
 	p.description {
 		color: #fdfdfd;
 	}
-
-	.button {
-		background-color: #caa162;
-		border-bottom: 3px solid #886c42;
-		color: #fdfdfd;
-	}
+	
 }
 
 li.work-item.hilton-luxury-maps {
@@ -222,11 +217,6 @@ li.work-item.hilton-luxury-maps {
 		color: #fdfdfd;
 	}
 
-	.button {
-		background-color: #e6e6e6;
-		color: #121013;
-		border-bottom: 3px solid #c3c0c0;
-	}
 }
 
 @media screen and (min-width: 37.5em) {
@@ -299,6 +289,10 @@ li.work-item.hilton-luxury-maps {
 
 		.device.iphone.responsive-photography {
 			border: 4px solid $yellow-color;
+		}
+
+		.device.iphone.uber-hilton {
+			border: 4px solid $uber-blue;
 		}
 
 		.devices.single-device .device.iphone {
@@ -393,6 +387,10 @@ li.work-item.hilton-luxury-maps {
 
 		.device.browser.responsive-photography {
 			background-color: $yellow-color;
+		}
+
+		.device.iphone.uber-hilton {
+			margin-left: 20%;
 		}
 	}
 }

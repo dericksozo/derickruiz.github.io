@@ -1,12 +1,11 @@
 /* Colors */
-// $background-color: rgb(240, 236, 235);
-// $background-color: #fdfdfd;
-$background-color: #ffffff;
-$background-color-darker: #F4F4F4;
+$top-bar-color: #FFFFF7;
+$background-color-darker: #EDD8D5;
 
-$top-bar-color: #FAF8FB; // The bar / border on the top of the page.
+$background-color: #EDD8D5; // The bar / border on the top of the page.
 
-$logo-color: #ffd321; // The color of the shape beside my name in the logo.
+$logo-color: #FFE43F; // The color of the shape beside my name in the logo.
+$logo-color-darker: #FFB636;
 
 $header-text-color: rgb(20, 19, 19);
 $yellow-color: rgb(255, 221, 0);
@@ -16,15 +15,20 @@ $purple-color: rgb(108, 73, 204);
 // $black-color: #141313;
 $black-color: #222;
 
-$body-color: #121013;
-$post-details-color: #C7CBD5; // The color of the date, article length, etc. under the headline.
+$body-color: #22231E;
+$post-details-color: #82786E; // The color of the date, article length, etc. under the headline.
 
 // Colors for headers on blog post style pages.
-$primary-header-color: #EA6B00;
-$secondary-header-color: #62B4F8;
+$primary-header-color: #FE0988;
+$secondary-header-color: #1E3072;
 
+$primary-color: #1E3072;
+$primary-color-darker: #121d46;
+$primary-color-lighter: #2f4dbd;
 
-$low-key-color: #adadad;
+$readable-color: #FFFFF7;
+
+$low-key-color: #82786E;
 $max-article-width: 34rem;
 
 $yellow-color-darker: #E0C200; // used for yellow buttons.
@@ -69,4 +73,10 @@ $shape-width: 200px;
 $font-family-serif: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
 $font-family-monospace: 'HelveticaMonospacedStd-Rg', Menlo, "Courier New", monospace;
 
-
+/* Font Scale */
+$scale-two-down: 0.444rem;
+$scale-one-down: 0.666rem;
+$scale-default: 1rem;
+$scale-one-up: 1.5rem;
+$scale-two-up: 2.25rem;
+$scale-three-up: 3.375rem;

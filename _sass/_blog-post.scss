@@ -35,8 +35,8 @@ article > .content {
 
 h1 {
 	font-family: $font-family-serif;
-	font-size: 1.5rem;
-	line-height: 1.2;
+	font-size: $scale-two-up;
+	line-height: 1;
 	font-weight: normal;
 	word-break: break-word;
 	word-wrap: break-word;
@@ -45,7 +45,12 @@ h1 {
 
 time {
 	display: inline-block;
-	margin-top: 0.333rem;
+	margin-top: $scale-one-down;
+}
+
+blockquote {
+	border-left: 4px solid $primary-header-color;
+	color: $low-key-color;
 }
 
 header > time:first-of-type {
@@ -87,9 +92,11 @@ pre > code {
 article {
 
 	.subheadline {
+		font-size: $scale-one-up;
 		color: $secondary-header-color;
 		font-weight: normal;
 		line-height: 1;
+		margin-top: $scale-two-down;
 	}
 
 	ul {

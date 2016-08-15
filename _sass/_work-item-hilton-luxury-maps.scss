@@ -64,7 +64,7 @@ article {
 
 			$color-a: $hilton-brown-with-opacity;
 			$color-b: $hilton-brown-with-opacity;
-			$background-image: "http://hhonors3.hilton.com/resources/media/hh/en_US/d3/uber/new-york-skyline-666x410.jpg";
+			$background-image: "/img/work/hilton-luxury-maps/map-background.jpg";
 
 			background: linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;
 			background: -webkit-linear-gradient(-40deg,$color-a, $color-b), url($background-image) no-repeat;

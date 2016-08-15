@@ -4,7 +4,6 @@ title:  "Remote Volunteering at GiveCamp Memphis"
 date:   2016-03-05
 hasCode: true
 regenerate: true
-headerImage: "/img/posts/remote-volunteering-givecamp-memphis/cover-photo.jpg"
 ---
 
 Back in 2015 I participated locally at GiveCamp Memphis, a weekend-long event where creators donate their time to nonprofit organizations. I volunteered my web design and front-end web development skills for a local volunteer organization in Memphis called [Volunteer Odyssey](http://volunteerodyssey.com/). I, along with an awesome team of Ruby programmers, built a responsive calendar for them to organize their events. I wrote all about that experience right [here][volunteer-odyssey-work-link].

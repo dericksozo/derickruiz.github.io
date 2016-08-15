@@ -530,7 +530,13 @@
 	display: block;
 	float: left;
 	margin-left: -3em;
-	background-color: #fff;
+	background-color: $background-color;
+}
+
+.devices.single-device .device.browser {
+	float: none;
+	margin: 0 auto;
+	margin-bottom: $scale-one-down;
 }
 
 .device.browser:before { // top bar
