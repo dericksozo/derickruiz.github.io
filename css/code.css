@@ -35,13 +35,7 @@
         opacity: 0
     }
 }[data-language] code,[class^="lang"] code,pre [data-language],pre [class^="lang"] {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    animation: 50ms ease-in-out 2s forwards fade-in
-}[data-language] code.rainbow,[class^="lang"] code.rainbow,pre [data-language].rainbow,pre [class^="lang"].rainbow {
-    animation-delay: 0s
-}[data-language] code.loading,[class^="lang"] code.loading,pre [data-language].loading,pre [class^="lang"].loading {
-    animation-play-state: paused
+    opacity: 1;
 }
 
 pre {
