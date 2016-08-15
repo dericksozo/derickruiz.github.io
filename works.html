@@ -7,21 +7,17 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="This is a temporary description for the work page.
+        <meta name="Description" content="A collection of projects that I have worked on.
 ">
         <!-- <link rel="canonical" href=""> -->
         <meta http-equiv="cleartype" content="on">
 
-        <!-- Typekit code that loads nimbus sans -->
-<script>
-  (function(d) {
-    var config = {
-      kitId: 'yhz0fyw',
-      scriptTimeout: 3000
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
         <link rel="stylesheet" href="/css/styles.css">
 
         <script>
@@ -34,89 +30,65 @@
   ga('send', 'pageview');
 
 </script>
-        
+
     </head>
     <body class='work-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
 
             <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-    <a href="/"><!-- link to home page -->
-        <header itemscope itemtype="http://schema.org/Person">
-            <h3 class='name' itemprop="name">
-                <span itemprop="givenName">
-                    Der<span class='loosen'>i</span>ck
-                </span>
-                <span itemprop="familyName">
-                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                </span>
-            </h3>
-            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
-        </header>
-    </a>
 
-    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/about" itemprop="url">About</a>
+	    		<a href="/about" itemprop="url">About</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    		<a href="/articles" itemprop="url">Articles</a>
 	    	</li>
         
     	    
     	    
 	    	<li class='active'>
-	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    		<a href="/works" itemprop="url">Works</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    		<a href="/contact" itemprop="url">Contact</a>
 	    	</li>
         
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
     </ul>
 </nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
 
 </section>
-            
+
         </div>
             <!-- I removed the itemtype of blog from the main tag. What should go in here now? Nothing? -->
             <main role="main" itemprop="mainContentOfPage">
-            	<div class='wrapper'>
-                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-        <a href="/" class='link' itemprop="url">Home</a>
-        </span>
-        <meta itemprop="position" content="1">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-            <span itemprop="name">Works</span>
-        </span>
-        <meta itemprop="position" content="2">
-    </span>
-</div><!-- breadcrumbs --> 
-            	</div>
-
                 <section class='work'>
                 	<div class='wrapper'>
-                    	<h1 class='title'>Works</h1>
-                    	<!-- This needs to be replaced with a front-matter variable. -->
-                    	<h2 class='subtitle hyphenate'>A collection of projects I have worked on.</h2>
+                    	<h1 class='subtitle hyphenate'>A collection of projects I have worked on.</h1>
                 	</div>
                     <ul class='work-items'>
-
+                        
                     	
                     	
                     	<!-- I need a new way to generate that slug now. -->
@@ -144,7 +116,7 @@
 		                    				I developed and designed a responsive calendar solution for Volunteer Odyssey during GiveCamp Memphis 2015, a weekend-long volunteer coding event for charities.
 
 		                    			</p>
-		                    			<a href="/work/volunteer-odyssey" class='button button--yellow read-more-button'>Read more</a>
+		                    			<a href="/work/volunteer-odyssey" class='button button--yellow read-more-button'>read case study</a>
 		                    		</div>
 		                    		
 		                    			<div class='work-example'>
@@ -312,7 +284,7 @@
 </div><!-- container for the devices -->
 		                    			</div><!-- work-example -->
 		                    		
-		                    		<a href="/work/volunteer-odyssey" class='button button--yellow'>See more</a>
+		                    		<a href="/work/volunteer-odyssey" class='button button--yellow'>Read Case Study</a>
 		                    	</div><!-- .wrapper -->
 	                    	</li>
                     	
@@ -342,7 +314,7 @@
 		                    				I created a photo blog where the loaded images are just as responsive as the layout.
 
 		                    			</p>
-		                    			<a href="/work/responsive-photography" class='button button--pink read-more-button'>Read more</a>
+		                    			<a href="/work/responsive-photography" class='button button--pink read-more-button'>read case study</a>
 		                    		</div>
 		                    		
 		                    			<div class='work-example'>
@@ -419,7 +391,210 @@
 </div>
 		                    			</div><!-- work-example -->
 		                    		
-		                    		<a href="/work/responsive-photography" class='button button--pink'>See more</a>
+		                    		<a href="/work/responsive-photography" class='button button--pink'>Read Case Study</a>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	
+                    	
+                    	<!-- I need a new way to generate that slug now. -->
+
+                        
+
+	                    	<li class='work-item clearfix glasses' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    
+		                    			    
+		                    			    	Glasses.com
+			                    				
+		                    				
+		                    			</h2>
+		                    			<span class='role'>HTML, CSS, and Javascript</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				I developed the user interface of Glasses.com's mobile website.
+
+		                    			</p>
+		                    			<a href="/work/glasses" class='button button--cyan read-more-button'>read case study</a>
+		                    		</div>
+		                    		
+		                    			<div class='work-example'>
+		                    				
+
+		                    				<div class='devices single-device'>
+    <div class='device iphone glasses-com' itemprop="workExample">
+        <div class='camera center-block'></div>
+        <div class='second-camera'></div>
+        <div class='speaker center-block'></div>
+        <div class='content clearfix'>
+            <div class='header'>
+                <div class='logo'></div>
+            </div>
+            <div class='hero-image'></div>
+            <div class='red-button'></div>
+            <div class='brands'>
+                <div class='brand'></div>
+                <div class='brand'></div>
+                <div class='brand'></div>
+            </div>
+            <div class='mosaic-images section clearfix'>
+                <div class='mosaic-image'></div>
+                <div class='mosaic-image'></div>
+                <div class='mosaic-image'></div>
+            </div>
+            <div class='featured-glasses'>
+                <div class='glasses'></div>
+                <div class='glasses'></div>
+                <div class='glasses'></div>
+            </div>
+            <!-- more content if I need it -->
+        </div><!-- .content -->
+    </div><!-- .device -->
+</div>
+		                    			</div><!-- work-example -->
+		                    		
+		                    		<a href="/work/glasses" class='button button--cyan'>Read Case Study</a>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	
+                    	
+                    	<!-- I need a new way to generate that slug now. -->
+
+                        
+
+	                    	<li class='work-item clearfix uber-hilton' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    
+		                    			    
+		                    			    	Uber
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	&
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Hilton
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Partnership
+			                    				
+		                    				
+		                    			</h2>
+		                    			<span class='role'>HTML, CSS, and Javascript</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				I developed the website showcasing the partnership between Hilton Hotels and Uber.
+
+		                    			</p>
+		                    			<a href="/work/uber-hilton" class='button button--brown read-more-button'>read case study</a>
+		                    		</div>
+		                    		
+		                    			<div class='work-example'>
+		                    				
+
+		                    				<div class='devices two-devices'>
+    <div class='device iphone glasses-com uber-hilton' itemprop="workExample">
+        <div class='camera center-block'></div>
+        <div class='second-camera'></div>
+        <div class='speaker center-block'></div>
+        <div class='content clearfix'>
+            <div class='header'>
+                <div class='logo'></div>
+            </div>
+            <div class='hero-image'></div>
+            <div class='red-button'></div>
+            <div class="explanationContainer"></div>
+            <!-- more content if I need it -->
+        </div><!-- .content -->
+    </div><!-- .device -->
+
+    <div class='device ipad uber-hilton' itemProp="workExample">
+        <div class='camera center-block'></div>
+        <div class='content clearfix'>
+            <div class='header section'>
+                <div class='logo'></div>
+            </div>
+
+            <div class="circleContainer"></div>
+            <div class="explanationContainer"></div>
+            <div class="footer"></div>
+        </div>
+    </div><!-- device -->
+
+</div>
+		                    			</div><!-- work-example -->
+		                    		
+		                    		<a href="/work/uber-hilton" class='button button--brown'>Read Case Study</a>
+		                    	</div><!-- .wrapper -->
+	                    	</li>
+                    	
+                    	
+                    	<!-- I need a new way to generate that slug now. -->
+
+                        
+
+	                    	<li class='work-item clearfix hilton-luxury-maps' itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+	                    		<div class='wrapper'>
+		                    		<div class='content'>
+		                    			<!-- I need a filter to break each word -->
+		                    			<h2 class='title' itemprop="name">
+		                    			    
+		                    			    
+		                    			    	Hilton
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Luxury
+			                    				
+		                    			    	<br>
+		                    			    	
+		                    				
+		                    			    	Maps
+			                    				
+		                    				
+		                    			</h2>
+		                    			<span class='role'>HTML, CSS, and Javascript</span>
+		                    			<p class='description hyphenate' itemprop="about">
+		                    				I developed the interactive maps app to search for Hilton's Conrad and Waldorf Astoria hotels.
+
+		                    			</p>
+		                    			<a href="/work/hilton-luxury-maps" class='button button--grey read-more-button'>read case study</a>
+		                    		</div>
+		                    		
+		                    			<div class='work-example'>
+		                    				
+
+		                    				<div class='devices single-device'>
+    <div class='device browser hilton-luxury-maps' itemProp="workExample">
+        <div class='menu'></div>
+        <div class='buttons'></div>
+        <div class='content clearfix'>
+            <div class='header section'>
+                <div class='logo'></div>
+            </div>
+            <div class="map"></div>
+            <div class="navigation">
+                <div class="navigation-item"></div>
+                <div class="navigation-item"></div>
+                <div class="navigation-item"></div>
+                <div class="navigation-item"></div>
+                <div class="navigation-item"></div>
+            </div>
+        </div>
+    </div>
+</div>
+		                    			</div><!-- work-example -->
+		                    		
+		                    		<a href="/work/hilton-luxury-maps" class='button button--grey'>Read Case Study</a>
 		                    	</div><!-- .wrapper -->
 	                    	</li>
                     	

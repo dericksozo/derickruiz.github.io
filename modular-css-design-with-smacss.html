@@ -6,14 +6,14 @@
         <!-- derickruiz.com/responsive-calendar -->
         <!-- It would be cool having the emoji either in the title or in the description. -->
         <!-- A single emoji that represents what the post is about -->
-        <title>Multiple includePaths with Grunt SASS - Derick Ruiz</title>
+        <title>Modular CSS Design with SMACSS - Derick Ruiz</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Some custom description in here -->
         <meta name="Description" content="">
-        <link rel="canonical" href="/grunt-multiple-includepaths">
+        <link rel="canonical" href="/modular-css-design-with-smacss">
         <meta http-equiv="cleartype" content="on">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,8 +35,6 @@
 
         <link rel="stylesheet" href="/css/styles.css">
 
-        
-        	<link rel="stylesheet" href="/css/code.css">
         
 
         <script>
@@ -107,11 +105,11 @@
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
                         
-                            <h1 class='hyphenate' itemprop="headline">Multiple includePaths with Grunt SASS</h1>
+                            <h1 class='hyphenate' itemprop="headline">Modular CSS Design with SMACSS</h1>
                             
                         
-            			<time itemprop="datePublished" datetime=2015-10-03>
-            				<span class='month-day-year'>10.03.2015</span>
+            			<time itemprop="datePublished" datetime=2015-09-22>
+            				<span class='month-day-year'>09.22.2015</span>
             			</time>
             			<span class='separator'>|</span>
 
@@ -122,38 +120,14 @@
             					<span>01 minute read</span>
             				</time>
             			
-            			<meta itemprop="wordCount" content="58">
+            			<meta itemprop="wordCount" content="66">
             		</header>
             		<div class='hyphenate content' itemprop="articleBody">
-            			<p>Here is how to include both Bourbon and Neat in your grunt sass configuration and have multiple includePaths.</p>
+            			<p>I gave a talk on August 19th at Meteor Memphis, a web development group in Memphis focused on the Meteor framework, about Modular CSS Design with SMACSS. My friend did me a great favor and filmed it for me. I talk about using the different methodologies that Jonathan Snook talks about in his SMACSS approach to CSS, and how they can drastically improve your CSS.</p>
 
-<h2 id="grunt-sass">grunt-sass</h2>
-<pre data-language="javascript"><code data-language="javascript">sass: {
-    dev: {
-        files: {
-            'src/css/styles.css': 'src/scss/styles.scss'
-        },
-        options: {
-            includePaths: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
-        }
-    }
-}</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n5eQhIXf5OE" frameborder="0" allowfullscreen=""></iframe>
 
-<h2 id="grunt-contrib-sass">grunt-contrib-sass</h2>
-<pre data-language="javascript"><code data-language="javascript">
-sass: {
-    dev: {
-        files: {
-            'src/css/styles.css': 'src/scss/styles.scss'
-        },
-        options: {
-            loadPath: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
-            sourceMap: true
-        }
-    }
-}</code></pre>
-
-<p>The includePaths (or loadPath with grunt-contrib-sass) property takes an array of different string paths. Doing <code class="highlighter-rouge">require('node-bourbon').includePaths</code> by itself returns an array so to have multiple includePaths concatenation is required to keep that single array.</p>
+<p>Enjoy!</p>
 
             		</div>
             	</article>
@@ -182,18 +156,6 @@ sass: {
         <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
 <script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
 <script src="/js/typography.js"></script>
-
-        
-        	<script src="/js/vendor/rainbow.js"></script>
-        	<script src="/js/vendor/language/generic.js"></script>
-
-        	
-
-            <script>
-            (function () {
-            	Rainbow.color();
-            }());
-            </script>
 
         
     </body>

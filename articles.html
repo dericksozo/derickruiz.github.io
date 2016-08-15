@@ -12,6 +12,12 @@
         <!-- <link rel="canonical" href="/articles"> -->
         <meta http-equiv="cleartype" content="on">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
         <!-- Typekit code that loads nimbus sans -->
 <script>
   (function(d) {
@@ -34,80 +40,144 @@
   ga('send', 'pageview');
 
 </script>
-        
+
     </head>
     <body class='articles-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
         <div class='wrapper'>
 
             <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-    <a href="/"><!-- link to home page -->
-        <header itemscope itemtype="http://schema.org/Person">
-            <h3 class='name' itemprop="name">
-                <span itemprop="givenName">
-                    Der<span class='loosen'>i</span>ck
-                </span>
-                <span itemprop="familyName">
-                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                </span>
-            </h3>
-            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
-        </header>
-    </a>
 
-    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/about" itemprop="url">About</a>
+	    		<a href="/about" itemprop="url">About</a>
 	    	</li>
         
     	    
     	    
 	    	<li class='active'>
-	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    		<a href="/articles" itemprop="url">Articles</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    		<a href="/works" itemprop="url">Works</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    		<a href="/contact" itemprop="url">Contact</a>
 	    	</li>
         
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
     </ul>
 </nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
 
 </section>
-            
+
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-                <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-        <a href="/" class='link' itemprop="url">Home</a>
-        </span>
-        <meta itemprop="position" content="1">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-            <span itemprop="name">Articles</span>
-        </span>
-        <meta itemprop="position" content="2">
-    </span>
-</div><!-- breadcrumbs -->
-
                 <section class='articles'>
+
+                    <h1 class='articles-header'>Articles</h1>
+
                     <ul class='posts-list'>
+
+                    	
+
+	                    	<li class='blog-post clearfix' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+	                            <a href="/class-reunion-2">
+	                                <!-- Second most important heading is the name of the articles? -->
+	                                <h2 class='hyphenate' itemprop="headline">Class Reunion Pt. 2</h2>
+	                            </a>
+	                            <div class='reading-time reading-time--single'>
+	                                <meta itemprop="wordCount" content="2168">
+
+	                                
+
+	                                
+	                                	<span>09 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
+	                                
+	                            </div>
+	                            <time itemprop="datePublished" datetime=2016-06-02>
+
+	                              	
+	                              	
+
+                                    
+                                        <span class='month-and-day'>06.02</span>
+                                    
+                                </time>
+	                        </li>
+
+                    	
+
+	                    	<li class='blog-post clearfix' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+	                            <a href="/class-reunion-1">
+	                                <!-- Second most important heading is the name of the articles? -->
+	                                <h2 class='hyphenate' itemprop="headline">Class Reunion Pt. 1</h2>
+	                            </a>
+	                            <div class='reading-time reading-time--single'>
+	                                <meta itemprop="wordCount" content="1366">
+
+	                                
+
+	                                
+	                                	<span>06 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
+	                                
+	                            </div>
+	                            <time itemprop="datePublished" datetime=2016-05-10>
+
+	                              	
+	                              	
+
+                                    
+                                        <span class='month-and-day'>05.10</span>
+                                    
+                                </time>
+	                        </li>
+
+                    	
+
+	                    	<li class='blog-post clearfix' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+	                            <a href="/remote-volunteering-givecamp-memphis">
+	                                <!-- Second most important heading is the name of the articles? -->
+	                                <h2 class='hyphenate' itemprop="headline">Remote Volunteering at GiveCamp Memphis</h2>
+	                            </a>
+	                            <div class='reading-time reading-time--single'>
+	                                <meta itemprop="wordCount" content="1109">
+
+	                                
+
+	                                
+	                                	<span>05 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
+	                                
+	                            </div>
+	                            <time itemprop="datePublished" datetime=2016-03-05>
+
+	                              	
+	                              	
+
+                                    
+                                        <span class='month-and-day'>03.05</span>
+                                    
+                                </time>
+	                        </li>
 
                     	
 
@@ -120,7 +190,7 @@
 	                                <meta itemprop="wordCount" content="62">
 
 	                                
-	                                
+
 	                                
 	                                	<span>01 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
 	                                
@@ -147,12 +217,39 @@
 	                                <meta itemprop="wordCount" content="58">
 
 	                                
-	                                
+
 	                                
 	                                	<span>01 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
 	                                
 	                            </div>
 	                            <time itemprop="datePublished" datetime=2015-10-03>
+
+	                              	
+	                              	
+
+                                    
+                                        <span class='year'>2015</span>
+                                    
+                                </time>
+	                        </li>
+
+                    	
+
+	                    	<li class='blog-post clearfix' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+	                            <a href="/modular-css-design-with-smacss">
+	                                <!-- Second most important heading is the name of the articles? -->
+	                                <h2 class='hyphenate' itemprop="headline">Modular CSS Design with SMACSS</h2>
+	                            </a>
+	                            <div class='reading-time reading-time--single'>
+	                                <meta itemprop="wordCount" content="66">
+
+	                                
+
+	                                
+	                                	<span>01 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
+	                                
+	                            </div>
+	                            <time itemprop="datePublished" datetime=2015-09-22>
 
 	                              	
 	                              	
@@ -174,7 +271,7 @@
 	                                <meta itemprop="wordCount" content="15">
 
 	                                
-	                                
+
 	                                
 	                                	<span>01 min<span class='minute-text'>ute</span> <span class='read-text'>read</span></span>
 	                                

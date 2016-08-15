@@ -16,6 +16,12 @@
         <link rel="canonical" href="/hello-world">
         <meta http-equiv="cleartype" content="on">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
         <!-- Typekit code that loads nimbus sans -->
 <script>
   (function(d) {
@@ -41,105 +47,74 @@
   ga('send', 'pageview');
 
 </script>
-        
+
     </head>
     <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+
         <div class='wrapper'>
-
             <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-    <a href="/"><!-- link to home page -->
-        <header itemscope itemtype="http://schema.org/Person">
-            <h3 class='name' itemprop="name">
-                <span itemprop="givenName">
-                    Der<span class='loosen'>i</span>ck
-                </span>
-                <span itemprop="familyName">
-                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                </span>
-            </h3>
-            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
-        </header>
-    </a>
 
-    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/about" itemprop="url">About</a>
+	    		<a href="/about" itemprop="url">About</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    		<a href="/articles" itemprop="url">Articles</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    		<a href="/works" itemprop="url">Works</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    		<a href="/contact" itemprop="url">Contact</a>
 	    	</li>
         
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
     </ul>
 </nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
 
 </section>
+        </div>
 
+        <div class='wrapper wrapper--noSpacing'>
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-            	<div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-            <a href="/" class='link' itemprop="url">Home</a>
-        </span>
-        <meta itemprop="position" content="1">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-        <!-- Yes, for now. -->
-        <span itemprop="item">
-            <a href="/articles" class='link' itemprop="url">Articles</a>
-        </span>
-        <meta itemprop="position" content="2">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-        <!-- Yes, for now. -->
-        <span itemprop="item">
-            <span itemprop="name">Hello World</span>
-        </span>
-        <meta itemprop="position" content="3">
-    </span>	                    
-</div><!-- breadcrumbs -->
-            	
-            	<!-- Should this be an article tag or a section tag? -->
-            	<!-- Look up the schema.org stuff you'll have to put in here -->
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
-            			<!-- <h1 class='hyphenate' itemprop="headline">Building a responsive calendar: The Definitive Guide</h1> -->
-            			<h1 class='hyphenate' itemprop="headline">Hello World</h1>
+                        
+                            <h1 class='hyphenate' itemprop="headline">Hello World</h1>
+                            
+                        
             			<time itemprop="datePublished" datetime=2015-05-17>
             				<span class='month-day-year'>05.17.2015</span>
             			</time>
             			<span class='separator'>|</span>
 
             			
-	                    
+
 	                    
 	                    	<time class='read-time' itemprop="timeRequired" datetime="01M">
             					<span>01 minute read</span>
@@ -153,7 +128,9 @@
             		</div>
             	</article>
             </main>
+        </div><!-- .wrapper -->
 
+        <div class='wrapper'>
             <footer>
     <div class='email'>
         <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
@@ -171,22 +148,11 @@
         </li>
     </ul>
 </footer>
-
-        </div><!-- .wrapper -->
-
+        </div>
         <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
 <script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
 <script src="/js/typography.js"></script>
 
-        <!-- Check if the post has code based on the front matter, and then which languages and iterate through them -->
-
         
-
-        <script>
-        (function () {
-        	Rainbow.color();
-        }());
-        </script>
-
     </body>
 </html>

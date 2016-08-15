@@ -16,16 +16,12 @@
         <link rel="canonical" href="">
         <meta http-equiv="cleartype" content="on">
 
-        <!-- Typekit code that loads nimbus sans -->
-<script>
-  (function(d) {
-    var config = {
-      kitId: 'yhz0fyw',
-      scriptTimeout: 3000
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+        
         <link rel="stylesheet" href="/css/styles.css">
 
         <script>
@@ -44,80 +40,53 @@
         <div class='wrapper'>
 
         	<section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-    <a href="/"><!-- link to home page -->
-        <header itemscope itemtype="http://schema.org/Person">
-            <h3 class='name' itemprop="name">
-                <span itemprop="givenName">
-                    Der<span class='loosen'>i</span>ck
-                </span>
-                <span itemprop="familyName">
-                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                </span>
-            </h3>
-            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
-        </header>
-    </a>
 
-    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/about" itemprop="url">About</a>
+	    		<a href="/about" itemprop="url">About</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    		<a href="/articles" itemprop="url">Articles</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    		<a href="/works" itemprop="url">Works</a>
 	    	</li>
         
     	    
     	    
 	    	<li class='active'>
-	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    		<a href="/contact" itemprop="url">Contact</a>
 	    	</li>
         
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
     </ul>
 </nav>
 
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h1 class='name' itemprop="name"><span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span></h1>
+        </header>
+    </a>
+
 </section>
-        	
+
         </div><!-- .wrapper -->
 
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage">
             	<div class='wrapper'>
-
-            		<div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-        <a href="/" class='link' itemprop="url">Home</a>
-        </span>
-        <meta itemprop="position" content="1">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-            <span itemprop="name">Contact</span>
-        </span>
-        <meta itemprop="position" content="2">
-    </span>
-</div><!-- breadcrumbs -->
-
-	                <header>
-            			<h1 class='title hyphenate'>Contact</h1>
-            		</header>
-
             		<p class='description hyphenate'>If you want a quick reply tweet me. If you need more than 140 characters you can always send an email.</p>
             	</div>
 
@@ -157,11 +126,10 @@
 
 	            <div class='wrapper'>
 	            	<div class='other-places'>
-						<h3>Other places on the internet</h3>
+						<h3 class="descriptionTitle descriptionTitle--spaceDown">Other places on the internet</h3>
 						<ul>
 							<li><a href="https://github.com/derickruiz"><i class='icon-github'></i> <span class='link'>@derickruiz on Github</span></a></li>
 							<li><a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link'>@derickruiz on Codepen</span></a></li>
-							<li><a href="http://instagram.com/iamderickruiz"><i class='icon-instagram'></i> <span class='link'>@iamderickruiz on Instagram</span></a></li>
 						</ul>
 	            	</div>
             	</div>

@@ -17,6 +17,12 @@
         <link rel="canonical" href="">
         <meta http-equiv="cleartype" content="on">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+        
         <!-- Typekit code that loads nimbus sans -->
 <script>
   (function(d) {
@@ -30,6 +36,8 @@
         <link rel="stylesheet" href="/css/styles.css">
 
         
+            <link rel="stylesheet" href="/css/code.css">
+        
 
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -41,7 +49,7 @@
   ga('send', 'pageview');
 
 </script>
-        
+
     </head>
 
     
@@ -51,87 +59,53 @@
     
         <div class='wrapper'>
             <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
-    <a href="/"><!-- link to home page -->
-        <header itemscope itemtype="http://schema.org/Person">
-            <h3 class='name' itemprop="name">
-                <span itemprop="givenName">
-                    Der<span class='loosen'>i</span>ck
-                </span>
-                <span itemprop="familyName">
-                    R<span class='tighten'>u</span>i<span class='trim'>z</span>
-                </span>
-            </h3>
-            <h4 class='title' itemprop="jobTitle">Front-End Web Developer</h4>
-        </header>
-    </a>
 
-    <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <ul>
     	
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/about" itemprop="url">About</a>
+	    		<a href="/about" itemprop="url">About</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/articles" itemprop="url">Articles</a>
+	    		<a href="/articles" itemprop="url">Articles</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/works" itemprop="url">Works</a>
+	    		<a href="/works" itemprop="url">Works</a>
 	    	</li>
         
     	    
     	    
 	    	<li class=''>
-	    		<a class='link' href="/contact" itemprop="url">Contact</a>
+	    		<a href="/contact" itemprop="url">Contact</a>
 	    	</li>
         
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
     </ul>
 </nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
 
 </section>
         </div>
 
             <!-- Put the item type of blog back inside of here -->
             <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-                <div class='wrapper'>
-                    <div class='breadcrumbs' itemprop="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <span itemprop="item">
-            <a href="/" class='link' itemprop="url">Home</a>
-        </span>
-        <meta itemprop="position" content="1">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-        <!-- Yes, for now. -->
-        <span itemprop="item">
-            <a href="/works" class='link' itemprop="url">Works</a>
-        </span>
-        <meta itemprop="position" content="2">
-    </span>
-
-    <span class='separator chevron chevron--direction-right'></span>
-
-    <span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-        <!-- Is this the best way to approach the last item in the breadcrumbs? -->
-        <!-- Yes, for now. -->
-        <span itemprop="item">
-            <span itemprop="name">Volunteer Odyssey</span>
-        </span>
-        <meta itemprop="position" content="3">
-    </span>	                    
-</div><!-- breadcrumbs -->
-                </div>
 
             	<!-- Should this be an article tag or a section tag? -->
             	<!-- Look up the schema.org stuff you'll have to put in here -->
@@ -308,23 +282,25 @@
 </div><!-- container for the devices -->
                         
 
-                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a> 
-                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>                     
+                        <a class='button button--yellow more-devices js-see-more-devices'>See more devices</a>
+                        <a class='button button--yellow another-device js-see-more-devices'>See another device</a>
                     </div><!-- .work-example -->
                     <!-- Is text the proper itemprop in this case since I'm going to have images and possibly videos
                     in here? -->
             		<div class='hyphenate content' itemprop="text">
-            			<p><img src="/img/work/volunteer-odyssey/calendar.gif" alt="gif of the calendar" /></p>
+            			<p>NOTE: Volunteer Odyssey’s calendar has been updated. <a href="/remote-volunteering-givecamp-memphis">I wrote about it here.</a></p>
+
+<p><img src="/img/work/volunteer-odyssey/calendar.gif" alt="gif of the calendar" /></p>
 
 <p>During GiveCamp Memphis 2015, a weekend-long event where creators donate their time to nonprofit organizations, I helped design and develop a responsive calendar for Volunteer Odyssey. Sarah Petschonek, the director of Volunteer Odyssey, pitched that she needed a new calendar because the one currently in use wasn’t mobile friendly. I jumped on the opportunity to help immediately.</p>
 
 <p>GiveCamp works by having teams do standup meetings every few hours to discuss the status of the project, and where it’s going next. We all chose which organization we wanted to help, formed teams, and headed for the first standup meeting.</p>
 
-<p><img src="/img/work/volunteer-odyssey/givecamp-meeting.jpg" alt="A photo of the first standup meeting at GiveCamp Memphis 2015" /></p>
+<figure><img src="/img/work/volunteer-odyssey/givecamp-meeting.jpg" alt="A photo of the first standup meeting at GiveCamp Memphis 2015" /></figure>
 
 <p>A group of Ruby on Rails programmers and I got together and immediately got to work after the meeting finished. I remember a feeling of bond and happiness between all of us. We were working together for a higher purpose. To create a great calendar that could be accessed on any device by volunteers and organizations alike. It felt refreshing.</p>
 
-<p><img src="/img/work/volunteer-odyssey/givecamp-team.jpg" alt="A photo of the team and I at GiveCamp Memphis 2015" /></p>
+<figure><img src="/img/work/volunteer-odyssey/givecamp-team.jpg" alt="A photo of the team and I at GiveCamp Memphis 2015" /></figure>
 
 <h3 id="the-calendar">The Calendar</h3>
 
@@ -377,7 +353,19 @@
 <script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
 <script src="/js/typography.js"></script>
         <script src="/js/work-item.js"></script>
+
         
+            <script src="/js/vendor/rainbow.js"></script>
+            <script src="/js/vendor/language/generic.js"></script>
+
+            
+
+            <script>
+            (function () {
+                Rainbow.color();
+            }());
+            </script>
+
         
     </body>
 </html>

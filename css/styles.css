@@ -1,3 +1,16 @@
+@import url("//hello.myfonts.net/count/31bf83");
+@import url("//hello.myfonts.net/count/31bf94");
+@font-face {
+  font-family: 'UniversLTPro-45Light';
+  src: url("/fonts/31BF83_0_0.eot");
+  src: url("/fonts/31BF83_0_0.eot?#iefix") format("embedded-opentype"), url("/fonts/31BF83_0_0.woff2") format("woff2"), url("/fonts/31BF83_0_0.woff") format("woff"), url("/fonts/31BF83_0_0.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'HelveticaMonospacedStd-Rg';
+  src: url("/fonts/31BF94_0_0.eot");
+  src: url("/fonts/31BF94_0_0.eot?#iefix") format("embedded-opentype"), url("/fonts/31BF94_0_0.woff2") format("woff2"), url("/fonts/31BF94_0_0.woff") format("woff"), url("/fonts/31BF94_0_0.ttf") format("truetype"); }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,6 +29,9 @@ html {
 body {
   margin: 0;
   font-size: 100%; }
+
+main {
+  display: block; }
 
 h1,
 h2,
@@ -51,30 +67,9 @@ img {
   height: auto;
   border: 0; }
 
-@font-face {
-  font-family: 'AtlasTypewriterWeb';
-  src: url("/fonts/AtlasTypewriterWeb-Light.eot");
-  src: url("/fonts/AtlasTypewriterWeb-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasTypewriterWeb-Light.woff") format("woff"), url("/fonts/AtlasTypewriterWeb-Light.ttf") format("truetype"), url("/fonts/AtlasTypewriterWeb-Light.svg#AtlasTypewriterWeb-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  word-spacing: 2em; }
-@font-face {
-  font-family: 'AtlasTypewriterWeb';
-  src: url("/fonts/AtlasTypewriterWeb-Medium.eot");
-  src: url("/fonts/AtlasTypewriterWeb-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasTypewriterWeb-Medium.woff") format("woff"), url("/fonts/AtlasTypewriterWeb-Medium.ttf") format("truetype"), url("/fonts/AtlasTypewriterWeb-Medium.svg#AtlasTypewriterWeb-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: 'AtlasTypewriterWeb';
-  src: url("/fonts/AtlasTypewriterRegular.eot");
-  src: url("/fonts/AtlasTypewriterRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/AtlasTypewriterRegular.woff") format("woff"), url("/fonts/AtlasTypewriterRegular.ttf") format("truetype"), url("/fonts/AtlasTypewriterRegular.svg#AtlasTypewriterRegular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
 /* Colors */
 /* Fonts */
+/* Font Scale */
 .hyphenate {
   text-align: justify;
   hyphens: auto;
@@ -555,7 +550,12 @@ img {
   display: block;
   float: left;
   margin-left: -3em;
-  background-color: #fff; }
+  background-color: #EDD8D5; }
+
+.devices.single-device .device.browser {
+  float: none;
+  margin: 0 auto;
+  margin-bottom: 0.666rem; }
 
 .device.browser:before {
   background-color: #E5E5E5;
@@ -668,6 +668,159 @@ img {
   margin-right: 3.33%;
   min-height: 37px; }
 
+.device.iphone.glasses-com.uber-hilton .hero-image {
+  position: relative;
+  background-color: #151525;
+  background-image: none; }
+.device.iphone.glasses-com.uber-hilton .hero-image:before {
+  content: " ";
+  display: block;
+  width: 50%;
+  border-radius: 80%;
+  border: 1px solid #1fbad6;
+  height: 50px;
+  margin: 0 auto; }
+.device.iphone.glasses-com.uber-hilton .header {
+  background-color: #7b7b7b;
+  overflow: hidden; }
+.device.iphone.glasses-com.uber-hilton .header .logo {
+  height: 10px;
+  width: 30px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 5px; }
+.device.iphone.glasses-com.uber-hilton .red-button {
+  background-color: #1fbad6; }
+.device.iphone.glasses-com.uber-hilton .explanationContainer {
+  position: relative;
+  width: 100%;
+  height: 39px;
+  background-color: #343434; }
+.device.iphone.glasses-com.uber-hilton .explanationContainer:before,
+.device.iphone.glasses-com.uber-hilton .explanationContainer:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  width: 50%;
+  left: 26%;
+  top: 15px;
+  height: 26px; }
+.device.iphone.glasses-com.uber-hilton .explanationContainer:after {
+  content: "";
+  display: block;
+  background-color: #caa162;
+  top: 3px;
+  height: 6px; }
+
+.device.ipad.uber-hilton .content {
+  overflow: hidden;
+  position: relative;
+  background-color: #7b7b7b; }
+.device.ipad.uber-hilton .header {
+  background-color: #7b7b7b;
+  overflow: hidden; }
+.device.ipad.uber-hilton .header .logo {
+  height: 10px;
+  width: 50px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 9px; }
+.device.ipad.uber-hilton .circleContainer {
+  position: absolute;
+  left: 5%;
+  top: 34%;
+  border: 1px solid #1fbad6;
+  background-color: #151525;
+  border-radius: 50%;
+  max-width: 350px;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 1.4375em;
+  height: 70px; }
+.device.ipad.uber-hilton .explanationContainer {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  width: 40%;
+  background-color: #000;
+  height: 116px; }
+.device.ipad.uber-hilton .explanationContainer:before,
+.device.ipad.uber-hilton .explanationContainer:after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  width: 65%;
+  left: 19%;
+  top: 29px;
+  height: 59px; }
+.device.ipad.uber-hilton .explanationContainer:after {
+  content: "";
+  display: block;
+  background-color: #caa162;
+  top: 9px;
+  height: 10px; }
+.device.ipad.uber-hilton .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #dadad9;
+  height: 20px; }
+
+.device.browser.hilton-luxury-maps .content {
+  background-color: #000; }
+.device.browser.hilton-luxury-maps .header {
+  position: relative;
+  height: 1px;
+  margin-top: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; }
+.device.browser.hilton-luxury-maps .header:before {
+  content: " ";
+  display: block;
+  width: 50px;
+  height: 13px;
+  background-color: #fff;
+  position: absolute;
+  top: -25px; }
+.device.browser.hilton-luxury-maps .map {
+  background-image: url("/img/work/hilton-luxury-maps/map.svg");
+  width: 70%;
+  float: left;
+  background-size: cover;
+  height: 109px;
+  margin-left: 6px;
+  margin-top: 13px;
+  margin-right: 5px; }
+.device.browser.hilton-luxury-maps .navigation {
+  width: 23%;
+  float: left;
+  height: 109px; }
+.device.browser.hilton-luxury-maps .navigation-item {
+  margin-top: 16px;
+  height: 10px;
+  width: 100%;
+  background-color: #c09760; }
+.device.browser.hilton-luxury-maps .navigation-item:not(:first-child) {
+  margin-top: 10px; }
+.device.browser.hilton-luxury-maps .navigation-item:nth-child(2) {
+  margin-top: 25px; }
+.device.browser.hilton-luxury-maps .navigation-item:first-child {
+  position: relative; }
+.device.browser.hilton-luxury-maps .navigation-item:first-child:before,
+.device.browser.hilton-luxury-maps .navigation-item:first-child:after {
+  content: " ";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 15px; }
+.device.browser.hilton-luxury-maps .navigation-item:first-child:after {
+  top: 25px; }
+
 html {
   /* Typography related rules */
   text-rendering: optimizeLegibility;
@@ -675,71 +828,62 @@ html {
   -ms-font-feature-settings: "kern" 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  font-size: 16px; }
 
 body {
-  font-size: 90%;
-  background-color: #fdfdfd;
-  color: #222; }
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-size: 100%;
+  line-height: 1.63;
+  background-color: #EDD8D5;
+  color: #22231E;
+  border-top: 30px solid #FFFFF7;
+  min-height: 100vh; }
+
+main {
+  margin-top: 3.375rem; }
 
 .link {
   text-decoration: underline; }
 
 a {
-  color: #222;
+  color: #22231E;
   display: inline; }
 
 a:hover {
   position: relative;
   top: 2px; }
 
+em,
+strong {
+  font-style: normal;
+  font-weight: normal; }
+
 .wrapper {
   width: 100%;
-  overflow: hidden;
-  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 0 0.5em 0 1em; }
 
-section.intro > a {
-  display: inline-block; }
+.wrapper.wrapper--noSpacing {
+  padding: 0 0 0 0 !important; }
 
-section.intro {
-  border-bottom: 5px solid #F4F4F4;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em; }
+section.intro > a {
+  display: block;
+  margin-top: 2.25rem; }
 
 section.intro header {
   position: relative; }
-  section.intro header:before {
-    content: " ";
-    display: block;
-    width: 105px;
-    height: 105px;
-    left: 2.6em;
-    position: absolute;
-    z-index: 1;
-    background-color: #ffdd00; }
   section.intro header .name {
-    font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-    color: #141313;
-    font-weight: 900;
+    font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+    font-weight: normal;
     line-height: 0.8em;
-    font-size: 2.9em;
-    letter-spacing: -0.04em;
+    font-size: 1rem;
+    text-decoration: underline;
     white-space: nowrap;
     -webkit-transition: font-size 0.3s ease;
     position: relative;
-    z-index: 2;
-    margin-top: 0.3em;
-    margin-bottom: 0.1em;
-    padding-top: 0.1em; }
-  section.intro header .name > span {
-    display: block; }
-  section.intro header .name .trim {
-    margin-left: 0.007em; }
-  section.intro header .name .tighten {
-    margin-left: -0.04em; }
-  section.intro header .name .loosen {
-    margin-left: 0.02em; }
+    z-index: 2; }
   section.intro header .name + .title {
     text-transform: lowercase;
     line-height: 1.2em;
@@ -749,30 +893,46 @@ section.intro header {
 
 /* Possibly gotta update this be more general because tags might change in the future. */
 .title {
-  font-size: 1.5em;
-  line-height: 2.2em;
-  font-weight: 600;
-  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.64;
+  font-weight: normal;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
   word-break: break-word;
   word-wrap: break-word; }
 
 nav {
-  margin-top: 1em; }
+  margin-top: -0.8rem;
+  max-width: 100%; }
   nav li {
     position: relative;
+    display: block;
+    float: left;
+    margin-right: 2rem; }
+  nav li:nth-child(3n),
+  nav li.home-link {
+    clear: left; }
+  nav li.home-link,
+  nav li.home-link > a {
     display: inline-block;
-    margin-right: 0.5em; }
-  nav li.active:before {
-    content: " ";
-    position: absolute;
-    background-color: #ffdd00;
-    height: 5px;
-    width: 100%;
-    bottom: -0.9em; }
+    width: 1rem;
+    height: 1rem;
+    min-width: 0; }
+  nav li.home-link {
+    margin-top: 0.4rem; }
+  nav li.home-link > a {
+    background-color: #FFE43F;
+    border-top: 2px solid #FFB636;
+    border-left: 2px solid #FFB636; }
+  nav li.active > a {
+    border-bottom: 1px solid #FE0988; }
   nav li a {
-    text-transform: lowercase; }
+    text-transform: lowercase;
+    text-decoration: none; }
 
-p.description,
+section.work {
+  max-width: 960px;
+  margin: 0 auto; }
+
 nav a,
 .breadcrumbs > span > span > span,
 .breadcrumbs span > a,
@@ -781,20 +941,14 @@ footer .email > a {
   font-size: 1em;
   line-height: 1.6em;
   font-weight: normal;
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+  font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
   text-align: left;
   font-weight: 300; }
-
-p.description b {
-  font-weight: 500; }
-
-footer .email > a {
-  font-size: 1.1em; }
 
 footer {
   padding-top: 0.5em;
   margin-bottom: 2em;
-  border-top: 5px solid #F4F4F4; }
+  margin-top: 2.25rem; }
   footer .email {
     margin-bottom: 0.25em; }
   footer .email > a {
@@ -811,19 +965,17 @@ footer {
   background: none;
   border: none;
   outline: none;
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-  font-size: 1em;
-  padding: 0.5em;
-  min-height: 44px;
-  width: 50%;
+  font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+  font-size: 1rem;
   display: block;
-  font-weight: 300;
+  font-weight: normal;
   margin-top: 1em;
-  max-width: 200px; }
+  width: 200px;
+  padding: 0.5rem;
+  text-transform: lowercase; }
 
 a.button {
-  text-align: center;
-  padding-top: 1em; }
+  text-align: center; }
 
 .button.button--yellow {
   background-color: #ffdd00;
@@ -835,6 +987,19 @@ a.button {
 
 .button.button--yellow:active {
   border-top: 3px solid #FFE645;
+  border-bottom: none; }
+
+.button.button--primary {
+  color: #FFFFF7;
+  background-color: #1E3072;
+  border-bottom: 3px solid #121d46; }
+
+.button.button--primary:hover {
+  background-color: #2f4dbd;
+  border-bottom: 3px solid #1E3072; }
+
+.button.button--primary:active {
+  border-top: 3px solid #2f4dbd;
   border-bottom: none; }
 
 .button.button--red {
@@ -866,6 +1031,32 @@ a.button {
 
 .button.button--pink:active {
   border-top: 3px solid #FF3CB1;
+  border-bottom: none; }
+
+.button.button--brown {
+  background-color: #caa162;
+  border-bottom: 3px solid #886c42;
+  color: #fdfdfd; }
+
+.button.button--brown:hover {
+  background-color: #e4b771;
+  border-bottom: 3px solid #caa162; }
+
+.button.button--brown:active {
+  border-top: 3px solid #e4b771;
+  border-bottom: none; }
+
+.button.button--grey {
+  background-color: #e6e6e6;
+  color: #121013;
+  border-bottom: 3px solid #c3c0c0; }
+
+.button.button--grey:hover {
+  background-color: #fffefe;
+  border-bottom: 3px solid #e6e6e6; }
+
+.button.button--grey:active {
+  border-top: 3px solid #fffefe;
   border-bottom: none; }
 
 /* Chevron */
@@ -906,73 +1097,107 @@ a.button {
 .breadcrumbs > span:last-child > span > span {
   color: #a8a8a8; }
 
-@media screen and (min-width: 30em) {
-  .wrapper {
-    padding: 0 7.5%; } }
-@media screen and (min-width: 48.4375em) {
-  body {
-    font-size: 118%; }
+/* Description Title */
+.descriptionTitle {
+  font-size: 1.1rem;
+  line-height: 1.64;
+  font-weight: normal;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  word-break: break-word;
+  word-wrap: break-word; }
 
-  header:before {
-    width: 130px;
-    height: 130px; } }
-@media screen and (min-width: 68.75em) {
-  .wrapper {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 960px; } }
+.descriptionTitle.descriptionTitle--lowKey {
+  color: #82786E; }
+
+.descriptionTitle.descriptionTitle--articles {
+  color: #FE0988; }
+
+.descriptionTitle.descriptionTitle--helpYou {
+  color: #1E3072; }
+
+.descriptionTitle.descriptionTitle--spaceDown {
+  margin-bottom: 0.5rem; }
+
+.Hero {
+  background-size: cover;
+  min-height: 11.089rem;
+  overflow: hidden; }
+
+.Hero > .Hero-title {
+  margin-top: 4.235rem;
+  margin-left: 1rem;
+  color: #fff; }
+
+.SpecialLink {
+  position: relative;
+  display: inline-block;
+  background-color: #FE0988;
+  color: #FFFFF7;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.SpecialLink[href*="youtu"] {
+  padding-right: 2.617rem; }
+
+.SpecialLink[href*="youtu"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 33%;
+  width: 0;
+  height: 0;
+  border-top: 0.618rem solid transparent;
+  border-bottom: 0.618rem solid transparent;
+  border-left: 1rem solid #FFFFF7; }
+
 .home-page {
   /* Blog posts section */ }
   .home-page section.intro {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0; }
-  .home-page nav {
-    border-bottom: 5px solid #F4F4F4;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em; }
-  .home-page div.what-i-do h4,
-  .home-page div.latest-blog-posts h4 {
-    font-size: 1.1em;
-    line-height: 2.2em;
-    font-weight: 600;
-    font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-    word-break: break-word;
-    word-wrap: break-word; }
   .home-page section.work {
-    padding-bottom: 1em; }
+    margin-top: 3.375rem; }
     .home-page section.work .work-item {
       position: relative;
       margin-bottom: 0.5em; }
-  .home-page div.what-i-do p.description {
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.5em; }
+  .home-page .work-items {
+    margin-top: 1rem; }
+  .home-page .work-items > .work-item + .work-item {
+    margin-top: 1.5rem; }
+  .home-page div.what-i-do {
+    margin-top: 2.25rem; }
+    .home-page div.what-i-do p.description {
+      font-weight: 300;
+      font-size: 1em;
+      line-height: 1.5em; }
   .home-page div.latest-blog-posts {
-    border-bottom: 5px solid #F4F4F4;
-    padding-bottom: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em; }
+    margin-top: 1.5rem; }
     .home-page div.latest-blog-posts li.blog-post {
       margin-bottom: 0.3em; }
     .home-page div.latest-blog-posts > span.or {
       display: block;
       text-align: center;
       text-transform: uppercase;
-      font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+      font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
       font-size: 0.85em;
-      color: #a8a8a8;
+      color: #82786E;
       margin-top: 1em; }
     .home-page div.latest-blog-posts li.blog-post > time,
     .home-page div.latest-blog-posts li.blog-post > a,
     .home-page div.latest-blog-posts > a {
-      font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+      font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
       font-weight: normal;
       text-align: left;
       font-size: 1em;
       line-height: 1.6em; }
     .home-page div.latest-blog-posts li.blog-post > time {
-      color: #a8a8a8; }
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace; }
+    .home-page div.latest-blog-posts li.blog-post > time {
+      color: #82786E; }
     .home-page div.latest-blog-posts > a {
       display: inline-block; }
   .home-page .device.ipad {
@@ -981,22 +1206,31 @@ a.button {
     display: none; }
   .home-page .device.browser {
     display: none; }
+  .home-page .devices.single-device .device.browser {
+    display: block; }
   .home-page .button {
     margin-left: auto;
     margin-right: auto; }
+  .home-page .work-item {
+    overflow: hidden; }
   .home-page .work-item::before {
     display: none; }
   @media screen and (min-width: 37.5em) {
+    .home-page div.what-i-do {
+      margin-top: 3.375rem; }
     .home-page div.latest-blog-posts {
       border-bottom: none;
       border-bottom: 0; }
     .home-page .work-item:before {
       display: block;
       float: right;
-      font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-      font-weight: 600;
-      font-size: 2.2em;
-      letter-spacing: -3px; }
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+      font-weight: normal;
+      letter-spacing: -3px;
+      font-size: 1.5rem;
+      position: relative;
+      top: 0.125em;
+      right: 0.2rem; }
     .home-page .work-item h3 {
       border-bottom: 1px solid #141313; }
     .home-page .work-item .devices {
@@ -1005,6 +1239,9 @@ a.button {
     .home-page .work-item .device {
       margin: 1em auto;
       margin-bottom: 0; }
+    .home-page .work-item .devices.single-device .device.browser {
+      margin-top: 1rem;
+      margin-left: -3.375rem; }
     .home-page .work-item p.description {
       float: left;
       width: 65%;
@@ -1014,7 +1251,7 @@ a.button {
       float: left;
       margin-left: 5%; }
     .home-page .work-item:first-child h3 {
-      border-bottom: 5px solid #141313; } }
+      border-bottom: 3px solid #141313; } }
   @media screen and (min-width: 38.75em) {
     .home-page a.button {
       padding-top: 0.8em; } }
@@ -1024,7 +1261,7 @@ a.button {
     .home-page .work-item .device.iphone {
       display: block;
       float: left;
-      border: 4px solid #fdfdfd;
+      border: 4px solid #EDD8D5;
       margin-top: 4.55em; }
     .home-page .work-item .device.ipad {
       display: block;
@@ -1035,6 +1272,10 @@ a.button {
       border: none;
       margin: 1em auto;
       margin-bottom: 0; }
+    .home-page .work-item .devices.single-device .device.browser {
+      margin-left: auto;
+      margin-right: auto;
+      float: none; }
     .home-page .work-item p.description {
       width: 52%;
       margin-left: 5%; } }
@@ -1043,26 +1284,10 @@ a.button {
       width: 37%; }
     .home-page .work-item .device.ipad {
       margin-top: 1.36em;
-      border: 4px solid #fdfdfd; }
+      border: 4px solid #EDD8D5; }
     .home-page .work-item p.description {
       width: 58%;
       margin-left: 5%; } }
-  @media screen and (min-width: 57.875em) {
-    .home-page section.intro {
-      		/* p.description {
-      			width: 60%;
-      			float: right;
-      
-      			margin-top: 0.5em;
-      		} */ }
-      .home-page section.intro div.latest-blog-posts {
-        width: 60%;
-        float: right;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em; }
-      .home-page section.intro div.what-i-do {
-        width: 60%;
-        float: right; } }
   @media screen and (min-width: 62em) {
     .home-page section.intro {
       		/* p.description {
@@ -1072,37 +1297,35 @@ a.button {
       			margin-left: 5%;
       			margin-top: 0.5em;
       		} */ }
-      .home-page section.intro div.latest-blog-posts {
+      .home-page section.intro div.what-i-do {
         width: 45%;
         float: left;
         margin-top: 0;
         margin-bottom: 0.5em; }
-      .home-page section.intro div.what-i-do {
+      .home-page section.intro div.latest-blog-posts {
         width: 50%;
         float: right;
         margin-left: 5%; }
-    .home-page .work-item {
-      /* .device.macbook {
-      	display: block;
-      	float: left;
-      	margin-left: -3.5em;
-      	margin-top: 3.48em;
-      } */ }
-      .home-page .work-item .devices {
-        width: 40%; }
-      .home-page .work-item .device.iphone {
-        margin-top: 5.7em; }
-      .home-page .work-item .device.ipad {
-        margin-top: 2.37em; }
-      .home-page .work-item .device.browser {
-        display: block;
-        float: left;
-        margin-left: -6.9em; }
-      .home-page .work-item p.description {
-        width: 50%;
-        margin-left: 10%; }
-      .home-page .work-item .button {
-        margin-left: 10%; } }
+      .home-page section.intro div.what-i-do,
+      .home-page section.intro div.latest-blog-posts {
+        margin-top: 5.0625rem; }
+    .home-page .work-item .devices {
+      width: 40%; }
+    .home-page .work-item .device.iphone {
+      margin-top: 5.7em; }
+    .home-page .work-item .devices.two-devices .device.iphone {
+      margin-left: 20%; }
+    .home-page .work-item .device.ipad {
+      margin-top: 2.37em; }
+    .home-page .work-item .device.browser {
+      display: block;
+      float: left;
+      margin-left: -6.9em; }
+    .home-page .work-item p.description {
+      width: 50%;
+      margin-left: 10%; }
+    .home-page .work-item .button {
+      margin-left: 10%; } }
   @media screen and (min-width: 68.75em) {
     .home-page .work-item:before {
       margin-right: 3px; } }
@@ -1112,6 +1335,11 @@ a.button {
   margin-bottom: 1em; }
 .articles-page .title {
   line-height: 1.68em; }
+.articles-page .articles-header {
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-size: 2.25rem;
+  color: #FE0988;
+  font-weight: normal; }
 .articles-page ul.posts-list {
   margin-top: 0.5em; }
   .articles-page ul.posts-list li.blog-post {
@@ -1126,14 +1354,14 @@ a.button {
   .articles-page ul.posts-list time,
   .articles-page ul.posts-list .reading-time > span,
   .articles-page ul.posts-list h2 {
-    font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+    font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
     font-weight: normal;
     text-align: left;
     line-height: 1.6em;
     font-size: 1em; }
   .articles-page ul.posts-list time,
   .articles-page ul.posts-list .reading-time > span {
-    color: #a8a8a8; }
+    color: #82786E; }
   .articles-page ul.posts-list time {
     display: none; }
   .articles-page ul.posts-list .reading-time .read-text {
@@ -1173,31 +1401,25 @@ a.button {
   display: none; }
 .work-page .read-more-button {
   display: none; }
-.work-page h1.title {
-  font-size: 2em;
-  line-height: 1.2em;
-  margin-top: 0.5em; }
-.work-page h2.subtitle {
-  color: #adadad;
-  font-size: 1em;
-  line-height: 1.6em;
+.work-page h1 {
+  color: #82786E;
+  font-size: 1.1rem;
+  line-height: 1.64;
   font-weight: normal;
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-  text-align: left;
-  margin-bottom: 1em; }
-.work-page footer {
-  border-top: none; }
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  text-align: left; }
+.work-page .work-items {
+  margin-top: 1.5rem; }
 .work-page li.work-item {
   padding: 1em 0; }
   .work-page li.work-item .title {
     line-height: 0.95em;
     padding-bottom: 0.5em; }
   .work-page li.work-item .role {
-    font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+    font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
     font-size: 1em;
     line-height: 1.8em;
     font-weight: normal;
-    font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
     text-align: left;
     display: block;
     font-weight: 300;
@@ -1205,11 +1427,10 @@ a.button {
   .work-page li.work-item .title:before {
     display: block;
     float: right;
-    font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-    font-weight: 600;
-    font-size: 2.2em;
+    font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+    font-weight: normal;
     letter-spacing: -3px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     position: relative;
     top: 0.125em; }
   .work-page li.work-item .button {
@@ -1253,6 +1474,47 @@ a.button {
     top: 1px; }
   .work-page li.work-item.glasses .button {
     color: #fdfdfd; }
+.work-page li.work-item.uber-hilton {
+  background-color: #1fbad6; }
+  .work-page li.work-item.uber-hilton .title {
+    color: #fdfdfd;
+    border-bottom: 4px solid #fdfdfd; }
+  .work-page li.work-item.uber-hilton .title:before {
+    content: "04"; }
+  .work-page li.work-item.uber-hilton .role {
+    color: #106271; }
+  .work-page li.work-item.uber-hilton br {
+    display: none; }
+  .work-page li.work-item.uber-hilton p.description {
+    color: #fdfdfd; }
+.work-page li.work-item.hilton-luxury-maps {
+  background-color: #c09760; }
+  .work-page li.work-item.hilton-luxury-maps .devices.single-device .device.browser {
+    background-color: #c09760;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; }
+  @media screen and (min-width: 37.5em) {
+    .work-page li.work-item.hilton-luxury-maps .wrapper {
+      overflow: hidden; }
+    .work-page li.work-item.hilton-luxury-maps .work-example {
+      margin-left: -4.8rem; } }
+  @media screen and (min-width: 43.75em) {
+    .work-page li.work-item.hilton-luxury-maps .work-example {
+      margin-left: auto; } }
+  .work-page li.work-item.hilton-luxury-maps .title {
+    color: #fdfdfd;
+    border-bottom: 4px solid #fdfdfd; }
+  .work-page li.work-item.hilton-luxury-maps .title:before {
+    content: "05"; }
+  .work-page li.work-item.hilton-luxury-maps .role {
+    color: #56442c; }
+  .work-page li.work-item.hilton-luxury-maps br {
+    display: none; }
+  .work-page li.work-item.hilton-luxury-maps p.description {
+    color: #fdfdfd; }
 @media screen and (min-width: 37.5em) {
   .work-page li.work-item .wrapper > .content {
     float: right;
@@ -1289,6 +1551,8 @@ a.button {
     border: 4px solid #3A60DA; }
   .work-page li.work-item .device.iphone.responsive-photography {
     border: 4px solid #ffdd00; }
+  .work-page li.work-item .device.iphone.uber-hilton {
+    border: 4px solid #1fbad6; }
   .work-page li.work-item .devices.single-device .device.iphone {
     float: none;
     border: none;
@@ -1311,6 +1575,10 @@ a.button {
       margin-top: 3em; }
     .work-page li.work-item .device.ipad {
       margin-left: -3.7em; } }
+@media only screen and (min-width: 60rem) {
+  .work-page li.work-item .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem; } }
 @media screen and (min-width: 62em) {
   .work-page li.work-item .wrapper > .content {
     width: 55%; }
@@ -1331,7 +1599,9 @@ a.button {
   .work-page li.work-item .device.browser.volunteer-odyssey {
     background-color: #3A60DA; }
   .work-page li.work-item .device.browser.responsive-photography {
-    background-color: #ffdd00; } }
+    background-color: #ffdd00; }
+  .work-page li.work-item .device.iphone.uber-hilton {
+    margin-left: 20%; } }
 @media screen and (min-width: 68.75em) {
   .work-page li.work-item .title:before {
     margin-right: 3px; } }
@@ -1339,7 +1609,7 @@ a.button {
 .blog-post-page article {
   display: block;
   margin: 0 auto;
-  max-width: 43.75em; }
+  max-width: 34rem; }
 .blog-post-page article > .content {
   text-align: left;
   hyphens: auto;
@@ -1347,7 +1617,8 @@ a.button {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  -moz-hyphens: auto; }
+  -moz-hyphens: auto;
+  margin-top: 1.5rem; }
   .blog-post-page article > .content a {
     text-decoration: underline; }
   .blog-post-page article > .content p:first-child {
@@ -1355,41 +1626,36 @@ a.button {
     text-align: left;
     -webkit-hyphens: none;
     -ms-hyphens: none;
-    -moz-hyphens: none; }
-.blog-post-page article > header {
-  margin-top: 1em;
-  margin-bottom: 1em; }
+    -moz-hyphens: none;
+    margin-bottom: 1.5rem; }
+  .blog-post-page article > .content * + * {
+    margin-bottom: 1.5rem; }
 .blog-post-page h1 {
-  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-  font-size: 1.4em;
-  line-height: 1.2em;
-  font-weight: 600;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: normal;
   word-break: break-word;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  color: #FE0988; }
 .blog-post-page time {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: 0.666rem; }
+.blog-post-page blockquote {
+  border-left: 4px solid #FE0988;
+  color: #82786E; }
 .blog-post-page time > span,
 .blog-post-page header > .separator {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+  font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 300;
-  color: #8d8d8d; }
-.blog-post-page h2,
-.blog-post-page p,
-.blog-post-page article ul li,
-.blog-post-page article ol li {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.6em; }
+  color: #82786E; }
 .blog-post-page h2 {
-  font-weight: 500;
-  font-size: 1.1em; }
-.blog-post-page p,
-.blog-post-page h2,
-.blog-post-page img {
-  padding-bottom: 1em; }
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #1E3072;
+  padding: 0 0.5em 0 1em; }
 .blog-post-page .video-wrapper,
 .blog-post-page pre {
   margin: 0 auto;
@@ -1400,21 +1666,52 @@ a.button {
   margin: 0 auto; }
 .blog-post-page pre > code {
   font-size: 0.75em; }
-.blog-post-page article ul,
-.blog-post-page article ol {
-  padding-bottom: 1em; }
-.blog-post-page article ul {
-  padding-left: 1em;
-  list-style-type: square; }
-.blog-post-page article ol {
-  padding-left: 3em;
-  list-style-type: decimal-leading-zero; }
-.blog-post-page article ul li,
-.blog-post-page article ol li {
-  display: list-item;
-  list-style-position: outside; }
-.blog-post-page article strong {
-  font-weight: 500; }
+.blog-post-page article {
+  /* Footnotes */
+  /* End Footnotes */
+  /* Footnote Link */
+  /* End Footnote Link */ }
+  .blog-post-page article .subheadline {
+    font-size: 1.5rem;
+    color: #1E3072;
+    font-weight: normal;
+    line-height: 1;
+    margin-top: 0.444rem; }
+  .blog-post-page article ul {
+    padding-left: 1em;
+    list-style-type: square; }
+  .blog-post-page article ol {
+    padding-left: 3em;
+    list-style-type: decimal-leading-zero; }
+  .blog-post-page article .footnotes {
+    position: relative; }
+  .blog-post-page article .footnotes:before {
+    content: "Footnotes";
+    display: block;
+    font-size: 1rem;
+    color: #FE0988;
+    margin-bottom: 1rem; }
+  .blog-post-page article .footnotes ol {
+    padding-left: 2em; }
+  .blog-post-page article .footnotes li {
+    font-size: 0.666rem;
+    margin-bottom: 1rem; }
+  .blog-post-page article .footnotes li p {
+    margin-bottom: 0; }
+  .blog-post-page article sup {
+    font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+    font-size: 0.666rem; }
+  .blog-post-page article sup a {
+    color: #FE0988; }
+  .blog-post-page article ul li,
+  .blog-post-page article ol li {
+    display: list-item;
+    list-style-position: outside; }
+  .blog-post-page article header,
+  .blog-post-page article p,
+  .blog-post-page article h2,
+  .blog-post-page article .footnotes:before {
+    padding: 0 0.5rem 0 1rem; }
 .blog-post-page .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -1429,6 +1726,12 @@ a.button {
 @media screen and (min-width: 480px) {
   .blog-post-page article > .content {
     text-align: justify; } }
+@media screen and (min-width: 31.25rem) {
+  .blog-post-page article header,
+  .blog-post-page article p,
+  .blog-post-page article h2,
+  .blog-post-page article .footnotes:before {
+    padding: 0 1rem 0 1rem; } }
 @media screen and (min-width: 20.125em) {
   .blog-post-page pre > code {
     font-size: 1em; } }
@@ -1439,17 +1742,17 @@ a.button {
 .work-item-page article a:not(.button) {
   text-decoration: underline; }
 .work-item-page article h1 {
-  line-height: 1.2em;
+  line-height: 1.64;
   position: relative;
   z-index: 2;
-  font-size: 1.5em;
-  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-size: 1.5rem;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
   color: #fdfdfd;
   border-bottom: 4px solid #fdfdfd;
-  padding-bottom: 0.25em; }
+  font-weight: normal; }
 .work-item-page article h2 {
   font-size: 1em;
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
   line-height: 1.5em;
   font-weight: 300;
   color: #1C2E69;
@@ -1471,7 +1774,9 @@ a.button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 43.75em; }
+  max-width: 34rem; }
+.work-item-page article > .work-example .devices {
+  margin-top: 1.5rem; }
 .work-item-page article > header .container {
   max-width: 55em; }
 .work-item-page article p,
@@ -1480,27 +1785,19 @@ a.button {
 .work-item-page article .work-example {
   width: 100%;
   overflow: hidden;
-  position: relative;
-  padding: 0 0.5em 0 1em; }
-.work-item-page article > header {
-  padding-top: 1em; }
+  position: relative; }
 .work-item-page article .work-example {
   padding-bottom: 1.5em; }
-.work-item-page article p,
-.work-item-page article h3,
-.work-item-page article ul li,
-.work-item-page article ol li {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.6em; }
 .work-item-page article h3 {
-  font-weight: 500;
-  font-size: 1.1em; }
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #1E3072; }
 .work-item-page article p,
 .work-item-page article h3,
 .work-item-page article img {
-  margin-bottom: 1em; }
+  margin-bottom: 1.5rem; }
+.work-item-page article p > img {
+  margin-bottom: 0; }
 .work-item-page article ul,
 .work-item-page article ol {
   padding-bottom: 1em; }
@@ -1514,8 +1811,13 @@ a.button {
 .work-item-page article ol li {
   display: list-item;
   list-style-position: outside; }
-.work-item-page article strong {
-  font-weight: 500; }
+.work-item-page article header,
+.work-item-page article p,
+.work-item-page article h3 {
+  padding-right: 0.5rem;
+  padding-left: 1rem; }
+.work-item-page article > header {
+  padding-top: 1rem; }
 .work-item-page img {
   display: block;
   margin: 0 auto; }
@@ -1523,8 +1825,6 @@ a.button {
   margin: 0 auto;
   margin-bottom: 1em;
   display: block; }
-.work-item-page pre > code {
-  font-size: 0.75em; }
 .work-item-page .button {
   margin: 0 auto; }
 .work-item-page .button.another-device {
@@ -1547,17 +1847,6 @@ a.button {
   .work-item-page pre > code {
     font-size: 1em; } }
 @media screen and (min-width: 30em) {
-  .work-item-page article p,
-  .work-item-page article h3 {
-    padding: 0 7.5%; }
-  .work-item-page article > header,
-  .work-item-page article > .work-example {
-    padding-left: 7.5%;
-    padding-right: 7.5%; }
-  .work-item-page article > .content {
-    text-align: justify; }
-  .work-item-page article ul {
-    padding-right: 7.5%; }
   .work-item-page .devices {
     width: 80%;
     margin: 0 auto; }
@@ -1573,6 +1862,12 @@ a.button {
     margin-top: 3.9em; }
   .work-item-page .device.ipad {
     display: block; } }
+@media screen and (min-width: 31.25rem) {
+  .work-item-page article header,
+  .work-item-page article p,
+  .work-item-page article h3 {
+    padding-left: 1rem;
+    padding-right: 1rem; } }
 @media screen and (min-width: 32.5em) {
   .work-item-page .device.iphone {
     margin-left: 8.5%;
@@ -1588,7 +1883,8 @@ a.button {
   .work-item-page .device.ipad {
     margin-right: 2.5%; }
   .work-item-page .device.iphone {
-    margin-top: 5.9em;
+    margin-top: 5.9em; }
+  .work-item-page .devices:not(.two-devices) .device.iphone {
     margin-left: 0; }
   .work-item-page .device.ipad {
     margin-top: 2em; }
@@ -1636,17 +1932,22 @@ a.button {
   .work-item-page .devices {
     width: 30.8em;
     margin: 0 auto; } }
+@media only screen and (min-width: 60rem) {
+  .work-item-page article {
+    max-width: 960px;
+    margin: 0 auto; } }
 @media screen and (min-width: 79.375em) {
   .work-item-page article {
-    position: relative; }
+    position: relative;
+    max-width: none; }
     .work-item-page article:before {
       content: "01";
       display: block;
       position: absolute;
       color: #3A60DA;
       right: 13%;
-      font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-      font-weight: 900;
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+      font-weight: normal;
       line-height: 0.8em;
       font-size: 2.9em;
       letter-spacing: -0.075em;
@@ -1739,8 +2040,8 @@ a.button {
       position: absolute;
       color: #FF4026;
       right: 8%;
-      font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
-      font-weight: 900;
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+      font-weight: normal;
       line-height: 0.8em;
       font-size: 2.9em;
       letter-spacing: -0.065em;
@@ -1780,17 +2081,156 @@ a.button {
 @media screen and (min-width: 83.75em) {
   .work-item-page.glasses article:before {
     right: 14%; } }
+.work-item-page.uber-hilton article > header,
+.work-item-page.uber-hilton article > .work-example {
+  background-color: #1fbad6; }
+.work-item-page.uber-hilton article h2 {
+  color: #1fbad6; }
+.work-item-page.uber-hilton .button {
+  display: none; }
+@media screen and (min-width: 30em) {
+  .work-item-page.uber-hilton .devices.single-device > .device.iphone {
+    margin: 1em auto;
+    margin-bottom: 0;
+    float: none; } }
+@media screen and (min-width: 57.5em) {
+  .work-item-page.uber-hilton article {
+    position: relative; }
+    .work-item-page.uber-hilton article .devices.single-device {
+      width: 100%; }
+    .work-item-page.uber-hilton article .devices.single-device .device.iphone {
+      margin-top: 0; }
+    .work-item-page.uber-hilton article:before {
+      content: "04";
+      display: block;
+      position: absolute;
+      color: #1fbad6;
+      right: 8%;
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+      font-weight: normal;
+      line-height: 0.8em;
+      font-size: 2.9em;
+      letter-spacing: -0.065em;
+      white-space: nowrap; }
+    .work-item-page.uber-hilton article > header {
+      float: right;
+      width: 40%;
+      padding-bottom: 1em;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      margin-top: 6.4em;
+      position: relative;
+      background: linear-gradient(-40deg, rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url("http://hhonors3.hilton.com/resources/media/hh/en_US/d3/uber/new-york-skyline-666x410.jpg") no-repeat;
+      background: -webkit-linear-gradient(-40deg, rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url("http://hhonors3.hilton.com/resources/media/hh/en_US/d3/uber/new-york-skyline-666x410.jpg") no-repeat;
+      background: -moz-linear-gradient(-40deg, rgba(21, 21, 37, 0.8), rgba(21, 21, 37, 0.8)), url("http://hhonors3.hilton.com/resources/media/hh/en_US/d3/uber/new-york-skyline-666x410.jpg") no-repeat;
+      background-position: 35% 43%; }
+    .work-item-page.uber-hilton article > header h1 {
+      color: #1fbad6;
+      border-bottom: 4px solid #1fbad6; }
+    .work-item-page.uber-hilton article > header h2 {
+      color: #fdfdfd;
+      padding-top: 0.5em; }
+    .work-item-page.uber-hilton article > .work-example {
+      float: left;
+      width: 48%;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      padding-top: 1.5em;
+      padding-bottom: 1em;
+      margin-left: 2.5%;
+      margin-bottom: 2em; }
+    .work-item-page.uber-hilton article > .content {
+      clear: left; } }
+@media screen and (min-width: 73.125em) {
+  .work-item-page.uber-hilton article:before {
+    right: 10%; } }
+@media screen and (min-width: 77.8125em) {
+  .work-item-page.uber-hilton article:before {
+    right: 12%; } }
+@media screen and (min-width: 83.75em) {
+  .work-item-page.uber-hilton article:before {
+    right: 14%; } }
+.work-item-page.hilton-luxury-maps article > header,
+.work-item-page.hilton-luxury-maps article > .work-example {
+  background-color: #c09760; }
+.work-item-page.hilton-luxury-maps article h2 {
+  color: #c09760; }
+.work-item-page.hilton-luxury-maps .button {
+  display: none; }
+@media screen and (min-width: 30em) {
+  .work-item-page.hilton-luxury-maps .devices.single-device > .device.iphone {
+    margin: 1em auto;
+    margin-bottom: 0;
+    float: none; } }
+@media screen and (min-width: 57.5em) {
+  .work-item-page.hilton-luxury-maps article {
+    position: relative; }
+    .work-item-page.hilton-luxury-maps article .devices.single-device {
+      width: 100%; }
+    .work-item-page.hilton-luxury-maps article .devices.single-device .device.iphone {
+      margin-top: 0; }
+    .work-item-page.hilton-luxury-maps article .device.browser {
+      background-color: #c09760; }
+    .work-item-page.hilton-luxury-maps article:before {
+      content: "05";
+      display: block;
+      position: absolute;
+      color: #c09760;
+      right: 8%;
+      font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
+      font-weight: normal;
+      line-height: 0.8em;
+      font-size: 2.9em;
+      letter-spacing: -0.065em;
+      white-space: nowrap; }
+    .work-item-page.hilton-luxury-maps article > header {
+      float: right;
+      width: 40%;
+      padding-bottom: 1em;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      margin-top: 6.4em;
+      position: relative;
+      background: linear-gradient(-40deg, rgba(192, 151, 96, 0.7), rgba(192, 151, 96, 0.7)), url("/img/work/hilton-luxury-maps/map-background.jpg") no-repeat;
+      background: -webkit-linear-gradient(-40deg, rgba(192, 151, 96, 0.7), rgba(192, 151, 96, 0.7)), url("/img/work/hilton-luxury-maps/map-background.jpg") no-repeat;
+      background: -moz-linear-gradient(-40deg, rgba(192, 151, 96, 0.7), rgba(192, 151, 96, 0.7)), url("/img/work/hilton-luxury-maps/map-background.jpg") no-repeat;
+      background-position: 35% 43%; }
+    .work-item-page.hilton-luxury-maps article > header h1 {
+      color: #fdfdfd;
+      border-bottom: 4px solid #fdfdfd; }
+    .work-item-page.hilton-luxury-maps article > header h2 {
+      color: #fdfdfd;
+      padding-top: 0.5em; }
+    .work-item-page.hilton-luxury-maps article > .work-example {
+      float: left;
+      width: 48%;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      padding-top: 1.5em;
+      padding-bottom: 1em;
+      margin-left: 2.5%;
+      margin-bottom: 2em; }
+    .work-item-page.hilton-luxury-maps article > .content {
+      clear: left; } }
+@media screen and (min-width: 73.125em) {
+  .work-item-page.hilton-luxury-maps article:before {
+    right: 10%; } }
+@media screen and (min-width: 77.8125em) {
+  .work-item-page.hilton-luxury-maps article:before {
+    right: 12%; } }
+@media screen and (min-width: 83.75em) {
+  .work-item-page.hilton-luxury-maps article:before {
+    right: 14%; } }
 
 .contact-page main {
   padding-bottom: 2em; }
 .contact-page main a.button {
   text-decoration: none; }
-.contact-page header,
 .contact-page p.description,
 .contact-page .other-places {
   display: block;
   margin: 0 auto;
-  max-width: 43.75em; }
+  max-width: 34rem; }
 .contact-page h1 {
   line-height: 1.5em;
   margin-top: 0.5em; }
@@ -1817,7 +2257,7 @@ a.button {
 .contact-page input[type="text"],
 .contact-page span.email-separator,
 .contact-page main a {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+  font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
   font-size: 1em;
   font-weight: 300;
   line-height: 1.6em; }
@@ -1828,10 +2268,6 @@ a.button {
   color: #a8a8a8;
   margin-top: 0.5em;
   max-width: 245px; }
-.contact-page h2,
-.contact-page h3 {
-  font-size: 1.1em;
-  font-weight: 500; }
 .contact-page .twitter,
 .contact-page .email,
 .contact-page .email-more-options {
@@ -1864,10 +2300,9 @@ a.button {
 .contact-page .email i,
 .contact-page .email-more-options i {
   position: absolute;
-  right: 1em;
-  top: 0.25em;
-  font-size: 1.2em;
-  top: 0; }
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.2rem; }
 .contact-page .email,
 .contact-page .email-more-options {
   background-color: #FF4026; }
@@ -1942,9 +2377,9 @@ a.button {
 .about-page article {
   display: block;
   margin: 0 auto;
-  max-width: 43.75em;
+  max-width: 34rem;
   margin-top: 1em; }
-.about-page article > .content {
+.about-page article {
   text-align: left;
   hyphens: auto;
   text-align: left;
@@ -1952,19 +2387,22 @@ a.button {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   -moz-hyphens: auto; }
-  .about-page article > .content a {
+  .about-page article a {
     text-decoration: underline; }
-  .about-page article > .content p:first-child {
+  .about-page article p:first-child {
     hyphens: none;
     text-align: left;
     -webkit-hyphens: none;
     -ms-hyphens: none;
-    -moz-hyphens: none; }
+    -moz-hyphens: none;
+    margin-bottom: 1.5rem; }
+  .about-page article * + * {
+    margin-bottom: 1.5rem; }
 .about-page article header {
   margin-top: 1em;
   margin-bottom: 1em; }
 .about-page article h1 {
-  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
+  font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
   font-size: 1.4em;
   line-height: 1.2em;
   font-weight: 600;
@@ -1974,29 +2412,15 @@ a.button {
   display: inline-block; }
 .about-page article time > span,
 .about-page article header > .separator {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
+  font-family: "HelveticaMonospacedStd-Rg", Menlo, "Courier New", monospace;
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 300;
   color: #8d8d8d; }
 .about-page article h2,
-.about-page article h3,
-.about-page article p,
-.about-page article article ul li,
-.about-page article article ol li {
-  font-family: "AtlasTypewriterWeb", "Vera Sans Mono", "Panic Sans", Consolas, "Andale Mono", Courier, monospace;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.6em; }
-.about-page article h2,
 .about-page article h3 {
   font-weight: 500;
-  font-size: 1.1em; }
-.about-page article p,
-.about-page article h2,
-.about-page article h3,
-.about-page article img {
-  padding-bottom: 1em; }
+  font-size: 1.1rem; }
 .about-page article .video-wrapper,
 .about-page article pre {
   margin: 0 auto;
@@ -2028,29 +2452,51 @@ a.button {
   border-radius: 15px;
   background-color: green; }
 
-@media screen and (min-width: 38.75em) {
-  a.button {
-    padding-top: 0.8em; }
-
-  nav li.active:before {
-    bottom: -0.8em; }
+@media screen and (min-width: 25.3125rem) {
+  nav li:nth-child(3n) {
+    clear: none; }
+  nav li:nth-child(4n) {
+    clear: left; } }
+@media screen and (min-width: 31.25rem) {
+  .wrapper {
+    padding: 0 1rem 0 1rem; } }
+@media screen and (min-width: 37.5rem) {
+  html {
+    font-size: 19px; }
 
   body {
-    font-size: 100%; }
+    border: 30px solid #FFFFF7; }
 
-  section.intro header:before {
-    width: 115px;
-    height: 115px; } }
+  nav {
+    position: static;
+    width: 100%;
+    margin-top: -0.8rem; }
+    nav ul {
+      position: relative; }
+    nav li {
+      margin-right: 0;
+      margin-left: 2.8rem; }
+    nav li:nth-child(4n) {
+      clear: none; }
+    nav li.home-link {
+      margin-left: 0;
+      margin-top: 0.2rem;
+      position: absolute;
+      left: 0; }
+
+  main {
+    margin-top: 5.0625rem; } }
+@media screen and (min-width: 46.25rem) {
+  nav li {
+    text-align: center;
+    width: 25%;
+    margin-left: 0; } }
 @media screen and (min-width: 51.25em) {
   a.button {
     padding-top: 0.7em; }
 
   nav li.active:before {
-    bottom: -0.75em; }
-
-  section.intro header:before {
-    width: 125px;
-    height: 125px; }
-
-  body {
-    font-size: 110%; } }
+    bottom: -0.75em; } }
+@media screen and (min-width: 68.75em) {
+  .wrapper {
+    padding: 0; } }

@@ -1,0 +1,294 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>Class Reunion Pt. 2 - Derick Ruiz</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <meta name="Description" content="">
+        <link rel="canonical" href="/class-reunion-2">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Typekit code that loads nimbus sans -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'yhz0fyw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+        <link rel="stylesheet" href="/css/styles.css">
+
+        
+        	<link rel="stylesheet" href="/css/code.css">
+        
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58696895-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <ul>
+    	
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/about" itemprop="url">About</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/articles" itemprop="url">Articles</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/works" itemprop="url">Works</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/contact" itemprop="url">Contact</a>
+	    	</li>
+        
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
+    </ul>
+</nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
+
+</section>
+        </div>
+
+        <div class='wrapper wrapper--noSpacing'>
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+            	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+            		<header>
+                        
+                            <h1 class='hyphenate' itemprop="headline">Class Reunion Pt. 2</h1>
+                            
+                                <h3 class="subheadline" class="hyphenate" itemprop="headline">The bumpy road to modular CSS</h3>
+                            
+                        
+            			<time itemprop="datePublished" datetime=2016-06-02>
+            				<span class='month-day-year'>06.02.2016</span>
+            			</time>
+            			<span class='separator'>|</span>
+
+            			
+
+	                    
+	                    	<time class='read-time' itemprop="timeRequired" datetime="09M">
+            					<span>09 minute read</span>
+            				</time>
+            			
+            			<meta itemprop="wordCount" content="2168">
+            		</header>
+            		<div class='hyphenate content' itemprop="articleBody">
+            			<p><a href="/class-reunion-1" class="SpecialLink">Please read part 1 first if you haven’t yet.</a></p>
+
+<p>The <a href="/class-reunion">context before class</a> style of CSS first conceived by Tantek Celik worked great for static documents that didn’t change frequently. But there is a difference between styling a document, a glorified word document, to styling a web application. As the Internet was becoming more of an application platform instead of a document sharing platform, the same CSS styling methods were no longer up to par and the community began to take note.</p>
+
+<p>Along with trouble in the browsers and the stubbornness in the CSS specification writers, the following years would prove to be a bumpy road for CSS that would ultimately lead to something better overall.</p>
+
+<h2 id="other-problems-and-css-gets-the-blame">Other problems and CSS gets the blame</h2>
+
+<p>After popularization by advocates and websites like CSS Zen Garden, In 2005 CSS began to look like a viable technology to start building websites with. Developers were not trying to experiment with CSS for experimentation’s sake, they wanted to create websites that worked. They were lured in from tables by the promise that it made creating layouts easier but it seems that promise wasn’t living up, at least at first.</p>
+
+<p>After attempting to use CSS for a while in real environments the cracks began to show. Many developers began to post articles about the problems they were experiencing. The blame for this seemed to bounce back and forth between two different things. First, the browsers were blamed for not correctly implementing the CSS specification. Secondly, CSS would get the blame as a language and how it wasn’t up to par.</p>
+
+<h2 id="the-angst-against-the-browsers">The angst against the browsers</h2>
+
+<p>Bloggers argued that tables generally had good browser support and it took a lot more work to get things to render correctly with CSS. Those that were in favor of tables weren’t against the semantic web, they just wanted something that worked. While developers were ecstatic about CSS at first because it promised to rid tables, global site modification, and gifs for positioning, the reality was that CSS didn’t behave the same on the different browsers.</p>
+
+<p>Dave Slusher of the Evil Genius Chronicles<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> in a short article titled I Hate CSS accurately puts into words the angst that many CSS developers were feeling at the time.</p>
+
+<blockquote>
+  <p>It’s official, I am fucking sick of CSS and the support thereof of various common web browsers. […] Guess what, sunshine, when you use tables it actually works and even sometimes across browsers. I’m about this close to backing up entirely to a table driven layout like it used to be and forgetting about the goddamn CSS thing once and for all.</p>
+</blockquote>
+
+<p>In another post that same year, Franklin Einspruch from artblog.net<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> wrote a blog post with the same name where he said that CSS was a lousy language. He argued that in trying to convert tables to only support tabular data, it made it extremely difficult for developers to create even the simplest of layouts.</p>
+
+<blockquote>
+  <p>At this point, I’ve had it with web design. I can script object-oriented PHP to execute a three-table equi-join in MySQL, but I can’t make the chicken-plucking right edges line up in a navigation bar in CSS, at least not universally. I have decided that this is not entirely my fault or Bill Gates’s. Part of it is that CSS is a lousy language.</p>
+</blockquote>
+
+<p>One of the biggest things stopping the full adoption of CSS was the lack of browser support. Franklin was partly right about the language being lousy, but that was also because of the browsers.</p>
+
+<h2 id="the-solutions-to-buggy-browsers">The solutions to buggy browsers</h2>
+
+<p>The biggest issue driving layouts to render incorrectly was how different browsers interpreted the box model, specifically Internet Explorer. The standard suggests that the width, padding, and border combined be an element’s rendered width. The final rendered width of an element could be different than what was specified on the width property if there were padding and a border. Internet Explorer’s box model, on the other hand, counted the defined width as the element’s rendered width and the padding and border would then be cut into the width instead of expanding the box. Elements in a layout would be the wrong width and therefore drop to the bottom if they were floated left and completely break layouts.</p>
+
+<p>The solution to this problem was CSS hacks and they ironically enough became the first shared patterns for the language. Tantek Celik himself, who developed Internet Explorer for Mac, was one of the first to post a solution.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> His solution took advantage of an error in Internet Explorer’s CSS parser. Because CSS parsers just skip declarations they don’t understand instead of throwing an exception like most languages, by writing a few characters that the parser couldn’t interpret it allowed developers to exploit different parsers to have more control over their websites. The control that should have been given in the first place if the parsers were all implemented according to the standard.</p>
+
+<p>This is how developers dealt with cross-browser CSS for many years. But the thing about CSS hacks though is that once a browser eventually did fix the parsing bug it would cause the CSS to bug out in a different way. Stylesheets had to constantly be maintained as the browsers released fixes.</p>
+
+<h2 id="the-problems-of-css-at-scale">The problems of CSS at scale</h2>
+
+<p>As early as 2005 Dave Shea, the creator of CSS Zen Garden, began to write about the scalability issues with CSS he was running into. It was the first time an article about CSS scalability specifically (not the language or browser issues) was written about. In the article Redundancy vs. Dependency<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, Dave said that eventually CSS forces you to choose between two different styles. In the redundant style, you end up repeating the same CSS for similar elements. 3 similar forms on 3 different pages, for example, would all have their own separate CSS. In the dependent style, the forms would pick up the differences through the cascade. By putting a custom class on a parent or just targeting a custom parent element on that page you could make the necessary changes to that element.</p>
+
+<p>These problems stemmed from styling those elements using the context before class style. The context before style class encouraged an extremely defensive style of writing CSS. Developers using it were petrified of other CSS overwriting their styles all the time. To counter this they would scope all of their CSS within an id and call it a module. Also, the !important property started being abused.</p>
+
+<pre data-language="CSS"><code data-language="CSS">#myModule #saleModule h3 { }</code></pre>
+
+<p>Back in the days of the table, each page was basically an island onto itself. You could style the page however you wanted and it would have no impact on any other pages. After CSS came along people started building their websites with the same mentality. Instead of pages being separate islands, the elements with id’s that developers created acted as those islands. Developers wrote CSS like a cannibalistic tribe on a sole island defending itself from itself.</p>
+
+<h2 id="the-beginnings-of-css-architecture">The beginnings of CSS architecture</h2>
+
+<p>One important point brought up multiple times in the comments of Dave’s Redundancy vs. Dependency article is Object Oriented programming. A lot of the commenters were hinting at extra planning needing to take place for a project and using multiple class names. It was beginning to enter the public consciousness that for developing websites with CSS a new methodology was going to be needed. The defensive island way of writing CSS was no longer working.</p>
+
+<p>The first group to capture and document object-oriented principles within CSS was the Russian company Yandex. In 2005, the engineers at Yandex were also beginning to run into CSS scalability issues<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup> similar to the ones Dave Shea wrote about. By the middle of 2006, they were deep into the development of the first version of Yandex.Music. It was a music application that consisted of multiple pages each unlike the other. While at first, they were following the context before class approach to writing their styles, soon enough they noticed long cascading rules mixing ids and tag name selectors. It ultimately resulted in the code losing control on so many levels.</p>
+
+<p>The developers at Yandex knew that they needed a different approach to their CSS and so began researching a new methodology to writing CSS that embodied object oriented principles. They called it BEM. BEM stands for Block, Element, Modifier. The most important part of BEM was the block. A block was a part of a page design or layout whose specific and unique meaning was defined either semantically or visually.</p>
+
+<p>By 2007 they presented a polished version of BEM at the ClientSide conference in Moscow, Russia. BEM established a few important rules. Only class names (no ids) should be used for CSS, each block’s class name should have a namespace (prefix), and every CSS rule must belong to a block.</p>
+
+<p>Some developers couldn’t get over the aesthetics of the system, but it highlighted extremely important points. Prefixing classes for examples was a way to namespace. BEM used CSS naming conventions as a way to capture the object oriented principles in such a loose and vulnerable language like CSS.</p>
+
+<p>Later Nicole Sullivan with OOCSS as well began advocating a more object-oriented approach to building web pages similar to BEM. In her Yahoo Talk in 2008<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup> Nicole suggested starting from styling the smallest elements (headers, lists, etc) first before proceeding on to design the entire page. This was a further attempt to encapsulate object oriented principles in CSS. Even before Brad Frost’s Atomic Design, Nicole Sullivan had already suggested something extremely similar.</p>
+
+<h2 id="transpilers-and-making-css-more-object-oriented">Transpilers and making CSS more object oriented.</h2>
+
+<p>Although methods like BEM and OOCSS could technically capture object oriented principles due to the nature of CSS as a language it was still very cumbersome and inconvenient to write. Developers began more loudly calling out for features in CSS that would make the language more object oriented.</p>
+
+<p>As early as 2005 developers were already asking for more programming constructs like if-else statements and macros. They were even building CSS preprocessors with PHP for things like colors<sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>. In 2007 David Gauer of ratfactor.com<sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup> argued that CSS should at least have constants because the constant repetition of things like colors led to hard to read stylesheets.</p>
+
+<p>Many in the W3 had already written a few comments on their mailing list as to why CSS having more programming features is a bad idea. Bert Bos in particular, one of the original creators of CSS, wrote an entire essay in 2008 stating his counter arguments.<sup id="fnref:9"><a href="#fn:9" class="footnote">9</a></sup></p>
+
+<p>Bert Bos’ main argument was that adding macros, more programming ability, or constants weren’t just redundant, but would also change CSS in ways that would make it unsuitable for its intended audience. Bos didn’t want to bring CSS closer to a programming language. He wanted to strictly keep it a visual styling language. He said that although it is possible to implement constants (Webkit had already implemented an experimental, non-standardized version) that it was best kept out of CSS by implementing it with another language like PHP. So eventually that’s what developers turned to.</p>
+
+<p>Finally some of these have begun popping up in CSS4 but in the end, it was transpiling that would provide the features developers desperately wanted. Sass, created in 2007, would go on to dominate them all. In 2011 Sass was included by default with the release of Ruby on Rails 3.1, one of the dominant frameworks for creating the back-end of websites at the time.<sup id="fnref:10"><a href="#fn:10" class="footnote">10</a></sup> That helped popularize Sass and raise its status as one of the top CSS transpilers.</p>
+
+<h2 id="not-yet-convinced-css-architecture-vs-context-before-class">Not yet convinced (CSS Architecture vs Context before Class)</h2>
+
+<p>In 2012 Nicolas Gallagher, creator of Normalize.css, posted an essay titled About HTML semantics and front-end architecture to further push against the context before class style that was still quite popular.<sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup> Nicolas argued that not all semantics need to be content-derived and that developers can leverage the “global” semantics of HTML without confusing their purpose with “local” application-specific semantics that are usually contained in the values of attributes like the class attribute.</p>
+
+<h2 id="end">End</h2>
+
+<p>Using a CSS architecture like BEM, OOCSS, SMACSS or SuitCSS allows developers to encapsulate object oriented principles and easily update the website under conditions of uncertainty. That’s a key phrase: conditions of uncertainty. Web applications are always changing due to user feedback, new features, new designs, and new technologies, whereas documents are more likely to stay the same.</p>
+
+<p>CSS went through a huge transition from developers using the context before class style to the modular style, but in the end, the community helped improve the language for everyone.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>http://www.evilgeniuschronicles.org/2005/06/12/i-hate-css/ <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>http://www.artblog.net/post/2005/08/css/ <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://tantek.com/CSS/Examples/boxmodelhack.html <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>http://mezzoblue.com/archives/2005/01/20/redundancy_v/ <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>https://en.bem.info/methodology/history/ <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>https://www.youtube.com/watch?v=7HC3OV1dDZ4 <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>http://www.barelyfitz.com/projects/csscolor/ <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>http://ratfactor.com/css-constants-rant <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>https://www.w3.org/People/Bos/CSS-variables <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>http://guides.rubyonrails.org/3_1_release_notes.html <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>http://nicolasgallagher.com/about-html-semantics-front-end-architecture/ <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+            		</div>
+            	</article>
+            </main>
+        </div><!-- .wrapper -->
+
+        <div class='wrapper'>
+            <footer>
+    <div class='email'>
+        <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
+    </div>
+    <!-- Figure out how to loop through the social_services thing in _confing.yml -->
+    <ul class='social-links'>
+        <li>
+            <a href="https://twitter.com/drrrruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+        </li>
+        <li>
+            <a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/derickruiz"><i class='icon-github'></i> <span class='link service'>Github</span></a>
+        </li>
+    </ul>
+</footer>
+        </div>
+        <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
+<script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
+<script src="/js/typography.js"></script>
+
+        
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	
+
+            <script>
+            (function () {
+            	Rainbow.color();
+            }());
+            </script>
+
+        
+    </body>
+</html>

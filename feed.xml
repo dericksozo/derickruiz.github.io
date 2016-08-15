@@ -1,14 +1,365 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Front-End Web Developer</title>
+    <title></title>
     <description>Derick Ruiz is a front-end web developer with a focus on responsive websites.
 </description>
     <link>http://derickruiz.com/</link>
     <atom:link href="http://derickruiz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 14:58:42 +0700</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 14:58:42 +0700</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <pubDate>Tue, 16 Aug 2016 04:08:09 +0700</pubDate>
+    <lastBuildDate>Tue, 16 Aug 2016 04:08:09 +0700</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Class Reunion Pt. 2</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/class-reunion-1&quot; class=&quot;SpecialLink&quot;&gt;Please read part 1 first if you haven’t yet.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/class-reunion&quot;&gt;context before class&lt;/a&gt; style of CSS first conceived by Tantek Celik worked great for static documents that didn’t change frequently. But there is a difference between styling a document, a glorified word document, to styling a web application. As the Internet was becoming more of an application platform instead of a document sharing platform, the same CSS styling methods were no longer up to par and the community began to take note.&lt;/p&gt;
+
+&lt;p&gt;Along with trouble in the browsers and the stubbornness in the CSS specification writers, the following years would prove to be a bumpy road for CSS that would ultimately lead to something better overall.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-problems-and-css-gets-the-blame&quot;&gt;Other problems and CSS gets the blame&lt;/h2&gt;
+
+&lt;p&gt;After popularization by advocates and websites like CSS Zen Garden, In 2005 CSS began to look like a viable technology to start building websites with. Developers were not trying to experiment with CSS for experimentation’s sake, they wanted to create websites that worked. They were lured in from tables by the promise that it made creating layouts easier but it seems that promise wasn’t living up, at least at first.&lt;/p&gt;
+
+&lt;p&gt;After attempting to use CSS for a while in real environments the cracks began to show. Many developers began to post articles about the problems they were experiencing. The blame for this seemed to bounce back and forth between two different things. First, the browsers were blamed for not correctly implementing the CSS specification. Secondly, CSS would get the blame as a language and how it wasn’t up to par.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-angst-against-the-browsers&quot;&gt;The angst against the browsers&lt;/h2&gt;
+
+&lt;p&gt;Bloggers argued that tables generally had good browser support and it took a lot more work to get things to render correctly with CSS. Those that were in favor of tables weren’t against the semantic web, they just wanted something that worked. While developers were ecstatic about CSS at first because it promised to rid tables, global site modification, and gifs for positioning, the reality was that CSS didn’t behave the same on the different browsers.&lt;/p&gt;
+
+&lt;p&gt;Dave Slusher of the Evil Genius Chronicles&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in a short article titled I Hate CSS accurately puts into words the angst that many CSS developers were feeling at the time.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s official, I am fucking sick of CSS and the support thereof of various common web browsers. […] Guess what, sunshine, when you use tables it actually works and even sometimes across browsers. I’m about this close to backing up entirely to a table driven layout like it used to be and forgetting about the goddamn CSS thing once and for all.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In another post that same year, Franklin Einspruch from artblog.net&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; wrote a blog post with the same name where he said that CSS was a lousy language. He argued that in trying to convert tables to only support tabular data, it made it extremely difficult for developers to create even the simplest of layouts.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;At this point, I’ve had it with web design. I can script object-oriented PHP to execute a three-table equi-join in MySQL, but I can’t make the chicken-plucking right edges line up in a navigation bar in CSS, at least not universally. I have decided that this is not entirely my fault or Bill Gates’s. Part of it is that CSS is a lousy language.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One of the biggest things stopping the full adoption of CSS was the lack of browser support. Franklin was partly right about the language being lousy, but that was also because of the browsers.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solutions-to-buggy-browsers&quot;&gt;The solutions to buggy browsers&lt;/h2&gt;
+
+&lt;p&gt;The biggest issue driving layouts to render incorrectly was how different browsers interpreted the box model, specifically Internet Explorer. The standard suggests that the width, padding, and border combined be an element’s rendered width. The final rendered width of an element could be different than what was specified on the width property if there were padding and a border. Internet Explorer’s box model, on the other hand, counted the defined width as the element’s rendered width and the padding and border would then be cut into the width instead of expanding the box. Elements in a layout would be the wrong width and therefore drop to the bottom if they were floated left and completely break layouts.&lt;/p&gt;
+
+&lt;p&gt;The solution to this problem was CSS hacks and they ironically enough became the first shared patterns for the language. Tantek Celik himself, who developed Internet Explorer for Mac, was one of the first to post a solution.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; His solution took advantage of an error in Internet Explorer’s CSS parser. Because CSS parsers just skip declarations they don’t understand instead of throwing an exception like most languages, by writing a few characters that the parser couldn’t interpret it allowed developers to exploit different parsers to have more control over their websites. The control that should have been given in the first place if the parsers were all implemented according to the standard.&lt;/p&gt;
+
+&lt;p&gt;This is how developers dealt with cross-browser CSS for many years. But the thing about CSS hacks though is that once a browser eventually did fix the parsing bug it would cause the CSS to bug out in a different way. Stylesheets had to constantly be maintained as the browsers released fixes.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problems-of-css-at-scale&quot;&gt;The problems of CSS at scale&lt;/h2&gt;
+
+&lt;p&gt;As early as 2005 Dave Shea, the creator of CSS Zen Garden, began to write about the scalability issues with CSS he was running into. It was the first time an article about CSS scalability specifically (not the language or browser issues) was written about. In the article Redundancy vs. Dependency&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, Dave said that eventually CSS forces you to choose between two different styles. In the redundant style, you end up repeating the same CSS for similar elements. 3 similar forms on 3 different pages, for example, would all have their own separate CSS. In the dependent style, the forms would pick up the differences through the cascade. By putting a custom class on a parent or just targeting a custom parent element on that page you could make the necessary changes to that element.&lt;/p&gt;
+
+&lt;p&gt;These problems stemmed from styling those elements using the context before class style. The context before style class encouraged an extremely defensive style of writing CSS. Developers using it were petrified of other CSS overwriting their styles all the time. To counter this they would scope all of their CSS within an id and call it a module. Also, the !important property started being abused.&lt;/p&gt;
+
+&lt;pre data-language=&quot;CSS&quot;&gt;&lt;code data-language=&quot;CSS&quot;&gt;#myModule #saleModule h3 { }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Back in the days of the table, each page was basically an island onto itself. You could style the page however you wanted and it would have no impact on any other pages. After CSS came along people started building their websites with the same mentality. Instead of pages being separate islands, the elements with id’s that developers created acted as those islands. Developers wrote CSS like a cannibalistic tribe on a sole island defending itself from itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-beginnings-of-css-architecture&quot;&gt;The beginnings of CSS architecture&lt;/h2&gt;
+
+&lt;p&gt;One important point brought up multiple times in the comments of Dave’s Redundancy vs. Dependency article is Object Oriented programming. A lot of the commenters were hinting at extra planning needing to take place for a project and using multiple class names. It was beginning to enter the public consciousness that for developing websites with CSS a new methodology was going to be needed. The defensive island way of writing CSS was no longer working.&lt;/p&gt;
+
+&lt;p&gt;The first group to capture and document object-oriented principles within CSS was the Russian company Yandex. In 2005, the engineers at Yandex were also beginning to run into CSS scalability issues&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; similar to the ones Dave Shea wrote about. By the middle of 2006, they were deep into the development of the first version of Yandex.Music. It was a music application that consisted of multiple pages each unlike the other. While at first, they were following the context before class approach to writing their styles, soon enough they noticed long cascading rules mixing ids and tag name selectors. It ultimately resulted in the code losing control on so many levels.&lt;/p&gt;
+
+&lt;p&gt;The developers at Yandex knew that they needed a different approach to their CSS and so began researching a new methodology to writing CSS that embodied object oriented principles. They called it BEM. BEM stands for Block, Element, Modifier. The most important part of BEM was the block. A block was a part of a page design or layout whose specific and unique meaning was defined either semantically or visually.&lt;/p&gt;
+
+&lt;p&gt;By 2007 they presented a polished version of BEM at the ClientSide conference in Moscow, Russia. BEM established a few important rules. Only class names (no ids) should be used for CSS, each block’s class name should have a namespace (prefix), and every CSS rule must belong to a block.&lt;/p&gt;
+
+&lt;p&gt;Some developers couldn’t get over the aesthetics of the system, but it highlighted extremely important points. Prefixing classes for examples was a way to namespace. BEM used CSS naming conventions as a way to capture the object oriented principles in such a loose and vulnerable language like CSS.&lt;/p&gt;
+
+&lt;p&gt;Later Nicole Sullivan with OOCSS as well began advocating a more object-oriented approach to building web pages similar to BEM. In her Yahoo Talk in 2008&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; Nicole suggested starting from styling the smallest elements (headers, lists, etc) first before proceeding on to design the entire page. This was a further attempt to encapsulate object oriented principles in CSS. Even before Brad Frost’s Atomic Design, Nicole Sullivan had already suggested something extremely similar.&lt;/p&gt;
+
+&lt;h2 id=&quot;transpilers-and-making-css-more-object-oriented&quot;&gt;Transpilers and making CSS more object oriented.&lt;/h2&gt;
+
+&lt;p&gt;Although methods like BEM and OOCSS could technically capture object oriented principles due to the nature of CSS as a language it was still very cumbersome and inconvenient to write. Developers began more loudly calling out for features in CSS that would make the language more object oriented.&lt;/p&gt;
+
+&lt;p&gt;As early as 2005 developers were already asking for more programming constructs like if-else statements and macros. They were even building CSS preprocessors with PHP for things like colors&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. In 2007 David Gauer of ratfactor.com&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; argued that CSS should at least have constants because the constant repetition of things like colors led to hard to read stylesheets.&lt;/p&gt;
+
+&lt;p&gt;Many in the W3 had already written a few comments on their mailing list as to why CSS having more programming features is a bad idea. Bert Bos in particular, one of the original creators of CSS, wrote an entire essay in 2008 stating his counter arguments.&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Bert Bos’ main argument was that adding macros, more programming ability, or constants weren’t just redundant, but would also change CSS in ways that would make it unsuitable for its intended audience. Bos didn’t want to bring CSS closer to a programming language. He wanted to strictly keep it a visual styling language. He said that although it is possible to implement constants (Webkit had already implemented an experimental, non-standardized version) that it was best kept out of CSS by implementing it with another language like PHP. So eventually that’s what developers turned to.&lt;/p&gt;
+
+&lt;p&gt;Finally some of these have begun popping up in CSS4 but in the end, it was transpiling that would provide the features developers desperately wanted. Sass, created in 2007, would go on to dominate them all. In 2011 Sass was included by default with the release of Ruby on Rails 3.1, one of the dominant frameworks for creating the back-end of websites at the time.&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; That helped popularize Sass and raise its status as one of the top CSS transpilers.&lt;/p&gt;
+
+&lt;h2 id=&quot;not-yet-convinced-css-architecture-vs-context-before-class&quot;&gt;Not yet convinced (CSS Architecture vs Context before Class)&lt;/h2&gt;
+
+&lt;p&gt;In 2012 Nicolas Gallagher, creator of Normalize.css, posted an essay titled About HTML semantics and front-end architecture to further push against the context before class style that was still quite popular.&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; Nicolas argued that not all semantics need to be content-derived and that developers can leverage the “global” semantics of HTML without confusing their purpose with “local” application-specific semantics that are usually contained in the values of attributes like the class attribute.&lt;/p&gt;
+
+&lt;h2 id=&quot;end&quot;&gt;End&lt;/h2&gt;
+
+&lt;p&gt;Using a CSS architecture like BEM, OOCSS, SMACSS or SuitCSS allows developers to encapsulate object oriented principles and easily update the website under conditions of uncertainty. That’s a key phrase: conditions of uncertainty. Web applications are always changing due to user feedback, new features, new designs, and new technologies, whereas documents are more likely to stay the same.&lt;/p&gt;
+
+&lt;p&gt;CSS went through a huge transition from developers using the context before class style to the modular style, but in the end, the community helped improve the language for everyone.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;http://www.evilgeniuschronicles.org/2005/06/12/i-hate-css/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.artblog.net/post/2005/08/css/ &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://tantek.com/CSS/Examples/boxmodelhack.html &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;http://mezzoblue.com/archives/2005/01/20/redundancy_v/ &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;https://en.bem.info/methodology/history/ &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;https://www.youtube.com/watch?v=7HC3OV1dDZ4 &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;http://www.barelyfitz.com/projects/csscolor/ &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;http://ratfactor.com/css-constants-rant &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;https://www.w3.org/People/Bos/CSS-variables &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;http://guides.rubyonrails.org/3_1_release_notes.html &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;http://nicolasgallagher.com/about-html-semantics-front-end-architecture/ &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 02 Jun 2016 00:00:00 +0700</pubDate>
+        <link>http://derickruiz.com/class-reunion-2</link>
+        <guid isPermaLink="true">http://derickruiz.com/class-reunion-2</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Class Reunion Pt. 1</title>
+        <description>&lt;p&gt;Open up any web page and take a look at the CSS under the hood. More than likely you’ll see CSS structured something like the following:&lt;/p&gt;
+
+&lt;pre data-language=&quot;CSS&quot;&gt;&lt;code&gt;.nav li a {
+  background-color: blue;
+}
+
+blockquote p {
+    font-size: 1em;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That CSS looks good, right? But how did that structure get so popular given how open and malleable CSS with classes is?&lt;/p&gt;
+
+&lt;p&gt;It turns out that a particular style of CSS encouraged by a few influencers in the field, the connection of semantic HTML to the class attribute, and a few websites encouraging more experimentation with CSS were the primary reason for that style taking such a strong hold.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-beginning&quot;&gt;In the beginning…&lt;/h2&gt;
+
+&lt;p&gt;In 2002, Tantek Celik wrote the most influential essay that shaped how web developers write CSS titled A Touch of Class&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Tantek argued that instead of using class names to indicate semantics in HTML to first look for a tag more appropriate than a div or a span. Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div class=&#39;posttitle&#39;&amp;gt;Today&#39;s news&amp;lt;/div&amp;gt;&lt;/code&gt; to do &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;h2&amp;gt;Today&#39;s news&amp;lt;/h2&amp;gt;&lt;/code&gt;. Adopting this approach made the HTML more semantically rich. Many other influencers in the field were also writing on the topic of Semantic HTML and how that related to writing good classes and CSS styles. In 2004 Eric Meyer in particular with the essay Competent Classing&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, wrote how some classes are useless and simply bloat the page weight (because the elements can be styled through the hierarchy in place instead). Tantek left a comment&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; on Eric Meyer’s essay that would formalize those ideas and forever leave an imprint on CSS structure.&lt;/p&gt;
+
+&lt;h2 id=&quot;context-before-class&quot;&gt;Context before class&lt;/h2&gt;
+
+&lt;p&gt;Three words that beautifully captured the popular ideas of how to write CSS at the time. Context before class says that before using a class name to connect an element to a CSS rule to use the element’s context (parent) to construct a selector. Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;.nav-link{}&lt;/code&gt; to use &lt;code class=&quot;highlighter-rouge&quot;&gt;.nav li{}&lt;/code&gt;. Both Tantek and Eric Meyer argued that this approach would reduce page weight by removing unnecessary classes.&lt;/p&gt;
+
+&lt;pre data-language=&quot;html&quot;&gt;
+    &lt;code data-language=&quot;html&quot;&gt;&amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;
+    &amp;lt;li class=&amp;quot;nav-link&amp;quot;&amp;gt;Blah01&amp;lt;/li&amp;gt; |
+    &amp;lt;li class=&amp;quot;nav-link&amp;quot;&amp;gt;Blah02&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;could then become the following:&lt;/p&gt;
+
+&lt;pre data-language=&quot;html&quot;&gt;
+    &lt;code data-language=&quot;html&quot;&gt;&amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;Blah01&amp;lt;/li&amp;gt; |
+    &amp;lt;li&amp;gt;Blah02&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;how-did-it-come-to-life&quot;&gt;How did it come to life?&lt;/h2&gt;
+
+&lt;p&gt;Tantek word’s beautifully captured the idea, but how did it come into life? These ideas about CSS were obvious backlashes against the popular table movement just a few years before it. This new movement ushered in by Tantek Celik and Eric Meyer was to bring the web back to its structural roots and guiding principles.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-guiding-principals-of-the-web&quot;&gt;The guiding principals of the web&lt;/h2&gt;
+
+&lt;p&gt;The web, created by Tim Berners-Lee, was originally created for structure. It was a science project designed for information organization.&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; There’s a lot of benefits to the structural approach. You have machine readability which leads to better accessibility, better indexing and search engines, and portability to all devices.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/class-reunion/This-is-for-everyone.jpg&quot; alt=&quot;A photo of the London Olympics showcasing Tim Berners-Lee&#39;s This is for everyone.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;However, that structural purity wasn’t what the web was destined for. The web, as was so famously captured in the London Olympics, was given for everyone to use. And it turns out that the best practices for computer scientists aren’t necessarily the same for regular people.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-table-movement&quot;&gt;The Table Movement&lt;/h2&gt;
+
+&lt;p&gt;People wanted the web to be a visual medium. Pretty sites, animated gifs, and places to post photos. Catering to normal people was seen as a competitive advantage for browsers because there’s a lot more normal people than there are computer scientists.&lt;/p&gt;
+
+&lt;p&gt;Besides browser incompatibility and lack of developer inertia, CSS just wasn’t powerful enough to achieve the layouts that designers wanted. It was just good enough for a few text effects and changing colors. The only way to achieve this visual nature was to abuse HTML structure at the time. Hence font tags and inline formatting. The mid 90’s HTML was all about presentation.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/class-reunion/creating-killer-websites.jpg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;The book Creating Killer Web Sites by David Siegel was extremely popular because it helped people achieve that visual medium. It got designers excited about the web. The most important concept expressed in the book was how to use tables and transparent gifs to achieve a grid-based layout that was close to print.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-meaningless-class-attribute&quot;&gt;The meaningless class attribute&lt;/h2&gt;
+
+&lt;p&gt;In direct contrast to the table movement which abused HTML tags to achieve layout, Ian Hickson, another early web influencer, created a post titled Why Semantic Markup is so Important&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Ian argued that because classes are meaningless (just a space separated list of author defined tokens) they shouldn’t be used in the markup at all. Markup was supposed to be pure and since classes didn’t mean anything then they shouldn’t be in the markup. It was from this idea that Tantek’s Context before Class was birthed. This style of writing HTML and CSS was seen as extremely semantic and on course with the original vision of the web created by Tim Berners-Lee.&lt;/p&gt;
+
+&lt;h2 id=&quot;success-but-css-not-being-adopted-yet&quot;&gt;Success but CSS not being adopted yet?&lt;/h2&gt;
+
+&lt;p&gt;The context before class style of writing CSS and classes was seen as an extreme positive. It maintained the best of the table movement because CSS2 was now as powerful as tables to create the layouts that designers wanted. Also, it was semantic as the original guiding principals of the web had intended.&lt;/p&gt;
+
+&lt;p&gt;Despite CSS2 finally achieving the power necessary to create modern layouts the developer inertia still wasn’t there and developers were reluctant to hop on the CSS train.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-road-css-took-to-prove-itself&quot;&gt;The road CSS took to prove itself&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/class-reunion/daily-css-fun.jpg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;In late 2001 Chris Casciano posted an influential transitionary post from using tables to taking advantage of the new power of CSS titled Your CSS Bores Me&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. He argued that CSS was just as powerful as tables and wondered why designers still weren’t taking advantage of it. In response, a lot of designers said they still weren’t sure if CSS could do what Chris was claiming. As a result, he created a project called Daily CSS Fun&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; in 2002 in which every day in the month of February he would post a new redesign of his website by only changing the stylesheet.&lt;/p&gt;
+
+&lt;p&gt;In the table movement a few years before, redesigns were extremely tedious. Because the design was very much tied into the markup it required designers to go into the HTML and manually update all the values on every page. By only changing the stylesheet and not any of the markup to achieve his redesigns, Chris was essentially marketing to web developers, “No need to change the markup for presentational changes, just use CSS!”. It was to reassure them that they would no longer have to face the great pains of big redesigns.&lt;/p&gt;
+
+&lt;p&gt;Because the design was only changed through the stylesheet, consequently the style and structure of the CSS very much resembled Tantek Celik’s Context before Class. This would help to further enforce and solidify that style of writing CSS.&lt;/p&gt;
+
+&lt;h2 id=&quot;solidification-of-style-with-css-zen-garden&quot;&gt;Solidification of style with CSS Zen Garden&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/class-reunion/css-zen-garden.jpg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;In 2003 Dave Shea, the creator of CSS Zen Garden was inspired by Chris Casciano’s Daily CSS Fun project and Your CSS Bores Me post to create CSS Zen Garden&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. Instead of Dave doing all of the redesigns, as Chris did, he opened it up to the community as a contest. This was huge because many web designers got their start around this period. They learned CSS by experimenting with the layouts presented in the contests and through reading the CSS source code created by other developers.&lt;/p&gt;
+
+&lt;p&gt;CSS Zen Garden convinced a lot of developers that CSS was a serious language. It was fun. It was experimental. Just by changing the CSS you could go to a completely different look and feel.&lt;/p&gt;
+
+&lt;h2 id=&quot;end&quot;&gt;End&lt;/h2&gt;
+
+&lt;p&gt;Ultimately Tantek’s context before class, the connection of classes to semantic HTML, and CSS proving itself came together to create a system to style pages that worked very well for developers. It finally just began to spread and it became commonplace.&lt;/p&gt;
+
+&lt;p&gt;This style of CSS works great for static documents. But there is a difference between styling a document, a glorified word document, to styling a web application. As the internet was becoming more of an application platform instead of a document sharing platform, the same methods were no longer up to par. Except they are still being used as we can see.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;SpecialLink&quot; href=&quot;/class-reunion-2&quot;&gt;Read Part 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;http://tantek.com/log/2002/12.html &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://meyerweb.com/eric/thoughts/2004/07/18/competent-classing/ &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://meyerweb.com/eric/thoughts/2004/07/18/competent-classing/#comment-529 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;https://www.w3.org/Consortium/mission#principles &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;http://ln.hixie.ch/?start=1038263537&amp;amp;order=-1&amp;amp;count=10 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;http://www.chunkysoup.net/opinion/boringcss/ &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;https://placenamehere.com/neuralustmirror/200202/ &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;http://mezzoblue.com/archives/2003/05/07/css_zen_gard/ &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 10 May 2016 00:00:00 +0700</pubDate>
+        <link>http://derickruiz.com/class-reunion-1</link>
+        <guid isPermaLink="true">http://derickruiz.com/class-reunion-1</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Remote Volunteering at GiveCamp Memphis</title>
+        <description>&lt;p&gt;Back in 2015 I participated locally at GiveCamp Memphis, a weekend-long event where creators donate their time to nonprofit organizations. I volunteered my web design and front-end web development skills for a local volunteer organization in Memphis called &lt;a href=&quot;http://volunteerodyssey.com/&quot;&gt;Volunteer Odyssey&lt;/a&gt;. I, along with an awesome team of Ruby programmers, built a responsive calendar for them to organize their events. I wrote all about that experience right &lt;a href=&quot;http://derickruiz.com/work/volunteer-odyssey&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-i-became-a-remote-volunteer&quot;&gt;How I became a remote volunteer&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/derick-in-japan.jpg&quot; alt=&quot;A photo of me in Japan with my friend Ayana.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;That was last year and at this point in February I was traveling around Japan and working remotely as a front-end web developer for Hilton Worldwide. The GiveCamp Memphis event is usually held around late February. I definitely wasn’t consciously thinking about participating again because I was traveling and I knew the event was more focused on local participation. I wasn’t sure if they’d allow remote volunteers. But, it turns out GiveCamp Memphis was completely cool with it.&lt;/p&gt;
+
+&lt;p&gt;One of the Ruby programmers who I worked with last year, Dounan Hu, contacted me and asked if I’d be interested in participating again. Of course I was. And I vlogged the entire experience and put it up on Youtube too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;SpecialLink&quot; href=&quot;https://youtu.be/vJhOHpR680I&quot;&gt;Watch Part 1 on Youtube&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-story&quot;&gt;The story&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/sarah.jpg&quot; alt=&quot;A photo of Sarah Petschonek&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;It turns out that Sarah Petschonek, the founder of Volunteer Odyssey, was participating in the event again. She contacted Josh Lewis, one of the programmers on last year’s team, and asked him if it was possible to get the ol’ gang back together. He wasn’t sure. Two of us weren’t even in the country anymore. Dounan Hu was in China working with an educational startup on lessons for high school students, and I was in Japan working remotely for Hilton Worldwide and casually traveling. A digital nomad.&lt;/p&gt;
+
+&lt;p&gt;So Josh contacted Dounan and because it fell on a weekend he said he could spare some time. Dounan then contacted me and I also had some time. Honestly, I was actively looking forward to hearing all about the project after a year of it being in production.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-goal&quot;&gt;The goal&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/work/volunteer-odyssey/givecamp-team.jpg&quot; alt=&quot;A photo of the team and I at GiveCamp Memphis 2015&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;After a year of the &lt;a href=&quot;http://derickruiz.com/work/volunteer-odyssey&quot;&gt;calendar&lt;/a&gt; we built for Volunteer Odyssey being in production, Sarah noted some bugs that needed to be fixed, usability issues that could be addressed, and new features that she and the community wanted.&lt;/p&gt;
+
+&lt;p&gt;As for the features, Sarah wanted a couple of new views on the calandar to make consumption of the information easier. She wanted updates like an indicator on whether an entry had an attachment or not, a week view (which we didn’t get to unfortunately), and updates to the month view.&lt;/p&gt;
+
+&lt;p&gt;There were a few non-critical bugs like not being able to submit the form without all the fields being filled in. We made some of the more obscure ones optional. Also besides bugs and new features we addressed a lot of usability issues. Some things we fixed include making the entire div clickable on mobile instead of just the link, improved the edit experience for the volunteer organizations that use the app, improved the editor for the form, and more relevant google analytics tracking.&lt;/p&gt;
+
+&lt;p&gt;Ultimately I decided that there was enough to tie all of the new features and usability fixes with a new design. I also secretly wanted to design something new, haha.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-i-kept-up-with-the-team&quot;&gt;How I kept up with the team&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/appear-in.jpg&quot; alt=&quot;A photo of the team communicating through appear.in, a video chat web app.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;At this point I was working remotely as a front-end web developer for a while so I was used to a remote environment. For the most part the team kept up with each other on a Slack channel that we created. We also used appear.in, a video chat web app. Despite the fact that I was in Japan and the team was in Memphis, there were no lag issues at all. I very much recommend &lt;a href=&quot;http://appear.in/&quot;&gt;appear.in&lt;/a&gt; for quick video chats. It’s a well built and easy to use web app.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/periscope.jpg&quot; alt=&quot;A photo of the team recording the event using Periscope.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Things got very interesting when the team decided to stream the main events with Periscope. I was watching live on my iPhone (even though Japan is 14 hours ahead) and it felt like I was right there in the room. Periscope really made the difference in keeping remote volunteering fresh and it created interesting opportunities to engage with the team in more human ways.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;SpecialLink&quot; href=&quot;https://youtu.be/Cdhuj_3OyHk&quot;&gt;Watch Part 2 on Youtube&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-process&quot;&gt;The process&lt;/h2&gt;
+
+&lt;p&gt;Besides vlogging the time that I was volunteering and working on the web app, I thought it would be a good opportunity for me to document my design process. After I figured out that I would be needing a new design to tie everything together I got to work on the initial mockups.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/design-process-mockup.jpg&quot; alt=&quot;A photo of my approach to mocking up the new design.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;When it comes to designing a user interface I love starting with paper first. I’m the kind of person that can get really obsessive about small details so using paper and a big sharpie marker forces me to focus on the most important parts first. A little thing I learned from one of my favorite books, Getting Real by 37 Signals.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/design-process-sketch.jpg&quot; alt=&quot;A photo of the new design sketched out using the Sketch app.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;After I had a good idea of the main elements I wanted on paper I went directly to Sketch and began mocking everything up. I choose the font Fira Sans as the main font for the project because I thought the open source nature of the font really matched the objectives of Volunteer Odyssey. I spent a bit of time here getting the colors, font spacing, and font sizes right before finally jumping into CSS. Having everything clearly defined in Sketch really made it easy to define sizes in terms of rems.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/new-design-mobile-optimized.jpg&quot; alt=&quot;A photo of the final mobile design in the browser.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;So that’s how the final design looks in the browser. One feature that I’m particularly proud of is search. When the search button is clicked it defaults to searching on the type of page you were on (events, organizations, or venues). But you can also click the radio buttons and dynamically switch the form link to search something else. It’s something simple, but definitely a usability improvement for the people using the app and trying to find stuff to volunteer for.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/img/posts/remote-volunteering-givecamp-memphis/search-feature.jpg&quot; alt=&quot;A photo of the search feature in a mobile browser.&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a class=&quot;SpecialLink&quot; href=&quot;https://youtu.be/pYJ64QEfi6Y&quot;&gt;Watch Part 3 on Youtube&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;end&quot;&gt;End&lt;/h2&gt;
+
+&lt;p&gt;Volunteering remotely for GiveCamp Memphis was super fun. I’m really glad that Sarah got the team together and that Dounan and I were able to participate despite the fact that we were half way around the world.&lt;/p&gt;
+
+&lt;p&gt;I was already used to working remotely but GiveCamp Memphis’ 3 day deadline and using Periscope really spiced things up. The experience definitely wouldn’t have been the same if the team wasn’t periscoping everything.&lt;/p&gt;
+
+&lt;p&gt;Documenting my experience and process with video was really fun too and gave me a third person look at how I like to approach designing user interfaces. I’m looking forward to next year’s event.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 05 Mar 2016 00:00:00 +0700</pubDate>
+        <link>http://derickruiz.com/remote-volunteering-givecamp-memphis</link>
+        <guid isPermaLink="true">http://derickruiz.com/remote-volunteering-givecamp-memphis</guid>
+        
+        
+      </item>
     
       <item>
         <title>Custom dots with Owl Carousel 2</title>
@@ -17,9 +368,7 @@
 &lt;p&gt;First create your dots container.&lt;/p&gt;
 
 &lt;pre data-language=&quot;html&quot;&gt;
-    &lt;code data-language=&quot;html&quot;&gt;
-
-&amp;lt;div id=&amp;#39;carousel&amp;#39; class=&amp;#39;owl-carousel&amp;#39;&amp;gt;
+    &lt;code data-language=&quot;html&quot;&gt;&amp;lt;div id=&amp;#39;carousel&amp;#39; class=&amp;#39;owl-carousel&amp;#39;&amp;gt;
     &amp;lt;div class=&amp;#39;item&amp;#39;&amp;gt;&amp;lt;/div&amp;gt;
     &amp;lt;div class=&amp;#39;item&amp;#39;&amp;gt;&amp;lt;/div&amp;gt;
     &amp;lt;div class=&amp;#39;item&amp;#39;&amp;gt;&amp;lt;/div&amp;gt;
@@ -29,29 +378,22 @@
     &amp;lt;li class=&amp;#39;owl-dot&amp;#39;&amp;gt;&amp;lt;!-- Anything in here --&amp;gt;&amp;lt;/li&amp;gt;
     &amp;lt;li class=&amp;#39;owl-dot&amp;#39;&amp;gt;&amp;lt;/li&amp;gt;
     &amp;lt;li class=&amp;#39;owl-dot&amp;#39;&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-    &lt;/code&gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;
 &lt;/pre&gt;
 
 &lt;p&gt;Next include this inside of your options object.&lt;/p&gt;
 
-&lt;pre data-language=&quot;javascript&quot;&gt;
-    &lt;code data-language=&quot;javascript&quot;&gt;
-    owl.owlCarousel({
-      dotsContainer: &#39;#carousel-custom-dots&#39;
-    });
-    &lt;/code&gt;
-&lt;/pre&gt;
+&lt;pre data-language=&quot;javascript&quot;&gt;&lt;code data-language=&quot;javascript&quot;&gt;owl.owlCarousel({
+    dotsContainer: &#39;#carousel-custom-dots&#39;
+});
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The following tells Owl Carousel 2 to go to a slide based on the index of the dot that was clicked.&lt;/p&gt;
 
-&lt;pre data-language=&quot;javascript&quot;&gt;
-    &lt;code data-language=&quot;javascript&quot;&gt;
-    $(&#39;.owl-dot&#39;).click(function () {
-        owl.trigger(&#39;to.owl.carousel&#39;, [$(this).index(), 300]);
-    });
-    &lt;/code&gt;
-&lt;/pre&gt;
+&lt;pre data-language=&quot;javascript&quot;&gt;&lt;code data-language=&quot;javascript&quot;&gt;$(&#39;.owl-dot&#39;).click(function () {
+    owl.trigger(&#39;to.owl.carousel&#39;, [$(this).index(), 300]);
+});
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That should be all you need to get custom dots up and going with Owl Carousel 2.&lt;/p&gt;
 </description>
@@ -67,43 +409,51 @@
         <description>&lt;p&gt;Here is how to include both Bourbon and Neat in your grunt sass configuration and have multiple includePaths.&lt;/p&gt;
 
 &lt;h2 id=&quot;grunt-sass&quot;&gt;grunt-sass&lt;/h2&gt;
-&lt;pre data-language=&quot;javascript&quot;&gt;
-    &lt;code data-language=&quot;javascript&quot;&gt;
-    sass: {
-        dev: {
-            files: {
-                &#39;src/css/styles.css&#39;: &#39;src/scss/styles.scss&#39;
-            },
-            options: {
-                includePaths: require(&#39;node-bourbon&#39;).includePaths.concat(require(&#39;node-neat&#39;).includePaths),
-            }
+&lt;pre data-language=&quot;javascript&quot;&gt;&lt;code data-language=&quot;javascript&quot;&gt;sass: {
+    dev: {
+        files: {
+            &#39;src/css/styles.css&#39;: &#39;src/scss/styles.scss&#39;
+        },
+        options: {
+            includePaths: require(&#39;node-bourbon&#39;).includePaths.concat(require(&#39;node-neat&#39;).includePaths),
         }
     }
-    &lt;/code&gt;
-&lt;/pre&gt;
+}&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;grunt-contrib-sass&quot;&gt;grunt-contrib-sass&lt;/h2&gt;
-&lt;pre data-language=&quot;javascript&quot;&gt;
-    &lt;code data-language=&quot;javascript&quot;&gt;
-    sass: {
-        dev: {
-            files: {
-                &#39;src/css/styles.css&#39;: &#39;src/scss/styles.scss&#39;
-            },
-            options: {
-                loadPath: require(&#39;node-bourbon&#39;).includePaths.concat(require(&#39;node-neat&#39;).includePaths),
-                sourceMap: true
-            }
+&lt;pre data-language=&quot;javascript&quot;&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+sass: {
+    dev: {
+        files: {
+            &#39;src/css/styles.css&#39;: &#39;src/scss/styles.scss&#39;
+        },
+        options: {
+            loadPath: require(&#39;node-bourbon&#39;).includePaths.concat(require(&#39;node-neat&#39;).includePaths),
+            sourceMap: true
         }
     }
-    &lt;/code&gt;
-&lt;/pre&gt;
+}&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The includePaths (or loadPath with grunt-contrib-sass) property takes an array of different string paths. Doing &lt;code class=&quot;highlighter-rouge&quot;&gt;require(&#39;node-bourbon&#39;).includePaths&lt;/code&gt; by itself returns an array so to have multiple includePaths concatenation is required to keep that single array.&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Oct 2015 00:00:00 +0700</pubDate>
         <link>http://derickruiz.com/grunt-multiple-includepaths</link>
         <guid isPermaLink="true">http://derickruiz.com/grunt-multiple-includepaths</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Modular CSS Design with SMACSS</title>
+        <description>&lt;p&gt;I gave a talk on August 19th at Meteor Memphis, a web development group in Memphis focused on the Meteor framework, about Modular CSS Design with SMACSS. My friend did me a great favor and filmed it for me. I talk about using the different methodologies that Jonathan Snook talks about in his SMACSS approach to CSS, and how they can drastically improve your CSS.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/n5eQhIXf5OE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Sep 2015 00:00:00 +0700</pubDate>
+        <link>http://derickruiz.com/modular-css-design-with-smacss</link>
+        <guid isPermaLink="true">http://derickruiz.com/modular-css-design-with-smacss</guid>
         
         
       </item>

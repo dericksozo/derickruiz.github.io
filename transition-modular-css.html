@@ -6,14 +6,14 @@
         <!-- derickruiz.com/responsive-calendar -->
         <!-- It would be cool having the emoji either in the title or in the description. -->
         <!-- A single emoji that represents what the post is about -->
-        <title>Multiple includePaths with Grunt SASS - Derick Ruiz</title>
+        <title>The bumpy road to modular CSS - Derick Ruiz</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Some custom description in here -->
         <meta name="Description" content="">
-        <link rel="canonical" href="/grunt-multiple-includepaths">
+        <link rel="canonical" href="/transition-modular-css">
         <meta http-equiv="cleartype" content="on">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -107,11 +107,11 @@
             	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
             		<header>
                         
-                            <h1 class='hyphenate' itemprop="headline">Multiple includePaths with Grunt SASS</h1>
+                            <h1 class='hyphenate' itemprop="headline">The bumpy road to modular CSS</h1>
                             
                         
-            			<time itemprop="datePublished" datetime=2015-10-03>
-            				<span class='month-day-year'>10.03.2015</span>
+            			<time itemprop="datePublished" datetime=2016-05-10>
+            				<span class='month-day-year'>05.10.2016</span>
             			</time>
             			<span class='separator'>|</span>
 
@@ -122,38 +122,18 @@
             					<span>01 minute read</span>
             				</time>
             			
-            			<meta itemprop="wordCount" content="58">
+            			<meta itemprop="wordCount" content="57">
             		</header>
             		<div class='hyphenate content' itemprop="articleBody">
-            			<p>Here is how to include both Bourbon and Neat in your grunt sass configuration and have multiple includePaths.</p>
+            			<!-- Layout -->
 
-<h2 id="grunt-sass">grunt-sass</h2>
-<pre data-language="javascript"><code data-language="javascript">sass: {
-    dev: {
-        files: {
-            'src/css/styles.css': 'src/scss/styles.scss'
-        },
-        options: {
-            includePaths: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
-        }
-    }
-}</code></pre>
+<p>[How the previous context before class way of approaching CSS was good for documents, not applications]</p>
 
-<h2 id="grunt-contrib-sass">grunt-contrib-sass</h2>
-<pre data-language="javascript"><code data-language="javascript">
-sass: {
-    dev: {
-        files: {
-            'src/css/styles.css': 'src/scss/styles.scss'
-        },
-        options: {
-            loadPath: require('node-bourbon').includePaths.concat(require('node-neat').includePaths),
-            sourceMap: true
-        }
-    }
-}</code></pre>
+<p>[The problems that began occurring when using the context before class style when approaching an application]</p>
 
-<p>The includePaths (or loadPath with grunt-contrib-sass) property takes an array of different string paths. Doing <code class="highlighter-rouge">require('node-bourbon').includePaths</code> by itself returns an array so to have multiple includePaths concatenation is required to keep that single array.</p>
+<p>[How CSS architectures embody object oriented principals in such a loose language like CSS]</p>
+
+<p>[A CSS Module system and what that could mean for CSS]</p>
 
             		</div>
             	</article>
