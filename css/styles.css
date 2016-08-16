@@ -1002,6 +1002,19 @@ a.button {
   border-top: 3px solid #2f4dbd;
   border-bottom: none; }
 
+.button.button--secondary {
+  color: #FFFFF7;
+  background-color: #FE0988;
+  border-bottom: 3px solid #d20971; }
+
+.button.button--secondary:hover {
+  background-color: #f546a0;
+  border-bottom: 3px solid #d20971; }
+
+.button.button--secondary:active {
+  border-top: 3px solid #f546a0;
+  border-bottom: none; }
+
 .button.button--red {
   background-color: #ff3c00; }
 
@@ -2157,6 +2170,9 @@ a.button {
   color: #c09760; }
 .work-item-page.hilton-luxury-maps .button {
   display: none; }
+.work-item-page.hilton-luxury-maps .device.browser {
+  background-color: #c09760;
+  display: block; }
 @media screen and (min-width: 30em) {
   .work-item-page.hilton-luxury-maps .devices.single-device > .device.iphone {
     margin: 1em auto;
@@ -2169,8 +2185,6 @@ a.button {
       width: 100%; }
     .work-item-page.hilton-luxury-maps article .devices.single-device .device.iphone {
       margin-top: 0; }
-    .work-item-page.hilton-luxury-maps article .device.browser {
-      background-color: #c09760; }
     .work-item-page.hilton-luxury-maps article:before {
       content: "05";
       display: block;
