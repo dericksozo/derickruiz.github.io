@@ -13,6 +13,11 @@ article {
 	display: none;
 }
 
+.device.browser {
+	background-color: $hilton-brown;
+	display: block;
+}
+
 @media screen and (min-width: 30em) {
 	.devices.single-device > .device.iphone {
 		margin: 1em auto;
@@ -34,10 +39,6 @@ article {
 		.devices.single-device .device.iphone {
 			margin-top: 0;
 		}
-
-        .device.browser {
-            background-color: $hilton-brown;
-        }
 
 		&:before {
 			content: "05";

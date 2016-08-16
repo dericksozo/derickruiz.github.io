@@ -256,6 +256,22 @@ a.button {
 	border-bottom: none;
 }
 
+.button.button--secondary {
+	color: $readable-color;
+	background-color: $secondary-color;
+	border-bottom: 3px solid $secondary-color-darker;
+}
+
+.button.button--secondary:hover {
+	background-color: $secondary-color-lighter;
+	border-bottom: 3px solid $secondary-color-darker;
+}
+
+.button.button--secondary:active {
+	border-top: 3px solid $secondary-color-lighter;
+	border-bottom: none;
+}
+
 .button.button--red {
 	background-color: $red-color;
 }
