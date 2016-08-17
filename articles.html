@@ -43,6 +43,7 @@ title: Articles
 
                     	{% for post in site.posts %}
 
+                            {% if post.layout == "post" %}
 	                    	<li class='blog-post clearfix' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 	                            <a href="{{post.url}}">
 	                                <!-- Second most important heading is the name of the articles? -->
@@ -71,7 +72,7 @@ title: Articles
                                     {% endif %}
                                 </time>
 	                        </li>
-
+                            {% endif %}
                     	{% endfor %}
 
                     </ul><!-- .posts-list -->

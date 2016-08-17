@@ -43,6 +43,10 @@ h1 {
 	color: $primary-header-color;
 }
 
+h1.breathing-room {
+	line-height: 1.18;
+}
+
 time {
 	display: inline-block;
 	margin-top: $scale-one-down;

@@ -22,6 +22,9 @@ collections:
   work:
     output: true
     permalink: /work/:path
+  coverletter:
+      output: true
+      permalink: /:path
 
 navigation:
  - title: About
@@ -54,3 +57,9 @@ defaults:
       layout: "work-item"
       parentTitle: "Works"
       parentUrl: "/works"
+  -
+    scope:
+      path: ""
+      type: "coverletter"
+    values:
+      layout: "coverletter"

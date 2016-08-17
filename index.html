@@ -61,6 +61,7 @@ regenerate: true
                             {% assign post_year = post.date | date: "%Y"  %}
                             {% assign this_year = 'now' | date: "%Y" %}
 
+                            {% if post.layout == "post" %}
                             <li class='blog-post' itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
                                 <time itemprop="datePublished" datetime={{post.date | date: "%Y-%m-%d"}}>
                                     {% if post_year == this_year %}
@@ -71,6 +72,7 @@ regenerate: true
                                 </time>
                                 <a class='link' href="{{post.url}}" itemprop="headline">{{post.title}}</a>
                             </li>
+                            {% endif %}
 
                         {% endfor %}
 
