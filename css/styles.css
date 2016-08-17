@@ -1166,6 +1166,19 @@ a.button {
   border-bottom: 0.618rem solid transparent;
   border-left: 1rem solid #FFFFF7; }
 
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .home-page {
   /* Blog posts section */ }
   .home-page section.intro {
@@ -1651,6 +1664,8 @@ a.button {
   word-break: break-word;
   word-wrap: break-word;
   color: #FE0988; }
+.blog-post-page h1.breathing-room {
+  line-height: 1.18; }
 .blog-post-page time {
   display: inline-block;
   margin-top: 0.666rem; }
