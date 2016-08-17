@@ -17,7 +17,7 @@ blockquote p {
     font-size: 1em;
 }</code></pre>
 
-That CSS looks good, right? But how did that structure get so popular given how open and malleable CSS with classes is?
+That CSS looks normal, right? But how did that structure get so popular given how open and malleable CSS with classes is?
 
 It turns out that a particular style of CSS encouraged by a few influencers in the field, the connection of semantic HTML to the class attribute, and a few websites encouraging more experimentation with CSS were the primary reason for that style taking such a strong hold.
 
