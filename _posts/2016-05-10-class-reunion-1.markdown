@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Class Reunion Pt. 1"
-subtitle: "or how 3 words by Tantek Celik shaped CSS structure permanently."
+subtitle: "or how 3 words by Tantek Celik completely shaped CSS."
 date:   2016-05-10
 hasCode: true
 regenerate: true
