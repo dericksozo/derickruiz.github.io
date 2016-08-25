@@ -13,4 +13,4 @@ Hospitality involves showing respect for one’s guests, providing for their nee
 
 And that’s exactly what I do. I build user interfaces using HTML, CSS, and Javascript. Hospitality comes first, treating users as equal, and *that* gets turned into the UI. I provide to the human being that is caring enough to actually be on my website — you — with that inherent right to a good experience. In essence, I’m a web developer that gives a shit.
 
-[derick-portrait]: /img/derick-about.png
+[derick-portrait]: /img/work/responsive-photography/in-japan-with-camera.jpg
