@@ -1,5 +1,5 @@
 ---
-title: Hello Customer.io
+title: Hey X-team
 description: >
   Hey there X-Team, here's a bit more about my experiences as a remote developer
 ---
