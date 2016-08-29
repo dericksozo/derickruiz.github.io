@@ -6,9 +6,37 @@
 </description>
     <link>http://derickruiz.com/</link>
     <atom:link href="http://derickruiz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Aug 2016 02:49:35 -0500</pubDate>
-    <lastBuildDate>Sat, 27 Aug 2016 02:49:35 -0500</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 20:32:41 -0500</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 20:32:41 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Using modelFor correctly in Ember.js</title>
+        <description>&lt;p&gt;The modelFor method needs the route defined according to its hierarchy. So if router.js looks like the following:&lt;/p&gt;
+
+&lt;pre data-language=&quot;Javascript&quot;&gt;&lt;code data-language=&quot;Javascript&quot;&gt;Router.map(function() {
+  this.route(&#39;org&#39;, {path: &#39;org/:id&#39;}, function() {
+    this.route(&#39;repos&#39;);
+    this.route(&#39;repo&#39;, {path: &#39;:repoid&#39;}, function() {
+      this.route(&#39;issues&#39;);
+    });
+  });
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here’s how to access repo’s model in the &lt;code class=&quot;highlighter-rouge&quot;&gt;issues&lt;/code&gt; route:&lt;/p&gt;
+
+&lt;pre data-language=&quot;Javascript&quot;&gt;&lt;code data-language=&quot;Javascript&quot;&gt;model() {
+  let repoId = this.modelFor(&#39;org.repo&#39;).repoid;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first parameter needs the route according to its position in the hierarchy separated by a period.&lt;/p&gt;
+
+&lt;p&gt;Just writing &lt;code class=&quot;highlighter-rouge&quot;&gt;this.modelFor(&#39;repo&#39;)&lt;/code&gt; will return undefined because that’s not a route specified in the upper most level of the router. It’s a child route and must be written out as so.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Aug 2016 00:00:00 -0500</pubDate>
+        <link>http://derickruiz.com/modelfor-emberjs</link>
+        <guid isPermaLink="true">http://derickruiz.com/modelfor-emberjs</guid>
+        
+        
+      </item>
     
       <item>
         <title>Class Reunion Pt. 2</title>
