@@ -1944,7 +1944,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("hungry/app")["default"].create({"name":"hungry","version":"0.0.0+75e41086"});
+  require("hungry/app")["default"].create({"name":"hungry","version":"0.0.0+7e16c710"});
 }
 
 /* jshint ignore:end */
