@@ -1,0 +1,202 @@
+@charset "UTF-8";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0; }
+
+article,
+main,
+section {
+  display: block; }
+
+h2, h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: inherit; }
+
+p {
+  margin: 0;
+  margin-bottom: 0; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+ul > li {
+  list-style-type: none; }
+
+.u-pushLeft {
+  float: left; }
+
+.u-pushRight {
+  float: right; }
+
+.u-clear {
+  clear: both;
+  display: inline-block;
+  width: 100%; }
+
+.u-clearFix:after {
+  content: " ";
+  display: table; }
+
+.u-clearFix:after {
+  clear: both; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background-color: #333;
+  color: #bababa;
+  line-height: 1.388; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.g-Container,
+.g-Grid,
+.g-GridCell {
+  box-sizing: border-box; }
+
+.g-Container,
+.g-Container > .g-Grid + .g-Grid {
+  margin-top: 40px; }
+
+.g-Grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-left: -30px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.g-GridCell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 30px 0 0 30px; }
+
+@media only screen and (max-width: 479px) {
+  .g-GridCell:not(:first-child) {
+    padding-top: 40px; } }
+
+@media only screen and (min-width: 480px) {
+  .g-GridCell-half {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; } }
+
+.InfoDisplayer {
+  background-color: transprent;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .InfoDisplayer-title {
+    color: #5abfeb;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600; }
+  .InfoDisplayer-content {
+    margin-top: 20px; }
+    .InfoDisplayer-content > * + * {
+      margin-top: 20px; }
+
+@media only screen and (min-width: 480px) {
+  .InfoDisplayer {
+    padding: 30px 20px;
+    border-top: 3px solid #5abfeb;
+    background-color: #202020; }
+    .InfoDisplayer-content {
+      margin-top: 30px; } }
+
+@media only screen and (min-width: 800px) {
+  .InfoDisplayer-title {
+    font-size: 1.333rem; }
+  .InfoDisplayer-content {
+    margin-top: 20px; } }
+
+.ArticlePreviews > * + * {
+  margin-top: 20px; }
+
+.ArticlePreview-title, .ArticlePreview-date {
+  display: inline-block; }
+
+.ArticlePreview-title {
+  color: #fff;
+  font-weight: 600;
+  margin-right: 10px; }
+
+.ArticlePreview-date {
+  color: #5abfeb;
+  font-style: italic; }
+
+.ArticlePreview-description {
+  margin-top: 5px; }
+
+@media only screen and (min-width: 480px) {
+  .ArticlePreview-description {
+    margin-top: 6px; } }
+
+@media only screen and (min-width: 800px) {
+  .ArticlePreviews {
+    padding-left: 20px; }
+  .ArticlePreview {
+    padding-left: 7px;
+    list-style-image: url("img/icon.png"); }
+    .ArticlePreview-title {
+      font-size: 1.066rem; }
+    .ArticlePreview-description {
+      font-size: 0.933rem; } }
+
+.TextBlock > * + * {
+  margin-top: 10px; }
+
+@media only screen and (min-width: 800px) {
+  .TextBlock {
+    position: relative;
+    padding-left: 40px; }
+    .TextBlock > * {
+      position: relative; }
+    .TextBlock:before {
+      content: "“";
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 188px;
+      color: #333;
+      position: absolute;
+      top: -66px;
+      left: -7px; } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 16px; } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 15px; } }
+
+/*# sourceMappingURL=styles.css.map */
