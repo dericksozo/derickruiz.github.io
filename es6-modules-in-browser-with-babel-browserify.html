@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>Using ES6 modules in the browser with Babel and Browserify - Derick Ruiz</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <meta name="Description" content="">
+        <link rel="canonical" href="/es6-modules-in-browser-with-babel-browserify">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Typekit code that loads nimbus sans -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'yhz0fyw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+        <link rel="stylesheet" href="/css/styles.css">
+
+        
+        	<link rel="stylesheet" href="/css/code.css">
+        
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58696895-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <ul>
+    	
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/about" itemprop="url">About</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/articles" itemprop="url">Articles</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/works" itemprop="url">Works</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/contact" itemprop="url">Contact</a>
+	    	</li>
+        
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
+    </ul>
+</nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
+
+</section>
+        </div>
+
+        <div class='wrapper wrapper--noSpacing'>
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+            	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+            		<header>
+                        
+                            <h1 class='hyphenate' itemprop="headline">Using ES6 modules in the browser with Babel and Browserify</h1>
+                            
+                        
+            			<time itemprop="datePublished" datetime=2016-09-18>
+            				<span class='month-day-year'>09.18.2016</span>
+            			</time>
+            			<span class='separator'>|</span>
+
+            			
+
+	                    
+	                    	<time class='read-time' itemprop="timeRequired" datetime="03M">
+            					<span>03 minute read</span>
+            				</time>
+            			
+            			<meta itemprop="wordCount" content="711">
+            		</header>
+            		<div class='hyphenate content' itemprop="articleBody">
+            			<p>I’m gonna go ahead and get this out in the air. This stuff can feel super complicated at times especially when you’re just trying to get setup and do some simple web development. Hopefully, this blog post can simplify things a little bit.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>Familiar with ES6 and ES6 Module syntax</li>
+  <li>Familiar with CommonJS Module Syntax</li>
+  <li>Familiar with Babel but not necessarily how to use it</li>
+  <li>Familiar with Browserify but not necessarily how to use it</li>
+  <li>Node and Npm installed</li>
+</ul>
+
+<p>This blog post is targeted towards Javascript programmers not necessarily familiar with Babel and Browserify and is about getting those tools set up locally so everything works right.</p>
+
+<h2 id="step-1-setting-up-packagejson">Step 1: Setting up package.json</h2>
+
+<p>Setting up a package.json is important because we’re going to use it to run some scripts later to compile the ES6 code into ES5 code from the command line.</p>
+
+<p>So if you don’t already have a package.json file in the root of your directory run the following command:</p>
+
+<pre data-language="command line"><code data-language="command line">npm init</code></pre>
+
+<p>It’ll run you through some steps about your project. They’re not very important so you can just press enter to skip them.</p>
+
+<h2 id="step-2-setting-up-babel">Step 2: Setting up Babel</h2>
+
+<p>The next step is to install Babel.</p>
+
+<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev babel-cli</code></pre>
+
+<p>You will also need to create a .babelrc file. Run <code class="highlighter-rouge">touch .babelrc</code> in the command line or create it. We’re gonna end up modifying this file in a bit, but first, we’re gonna install the necessary plugins to get things to compile correctly.</p>
+
+<h2 id="step-3-installing-the-necessary-babel-plugins">Step 3: Installing the necessary babel plugins</h2>
+
+<p>For the purposes of just compiling ES6 and ES6 modules, there are only two necessary plugins. Well, one is a preset. A preset is just a collection of plugins. Those two are ES2015 preset and the ES2015 CommonJS Modules plugin. In order to install those two run the following command.</p>
+
+<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev babel-preset-2015 &amp;&amp; transform-es2015-modules-commonjs</code></pre>
+
+<p>Now that those are in node_modules the next step is making sure that the .babelrc file is setup correctly. It should look like the following:</p>
+
+<pre data-language="babelrc"><code data-language="babelrc">{
+    "presets": ["es2015"],
+    "plugins": ["transform-es2015-modules-commonjs"]
+}</code></pre>
+
+<p>It’s just an object with two keys that specify the presets and plugins.</p>
+
+<h2 id="step-4-compiling-with-npm">Step 4: Compiling with Npm</h2>
+
+<p>There’s always some kind of build process with these tools to transform the code into ES5 that can run in all browsers. Go back to the <code class="highlighter-rouge">package.json</code> file that we created initially. It should have a key in it called <code class="highlighter-rouge">scripts</code> and look something like the following:</p>
+
+<pre data-language="package.json"><code data-language="package.json">"scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+}</code></pre>
+
+<p>Go ahead and delete the test key and its value and create a new key called <code class="highlighter-rouge">build</code>. The value is going to be <code class="highlighter-rouge">babel src -d lib</code>. That <code class="highlighter-rouge">-d</code> is shorthand for <code class="highlighter-rouge">--out-dir</code> and compiles an entire directory into another instead of a single file into another single file. So package.json should now look like the following:</p>
+
+<pre data-language="package.json"><code data-language="package.json">"scripts": {
+    "build": "babel src -d lib"
+}</code></pre>
+
+<p>If you don’t already have a src folder go ahead and create one and put some code in there. I have a file called <code class="highlighter-rouge">app.js</code> and <code class="highlighter-rouge">my-module.js</code> that look like the following:</p>
+
+<pre data-language="app.js"><code data-language="app.js">import myModule from './my-module.js';
+
+myModule();</code></pre>
+
+<pre data-language="my-module.js"><code data-language="my-module.js">export default function () {
+    console.log("This is my module!");
+}</code></pre>
+
+<p>Now if you go back to the command line and run <code class="highlighter-rouge">npm run build</code> you should get the files <code class="highlighter-rouge">lib/app.js</code> and <code class="highlighter-rouge">lib/my-module.js</code>.</p>
+
+<p>Go ahead and create an <code class="highlighter-rouge">index.html</code> file and include <code class="highlighter-rouge">&lt;script src="lib/app.js"&gt;&lt;/script&gt;</code>. If you try running this file in the browser you’re going to get an error. That error should say <code class="highlighter-rouge">Uncaught ReferenceError: require is not defined</code>. That’s because we compiled the ES6 module syntax into CommonJS module syntax but the browser still doesn’t understand CommonJS syntax. That’s where Browserify comes in.</p>
+
+<h2 id="step-6-setting-up-browserify-to-run-the-code-in-the-browser">Step 6: Setting up Browserify to run the code in the browser</h2>
+
+<p>Browserify is a tool to make sure that CommonJS modules can be run in the browser. To install browserify run the following command.</p>
+
+<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev -g browserify</code></pre>
+
+<p>Now that browserify is installed the build script in package.json is going to have to be modified again. It should look like the following</p>
+
+<pre data-language="package.json"><code data-language="package.json">"scripts": {
+    "build": "babel src -d lib &amp;&amp; browersify lib/app.js -o lib/app.bundle.js"
+}</code></pre>
+
+<p>Save that and run <code class="highlighter-rouge">npm run build</code> again and now you should have that <code class="highlighter-rouge">lib/app.bundle.js</code> file. If you load that into your index.html file instead of lib/app.js everything should work and compile correctly.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This was a code heavy blog post and there was a lot of setting up involved but this is what it takes to compile ES6 code with modules into ES5 code that runs in the browser. I wanted to keep things simple by using npm for compilation, but there’s a lot missing. What if you want to setup a watcher to compile files after they change? The next steps would be to begin looking at a build tool like Webpack or Grunt. As always, thank you for reading.</p>
+
+            		</div>
+            	</article>
+            </main>
+        </div><!-- .wrapper -->
+
+        <div class='wrapper'>
+            <footer>
+    <div class='email'>
+        <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
+    </div>
+    <!-- Figure out how to loop through the social_services thing in _confing.yml -->
+    <ul class='social-links'>
+        <li>
+            <a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/derickruiz"><i class='icon-github'></i> <span class='link service'>Github</span></a>
+        </li>
+        <li>
+            <a href="https://twitter.com/drrrruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/derickruiz"><i class='icon-linkedin'></i> <span class='link service'>Linkedin</span></a>
+        </li>
+    </ul>
+</footer>
+        </div>
+        <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
+<script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
+<script src="/js/typography.js"></script>
+
+        
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	
+
+            <script>
+            (function () {
+            	Rainbow.color();
+            }());
+            </script>
+
+        
+    </body>
+</html>

@@ -1654,6 +1654,8 @@ a.button {
     margin-bottom: 1.5rem; }
   .blog-post-page article > .content * + * {
     margin-bottom: 1.5rem; }
+  .blog-post-page article > .content ul > li {
+    margin-bottom: 0; }
 .blog-post-page h1 {
   font-family: "UniversLTPro-45Light", "Helvetica Neue", Helvetica, Arial, "Lucida Granda", sans-serif;
   font-size: 2.25rem;
