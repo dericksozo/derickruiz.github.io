@@ -6,8 +6,8 @@
 </description>
     <link>http://derickruiz.com/</link>
     <atom:link href="http://derickruiz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Sep 2016 01:42:26 -0500</pubDate>
-    <lastBuildDate>Fri, 23 Sep 2016 01:42:26 -0500</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2016 17:18:52 -0500</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2016 17:18:52 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -28,38 +28,46 @@
 
 &lt;h2 id=&quot;step-1-setting-up-packagejson&quot;&gt;Step 1: Setting up package.json&lt;/h2&gt;
 
-&lt;p&gt;Setting up a package.json is important because we’re going to use it to run some scripts later to compile the ES6 code into ES5 code from the command line.&lt;/p&gt;
-
-&lt;p&gt;So if you don’t already have a package.json file in the root of your directory run the following command:&lt;/p&gt;
-
 &lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;npm init&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;It’ll run you through some steps about your project. They’re not very important so you can just press enter to skip them.&lt;/p&gt;
+&lt;p&gt;Running that command will set up a package.json file in the root of your directory. Setting up a package.json is important for running scripts later on to compile the ES6 code into ES5 code from the command line.&lt;/p&gt;
 
-&lt;h2 id=&quot;step-2-setting-up-babel&quot;&gt;Step 2: Setting up Babel&lt;/h2&gt;
+&lt;p&gt;It’ll run you through some steps about your project. They’re not very important right now so you can just press enter to skip them.&lt;/p&gt;
 
-&lt;p&gt;The next step is to install Babel.&lt;/p&gt;
+&lt;h2 id=&quot;step-2-installing-babel&quot;&gt;Step 2: Installing Babel&lt;/h2&gt;
 
 &lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;[sudo] npm install --save-dev babel-cli&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You will also need to create a .babelrc file. Run &lt;code class=&quot;highlighter-rouge&quot;&gt;touch .babelrc&lt;/code&gt; in the command line or create it. We’re gonna end up modifying this file in a bit, but first, we’re gonna install the necessary plugins to get things to compile correctly.&lt;/p&gt;
+&lt;p&gt;The next step is to install Babel. Running that command should get you up and running.&lt;/p&gt;
 
-&lt;h2 id=&quot;step-3-installing-the-necessary-babel-plugins&quot;&gt;Step 3: Installing the necessary babel plugins&lt;/h2&gt;
+&lt;h2 id=&quot;step-4-installing-the-babel-preset-plugin&quot;&gt;Step 4: Installing the babel preset plugin&lt;/h2&gt;
 
-&lt;p&gt;For the purposes of just compiling ES6 and ES6 modules, there are only two necessary plugins. Well, one is a preset. A preset is just a collection of plugins. Those two are ES2015 preset and the ES2015 CommonJS Modules plugin. In order to install those two run the following command.&lt;/p&gt;
+&lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;[sudo] npm install --save-dev babel-preset-es2015&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;[sudo] npm install --save-dev babel-preset-2015 &amp;amp;&amp;amp; transform-es2015-modules-commonjs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first necessary plugin is babel-preset-es2015. It’s actually a preset. A preset is just a collection of plugins. It’s necessary to run through the various different syntaxes in ES6 and converting them into ES5 code.&lt;/p&gt;
 
-&lt;p&gt;Now that those are in node_modules the next step is making sure that the .babelrc file is setup correctly. It should look like the following:&lt;/p&gt;
+&lt;h2 id=&quot;step-5-install-the-es2015-modules-commonjs-plugin&quot;&gt;Step 5: Install the ES2015 modules commonjs plugin&lt;/h2&gt;
+
+&lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;[sudo] npm install --save-dev transform-es2015-modules-commonjs&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This babel plugin is the one that converts ES6 style imports into CommonJS style requires. Browserify then compiles everything and makes sure that requires work on the browser.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-create-babelrc-file&quot;&gt;Step 6: Create .babelrc file&lt;/h2&gt;
+
+&lt;pre data-language=&quot;command line&quot;&gt;&lt;code data-language=&quot;command line&quot;&gt;touch .babelrc&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will also need to create a .babelrc file. Run the above command to create it. This file is where you can define various options for babel like which plugins it will use.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-7-set-up-babelrc-file&quot;&gt;Step 7: Set up .babelrc file&lt;/h2&gt;
 
 &lt;pre data-language=&quot;babelrc&quot;&gt;&lt;code data-language=&quot;babelrc&quot;&gt;{
     &quot;presets&quot;: [&quot;es2015&quot;],
     &quot;plugins&quot;: [&quot;transform-es2015-modules-commonjs&quot;]
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;It’s just an object with two keys that specify the presets and plugins.&lt;/p&gt;
+&lt;p&gt;Now that the plugins are installed and are in node_modules the next step is making sure that the .babelrc file is setup correctly. It should look like the above.&lt;/p&gt;
 
-&lt;h2 id=&quot;step-4-compiling-with-npm&quot;&gt;Step 4: Compiling with Npm&lt;/h2&gt;
+&lt;h2 id=&quot;step-8-compiling-with-npm&quot;&gt;Step 8: Compiling with Npm&lt;/h2&gt;
 
 &lt;p&gt;There’s always some kind of build process with these tools to transform the code into ES5 that can run in all browsers. Go back to the &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file that we created initially. It should have a key in it called &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; and look something like the following:&lt;/p&gt;
 
@@ -87,7 +95,7 @@ myModule();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Go ahead and create an &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file and include &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;script src=&quot;lib/app.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;. If you try running this file in the browser you’re going to get an error. That error should say &lt;code class=&quot;highlighter-rouge&quot;&gt;Uncaught ReferenceError: require is not defined&lt;/code&gt;. That’s because we compiled the ES6 module syntax into CommonJS module syntax but the browser still doesn’t understand CommonJS syntax. That’s where Browserify comes in.&lt;/p&gt;
 
-&lt;h2 id=&quot;step-6-setting-up-browserify-to-run-the-code-in-the-browser&quot;&gt;Step 6: Setting up Browserify to run the code in the browser&lt;/h2&gt;
+&lt;h2 id=&quot;step-9-setting-up-browserify-to-run-the-code-in-the-browser&quot;&gt;Step 9: Setting up Browserify to run the code in the browser&lt;/h2&gt;
 
 &lt;p&gt;Browserify is a tool to make sure that CommonJS modules can be run in the browser. To install browserify run the following command.&lt;/p&gt;
 
@@ -96,7 +104,7 @@ myModule();&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now that browserify is installed the build script in package.json is going to have to be modified again. It should look like the following&lt;/p&gt;
 
 &lt;pre data-language=&quot;package.json&quot;&gt;&lt;code data-language=&quot;package.json&quot;&gt;&quot;scripts&quot;: {
-    &quot;build&quot;: &quot;babel src -d lib &amp;amp;&amp;amp; browersify lib/app.js -o lib/app.bundle.js&quot;
+    &quot;build&quot;: &quot;babel src -d lib &amp;amp;&amp;amp; browserify lib/app.js -o lib/app.bundle.js&quot;
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Save that and run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run build&lt;/code&gt; again and now you should have that &lt;code class=&quot;highlighter-rouge&quot;&gt;lib/app.bundle.js&lt;/code&gt; file. If you load that into your index.html file instead of lib/app.js everything should work and compile correctly.&lt;/p&gt;
@@ -104,6 +112,10 @@ myModule();&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;This was a code heavy blog post and there was a lot of setting up involved but this is what it takes to compile ES6 code with modules into ES5 code that runs in the browser. I wanted to keep things simple by using npm for compilation, but there’s a lot missing. What if you want to setup a watcher to compile files after they change? The next steps would be to begin looking at a build tool like Webpack or Grunt. As always, thank you for reading.&lt;/p&gt;
+
+&lt;h2 id=&quot;edit&quot;&gt;Edit&lt;/h2&gt;
+
+&lt;p&gt;Thank you very much to Allan Arriaga who graciously emailed me and caught some errors with the initial version of this post.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Sep 2016 00:00:00 -0500</pubDate>
         <link>http://derickruiz.com/es6-modules-in-browser-with-babel-browserify</link>
