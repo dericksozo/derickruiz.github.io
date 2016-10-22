@@ -20,38 +20,46 @@ This blog post is targeted towards Javascript programmers not necessarily famili
 
 ## Step 1: Setting up package.json
 
-Setting up a package.json is important because we're going to use it to run some scripts later to compile the ES6 code into ES5 code from the command line.
-
-So if you don't already have a package.json file in the root of your directory run the following command:
-
 <pre data-language="command line"><code data-language="command line">npm init</code></pre>
 
-It'll run you through some steps about your project. They're not very important so you can just press enter to skip them.
+Running that command will set up a package.json file in the root of your directory. Setting up a package.json is important for running scripts later on to compile the ES6 code into ES5 code from the command line.
 
-## Step 2: Setting up Babel
+It'll run you through some steps about your project. They're not very important right now so you can just press enter to skip them.
 
-The next step is to install Babel.
+## Step 2: Installing Babel
 
 <pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev babel-cli</code></pre>
 
-You will also need to create a .babelrc file. Run `touch .babelrc` in the command line or create it. We're gonna end up modifying this file in a bit, but first, we're gonna install the necessary plugins to get things to compile correctly.
+The next step is to install Babel. Running that command should get you up and running.
 
-## Step 3: Installing the necessary babel plugins
+## Step 4: Installing the babel preset plugin
 
-For the purposes of just compiling ES6 and ES6 modules, there are only two necessary plugins. Well, one is a preset. A preset is just a collection of plugins. Those two are ES2015 preset and the ES2015 CommonJS Modules plugin. In order to install those two run the following command.
+<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev babel-preset-es2015</code></pre>
 
-<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev babel-preset-2015 && transform-es2015-modules-commonjs</code></pre>
+The first necessary plugin is babel-preset-es2015. It's actually a preset. A preset is just a collection of plugins. It's necessary to run through the various different syntaxes in ES6 and converting them into ES5 code.
 
-Now that those are in node_modules the next step is making sure that the .babelrc file is setup correctly. It should look like the following:
+## Step 5: Install the ES2015 modules commonjs plugin
+
+<pre data-language="command line"><code data-language="command line">[sudo] npm install --save-dev transform-es2015-modules-commonjs</code></pre>
+
+This babel plugin is the one that converts ES6 style imports into CommonJS style requires. Browserify then compiles everything and makes sure that requires work on the browser.
+
+## Step 6: Create .babelrc file
+
+<pre data-language="command line"><code data-language="command line">touch .babelrc</code></pre>
+
+You will also need to create a .babelrc file. Run the above command to create it. This file is where you can define various options for babel like which plugins it will use.
+
+## Step 7: Set up .babelrc file
 
 <pre data-language="babelrc"><code data-language="babelrc">{
     "presets": ["es2015"],
     "plugins": ["transform-es2015-modules-commonjs"]
 }</code></pre>
 
-It's just an object with two keys that specify the presets and plugins.
+Now that the plugins are installed and are in node_modules the next step is making sure that the .babelrc file is setup correctly. It should look like the above.
 
-## Step 4: Compiling with Npm
+## Step 8: Compiling with Npm
 
 There's always some kind of build process with these tools to transform the code into ES5 that can run in all browsers. Go back to the `package.json` file that we created initially. It should have a key in it called `scripts` and look something like the following:
 
@@ -79,7 +87,7 @@ Now if you go back to the command line and run `npm run build` you should get th
 
 Go ahead and create an `index.html` file and include `<script src="lib/app.js"></script>`. If you try running this file in the browser you're going to get an error. That error should say `Uncaught ReferenceError: require is not defined`. That's because we compiled the ES6 module syntax into CommonJS module syntax but the browser still doesn't understand CommonJS syntax. That's where Browserify comes in.
 
-## Step 6: Setting up Browserify to run the code in the browser
+## Step 9: Setting up Browserify to run the code in the browser
 
 Browserify is a tool to make sure that CommonJS modules can be run in the browser. To install browserify run the following command.
 
@@ -88,7 +96,7 @@ Browserify is a tool to make sure that CommonJS modules can be run in the browse
 Now that browserify is installed the build script in package.json is going to have to be modified again. It should look like the following
 
 <pre data-language="package.json"><code data-language="package.json">"scripts": {
-    "build": "babel src -d lib && browersify lib/app.js -o lib/app.bundle.js"
+    "build": "babel src -d lib && browserify lib/app.js -o lib/app.bundle.js"
 }</code></pre>
 
 Save that and run `npm run build` again and now you should have that `lib/app.bundle.js` file. If you load that into your index.html file instead of lib/app.js everything should work and compile correctly.
@@ -96,3 +104,7 @@ Save that and run `npm run build` again and now you should have that `lib/app.bu
 ## Conclusion
 
 This was a code heavy blog post and there was a lot of setting up involved but this is what it takes to compile ES6 code with modules into ES5 code that runs in the browser. I wanted to keep things simple by using npm for compilation, but there's a lot missing. What if you want to setup a watcher to compile files after they change? The next steps would be to begin looking at a build tool like Webpack or Grunt. As always, thank you for reading.
+
+## Edit
+
+Thank you very much to Allan Arriaga who graciously emailed me and caught some errors with the initial version of this post.
