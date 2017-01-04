@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- derickruiz.com/responsive-calendar -->
+        <!-- It would be cool having the emoji either in the title or in the description. -->
+        <!-- A single emoji that represents what the post is about -->
+        <title>Pinterest Javascript SDK Auth Tutorial - Derick Ruiz</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Some custom description in here -->
+        <meta name="Description" content="">
+        <link rel="canonical" href="/pinterest-javascript-sdk-authentication">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Typekit code that loads nimbus sans -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'yhz0fyw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+        <link rel="stylesheet" href="/css/styles.css">
+
+        
+        	<link rel="stylesheet" href="/css/code.css">
+        
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58696895-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <body class='blog-post-page' itemscope="itemscope" itemprop="http://schema.org/WebPage">
+
+        <div class='wrapper'>
+            <section class='intro clearfix'><!-- Is intro the appropriate name for this section? -->
+
+    <nav class="clearfix" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <ul>
+    	
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/about" itemprop="url">About</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/articles" itemprop="url">Articles</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/works" itemprop="url">Works</a>
+	    	</li>
+        
+    	    
+    	    
+	    	<li class=''>
+	    		<a href="/contact" itemprop="url">Contact</a>
+	    	</li>
+        
+        <li class="home-link" aria-hidden="true">
+            <a href="/"></a>
+        </li>
+    </ul>
+</nav>
+    
+    <a href="/"><!-- link to home page -->
+        <header itemscope itemtype="http://schema.org/Person">
+            <h3 class='name' itemprop="name">
+                <span itemprop="givenName">Derick</span> <span itemprop="familyName">Ruiz</span>
+            </h3>
+        </header>
+    </a>
+
+</section>
+        </div>
+
+        <div class='wrapper wrapper--noSpacing'>
+            <!-- Put the item type of blog back inside of here -->
+            <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+
+            	<article itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+            		<header>
+                        
+                            <h1 class='hyphenate' itemprop="headline">Pinterest Javascript SDK Auth Tutorial</h1>
+                            
+                        
+            			<time itemprop="datePublished" datetime=2017-01-03>
+            				<span class='month-day-year'>01.03.2017</span>
+            			</time>
+            			<span class='separator'>|</span>
+
+            			
+
+	                    
+	                    	<time class='read-time' itemprop="timeRequired" datetime="02M">
+            					<span>02 minute read</span>
+            				</time>
+            			
+            			<meta itemprop="wordCount" content="336">
+            		</header>
+            		<div class='hyphenate content' itemprop="articleBody">
+            			<p>Recently I had the opportunity to use the Pinterest Javascript SDK at work. I ran into a few issues with it specifically with setting up an authorization session with an auth token that had been saved to a database.</p>
+
+<p>Pinterest’s documentation didn’t explain things thoroughly enough for my needs so hopefully this blog post helps someone. I’m going to explain the authorization methods that take parameters and provide examples.</p>
+
+<h2 id="pdklogin">PDK.login</h2>
+
+<p>This is the method used to authorize a user. The docs say there is only one string parameter required called scope. This method takes two parameters. The first parameter is an object that must have a key called <code class="highlighter-rouge">scope</code> that is a string. The second is a callback that will have the session as the first parameter.</p>
+
+<h3 id="example">Example</h3>
+
+<pre data-language="javascript"><code data-language="javascript">PDK.login({
+    scope: "read_public, write_public, read_relationships, write_relationships"
+}, function (session) {
+    if ( ! session) {
+        // The user didn't authorize or closed the popup window
+    } else {
+        // Success!
+        console.log(session.auth_token); // Save this to the database along with other info
+    }
+});</code></pre>
+
+<h2 id="pdksetsession">PDK.setSession</h2>
+
+<p>This method is used to set up the session again if you already have the auth token saved. Most likely the user has already authorized your application and you saved that data once in a database. Now the user is back again and you want to use the auth token you saved to authorize them instead of having them log in again (in case they’re logged out on pinterest.com)</p>
+
+<p>The docs say that the one required parameter is something called session that is a callback to PDK.getSession. Actually this method just takes an object with two required keys. One is <code class="highlighter-rouge">accessToken</code> and it’s a string and the other is <code class="highlighter-rouge">scope</code> and it’s a string.</p>
+
+<h3 id="example-1">Example</h3>
+
+<pre data-language="javascript"><code data-language="javascript">if (existingAuthToken) {
+
+    // This method doesn't make any kind of http request, it only sets an object.
+    PDK.setSession({
+        accessToken: existingAuthToken,
+        scope: "read_public, write_public, read_relationships, write_relationships"
+    });
+
+    // Doing a request to test if we're still actually authorized
+    PDK.me(function (response) {
+        if (response.error) {
+            // The user revoked their own accessToken through pinterest
+            // ask them to reauthorize in the UI.
+        }
+    });
+}</code></pre>
+
+<p>This method confused me the most because I thought it was making an http request for some reason to check the session, but it doesn’t do anything but set the object you’ve specificed internally. Also, if you don’t set the object like that with both of the keys the SDK will throw an error when you make a request using one of the other convenience methods like <code class="highlighter-rouge">PDK.me</code>, <code class="highlighter-rouge">PDK.pin</code>, or <code class="highlighter-rouge">PDK.request</code> and say <code class="highlighter-rouge">A request was made on behalf of a user before they were authenticated.</code></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>That’s it. I hope the examples help someone else looking up information about the Pinterest Javascript SDK. Thanks for reading!</p>
+
+            		</div>
+            	</article>
+            </main>
+        </div><!-- .wrapper -->
+
+        <div class='wrapper'>
+            <footer>
+    <div class='email'>
+        <a class='link' href="/contact">derick.r.ruiz@gmail.com</a>
+    </div>
+    <!-- Figure out how to loop through the social_services thing in _confing.yml -->
+    <ul class='social-links'>
+        <li>
+            <a href="http://codepen.io/derickruiz"><i class='icon-codepen'></i> <span class='link service'>Codepen</span></a>
+        </li>
+        <li>
+            <a href="https://github.com/derickruiz"><i class='icon-github'></i> <span class='link service'>Github</span></a>
+        </li>
+        <li>
+            <a href="https://twitter.com/drrrruiz"><i class='icon-twitter'></i> <span class='link service'>Twitter</span></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/derickruiz"><i class='icon-linkedin'></i> <span class='link service'>Linkedin</span></a>
+        </li>
+    </ul>
+</footer>
+        </div>
+        <script src="/js/vendor/SmartUnderline/js/smart-underline.js"></script>
+<script src="/js/vendor/Hyphenator/Hyphenator_Loader.js"></script>
+<script src="/js/typography.js"></script>
+
+        
+        	<script src="/js/vendor/rainbow.js"></script>
+        	<script src="/js/vendor/language/generic.js"></script>
+
+        	
+
+            <script>
+            (function () {
+            	Rainbow.color();
+            }());
+            </script>
+
+        
+    </body>
+</html>
