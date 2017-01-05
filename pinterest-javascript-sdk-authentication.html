@@ -150,7 +150,7 @@
 
 <p>This method is used to set up the session again if you already have the auth token saved. Most likely the user has already authorized your application and you saved that data once in a database. Now the user is back again and you want to use the auth token you saved to authorize them instead of having them log in again (in case they’re logged out on pinterest.com)</p>
 
-<p>The docs say that the one required parameter is something called session that is a callback to PDK.getSession. Actually this method just takes an object with two required keys. One is <code class="highlighter-rouge">accessToken</code> and it’s a string and the other is <code class="highlighter-rouge">scope</code> and it’s a string.</p>
+<p>The docs say that the one required parameter is something called session that is a callback to PDK.getSession. Actually, this method just takes an object with two required keys. One is <code class="highlighter-rouge">accessToken</code> and it’s a string and the other is <code class="highlighter-rouge">scope</code> and it’s a string.</p>
 
 <h3 id="example-1">Example</h3>
 
@@ -171,7 +171,7 @@
     });
 }</code></pre>
 
-<p>This method confused me the most because I thought it was making an http request for some reason to check the session, but it doesn’t do anything but set the object you’ve specificed internally. Also, if you don’t set the object like that with both of the keys the SDK will throw an error when you make a request using one of the other convenience methods like <code class="highlighter-rouge">PDK.me</code>, <code class="highlighter-rouge">PDK.pin</code>, or <code class="highlighter-rouge">PDK.request</code> and say <code class="highlighter-rouge">A request was made on behalf of a user before they were authenticated.</code></p>
+<p>This method confused me the most because I thought it was making an http request for some reason to check the session, but it doesn’t do anything but set the object you’ve specified internally. Also, if you don’t set the object like that with both of the keys the SDK will throw an error when you make a request using one of the other convenience methods like <code class="highlighter-rouge">PDK.me</code>, <code class="highlighter-rouge">PDK.pin</code>, or <code class="highlighter-rouge">PDK.request</code> and say <code class="highlighter-rouge">A request was made on behalf of a user before they were authenticated.</code></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
