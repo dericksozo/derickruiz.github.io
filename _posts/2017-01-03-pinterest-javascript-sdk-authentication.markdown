@@ -31,7 +31,7 @@ This is the method used to authorize a user. The docs say there is only one stri
 
 This method is used to set up the session again if you already have the auth token saved. Most likely the user has already authorized your application and you saved that data once in a database. Now the user is back again and you want to use the auth token you saved to authorize them instead of having them log in again (in case they're logged out on pinterest.com)
 
-The docs say that the one required parameter is something called session that is a callback to PDK.getSession. Actually this method just takes an object with two required keys. One is `accessToken` and it's a string and the other is `scope` and it's a string.
+The docs say that the one required parameter is something called session that is a callback to PDK.getSession. Actually, this method just takes an object with two required keys. One is `accessToken` and it's a string and the other is `scope` and it's a string.
 
 ### Example
 
@@ -52,7 +52,7 @@ The docs say that the one required parameter is something called session that is
     });
 }</code></pre>
 
-This method confused me the most because I thought it was making an http request for some reason to check the session, but it doesn't do anything but set the object you've specificed internally. Also, if you don't set the object like that with both of the keys the SDK will throw an error when you make a request using one of the other convenience methods like `PDK.me`, `PDK.pin`, or `PDK.request` and say `A request was made on behalf of a user before they were authenticated.`
+This method confused me the most because I thought it was making an http request for some reason to check the session, but it doesn't do anything but set the object you've specified internally. Also, if you don't set the object like that with both of the keys the SDK will throw an error when you make a request using one of the other convenience methods like `PDK.me`, `PDK.pin`, or `PDK.request` and say `A request was made on behalf of a user before they were authenticated.`
 
 ## Conclusion
 
